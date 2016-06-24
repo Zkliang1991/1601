@@ -1,9 +1,1 @@
-my first git text
-
-AAAAAAAAAAAAAAAAAA
-
-BBBBBBBBBBBBBBBBBB
-
-cccccccccccccccccc
-
-dddddddddddddddddd
+空
