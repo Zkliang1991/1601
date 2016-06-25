@@ -1,60 +1,188 @@
-header{
-	height: 14.1vw;
-	width: 100vw;
-	background: #e23a6d;
-	position: absolute;
-	top: 0;
-	left: 0;
-}
 
-section{
+.swiper-container {
 	width: 100vw;
-	background: #fefcfd;
+	height: 39vw;
 	position: absolute;
 	top: 14.1vw;
 	left: 0;
-	
-}
-.search{
-	display: flex;
-	height: 14.1vw;
-	justify-content: center;
-	align-items: center;
-	background: #52525a;
-}
-.search input{
-	display: flex;
-	width: 90vw;
-	height: 8.7vw;
-	border: 0;
-	background:#fff url(../img/search.jpg) 4vw 1vw no-repeat;
-	background-size: 6.25vw 7.34vw;
-	border-radius: 4vw/7vw;
 }
 
- .search input::-webkit-input-placeholder {
-    text-indent: 11vw;
-    font-size: 3.8vw;
-    color: #bbb; }
+.swiper-container img {
+	width: 100%;
+	height: 100%;
+}
 
-
-footer{
-	height: 14.1vw;
+#thelist dl {
 	width: 100vw;
-	background: #484850;
-	position: absolute;
-	bottom: 0;
-	left: 0;
+	height: 34.3vw;
+	border-bottom: 1px solid #aaa;
+	overflow: hidden;
+	padding: 3vw;
+	box-sizing: border-box;
+	display: flex;
+	font-family: "microsoft yahei";
 }
 
+#thelist dt img {
+	display: flex;
+	width: 26.5vw;
+	height: 26.5vw;
+}
 
-footer ul li{
-	display: block;
-	width: 20vw;
-	height: 14.1vw;
-	float: left;
-	font-size: 8vw;
-	color: #f1f1f1;
-	line-height: 14.1vw;
+#thelist dd {
+	width: 64vw;
+	height: 27.7vw;
+	padding-left: 3vw;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#thelist dd h3 {
+	width: 63.3vw;
+	height: 14vw;
+	font-size: 4.4vw;
+	line-height: 7vw;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+
+#thelist dd div {
+	display: flex;
+	width: 39vw;
+	height: 12.5vw;
+	flex-wrap: wrap;
+}
+
+#thelist dd div span:nth-of-type(1) {
+	display: flex;
+	width: 22vw;
+	font-size: 5.2vw;
+	color: #e23a6d;
+}
+
+#thelist dd div span:nth-of-type(2) {
+	display: flex;
+	flex: 17vw;
+	font-size: 3vw;
+	color: #AAAAAA;
+	text-decoration: line-through;
+	margin-top: 2vw;
+}
+
+#thelist dd div span:nth-of-type(3) {
+	display: flex;
+	width: 100%;
+	font-size: 2.8vw;
+}
+
+#thelist dd a {
+	display: flex;
+	width: 18.7vw;
+	height: 12.5vw;
+	align-items: center;
+}
+
+#thelist dd a img {
+	display: flex;
+	width: 18.7vw;
+	height: 8vw;
+}
+
+.swiper-slide {
+	width: 100%;
+	height: 100%;
+	font-size: 100px;
+	color: blue;
+	line-height: 100%;
 	text-align: center;
+	background: darkturquoise;
 }
+.swiper-container-horizontal>.swiper-pagination-bullets {
+	height: 8vw;
+	bottom: -1vw;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+	border-radius: 4px;
+	width: 8px;
+	height: 8px;
+	color: #ccc;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet-active {
+	background: #e23a6d;
+	color: #DC1E5A;
+}
+
+
+
+
+
+#wrapper {
+  position: absolute;
+  z-index: 1;
+  /*  header 和footer 的高度 */
+  top: 68vw;
+  bottom: 14.1vw;
+  width: 100%;
+  background: rgab(0, 0, 0, 0.1);
+  overflow: auto; }
+
+#scroller {
+  position: absolute;
+  z-index: 1;
+  /*	-webkit-touch-callout:none;*/
+  -webkit-tap-highlight-color: transparent;
+  width: 100%;
+  padding: 0; }
+
+#pullDown, #pullUp {
+  background: #e4e0e0;
+  height: 40px;
+  line-height: 40px;
+  padding: 5px 10px;
+  border-bottom: 1px solid #ccc;
+  font-weight: bold;
+  font-size: 14px;
+  color: #888;
+  zoom: 1 !important; }
+
+#pullDown .pullDownIcon, #pullUp .pullUpIcon {
+  zoom: 1 !important;
+  display: block;
+  float: left;
+  width: 40px;
+  height: 40px;
+  background: url(../img/pull-icon@2x.png) 0 0 no-repeat;
+  -webkit-background-size: 40px 80px;
+  background-size: 40px 80px;
+  -webkit-transition-property: -webkit-transform;
+  -webkit-transition-duration: 250ms; }
+
+#pullDown .pullDownIcon {
+  -webkit-transform: rotate(0deg) translateZ(0); }
+
+#pullUp .pullUpIcon {
+  -webkit-transform: rotate(-180deg) translateZ(0); }
+
+#pullDown.flip .pullDownIcon {
+  -webkit-transform: rotate(-180deg) translateZ(0); }
+
+#pullUp.flip .pullUpIcon {
+  -webkit-transform: rotate(0deg) translateZ(0); }
+
+#pullDown.loading .pullDownIcon, #pullUp.loading .pullUpIcon {
+  background-position: 0 100%;
+  -webkit-transform: rotate(0deg) translateZ(0);
+  -webkit-transition-duration: 0ms;
+  -webkit-animation-name: loading;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear; }
+
+@-webkit-keyframes loading {
+  from {
+    -webkit-transform: rotate(0deg) translateZ(0); }
+  to {
+    -webkit-transform: rotate(360deg) translateZ(0); } }

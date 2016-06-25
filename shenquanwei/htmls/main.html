@@ -1,34 +1,76 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<title></title>
 		<link rel="stylesheet" href="../css/common.css" />
-		<link rel="stylesheet" href="../css/swiper.css" />
 		<link rel="stylesheet" href="../css/main.css" />
-		<script type="text/javascript" src="../js/swiper.min.js" ></script>
+		<link rel="stylesheet" href="../css/swiper.css" />
+		<script type="text/javascript" src="../js/zepto.min.js"></script>
+		<script type="text/javascript" src="../js/swiper.min.js"></script>
+		<script type="text/javascript" src="../js/iscroll.js"></script>
+		<script type="text/javascript" src="../js/myiscroll.js"></script>
 	</head>
+
 	<body>
 		<header class="iconfont">
-			<div>&#xe631;</div>
-			<p></p>
+			<p>ZXIU 走秀网</p>
 		</header>
 
 		<section>
 			<div class="search">
-				<input type="text" placeholder="请输入搜索内容"/>
+				<input type="text" placeholder="请输入搜索内容" />
 			</div>
-			
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide"><img src="../img/S2.jpg" /></div>
+					<div class="swiper-slide"><img src="../img/S3.jpg" /></div>
+					<div class="swiper-slide"><img src="../img/S4.jpg" /></div>
+					<div class="swiper-slide"><img src="../img/S5.jpg" /></div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>
 		</section>
+
+		<div id="wrapper">
+			<div id="scroller">
+				<div id="pullDown">
+					<span class="pullDownIcon"></span>
+					<span class="pullDownLabel">下拉刷新...</span>
+				</div>
+
+				<ul id="thelist">
+				</ul>
+
+				<div id="pullUp">
+					<span class="pullUpIcon"></span>
+					<span class="pullUpLabel">加载更多...</span>
+				</div>
+			</div>
+		</div>
+
 		<footer class="iconfont">
 			<ul>
-				<li>&#xe628;</li>
-				<li>&#xe62a;</li>
-				<li>&#xe60f;</li>
-				<li>&#xe61a;</li>
-				<li>&#xe61c;</li>
+				<li><a href="main.html" style="color: #DC1E5A;">&#xe628;
+					<p>首页</p></a>
+				</li>
+				<li><a href="class.html">&#xe62a;
+					<p>分类</p></a>
+				</li>
+				<li><a href="car.html">&#xe60f;
+					<p>购物车</p></a>
+				</li>
+				<li><a href="user.html">&#xe61a;
+					<p>我的秀</p></a>
+				</li>
+				<li><a href="more.html">&#xe61c;
+					<p>更多</p></a>
+				</li>
 			</ul>
 		</footer>
+		<script type="text/javascript" src="../js/main.js"></script>
 	</body>
+
 </html>

@@ -172,3 +172,122 @@ textarea {
     /* 36/16=146.43% */ } }
 
 /*# sourceMappingURL=common.css.map */
+
+
+header {
+	height: 14.1vw;
+	width: 100vw;
+	background: #e23a6d;
+	display: flex;
+	color: #f1f1f1;
+	z-index: 1;
+	position: relative;
+}
+
+header a:nth-of-type(1) {
+	display: flex;
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 14.1vw;
+	width: 14.1vw;
+	font-size: 8vw;
+	color: #f1f1f1;
+	justify-content: center;
+	align-items: center;
+}
+header a:nth-of-type(2) {
+	display: flex;
+	position: absolute;
+	right: 2vw;
+	top: 3.2vw;
+	height: 7vw;
+	width: 17.8vw;
+	font-size: 4vw;
+	border-radius: 4px;
+	color: #f1f1f1;
+	background: linear-gradient(#fb5f8c,#a20c3c);
+	border: 1px solid #f1f1f1;
+	justify-content: center;
+	align-items: center;
+}
+
+header p {
+	display: flex;
+	height: 14.1vw;
+	width: 100vw;
+	font-size: 6.25vw;
+	justify-content: center;
+	align-items: center;
+	font-family: "microsoft yahei";
+}
+
+section {
+	width: 100vw;
+	background: #fefcfd;
+}
+
+.search {
+	display: flex;
+	height: 14.1vw;
+	width: 100vw;
+	justify-content: center;
+	align-items: center;
+	background: #52525a;
+	position: absolute;
+	left: 0;
+	top: 14.1vw;
+	z-index: 100;
+}
+
+.search input {
+	display: flex;
+	width: 90vw;
+	height: 8.7vw;
+	border: 0;
+	background: #fff url(../img/search.jpg) 4vw 1vw no-repeat;
+	background-size: 6.25vw 7.34vw;
+	border-radius: 4vw/7vw;
+	text-indent: 11vw;
+	font-size: 4.2vw;
+}
+
+.search input::-webkit-input-placeholder {
+	text-indent: 11vw;
+	font-size: 3.8vw;
+	color: #bbb;
+}
+
+footer {
+	height: 14.1vw;
+	width: 100vw;
+	background: #484850;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 999;
+}
+
+footer ul li {
+	box-sizing: border-box;
+	padding-top: 1.2vw;
+	display: block;
+	width: 20vw;
+	height: 14.1vw;
+	float: left;
+	font-size: 8vw;
+	color: #f1f1f1;
+	line-height: 8vw;
+	text-align: center;
+	overflow: hidden;
+}
+footer ul li a{
+	color: #f1f1f1;
+}
+footer ul li p {
+	display: block;
+	width: 20vw;
+	height: 6vw;
+	font-size: 4vw;
+	line-height: 4.8vw;
+}
