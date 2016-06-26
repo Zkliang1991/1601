@@ -42,7 +42,7 @@ input::-webkit-input-placeholder {
 	justify-content: center;
 	align-items: center;
 }
-section .dltool{
+section div{
 	width: 87.5vw;
 	height: 16vw;
 	display: flex;
@@ -53,7 +53,7 @@ section .dltool{
 .dl{
 	margin-top: 0vw;
 }
-.dltool a{
+div a{
 	text-decoration: underline;
 	color: #aaa;
 	margin-left: 6vw;
@@ -82,8 +82,7 @@ div input:checked + label{
 	text-indent: 6vw;
 	font-size: 5vw;
 	font-family: "微软雅黑";
-	background: url(../img/right.jpg) 78vw center no-repeat;
-	background-size: 5vw 5vw;
+	background: url(../img/right.jpg) right center no-repeat;
 }
 .tools p:nth-of-type(4){
 	border: 0;
