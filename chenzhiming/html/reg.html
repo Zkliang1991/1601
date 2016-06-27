@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+	<head>
+		<meta charset="UTF-8">
+		<title>rem宽度</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			body{
+				background: #ccc;
+			}
+			div{
+				width: 100%;
+				padding: 0.1rem 0.4rem 0 0.4rem;
+				box-sizing: border-box;
+			}
+			input{
+				margin-top: 0.5rem;
+				width: 5.6rem;
+				height: 0.8rem;
+				background: #fff;
+				display: block;
+				border: 0;
+				outline: none;
+				font-size: 0.36rem;
+				font-weight: 300;
+				border-radius: 10px;
+				font-family: "微软雅黑";
+				padding-left: 0.25rem;
+				box-sizing: border-box;
+			}
+			input::-webkit-input-placeholder{
+				color: #666;
+			}
+			a{
+				display: block;
+				width: 5.6rem;
+				height: 0.9rem;
+				margin-top: 1.2rem;
+				font-size: 0.36rem;
+				font-weight: 300;
+				border-radius: 10px;
+				font-family: "微软雅黑";
+				color: #fff;
+				text-align: center;
+				line-height: 0.9rem;
+				text-decoration: none;
+				background: -webkit-linear-gradient(top,pink,red);
+			}
+		</style>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		
+	</head>
+	<body>
+		<div>
+			<input type="text" name="username" class="username" placeholder="账号" />
+			<input type="password" name="pass" class="pass" placeholder="密码" />
+			<a href="#">登录</a>
+		</div>
+		
+		<script type="text/javascript">
+			var width = document.body.clientWidth;
+			var html = document.getElementById('html');
+			html.style.fontSize = width/640*100 + 'px';
+			
+			console.log(width);
+			window.onresize=function(){
+				var width = document.body.clientWidth;
+				console.log(width);
+				html.style.fontSize=width/640*100+'px'
+			}
+		</script>
+	</body>
+</html>
