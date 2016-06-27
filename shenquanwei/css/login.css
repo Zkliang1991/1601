@@ -72,6 +72,9 @@ div input:checked + label{
 	height: 58vw;
 	margin-top: 8vw;
 }
+.tools a{
+	color: #000;
+}
 .tools p{
 	display: flex;
 	height: 14vw;
