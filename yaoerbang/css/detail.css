@@ -1,0 +1,146 @@
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  width: 100%;
+  height: 100%; }
+
+#swiper-out {
+  width: 100%;
+  height: 100%; }
+  #swiper-out .sw1 {
+    width: 100%; }
+    #swiper-out .sw1 .swiper-slide {
+      width: 100%; }
+    #swiper-out .sw1 .pro1 h1 {
+      box-sizing: border-box;
+      width: 100%;
+      height: 1.28rem;
+      font-size: 0.42rem;
+      text-align: center;
+      color: white;
+      font-family: "Microsoft yahei";
+      padding-top: 0.5rem;
+      background: #e4366b; }
+      #swiper-out .sw1 .pro1 h1 span {
+        float: left;
+        color: #690c27; }
+      #swiper-out .sw1 .pro1 h1 button {
+        float: right;
+        width: 1.1rem;
+        height: 0.62rem;
+        line-height: 0.62rem;
+        background: #e4366b;
+        color: white;
+        border: solid 0.02rem grey;
+        border-radius: 0.15rem;
+        margin-right: 0.16rem;
+        font-size: 0.24rem; }
+    #swiper-out .sw1 .pro1 .time {
+      width: 100%;
+      height: 0.88rem;
+      background: #333333; }
+    #swiper-out .sw1 .pro1 .pro {
+      width: 100%;
+      height: 8.25rem;
+      background: yellow; }
+    #swiper-out .sw1 .pro2 h1 {
+      box-sizing: border-box;
+      width: 100%;
+      height: 1.28rem;
+      font-size: 0.42rem;
+      text-align: center;
+      color: white;
+      font-family: "Microsoft yahei";
+      padding-top: 0.5rem;
+      background: #e4366b; }
+      #swiper-out .sw1 .pro2 h1 span {
+        float: left;
+        color: #690c27; }
+      #swiper-out .sw1 .pro2 h1 button {
+        float: right;
+        width: 1.1rem;
+        height: 0.62rem;
+        line-height: 0.62rem;
+        background: #e4366b;
+        color: white;
+        border: solid 0.02rem grey;
+        border-radius: 0.15rem;
+        margin-right: 0.16rem;
+        font-size: 0.24rem; }
+    #swiper-out .sw1 .pro2 .time {
+      width: 100%;
+      height: 0.88rem;
+      background: #333333; }
+    #swiper-out .sw1 .pro2 .pro {
+      width: 100%;
+      height: 8.25rem;
+      background: yellow; }
+    #swiper-out .sw1 .pro3 h1 {
+      box-sizing: border-box;
+      width: 100%;
+      height: 1.28rem;
+      font-size: 0.42rem;
+      text-align: center;
+      color: white;
+      font-family: "Microsoft yahei";
+      padding-top: 0.5rem;
+      background: #e4366b; }
+      #swiper-out .sw1 .pro3 h1 span {
+        float: left;
+        color: #690c27; }
+      #swiper-out .sw1 .pro3 h1 button {
+        float: right;
+        width: 1.1rem;
+        height: 0.62rem;
+        line-height: 0.62rem;
+        background: #e4366b;
+        color: white;
+        border: solid 0.02rem grey;
+        border-radius: 0.15rem;
+        margin-right: 0.16rem;
+        font-size: 0.24rem; }
+    #swiper-out .sw1 .pro3 #swiper-in .swiper-pagination-bullet-active {
+      background: red; }
+    #swiper-out .sw1 .pro3 #swiper-in .sw2 .swiper-slide {
+      height: 9.1rem; }
+    #swiper-out .sw1 .pro3 #swiper-in .sw2 .slide1 {
+      background: yellow; }
+    #swiper-out .sw1 .pro3 #swiper-in .sw2 .slide2 {
+      background: orange; }
+    #swiper-out .sw1 .pro3 #swiper-in .sw2 .slide3 {
+      background: black; }
+    #swiper-out .sw1 .pro3 #swiper-in .sw2 .slide4 {
+      background: blue; }
+    #swiper-out .sw1 .pro3 #swiper-in #sp-in li {
+      width: 0.26rem;
+      height: 0.26rem; }
+  #swiper-out #sp-out {
+    -webkit-display: flex;
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
+    display: flex;
+    -webkit-flex-flow: row;
+    position: absolute;
+    bottom: 0; }
+    #swiper-out #sp-out li {
+      width: 33.3%;
+      height: 0.96rem;
+      background: #525159;
+      border-radius: 0;
+      margin: 0;
+      padding: 0;
+      color: white;
+      text-align: center;
+      line-height: 0.96rem;
+      font-size: 0.32rem; }
+
+/*# sourceMappingURL=detail.css.map */

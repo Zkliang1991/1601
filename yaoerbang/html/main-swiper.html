@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="initial-scale=1,width=device-width,maximum-scale=2,minimum-scale=1,user-scalable=no">
+	<link rel="stylesheet" href="../ux/iconfont.css" type="text/css">
+	<link rel="stylesheet" href="../icon/iconfont.css" type="text/css">
+	<link rel="stylesheet" href="../css/swiper-3.3.1.min.css">
+	<link rel="stylesheet" href="../css/main-swiper.css" type="text/css">
+	<script src="../js/zepto.js"></script>
+	<script src="../js/zepto-tap.js"></script>
+	<script src="../js/swiper-3.3.1.min.js"></script>
+	<script src="../js/iscroll.js"></script>
+	
+ 	<style>
+ 		#pullDown, #pullUp {
+			background:#fff;
+			height:0.4rem;
+			line-height:0.4rem;
+			padding:0.1rem 0.2rem;
+			border-bottom:0.01rem solid #ccc;
+			font-weight:bold;
+			font-size:0.3rem;
+			color:#888;
+		}
+		#pullDown .pullDownIcon, #pullUp .pullUpIcon  {
+			display:block; float:left;
+			width:0.4rem; height:0.4rem;
+			background:url(../css/i/pull-icon@2x.png) 0 0 no-repeat;
+			-webkit-background-size:0.4rem 0.8rem;
+			 background-size:0.4rem 0.8rem;
+			-webkit-transition-property:-webkit-transform;
+			-webkit-transition-duration:250ms;	
+		}
+		#pullDown .pullDownIcon {
+			-webkit-transform:rotate(0deg) translateZ(0);
+		}
+		#pullUp .pullUpIcon  {
+			-webkit-transform:rotate(-180deg) translateZ(0);
+		}
+
+		#pullDown.flip .pullDownIcon {
+			-webkit-transform:rotate(-180deg) translateZ(0);
+		}
+
+		#pullUp.flip .pullUpIcon {
+			-webkit-transform:rotate(0deg) translateZ(0);
+		}
+
+		#pullDown.loading .pullDownIcon, #pullUp.loading .pullUpIcon {
+			background-position:0 100%;
+			-webkit-transform:rotate(0deg) translateZ(0);
+			-webkit-transition-duration:0ms;
+
+			-webkit-animation-name:loading;
+			-webkit-animation-duration:2s;
+			-webkit-animation-iteration-count:infinite;
+			-webkit-animation-timing-function:linear;
+		}
+
+		@-webkit-keyframes loading {
+			from { -webkit-transform:rotate(0deg) translateZ(0); }
+			to { -webkit-transform:rotate(360deg) translateZ(0); }
+		}
+ 	</style>
+</head>
+<body>
+	<div class="swiper-container swiper-out" id="swiper-out">
+		<div class="swiper-wrapper sw1">
+			<div class="swiper-slide slide1 index"  data-hash="slide1">
+				<h1>ZXIU 走秀网</h1>
+				<div class="search">
+				    <span></span>
+					<input type="search" placeholder="请输入搜索内容">
+				</div>
+				<div class="swiper-container swiper-in" id="swiper-in">
+					<div class="swiper-wrapper sw2">
+						<div class="swiper-slide slide1"  data-hash="slide1"></div>
+						<div class="swiper-slide slide2" data-hash="slide1"></div>
+						<div class="swiper-slide slide3" data-hash="slide1"></div>
+						<div class="swiper-slide slide4" data-hash="slide1"></div>
+					</div>
+					<div class="swiper-pagination" id="sp-in"></div>
+				</div>
+
+
+				<div class="main" id="wrapper">
+					<div id="scroller">
+						<div id="pullDown">
+							<span class="pullDownIcon"></span>
+							<span class="pullDownLabel">下拉刷新...</span>
+						</div>
+						<ul id="thelist" class="ul">
+							<li class = "list">
+								<img src="http://img.alicdn.com/bao/uploaded/i4/TB1QP0gJpXXXXczXpXXXXXXXXXX_!!0-item_pic.jpg_b.jpg" alt="">
+								<ul>
+									<li>韩都衣舍长袖衬衫</li>
+									<li>￥198</li>
+									<li>9折</li>
+									<button class="iconfont" type="button">&#xe632;</button>
+								</ul>
+							</li>
+							<li class = "list">
+								<img src="https:////img.alicdn.com/bao/uploaded///img.alicdn.com/bao/uploaded/i4/TB1vGO5IFXXXXb4XXXXXXXXXXXX_!!0-item_pic.jpg_160x160q90.jpg" alt="">
+								<ul>
+									<li>韩都衣舍韩版2015秋装新款女装翻领绣花图案长袖衬衫</li>
+									<li>￥260</li>
+									<li>6折</li>
+									<button class="iconfont" type="button">&#xe632;</button>
+								</ul>
+							</li>
+							<li class = "list">
+								<img src="http://g-search3.alicdn.com/img/bao/uploaded/i4/i1/TB1EmgpJXXXXXbTXVXXXXXXXXXX_!!0-item_pic.jpg_180x180.jpg_.webp" alt="">
+								<ul>
+									<li>男士修身商务正装</li>
+									<li>￥140</li>
+									<li>8折</li>
+									<button class="iconfont" type="button">&#xe632;</button>
+								</ul>
+							</li>
+						</ul>
+						<div id="pullUp">
+							<span class="pullUpIcon"></span>
+							<span class="pullUpLabel">加载更多...</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-slide slide2 devide" data-hash="slide1">
+				<h1 class="iconfont"><span>&#xe604;</span>ZXIU 走秀网</h1>
+				<div class="search">
+				    <span></span>
+					<input type="search" placeholder="请输入搜索内容">
+				</div>
+				<ul class='main'>
+					<li class='list'>全部<span>&#xe61a;</span>
+						<ul>
+							<li>衬衫<span>&#xe61a;</span></li>
+							<li>女装T恤<span>&#xe61a;</span></li>
+							<li>珠宝配饰<span>&#xe61a;</span></li>
+							<li>美食保健<span>&#xe61a;</span></li>
+						</ul>
+					</li>
+					<li class='list'>第二类<span>&#xe61a;</span>
+						<ul>
+							<li>衬衫<span>&#xe61a;</span></li>
+							<li>女装T恤<span>&#xe61a;</span></li>
+							<li>珠宝配饰<span>&#xe61a;</span></li>
+							<li>美食保健<span>&#xe61a;</span></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="swiper-slide slide3 cart" data-hash="slide1">
+				<h1><span class="iconfont">&#xe604;</span>购物车<button type="button">去结算</button></h1>
+				<div class="search">
+				    商品数量：<span>1</span>
+				    应付总额(不含运费)：<span>4442</span>
+				</div>
+				<ul class="ul">
+					<li class = "list">
+						<img src="" alt="">
+						<ul>
+							<li>气质<span class="iconfont"><a href="#">删除</a></span></li>
+							<li>T恤</li>
+							<li>单价<span class="iconfont">L</span></li>
+							<li>
+								数量：
+								<span>-</span>
+								<input type="text" value="1">
+								<span>+</span>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<div class="qgg">
+					<p>您的购物车空空~</p>
+					<div class="cart-empty"></div>
+					<button type="button">去逛逛</button>
+				</div>
+			</div>
+			<div class="swiper-slide slide4 myshow" data-hash="slide1">
+			<div id="section"></div>
+				<script type="text/javascript">
+					$("#section").load("myshow_user.html");
+				</script>
+			</div>
+			<div class="swiper-slide slide5 more" data-hash="slide5">
+				<h1><span class="iconfont">&#xe604;</span>更多</h1>
+				<ul class="ul1">
+					<li class="iconfont">常见问题<span>&#xe61a;</span></li>
+					<li class="iconfont">系统设置<span>&#xe61a;</span></li>
+					<li class="iconfont">软件更新<span>&#xe61a;</span></li>
+					<li class="iconfont list-last">扫描二维码<span>&#xe61a;</span></li>
+				</ul>
+				<ul class="ul2">
+					<li class="iconfont">我要提意见<span>&#xe61a;</span></li>
+					<li class="iconfont list-last">关于<span>&#xe61a;</span></li>
+				</ul>
+				<button type="button">退出登录</button>
+			</div>
+		</div>
+		<div class="swiper-pagination sp-out" id="sp-out"></div>
+	</div>
+	<script src="../js/myjs.js" type="text/javascript"></script>
+	<script src="../js/myiscroll.js" type="text/javascript"></script>
+	<script src="../js/devide.js" type="text/javascript"></script>
+	<script src="../js/cart.js" type="text/javascript"></script>
+	<script src="../js/myshow.js" type="text/javascript"></script>
+	
+</body>
+</html>

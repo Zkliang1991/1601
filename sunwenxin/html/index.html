@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+	<meta charset="UTF-8">
+	<title>走秀网</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="stylesheet" href="../css/swiper-3.3.1.min.css">
+	<link rel="stylesheet" href="../css/index1.css">
+	<link rel="stylesheet" href="../css/ux/iconfont.css">
+	<script src='../js/jquery-1.8.3.js'></script>
+	<script src = "../js/swiper-3.3.1.min.js"></script>
+	<script src="../js/zepto.js"></script>
+	<script src="../js/zepto-tap.js"></script>
+</head>
+<body>
+	<header>
+		<section>
+			<span>zxiu</span>
+			<h3>走秀网</h3>
+		</section>
+	</header>
+
+	<div class="search">
+		<div class="se iconfont">
+			<span>&#xe635;</span>
+			<input class="ser" type="text" placeholder="请输入搜索内容">
+		</div>
+	</div>
+	
+	<div class="swiper-container">
+	    <div class="swiper-wrapper">
+	        <!-- <div class="swiper-slide slide1"></div>
+	        <div class="swiper-slide slide2"></div>
+	        <div class="swiper-slide slide3"></div>
+	        <div class="swiper-slide slide4"></div> -->
+	    </div>
+   		<div class="swiper-pagination"></div>
+	</div>
+	<script>
+	$(function(){
+		$.ajax({
+			url: 'http://datainfo.duapp.com/shopdata/getBanner.php',
+			type: 'get',
+			dataType: 'jsonp',
+			success:function(data){
+				console.log(data);
+				for(var i=0;i<4;i++){
+					var imgs = JSON.parse(data[i].goodsBenUrl)[0];
+					console.log(imgs);
+					$('.swiper-wrapper').append('<div class="swiper-slide"><img src='+imgs+' /></div>');
+				}
+				var mySwiper = new Swiper('.swiper-container',{
+					pagination : '.swiper-pagination',
+					speed:1000,
+					loop:'true',
+					// autoplay:'true',
+				});
+			}
+		});	
+	})	
+	</script>
+	<div id="wrapper">
+	<div id="scroller">
+		<div id="pullDown">
+			<span class="pullDownIcon"></span>
+			<span class="pullDownLabel">下拉刷新...</span>
+		</div>
+		<ul id="thelist">
+			<!--  <li>
+				<dl>
+					<dt>
+						<img src="../images/jiang.jpg" alt="">
+					</dt>
+					<dd>
+						<span>0元大抽奖!走秀携古尔莎为你开启，价值28880元的土耳其</span>
+						<p>¥ <b>0</b></p>
+						<i>0折</i>
+					</dd>
+				</dl>
+				<div class="iconfont">
+					<span>&#xe607;</span>
+				</div>
+			</li> -->
+		</ul>
+		<div id="pullUp">
+			<span class="pullUpIcon"></span>
+			<span class="pullUpLabel">加载更多...</span>
+		</div>
+	</div>
+</div>
+	<footer>
+		<ul class="iconfont">
+			<li class="index">
+				<i>
+					&#xe601;
+				</i>
+				<span>首页</span>
+			</li>
+			<li class="type">
+				<i>
+					&#xe60d;
+				</i>
+				<span>分类</span>
+			</li>
+			<li class="buycar">
+				<i>
+					&#xe6ef;
+				</i>
+				<span>购物车</span>
+			</li>
+			<li class="myshow">
+				<i>
+				   &#xe605;
+				</i>
+				<span>我的秀</span>
+			</li>
+			<li class="more">
+				<i>
+					&#xf0013;
+				</i>
+				<span>更多</span>
+			</li>
+		</ul>
+	</footer>
+<!-- 	<footer id="footer"></footer>
+	<script type="text/javascript">
+		$("#footer").load("footer.html");
+	</script> -->
+	
+</body>
+	<script src="../js/iscroll.js"></script>
+	<script src="../js/myiscroll.js"></script>
+	<script type="text/javascript">
+		var url = window.location.href;
+		if (url.indexOf("index") > 0) {
+			$('.index').removeClass().addClass('active');
+		}
+
+		var width = document.documentElement.clientWidth;
+		var html = document.getElementById("html");
+		html.style.fontSize = width/640*100 + 'px';
+		console.log(width);
+		window.onresize = function() {
+			// 随着窗口的改变求设备的宽度
+			var width = document.body.clientWidth;
+			html.style.fontSize = width/640*100 + 'px';
+			console.log(width);
+		}
+	
+ 
+		
+
+		$.ajax({
+			url:'http://datainfo.duapp.com/shopdata/getGoods.php',
+			type:'get',
+			dataType:'jsonp',
+			success:function(data){
+				for( var i=0;i<4;i++){
+					var name = data[i].goodsName;
+				    var discounts = data[i].discount;
+				    var img = data[i].goodsListImg;
+				    var prices = data[i].price; 
+				 //    <li>
+					// 	<dl>
+					// 		<dt>
+					// 			<img src="../images/jiang.jpg" alt="">
+					// 		</dt>
+					// 		<dd>
+					// 			<span>0元大抽奖!走秀携古尔莎为你开启，价值28880元的土耳其</span>
+					// 			<p>¥ <b>0</b></p>
+					// 			<i>0折</i>
+					// 		</dd>
+					// 	</dl>
+					// 	<div class="iconfont">
+					// 		<span>&#xe607;</span>
+					// 	</div>
+					// </li>
+				    $('#thelist').append('<li><dl><dt><img src='+img+'></dt><dd><span>'+name+'</span><p>¥<b>'+prices+'</b></p><i>'+discounts+'折</i></dd></dl><div><span class="iconfont">&#xe607;</span></div></li>')
+				    	
+				}
+			}
+		})
+
+
+		$('.index').on('tap',function(){
+			
+			window.location.href = "index.html";
+			$(this).removeClass().addClass('active');
+
+		})
+		$('.type').on('tap',function(){
+			window.location.href = "type.html";
+			$(this).removeClass().addClass('active');
+		})
+		$('.buycar').on('tap',function(){
+			window.location.href = "buycar.html";
+		})
+		$('.myshow').on('tap',function(){
+			window.location.href = "myshow.html";
+		})
+		$('.more').on('tap',function(){
+			window.location.href = "more.html";
+		})
+	</script>
+</html>

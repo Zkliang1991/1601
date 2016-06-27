@@ -1,0 +1,73 @@
+
+	<link rel="stylesheet" type="text/css" href="../css/foot.css">
+	<link rel="stylesheet" type="text/css" href="../ux/iconfont.css">
+
+
+	<div class="foot">
+		<ul>
+			<li>
+				<span class="iconfont">&#xe601;</span>
+				<p>首页</p>
+			</li>
+			<li>
+				<span class="iconfont">&#xe687;</span>
+				<p>分类</p>
+			</li>
+			<li>
+				<span class="iconfont">&#xe611;</span>
+				<p>购物车</p>
+			</li>
+			<li>
+				<span class="iconfont">&#xe620;</span>
+				<p>我的秀</p>
+			</li>
+			<li>
+				<span class="iconfont">&#xe612;</span>
+				<p>更多</p>
+			</li>
+		</ul>
+	</div>
+	<script type="text/javascript" src="../js/zepto.min.js"></script>
+	<script type="text/javascript" src="../js/zepto-tap.js"></script>
+	<script type="text/javascript">
+		$('.foot li:eq(0)').on('tap',function(){
+			window.location.href='main.html';
+			console.log('123');
+		});
+		$('.foot li:eq(1)').on('tap',function(){
+			window.location.href='list.html';
+
+		})
+		$('.foot li:eq(2)').on('tap',function(){
+			
+			window.location.href='buycar.html';
+		})
+		$('.foot li:eq(3)').on('tap',function(){
+			window.location.href='myshow.html';
+		})
+		$('.foot li:eq(4)').on('tap',function(){
+			window.location.href='more.html';
+		})
+		
+
+		$('.foot ul li').on('tap',function(){
+			var index = $(this).index();
+			console.log(index);
+			getTypeByLocal(index);
+		})
+		function getTypeByLocal(index){
+			var reg = /^htmlType_/;
+			for(var i=0;i<localStorage.length;i++){
+				var key = localStorage.key(i);
+				if(reg.test(key)){
+					var oIndex = key.split('_')[1];
+					//取出对应key的htmlType_n里面n的值，
+					if(oIndex==index){   
+						//然后就跳转到点击的li下标的htmlType的值得页面
+						var myHtml = localStorage.getItem(key);
+						window.location.href=myHtml+'.html';
+					}
+				}
+			}
+		}
+	</script>
