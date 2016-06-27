@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>我的订单</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="../css/order.css">
+	<link rel="stylesheet" href="../img/iconfont/ux/iconfont.css">
+</head>
+<body>
+	<div class="tit">
+		<a href="javascript:history.go(-1);"></a>
+		<p>我的订单</p>
+	</div>
+	<ul class="main">
+		<li>
+			<dl>
+				<dt><img src="" alt=""></dt>
+				<dd>
+					<div class="top">
+						<p>ESPRIT <span>气质V领玫红</span></p>
+						<i>L</i>
+					</div>
+					<p>T衬衣</p>
+					<div class="top price">
+						<p>单价：<span>￥199</span></p>
+					</div>
+					<div class="sum">
+						<p>数量：<span>1</span></p>
+					</div>
+					<span id="quit-order">取消订单</span>
+				</dd>
+			</dl>
+		</li>
+	</ul>
+	<script type="text/javascript" src="../js/order.js"></script>
+	<div id="footer11"></div>
+	<script>
+		$("#footer11").load("footer.html",function(){
+			$("#tubiao li").eq(2).addClass('active').siblings().removeClass('active');
+		});
+	</script>
+	
+</body>
+</html>
