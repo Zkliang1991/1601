@@ -2,9 +2,9 @@
 .swiper-container {
 	width: 100vw;
 	height: 39vw;
-	position: absolute;
+	/*position: absolute;
 	top: 14.1vw;
-	left: 0;
+	left: 0;*/
 }
 
 .swiper-container img {
@@ -123,7 +123,7 @@
   position: absolute;
   z-index: 1;
   /*  header 和footer 的高度 */
-  top: 68vw;
+  top: 28.2vw;
   bottom: 14.1vw;
   width: 100%;
   background: rgab(0, 0, 0, 0.1);

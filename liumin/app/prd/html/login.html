@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>我的秀</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<script type="text/javascript" src="../js/jquery-2.2.3.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/login.css">
+	<link rel="stylesheet" type="text/css" href="../css/head.css">
+	<link rel="stylesheet" type="text/css" href="../ux1/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="../css/regist.css">
+	<!-- <script type="text/javascript" src="../js/login.js"></script> -->
+</head>
+<body>
+	<header id="header">
+		<div class="head">
+			<header>
+				<a src="javascript:;" onClick="javascript:history.go(-1);" class="iconfont">&#xe63d;</a>
+				<span class="name">登录</span>
+				<a href="regist.html" class="kuang">注册</a>
+			</header>
+			
+		</div>
+	</header>
+	
+	<section>
+		<form class="login">
+			<input type="text" placeholder="账号" class="number" id="number">
+			<input type="password" placeholder="密码" class="pwd" id="pwd">
+			<input type="checkbox" id="select"><span>记住密码</span>
+			<a>忘记密码？</a>
+		</form>
+		<a href="javascript:;" class="denglu">登录</a>
+	</section>
+	
+	<footer id="footer"></footer>
+	<script type="text/javascript">
+		$("#footer").load("foot.html",function(){
+			var url = window.location.href;
+			var htmlName = url.split('/');
+			var thisHtml = null;
+			for(var i=0;i<htmlName.length;i++){
+				if(htmlName[i].indexOf('.html')!=-1){
+					thisHtml = htmlName[i].split('.html')[0];
+				}
+			}
+			console.log(thisHtml);
+			var reg = /^htmlType_/;
+			var myHtml = 'htmlType_';
+			console.log(localStorage.length);
+			// console.log(localStorage.key(0).split('_')[1]);
+			for(var i=0;i<localStorage.length;i++){
+				
+				var key = localStorage.key(i);
+				if(reg.test(key)){
+					var oIndex = key.split('_')[1];
+					if(oIndex==3){
+						localStorage.setItem(myHtml+'3',thisHtml)
+					}
+				}
+			}
+		});
+
+	</script>
+	
+</body>
+</html>
