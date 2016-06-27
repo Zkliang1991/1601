@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>走秀首页</title>
+	<link rel="stylesheet" type="text/css" href="../css/index.css">
+	<link rel="stylesheet" type="text/css" href="../ux/iconfont.css">
+</head>
+<body>
+	<header class="header">
+		<p><span>zxiu</span>走秀</p>
+	</header>
+	<div class="search-wrap">
+		<div class="search">
+			<input class="search-btn" type="button" name="">
+			<input class="search-txt" type="text" name="" placeholder="请输入搜索内容">
+		</div>
+	</div>
+	<div class="swiper-container" id="myswiper1">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide slide1" data-hash="swiper1"><img /></div>
+			<div class="swiper-slide slide2" data-hash="swiper2"><img /></div>
+			<div class="swiper-slide slide3" data-hash="swiper3"><img /></div>
+			<div class="swiper-slide slide4" data-hash="swiper4"><img /></div>
+		</div>
+		<div class="swiper-pagination"></div>
+	</div>
+	<div id="wrapper">
+		<div id="scroller">
+			<div id="pullDown">
+				<span class="pullDownIcon"></span>
+				<span class="pullDownLabel">下拉刷新...</span>
+			</div>
+			<ul id="thelist">
+				<!-- <li>
+					<dl>
+						<dt><img src=""><a></a></dt>
+						<dd>
+							<p class="p1">下拉刷新下拉刷新下拉刷新下拉刷新下拉刷新下拉刷新下拉刷新</p>
+							<p class="p2">下拉<span>￥2888</span></p>
+							<p class="p3">下拉</p>
+							<button class="iconfont">
+						</dd>
+					</dl>
+				</li> -->
+			</ul>
+			<div id="pullUp">
+				<span class="pullUpIcon"></span>
+				<span class="pullUpLabel">加载更多...</span>
+			</div>
+		</div>
+	</div>
+	<div class="btm-list"></div>
+	<script type="text/javascript" src="../js/jquery-2.2.3.js"></script>
+	<script type="text/javascript">
+		$(".btm-list").load("footer.html");
+	</script>
+	<script type="text/javascript" src="../js/main.js"></script>
+</body>
+</html>
