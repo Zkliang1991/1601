@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="../css/start.css" type="text/css">
 	<link rel="stylesheet" href="../css/swiper-3.3.1.min.css">
 	<script src="../js/zepto.js"></script>
+	<script src="../js/zepto-tap.js"></script>
 	<script src="../js/swiper-3.3.1.min.js"></script>
 </head>
 <body>
@@ -17,7 +18,7 @@
 			<div class="swiper-slide slide3" data-hash="slide1"></div>
 			<div class="swiper-slide slide4" data-hash="slide1"></div>
 			<div class="swiper-slide slide5" data-hash="slide5">
-				<button type="button">开始体验</button>
+				<button type="button" id="start">开始体验</button>
 			</div>
 		</div>
 		<div class="swiper-pagination"></div>
@@ -36,7 +37,27 @@
 			simulateTouch : true,
 			pagination : '.swiper-pagination',
 			paginationClickable :true,
-			paginationElement : 'li',
+			watchSlidesProgress : true,
+			watchSlidesVisibility : true,
+			paginationElement : 'li'
+		})
+
+		$(document.body).on("touchstart",mySwiper,function(){
+			var index = mySwiper.activeIndex;
+			if(index==0){
+				mySwiper.lockSwipeToPrev();
+			}
+			else if(index==3){
+				mySwiper.lockSwipeToNext();
+			}
+			else{
+				mySwiper.unlockSwipeToPrev();
+				mySwiper.unlockSwipeToNext();
+			}
+		})
+
+		$("#start").on("tap",function(){
+			window.location.href = 'main-swiper.html';
 		})
 	</script>
 </body>
