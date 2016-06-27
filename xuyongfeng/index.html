@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+    <meta charset="utf-8">  
+<meta name="viewport" content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no'>
+
+    <title>xiu秀出你的每一天</title>
+    <link rel="stylesheet" type="text/css" href="css/show.css"/>
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css">
+    <link rel="stylesheet" href="iconfont/ux/iconfont.css">
+ 	<script src="js/swiper-3.3.1.min.js"></script>	
+ 	<script src="js/iscroll.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="js/index-iscroll.js"></script>
+ 
+</head>
+<body>
+	<div id="header">
+		<span>zxiu</span><h1>走秀网</h1>
+	</div>	
+
+	<div id="search">	
+		<input type="text" placeholder="请输入搜索内容" autocomplete="off" class="ser" />
+	</div>
+
+<!-- 轮播图 -->
+
+	<div id="banner">
+		<div class="swiper-container">
+		  <div class="swiper-wrapper">
+		    <div class="swiper-slide"><a href="javascript:;"><img src="img/banner1.jpg" alt="banner1"></a></div>
+		    <div class="swiper-slide"><a href="javascript:;"><img src="img/banner2.jpg" alt="banner2"></a></div>
+		    <div class="swiper-slide"><a href="javascript:;"><img src="img/banner3.jpg" alt="banner3"></a></div>
+		    <div class="swiper-slide"><a href="javascript:;"><img src="img/banner4.jpg" alt="banner4"></a></div>
+
+		  </div>
+		  <div class="swiper-pagination"></div>
+		</div>
+	</div>
+<!-------------------------scroller部分----------------------------->			
+			
+	<div id="scroller">
+			<div id="pullDown">
+				<span class="pullDownIcon"></span>
+				<span class="pullDownLabel">下拉刷新...</span>
+			</div>
+			<ul id="main">
+				<li>				
+					<div class="main-left"><img src="img/g1.jpg" alt="商品"></div>
+	
+					<div class="main-right">
+						<div class="main-rig-top">0元抽大奖抽大奖抽大奖
+						抽大奖抽大奖抽</div>
+						<div class="main-rig-bottom">						
+							<div class="main-rig-bott-l">							
+								<div class="main-rig-bott-l-top">
+									<div class="price">￥0</div>
+									<div class="noprice">￥28880</div>
+								</div>
+								<div class="main-rig-bott-l-bottom">0折</div>
+							</div>
+							
+							<div class="main-rig-bott-r">
+								<a href="javascript:;" class="iconfont cart"></a>
+							</div>
+						</div>
+					</div>	
+				</li>			
+			</ul>	
+
+			<div id="pullUp">
+				<span class="pullUpIcon"></span>
+				<span class="pullUpLabel">加载更多...</span>
+			</div>		
+	</div>		
+			
+	
+			
+			
+			
+	<!------------------------------footer-------------------------------->		
+			
+			
+	<footer>
+		<a href="javascript:;">
+			<dl>
+				<dt class="iconfont home_page"></dt>
+				<a href=""><dd>首页</dd></a>
+				
+			</dl>
+		</a>
+
+
+		<a href="sort.html">
+			<dl>
+				<dt class="iconfont sort"></dt>
+				<a href=""><dd>分类</dd></a>
+			</dl>
+		</a>
+		
+		
+		<a href="cart.html">
+			<dl>
+				<dt class="iconfont cart"></dt>
+				<a href=""><dd>购物车</dd></a>
+			</dl>
+		</a>
+		
+		<a href="myshow.html">
+			<dl>
+				<dt class="iconfont my_show"></dt>
+				<a href=""><dd>我的秀</dd></a>
+			</dl>
+		</a>
+
+		<a href="more.html">
+			<dl>
+				<dt class="iconfont more"></dt>
+				<a href=""><dd>更多</dd></a>
+			</dl>
+		</a>
+	</footer>
+		
+		
+		
+		
+	<script type="text/javascript">
+		var html = document.getElementById('html');
+		var width = document.documentElement.clientWidth;
+		html.style.fontSize = width/640*100 + "px";
+
+		window.onresize = function(){
+			var html = document.getElementById('html');
+			var width = document.documentElement.clientWidth;
+			html.style.fontSize = width/640*100 + "px";	
+		}
+
+		// swiper设置。
+
+		var mySwiper = new Swiper('.swiper-container',{
+		pagination : '.swiper-pagination',
+		paginationClickable :true,
+		})
+
+		 var mySwiper = new Swiper('.swiper-container',{
+		    loop: true,
+			autoplay: 3000,
+		  });
+
+	</script>
+
+</body>
+</html>
