@@ -1,0 +1,35 @@
+footer {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.98rem;
+  background: #484850;
+  color: #fff; }
+  footer ul {
+    width: 100%;
+    height: 0.98rem; }
+    footer ul li {
+      width: 1.28rem;
+      height: 0.98rem;
+      float: left;
+      list-style: none;
+      color: #fff; }
+      footer ul li i {
+        display: block;
+        height: 0.67rem;
+        text-align: center;
+        font-size: 0.5rem;
+        font-style: normal;
+        line-height: 0.67rem;
+        text-decoration: none; }
+      footer ul li span {
+        display: block;
+        text-align: center;
+        padding-bottom: 0;
+        font-size: 0.24rem;
+        font-weight: bolder; }
+
+.active {
+  color: red; }

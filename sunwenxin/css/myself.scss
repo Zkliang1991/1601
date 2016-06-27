@@ -1,0 +1,104 @@
+@charset 'UTF-8';
+*{
+	padding: 0;
+	margin: 0;
+}
+header {
+	width: 100%;
+	border-bottom: 0.01rem solid black;
+	background: #e4366b;
+	position: relative;
+	a {
+		display: block;
+		text-decoration: none;
+		line-height: 0.88rem;
+		position: absolute;
+		font-size: 0.4rem;
+		font-weight: bolder;
+		left: 0.16rem;
+		color: black;
+	}
+	span {
+		display: block;
+		font-size: 0.38rem;
+	    line-height: 0.88rem;
+	    color: #fff;
+	    font-weight: bold; 
+		text-align: center;
+	}
+}
+
+dl {
+	width: 100%;
+	height: 1.64rem;
+	margin: 0.62rem 0 0 0.3rem;
+	
+	dt {
+		float: left;
+		display: block;
+		width: 1.6rem;
+		height: 1.64rem;
+		background: url(../images/allnew1.jpg);
+		background-size: 1.62rem 1.64rem;
+	}
+	dd {
+		float: left;
+		display: block;
+		margin-left: 0.3rem;
+		p {
+			font-size: 0.36rem;
+			line-height: 0.94rem;
+		}
+	
+			input {
+				display: block;
+				width: 1.1rem;
+				height: 0.54rem;
+				float: left;
+				border-radius: 0.1rem;
+				background: deeppink;
+				line-height: 0.54rem;
+				text-align: center;
+				font-size: 0.28rem;
+				color: #fff;
+				border: 0;
+			}
+		.second {
+			margin-left: 0.4rem;
+		}
+	}
+}
+
+div {
+	width: 100%;
+	background: #fff;
+	ul {
+		margin: 0.84rem 1.12rem 0.6rem 0.3rem;
+		border: 1px solid #ccc;
+		border-radius: 0.2rem;
+		list-style: none;
+		.last {
+				border-bottom: 0;
+		}
+		li {
+			height: 0.84rem;
+			line-height: 0.84rem;
+			border-bottom: 1px solid #ccc;
+
+			span {
+				display: block;
+				float: left;
+				padding-left: 0.26rem;
+				font-size: 0.34rem;
+			}
+			a {
+				display: block;
+				float: right;
+				text-decoration:none;
+				padding-right: 0.26rem;
+				color: #ccc;
+				font-size: 0.3rem;
+			}
+		}
+	}
+}
