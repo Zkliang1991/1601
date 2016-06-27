@@ -1,0 +1,120 @@
+html{
+	background: #F1F1F1;
+}
+section {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100vw;
+	align-items: center;
+	background: #f1f1f1;
+	justify-content: center;
+}
+.inp-text{
+	display: flex;
+	width: 87.5vw;
+	height: 12.5vw;
+	border-width: 1px;
+	border-radius: 1.8vw;
+	border-bottom-color: #eee;
+	border-top-color: #ccc;
+	border-left-color: #ccc;
+	border-right-color: #eee;
+	margin-top: 10vw;
+	font-size: 6vw;
+	text-indent: 5.6vw;
+}
+input::-webkit-input-placeholder {
+	text-indent: 6vw;
+	font-size: 5vw;
+	line-height: 12.5vw;
+	color: #bbb;
+	font-family: "微软雅黑";
+}
+.ty{
+	display: flex;
+	border-radius: 2vw;
+	height: 14.06vw;
+	width: 87.5vw;
+	margin-top: 12vw;
+	background: linear-gradient(#f36f92,#d91351);
+	color: #f1f1f1;
+	font-size: 6vw;
+	justify-content: center;
+	align-items: center;
+}
+section .dltool{
+	width: 87.5vw;
+	height: 16vw;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	font-size: 4vw;
+}
+.dl{
+	margin-top: 0vw;
+}
+.dltool a{
+	text-decoration: underline;
+	color: #aaa;
+	margin-left: 6vw;
+}
+div input:checked + label{
+	color: red;
+}
+.tools{
+	width: 86vw;
+	border-radius: 3vw;
+	border:1px solid #BBBBBB;
+	display: flex;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+	background: #fff;
+	height: 58vw;
+	margin-top: 8vw;
+}
+.tools p{
+	display: flex;
+	height: 14vw;
+	padding: 4.2vw 0;
+	width: 86vw;
+	box-sizing: border-box;
+	border-bottom: 1px solid #BBBBBB;
+	text-indent: 6vw;
+	font-size: 5vw;
+	font-family: "微软雅黑";
+	background: url(../img/right.jpg) 78vw center no-repeat;
+	background-size: 5vw 5vw;
+}
+.tools p:nth-of-type(4){
+	border: 0;
+}
+
+.signout{
+	width: 86vw;
+	border-radius: 3vw;
+	border:1px solid #BBBBBB;
+	display: flex;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+	background: #fff;
+	height: 30vw;
+	margin-top: 5vw;
+}
+.signout p{
+	display: flex;
+	height: 14vw;
+	padding: 4.2vw 0;
+	width: 86vw;
+	box-sizing: border-box;
+	border-bottom: 1px solid #BBBBBB;
+	text-indent: 6vw;
+	font-size: 5vw;
+	font-family: "微软雅黑";
+	background: url(../img/right.jpg) right center no-repeat;
+}
+.signout p:nth-of-type(2){
+	border: 0;
+}
+.so{
+	margin-top: 4vw;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="../css/regist.css">
+	<link rel="stylesheet" type="text/css" href="../ux/iconfont.css">
+	<script type="text/javascript" src="../js/regist.js"></script>
+</head>
+<body>
+	<header><a href="javascript:history.go(-1);"></a><b>登录</b><a  class="go" href="regist.html">注册</a></header>
+	
+	<div class="regmain">
+		<input type="text" placeholder="账号" id="username" class="inp">
+		<input type="password" placeholder="密码" id="pass" class="inp">
+		<p class="warn">
+			<input type="checkbox" id="rempass"> <label for="rempass">记住密码</label>
+			<a>忘记密码?</a>
+		</p>
+		
+		<input type="button" value="登录" id="regbtn" class="inp">
+	</div>
+	
+	
+
+
+	<footer id="footer"></footer>
+	<script type="text/javascript">
+		$("#footer").load("footer.html",function(){
+			$('#footer ul li').eq(3).addClass('active');
+		});
+
+	</script>
+</body>
+</html>

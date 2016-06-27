@@ -1,0 +1,44 @@
+.userbox{
+    width: 100vw;
+    height: 36.25vw;
+    padding: 4.6vw;
+    background: #F5F4F0;
+    box-sizing: border-box;
+    display: flex;
+    margin-top: 3vw;
+    img{
+        width: 26vw;
+        height: 26vw;
+        border-radius: 3vw;
+        display: flex;
+    }
+    .userinfo{
+        width: 64vw;
+        height: 26vw;
+        padding-left: 3.8vw;
+        display: flex;
+        flex-wrap: wrap;
+        p{
+            display: flex;
+            align-items: center;
+            width: 64vw;
+            height: 15.6vw;
+            font-size: 5vw;
+            font-family: "microsoft yahei";
+        }
+        a{
+            display: flex;
+            width: 16vw;
+            height: 7vw;
+            border-radius: 2vw;
+            background: linear-gradient(#f65b85,#c50f48);
+            justify-content: center;
+            align-items: center;
+            font-size: 4vw;
+            color: #f1f1f1;
+        }
+        .zhuc{
+            margin-left: 2vw;
+        }
+    }
+}
