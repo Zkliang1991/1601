@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>更多</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="../prd/css/more.css">
+</head>
+<body>
+	<header>
+		<a href="javascript:history.go(-1)"></a>
+		<h2>更多</h2>
+	</header>
+	
+	<section>
+		<ul class="list1">
+			<li>常见问题</li>
+			<li>系统设置</li>
+			<li>软件更新</li>
+			<li class="border-none">扫描二维码</li>
+		</ul>
+		<ul class="list2">
+			<li>我要提意见</li>
+			<li>关于</li>
+		</ul>
+		<span>退出登录</span>
+	</section>
+	<script type="text/javascript" src="../prd/js/more.js"></script>
+	<footer id="footer"></footer>
+	<script type="text/javascript">
+		$("#footer").load("footer.html",function(){
+			$('#footer ul li').eq(4).addClass('active');
+			/*var url = window.location.href;
+			//每次刷新新的页面，就把url里.html的前面值截取出来
+			var htmlName = url.split('/');
+			console.log(htmlName);
+			var thisHtml = null;
+			for(var i=0;i<htmlName.length;i++){
+				if(htmlName[i].indexOf('.html')!=-1){
+					//在.html前截取
+					thisHtml = htmlName[i].split('.html')[0];
+				}
+			}
+			console.log(thisHtml);
+			var reg = /^htmlType_/;
+			var myHtml = 'htmlType_';
+			for(var i=0;i<localStorage.length;i++){
+				var key = localStorage.key(i);
+				if(reg.test(key)){
+					var oIndex = key.split('_')[1];
+					if(oIndex==0){
+						// 然后就修改li的本地localStorage的htmlType_n的值
+						localStorage.setItem(myHtml+'0',thisHtml)
+					}
+				}
+			}*/
+		});
+	</script>
+	
+</body>
+</html>

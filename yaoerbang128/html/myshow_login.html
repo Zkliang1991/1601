@@ -1,0 +1,56 @@
+
+<section>
+<ul class="main">
+		<li class="log-in lm">
+					<h1><span class="iconfont" id="back">&#xe604;</span>登录<button type="button" id="logup">注册</button></h1>
+					<ul class="log">
+						<li><input type="text" value="账号" class="username"></li>
+						<li><input type="text" value="密码" class="password"></li>
+						<li>
+							<input type="checkbox" id="check">记住密码
+							<a href="#">忘记密码 ？</a>
+							<span class="submit" style="position:absolute;top:7.5rem;left:2.4rem;font-size:0.24rem;color:red;"></span>
+						</li>
+						<button type="button" id="login">登录</button>
+					</ul>
+		</li>
+</ul>
+
+</section>
+<script>
+	$("#logup").on("tap",function(){
+		$('section').load('myshow_logup.html');
+	})
+	$("#back").on("tap",function(){
+		// window.history.back();
+		$('section').load('myshow_user.html');
+	})
+
+	$('#login').on('tap',function(){
+			var $name = $('.username').val();
+			var $pass = $('.password').val();
+			$.ajax({
+				url:'http://datainfo.duapp.com/shopdata/userinfo.php',
+				type:'post',
+				data:{
+					status:'login',
+					userID: $name,
+					password: $pass
+				},
+				success:function(data){
+					if(data=='0') {
+					$('.submit').html('用户名不存在');
+					}else if(data=='2') {
+						$('.submit').html('用户名密码不符');
+					}
+					else{
+						$('section').load('myshow_user.html');
+						localStorage.setItem("username",$name);
+					}
+				},
+				error:function(data){
+					return false;
+				}
+			})
+		})
+</script>

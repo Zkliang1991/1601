@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物车</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="../css/shopping.css">
+	<!-- <link rel="stylesheet" type="text/css" href="../img/iconfont/ux/iconfont.css"> -->
+</head>
+<body>
+	<div class="tit">
+		<a href="javascript:history.go(-1);"></a>
+		<p>购物车</p>
+		<input type="button" value="去结算">
+	</div>
+
+	<div class="page1">
+		<div class="header">
+			<p>商品数量：<span>1</span></p>
+			<p>应付总额(不含运费)：<span>￥199</span></p>
+		</div>
+		<ul>
+			<li>
+				<dl>
+					<dt><img src="" alt=""></dt>
+					<dd>
+						<div class="top">
+							<p>ESPRIT <span>气质V领玫红</span></p>
+							<i></i>
+						</div>
+						<p>T衬衣</p>
+						<div class="top price">
+							<p>单价：<span>￥199</span></p>
+							<i>L</i>
+						</div>
+						<div class="sum">
+							<p>数量：</p>
+							<span class="del">-</span>
+							<input type="text" value="1">
+							<span class="add">+</span>
+						</div>
+					</dd>
+				</dl>
+			</li>
+		</ul>
+	</div>
+	<div class="page2">
+		<div class="txt">您的购物车空空~</div>
+		<img src="../img/0.jpg" alt="">
+		<span class="sp">去逛逛</span>
+
+	</div>
+
+
+
+	<script type="text/javascript" src="../js/shopping.js"></script>
+	<footer id="footer"></footer>
+		<script type="text/javascript">		
+			$("#footer").load("footer.html",function(){
+				$("#tubiao li").eq(2).addClass('active').siblings().removeClass('active');
+			});
+		</script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+.emptycar {
+  width: 100vw;
+  display: none;
+  padding-top: 10vw; }
+  .emptycar span {
+    display: flex;
+    width: 100vw;
+    height: 14vw;
+    justify-content: center;
+    align-items: center;
+    font-size: 6vw;
+    color: #666; }
+  .emptycar div {
+    width: 100vw;
+    height: 78vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start; }
+    .emptycar div img {
+      width: 41vw;
+      height: 41vw; }
+    .emptycar div a {
+      display: flex;
+      width: 65.6vw;
+      height: 14vw;
+      background: linear-gradient(#f75f88, #d91351);
+      border-radius: 2vw;
+      color: #f1f1f1;
+      font-size: 7vw;
+      justify-content: center;
+      align-items: center; }
+
+.notempty {
+  width: 100vw;
+  display: block; }
+  .notempty .car-count p {
+    width: 100vw;
+    font-size: 4.6vw;
+    line-height: 14vw;
+    padding-left: 4vw;
+    box-sizing: border-box;
+    height: 14.1vw;
+    background: #242424;
+    color: #f1f1f1; }
+    .notempty .car-count p span:nth-of-type(1) {
+      margin-right: 6vw; }
+    .notempty .car-count p span:nth-of-type(2) {
+      color: #F75F88; }
+  .notempty .car-foods li {
+    width: 100vw;
+    height: 36vw;
+    border-bottom: 1px solid #666;
+    display: flex;
+    padding: 4vw;
+    box-sizing: border-box; }
+    .notempty .car-foods li div:nth-of-type(1) img {
+      width: 26.5vw;
+      height: 26.5vw; }
+    .notempty .car-foods li .nm {
+      width: 60vw;
+      height: 26.5vw;
+      padding-left: 4vw;
+      box-sizing: border-box; }
+      .notempty .car-foods li .nm .car-foods-name {
+        display: flex;
+        width: 60vw;
+        height: 13.4vw;
+        font-size: 4.6vw;
+        line-height: 7vw; }
+        .notempty .car-foods li .nm .car-foods-name a {
+          width: 12vw;
+          height: 13.4vw;
+          text-align: end;
+          font-size: 6.2vw;
+          color: #000; }
+      .notempty .car-foods li .nm .car-foods-price {
+        width: 60vw;
+        height: 8vw;
+        font-size: 5vw;
+        line-height: 8vw; }
+        .notempty .car-foods li .nm .car-foods-price span:nth-of-type(1) {
+          color: #D91754; }
+        .notempty .car-foods li .nm .car-foods-price .daxiao {
+          display: inline-block;
+          width: 30vw;
+          height: 8vw;
+          text-align: end; }
+      .notempty .car-foods li .nm .car-foods-count {
+        width: 60vw;
+        height: 8vw;
+        display: flex;
+        line-height: 8vw;
+        font-size: 5vw; }
+        .notempty .car-foods li .nm .car-foods-count input {
+          width: 10vw;
+          height: 8vw;
+          border: 1px solid #ccc;
+          border-radius: 1vw;
+          margin: 0 3vw;
+          text-align: center; }
+        .notempty .car-foods li .nm .car-foods-count a {
+          display: flex;
+          height: 8vw;
+          width: 10vw;
+          border-radius: 2vw;
+          background: linear-gradient(#a0a0a0, #585858);
+          font-size: 7vw;
+          justify-content: center;
+          align-items: center;
+          color: #fff; }
+      .notempty .car-foods li .nm .sc-count {
+        width: 60vw;
+        height: 8vw;
+        display: flex;
+        line-height: 8vw;
+        font-size: 4vw; }
+        .notempty .car-foods li .nm .sc-count span:nth-of-type(2) {
+          width: 10vw;
+          height: 8vw;
+          margin-left: 5vw;
+          display: flex;
+          color: #CCC;
+          text-decoration: line-through; }
+        .notempty .car-foods li .nm .sc-count a {
+          display: flex;
+          width: 12vw;
+          height: 8vw;
+          border-radius: 2vw;
+          border: 1px solid #F1F1F1;
+          background: linear-gradient(#f22d6a, #d91351);
+          color: #fff;
+          font-size: 5vw;
+          margin-left: 26vw;
+          justify-content: center;
+          align-items: center; }
+
+/*# sourceMappingURL=car.css.map */

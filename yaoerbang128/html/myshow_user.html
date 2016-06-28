@@ -1,0 +1,57 @@
+
+<section>
+<ul class="main">
+		<li class="user lm">
+					<h1><span class="iconfont" id="back">&#xe604;</span>我的秀</h1>
+					<div class="content">
+						<div class="iconfont head">&#xe627;</div>
+						<ul  class="top">
+							<li class="list1">昵称：<span id="user">未知</span></li>
+							<li class="list2">
+								<button class='log-in'>登录</button>
+								<button class="log-up">注册</button>
+							</li>
+						</ul>
+						<ul class="bottom">
+							<li>我的订单<span class='iconfont'>&#xe61a;</span></li>
+							<li>我的优惠券<span class='iconfont'>&#xe61a;</span></li>
+							<li>浏览记录<span class='iconfont'>&#xe61a;</span></li>
+							<li class="le">我的收藏<span class='iconfont'>&#xe61a;</span></li>
+						</ul>
+					</div>
+				</li>
+</ul>
+</section>
+<script>
+	$(".myshow button[class='log-in']").on("tap",function(){
+     $('section').load('myshow_login.html');
+    });
+
+    $(".myshow button[class='log-up']").on("tap",function(){
+     	$('section').load('myshow_logup.html');
+	});
+
+     $(".myshow .bottom li").first().on("tap",function(){
+     	$('section').load('myshow_order.html');
+     })
+
+    $("#user").html(localStorage.getItem("username"));
+     // $("#user").html(localStorage.getItem("username");
+			// $.ajax({
+			// 	url:'http://datainfo.duapp.com/shopdata/getuser.php',
+			// 	type:'post',
+			// 	data:{
+			// 		userID: $name
+			// 	},
+			// 	success:function(data){
+			// 			if(data=="登录成功"){
+			// 				console.log(data);
+			// 				$("#user").html(localStorage.getItem("username",$name));
+			// 			}
+			// 		},
+			// 	error:function(data){
+			// 		return false;
+			// 	}
+			// })
+
+</script>

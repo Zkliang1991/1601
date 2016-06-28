@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物车为0</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="../css/cart0.css">
+	<link rel="stylesheet" href="../img/iconfont/ux/iconfont.css">
+</head>
+<body>
+	<div class="tit">
+		<a href="javascript:history.go(-1);"></a>
+		<p>购物车</p>
+		<input type="button" value="去结算">
+	</div>
+	<div class="txt">您的购物车空空~</div>
+	<img src="../img/0.jpg" alt="">
+	<span class="sp">去逛逛</span>
+
+	<script type="text/javascript" src="../js/cart0.js"></script>
+	<div id="footer11"></div>
+	<script>
+		$("#footer11").load("footer.html",function(){
+			$("#tubiao li").eq(2).addClass('active').siblings().removeClass('active');
+		});
+	</script>
+</body>
+</html>
