@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+	<meta charset="UTF-8">
+	<title>我的秀</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="../css/order.css">
+</head>
+<body>
+	<header>
+		<a href="javascript:history.go(-1);"></a>
+		<p>我的订单</p>
+	</header>
+	<div class="cart-money">
+		<ul class="cart-ul">
+			<li>
+				<dl>
+					<dt><img src="../images/myshow.jpg"></dt>
+					<dd>
+						<p class="cdl-tit"><span>美国加州无籽红提1kg装</span><span class="myordert-right">L</span></p>
+						<div class="myordpri-right">
+							<p class="cdl-price"><span>单价：</span><span class="cdlp-left">￥<b>199</b></span> </p>
+							<p class="cdl-num"><span>数量：</span><span>1</span></p>
+						</div>
+						<a class="myordpri-left" href="javascript:;">取消订单</a>
+					</dd>
+				</dl>
+			</li>
+		</ul>
+	</div>
+	<div id="footer"></div>
+	<script type="text/javascript" src="../js/lr.js"></script>
+	<script type="text/javascript">
+	    $('#footer').load('../html/footer.html',function(){
+	    	$('#foot-ul li').siblings().removeClass('active').eq(2).addClass('active');
+	    });
+	</script>
+	
+</body>
+</html>
