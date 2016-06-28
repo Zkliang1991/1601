@@ -130,7 +130,9 @@ ul, li {
 
 body, html {
   width: 100%;
-  background: #fff; }
+  height: 38.33333rem;
+  background: #fff;
+  overflow: hidden; }
 
 article {
   width: 100%;
