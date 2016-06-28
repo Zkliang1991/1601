@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+	<head>
+		<meta charset="UTF-8">
+		<title>注册</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../prd/css/reg.css">
+	</head>
+	<body>
+		<header>
+			<a href="javascript:history.go(-1)"></a>
+			<span>注册</span>
+			<a href="login.html" class="gologin">登录</a>
+		</header>
+		<div>
+			<input type="text" name="username" class="username" placeholder="账号" />
+			<input type="password" name="pass" class="pass" placeholder="密码" />
+			<input type="password" name="pass" class="passtwo" placeholder="重复密码" />
+			<a href="#" class="login">同意服务协议并注册</a>
+		</div>
+		
+		<script type="text/javascript" src="../prd/js/reg.js">		
+		</script>
+
+		<footer id="footer"></footer>
+		<script type="text/javascript">
+			$("#footer").load("footer.html",function(){
+				$('#footer ul li').eq(3).addClass('active');
+			});
+		</script>
+	</body>
+</html>

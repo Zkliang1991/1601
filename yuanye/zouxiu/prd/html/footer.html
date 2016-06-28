@@ -1,0 +1,68 @@
+
+<ul class="iconfont">
+	<li class='Quindex'>
+		<p>&#xe646;</p>
+		<span>首页</span>
+	</li>
+	<li class='Qulist'>
+		<p>&#xe607;</p>
+		<span>分类</span>
+	</li>
+	<li class='QushopC'>
+		<p>&#xe60d;</p>
+		<span>购物车</span>
+	</li>
+	<li class="Qumyshow">
+		<p>&#xe67a;</p>
+		<span>我的秀</span>
+	</li>
+	<li class="Qumore">
+		<p>&#xf0013;</p>
+		<span>更多</span>
+	</li>
+</ul>
+<script type="text/javascript">
+	// $('.iconfont li').on('tap',function(){
+	// 	$(this).addClass('borderT').siblings().removeClass('borderT');
+	// });
+	$('.Quindex').on('click',function(){
+		if (window.location.href.split('?').length>1) {
+			var userIDs = window.location.href.split('?')[1].split('=')[1];
+			window.location.href = 'index.html?userID='+userIDs;
+		}else{
+			window.location.href = 'index.html';
+		}
+	});
+	$('.Qulist').on('click',function(){
+		if (window.location.href.split('?').length>1) {
+			var userIDs = window.location.href.split('?')[1].split('=')[1];
+			window.location.href = 'list.html?userID='+userIDs;
+		}else{
+			window.location.href = 'list.html';
+		}
+	});
+	$('.QushopC').on('click',function(){
+		if (window.location.href.split('?').length>1) {
+			var userIDs = window.location.href.split('?')[1].split('=')[1];
+			window.location.href = 'shopCar.html?userID='+userIDs;
+		}else{
+			window.location.href = 'shopCar.html';
+		}
+	});
+	$('.Qumyshow').on('click',function(){
+		if (window.location.href.split('?').length>1) {
+			var userIDs = window.location.href.split('?')[1].split('=')[1];
+			window.location.href = 'myshow.html?userID='+userIDs;
+		}else{
+			window.location.href = 'myshow.html';
+		}
+	});
+	$('.Qumore').on('click',function(){
+		if (window.location.href.split('?').length>1) {
+			var userIDs = window.location.href.split('?')[1].split('=')[1];
+			window.location.href = 'more.html?userID='+userIDs;
+		}else{
+			window.location.href = 'more.html';
+		}
+	});
+</script>

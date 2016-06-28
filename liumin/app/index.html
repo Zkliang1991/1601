@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="stylesheet" type="text/css" href="prd/css/index.css">
+	
+	
+	<title>我的秀</title>
+</head>
+<body>
+	<div class="bg"></div>
+	<div class="swiper-container" id="myswiper1" >
+		<div class="swiper-wrapper">
+			<div class="swiper-slide slide1" data-hash='slide1'>
+				<img data-src="prd/img/1-bg.jpg" class="swiper-lazy">
+				<div class="swiper-lazy-preloader"></div>
+			</div>
+			<div class="swiper-slide slide2" data-hash='slide2'>
+				<img data-src="prd/img/2-bg.jpg" class="swiper-lazy">
+				<div class="swiper-lazy-preloader"></div>
+			</div>
+
+			<div class="swiper-slide slide3" data-hash='slide3'>
+				<img data-src="prd/img/3-bg.jpg" class="swiper-lazy">
+				<div class="swiper-lazy-preloader"></div>
+			</div>
+			<div class="swiper-slide slide4" data-hash='slide4'>
+				<img data-src="prd/img/4-bg.jpg" class="swiper-lazy">
+				<div class="swiper-lazy-preloader"></div>
+			</div>
+		</div>
+		<div class="swiper-pagination"></div>
+	</div>
+	<script type="text/javascript" src="prd/js/index.js"></script>
+	<script type="text/javascript">
+		setInterval(function(){
+			$('.bg').attr('style','display:none');
+		},2500)
+		 
+	</script>
+	<script type="text/javascript">
+		var arrhtml=['main','list','buycar','myshow','more'];
+		//判断用户是否第一次登陆 如果第一次打开，把footer默认初始跳转的值传到localStorage
+		if(localStorage.pCount){
+		localStorage.pCount = JSON.parse(localStorage.pCount) + 1;
+		}else{
+			localStorage.pCount = 1;
+		}
+		for(var i =0;i<arrhtml.length;i++){
+			if(localStorage.pCount==1){     //用户第一次登陆
+				var htmlType = 'htmlType_'+i;
+				localStorage.setItem(htmlType,arrhtml[i]);
+				//把页面的url中的具体存到本地来
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,273 @@
+
+	
+	@fe :"Microsoft yahei";
+* {
+  margin: 0;
+  padding: 0; }
+  
+	body{
+		background:rgba(0,0,0,.1);
+	}
+/*header矢量图标*/
+.iconfont2 {
+  font-size: 30px;
+  font-family: "iconfont2" !important; }
+
+  .back:before{
+  	content:"\f007a";
+		width: 0.97rem;	
+		height:0.86rem;
+		float: left;
+		color:#000000;
+		font-size:0.40rem;
+		text-align: center;
+		line-height: 0.86rem;
+  }
+  .fangdajing{
+  	background: #fff;
+  	width: 0.6rem;
+  	height:0.53rem;
+  	border-bottom-left-radius: 0.2rem;
+    border-top-left-radius:0.2rem;
+    text-align: center;
+		
+  }
+
+  .fangdajing:before{
+  	content:"\e624";
+		
+		/*float: left;*/
+		color:#000000;
+		font-size:0.40rem;
+		
+		line-height: 0.53rem;			
+  }
+  
+ /*---------------header----------------*/ 
+
+#header{
+  position: relative;
+  width: 100%;
+  height: 0.86rem;
+  line-height: 0.4rem;
+  color: #fff;
+ 
+/*  text-align: center;*/
+  background: #e4366b; }
+  
+  /*去结算*/
+ .btn{	
+ 	float: right;
+ 	/*display: block;*/
+ 	width: 1.09rem;
+ 	height:0.53rem;
+ 	color:#fefefe;
+ 	line-height: 0.53rem;
+ 	background: #e53269;
+ 	font-size: 0.24rem;
+ 	font-family: "微软雅黑";
+ 	border:1px solid deeppink;
+ 	text-align: center;
+ 	text-decoration:none;
+ 	border-radius:0.15rem;
+ 	margin-right:0.2rem;
+ 	margin-top:0.15rem;
+ }
+  #header span {
+  /*	position:absolute;*/
+  	padding-left:0.96rem ;
+    display: inline-block;
+    height: 0.27rem;
+    font-size: 0.27rem;
+    font-family: arial; }
+  #header h1 {
+  	
+    display: inline-block;
+    padding-left: 0.4rem;
+    font-size: 0.4rem;
+    color: yellow;
+    height: 0.4rem; }
+
+/* ------------------------------------  */  
+
+
+
+
+
+
+
+
+
+
+/*------------------我的订单------------------------*/
+
+
+footer {
+	
+  width: 6.4rem;
+  height: 0.98rem;
+  position: absolute;
+  
+  
+  width: 6.4rem;
+  height: 0.98rem;
+  position: absolute;
+  bottom: 0; }
+  footer dl {
+    width: 1.28rem;
+    height: 0.97rem;
+    float: left;
+    background: #484850; }
+    footer dl dt {
+      width: 1.28rem;
+      height: 0.49rem;
+      text-align: center; }
+    footer dl dd {
+      width: 1.28rem;
+      height: 0.41rem;
+      font-size: 0.24rem;
+      line-height: 0.41rem;
+      text-align: center;
+      color: #fff; }
+
+.iconfont {
+  font-size: 30px;
+  color: #fff;
+  font-family: "iconfont" !important; }
+
+.home_page:before {
+  content: "\e604";
+  font-size: 0.5rem;
+  line-height: 0.5rem; }
+
+.sort:before {
+  content: "\e7ad";
+  font-size: 0.5rem;
+  line-height: 0.5rem;
+  text-align: center; }
+
+.cart:before {
+  content: "\e654";
+  font-size: 0.5rem;
+  line-height: 0.5rem;
+  text-align: center; }
+
+.my_show:before {
+  content: "\e735";
+  font-size: 0.5rem;
+  line-height: 0.5rem;
+  text-align: center; }
+
+.more:before {
+  content: "\f0013";
+  font-size: 0.5rem;
+  line-height: 0.5rem;
+  text-align: center; }
+
+
+/*  登陆注册input部分  */
+	
+	
+	
+	.login-ipt{
+		width: 100%;
+		padding: 0.1rem  0.4rem 0  0.4rem;
+		box-sizing: border-box;
+		/*background: pink;*/
+	}
+	 .username{
+		background:red ;
+		margin-top:0.5rem;
+		width: 5.6rem;
+		height: 0.8rem;
+		background: #fff;
+		display: block;
+		border:0;
+		outline: none;
+		font-size:0.36rem;
+		font-weight: 300;
+		border-radius: 10px;
+		font-family: "微软雅黑";
+		padding-left: 0.25rem;
+		box-sizing: border-box;
+		line-height: 0.8rem;
+	}
+	
+	 .pass{
+		background:red ;
+		margin-top:0.5rem;
+		width: 5.6rem;
+		height: 0.8rem;
+		background: #fff;
+		display: block;
+		border:0;
+		outline: none;
+		font-size:0.36rem;
+		font-weight: 300;
+		border-radius: 10px;
+		font-family: "微软雅黑";
+		padding-left: 0.25rem;
+		box-sizing: border-box;
+		line-height: 0.8rem;
+	}
+	
+	
+	
+	.pp1::-webkit-input-placeholder{
+		color:#666;
+	}
+	
+	.login-ipt span{
+		/*display: block;*/
+		font-size: 0.24rem;
+		/*float: left;*/
+	}
+	.forget{
+	/*	display: block;*/
+		font-size: 0.24rem;
+	/*	float: left;*/
+		
+	}
+	
+	
+	
+	
+	 .denglu{
+		display: block;
+		width: 5.6rem;
+		height: 0.9rem;
+		margin-top: 1.2rem;
+		color: #fff;
+		font-size:0.36rem;
+		font-weight: 300;
+		border-radius: 10px;
+		font-family: "微软雅黑";
+		text-align: center;
+		line-height: 0.9rem;
+		text-decoration: none;
+		background: -webkit-linear-gradient(top,pink,deeppink);
+		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

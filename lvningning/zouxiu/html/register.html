@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+	<meta charset="UTF-8">
+	<title>登录</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="../css/register.css">
+	<link rel="stylesheet" href="../img/iconfont/ux/iconfont.css">
+</head>
+<body>
+	<div class="tit">
+		<a href="javascript:history.go(-1);"></a>
+		<p>登录</p>
+		<input type="button" value="注册" id="login">
+	</div>
+	<section>
+		<input type="text" name="username" class="username" placeholder="账号">
+		<input type="password" name="pass" class="pass" placeholder="密码">
+		<div class="check">
+			<input type="checkbox">
+			<span>记住密码</span>
+			<a href="###">忘记密码</a>
+		</div>
+		<a class="register" href="javascript:;">登录</a>
+		<div class="wall"></div>
+		<div class="box">
+			<b>注册成功</b>
+			<span>确定</span>
+		</div>
+	</section>
+
+	<script type="text/javascript" src="../js/register.js"></script>
+	<div id="footer11"></div>
+	<script type="text/javascript">
+		$("#footer11").load("footer.html",function(){
+			$("#tubiao li").eq(3).addClass('active').siblings().removeClass('active');
+			var url = window.location.href;
+			console.log(url);
+			var htmlName = url.split("/");
+			console.log(htmlName);
+			var thisHtml = null;
+			for(var i=0;i<htmlName.length;i++){
+				if(htmlName[i].indexOf(".html")!=-1){
+					thisHtml = htmlName[i].split(".html")[0];
+				}
+			}
+			console.log(thisHtml);
+
+			var reg = /^htmlType_/;
+			var myHtml = "htmlType_";
+			for(var i=0;i<localStorage.length;i++){
+				var key = localStorage.key(i);
+				if(reg.test(key)){
+					var oIndex = key.split("_")[1];
+					if(oIndex==3){
+						localStorage.setItem(myHtml+"3",thisHtml);
+					}
+				}
+			};
+					
+		
+
+
+		});
+			
+	</script>
+</body>
+</html>

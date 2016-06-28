@@ -1,0 +1,61 @@
+<link rel="stylesheet" type="text/css" href="../css/footer.css">
+<link rel="stylesheet" href="../img/iconfont/ux/iconfont.css">
+
+<footer id="footer">
+		<ul id="tubiao">
+			<li>
+				<p class="icon iconfont">&#x344c;</p>
+				<span>首页</span>
+			</li>
+			<li>
+				<p class="icon iconfont">&#xe662;</p>
+				<span>分类</span>
+			</li>
+			<li>
+				<p class="icon iconfont">&#xe61d;</p>
+				<span>购物车</span>
+			</li>
+			<li class="active">
+				<p class="icon iconfont">&#xe63c;</p>
+				<span>我的秀</span>
+			</li>
+			<li>
+				<p class="icon iconfont">&#xe669;</p>
+				<span>更多</span>
+			</li>
+		</ul>
+	</footer>
+
+
+<script type="text/javascript">
+
+	$("#tubiao li").on("tap",function(){
+		$(this).addClass('active').siblings().removeClass('active');
+		var index = $(this).index();
+		 getTypeByLocal(index);
+	});
+
+	function getTypeByLocal(index){
+		var reg = /^htmlType_/;
+		for(var i=0;i<localStorage.length;i++){
+			var key = localStorage.key(i);
+			if(reg.test(key)){
+				var oIndex = key.split('_')[1];
+				//取出对应key的htmlType_n里面n的值，
+				if(oIndex==index){   
+					//然后就跳转到点击的li下标的htmlType的值得页面
+					var myHtml = localStorage.getItem(key);
+					window.location.href=myHtml+'.html';
+				}
+			}
+		}
+	}
+
+
+
+</script>
+
+
+
+
+

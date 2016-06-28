@@ -1,0 +1,54 @@
+
+<section>
+<ul class="main">
+		<li class="log-up lm">
+					<h1><span class="iconfont" id="back">&#xe604;</span>注册<button type="button" id="login">登录</button></h1>
+					<ul class="log">
+						<li><input type="text" value="账号" class="username"></li>
+						<li><input type="text" value="密码" class="password"></li>
+						<li><input type="text" value="重复密码" class="confirm-pass"></li>
+						<span class="submit" style="position:absolute;top:7.5rem;left:2.4rem;font-size:0.24rem;color:red;"></span>
+						<button type="button" id="logup">同意服务协议并注册</button>
+					</ul>
+				</li>
+</ul>
+</section>
+<script>
+	$("#login").on("tap",function(){
+		$('section').load('myshow_login.html');
+
+	})
+	$("#back").on("tap",function(){
+		// window.history.back();
+		$('section').load('myshow_user.html');
+	})
+
+$('#logup').on('tap',function(){
+			var $name = $('.username').val();
+			var $pass = $('.password').val();
+			var $repass = $('.confirm-pass').val();
+			$.ajax({
+				url:'http://datainfo.duapp.com/shopdata/userinfo.php',
+				type:'post',
+				data:{
+					status:'register',
+					userID: $name,
+					password: $pass
+				},
+				success:function(data){
+					if(data=='0') {
+					$('.submit').html('用户名重名');
+					}else if(data=='1'){
+						$('.submit').html('注册成功');
+						$('section').load('myshow_user.html');
+					}else if(data=='2') {
+						$('.submit').html('数据库报错');
+					}
+				},
+				error:function(data){
+					return false;
+				}
+			})
+		})
+	
+</script>

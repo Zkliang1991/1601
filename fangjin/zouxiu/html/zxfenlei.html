@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>走秀首页</title>
+	<link rel="stylesheet" type="text/css" href="../css/zxfenlei.css">
+	
+	<link rel="stylesheet" type="text/css" href="../ux/iconfont.css">
+</head>
+<body>
+	<header class="header">
+		<a href="javascript:history.go(-1);"></a>
+		<p><b>zxiu</b>走秀</p>
+	</header>
+	<div class="search-wrap">
+		<div class="search">
+			<input class="search-btn" type="button" name="">
+			<input class="search-txt" type="text" name="" placeholder="请输入搜索内容">
+		</div>
+	</div>
+	<div id="list-wrap">
+		<div class="top">全部<div class="more-list"></div></div>
+		<ul id="thelist">
+		</ul>
+	</div>
+	<div class="btm-list"></div>
+	<script type="text/javascript" src="../js/jquery-2.2.3.js"></script>
+	<script type="text/javascript">
+		$(".btm-list").load("footer.html");
+	</script>
+<script type="text/javascript" src="../js/zxfenlei.js"></script>
+</body>
+</html>
