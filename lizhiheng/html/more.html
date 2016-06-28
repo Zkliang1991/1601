@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>更多</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../css/more.css">
+</head>
+<body>
+	<header>
+		<div class="huitui">
+			<a href="javascript:history.go(-1)" title="">
+				<img src="../img/houtui.jpg" alt="">
+			</a>
+		</div>
+		<div class="g-top">
+			<span>更多</span>
+		</div>
+	</header>
+	<section>
+		<div class="mo-links">
+			<ul>
+				<li>常见问题</li>
+				<li>系统设置</li>
+				<li>软件更新</li>
+				<li>扫描二维码</li>
+			</ul>
+		</div>
+		<div class="mo1-links">
+			<ul>
+				<li>我要提意见</li>
+				<li>关于</li>
+			</ul>
+		</div>
+		<div class="tuichu">
+			<a href="javascript:;">退出登录</a>
+		</div>
+	</section>
+	<footer>
+		
+	</footer>
+</body>
+<script type="text/javascript" src="../js/index.js"></script>
+<script type="text/javascript">
+	 $("footer").load('footer.html',function(){
+	 	$("#uli li").eq(0).on("tap",function(){
+		window.location.href='../html/shouye.html';
+		});
+		$("#uli li").eq(1).on("tap",function(){
+			window.location.href='../html/list.html';
+		});
+		$("#uli li").eq(2).on("tap",function(){
+			window.location.href='../html/goodscar.html';
+		});
+		$("#uli li").eq(3).on("tap",function(){
+			window.location.href='../html/myshow.html';
+		});
+		$("#uli li").eq(4).on("tap",function(){
+			window.location.href='../html/more.html';
+		});
+	 });
+</script>
+</html>

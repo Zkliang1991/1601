@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>商品详情</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<link rel="stylesheet" href="../css/xp.css">
+</head>
+<body>
+<header>
+		<div class="huitui">
+			<a href="javascript:history.go(-1)" title="">
+				<img src="../img/houtui.jpg" alt="">
+			</a>
+		</div>
+		<div class="zhuce">
+			<span>商品介绍</span>
+			<a href="javascript:;" title="">分享</a>
+		</div>
+	</header>
+	<section>
+	<div class="swiper-container" id="swiper1">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide s1" >
+					<div class="total">
+						距离结束时间:04天01时12分37秒
+					</div>	
+					<div class="sp-pic">
+						<img src="../img/sp1.jpg" alt="">
+					</div>
+					<div class="sp-info">
+						￥<b>288</b><span>灰色印花短袖T恤</span>
+					</div>
+					<div class="sp-dis">
+						市场价：￥<b>499</b> <i>4.8折</i><span>128人购买</span>
+					</div>		
+				</div>
+				<div class="swiper-slide s2" >
+					<div class="sp-pic2">
+						<img src="../img/sp-2.jpg" alt="">
+					</div>
+					<div class="sp-info2">
+						<p>
+							产地:土耳其 品牌：LIU.JO 商品名称：灰色个性团印花短袖T恤(配饰品)
+						</p>
+						<p>
+							舒适的领口，时尚大方，极简的风格，彰显女性魅力。兽头人身的团，彰显个性另类，小小胸花随心点缀，女人的可爱气质(胸花有别针，可拆卸)体现。
+						</p>
+						<p>
+							细节亮点：印花，配饰物品
+						</p>
+						<p>
+							舒适的领口，时尚大方，极简的风格，彰显女性魅力。兽头人身的团，彰显个性另类，小小胸花随心点缀
+						</p>
+					</div>	
+				</div>
+				<div class="swiper-slide s3" >
+					<div class="swiper-container" id="swiper2">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide" >
+								<img src="../img/xq-1.jpg" alt="" >	
+							</div>
+							<div class="swiper-slide" >
+								<img src="../img/xq-2.jpg" alt="">			
+							</div>
+							<div class="swiper-slide" >
+								<img src="../img/xq-3.jpg" alt="">	
+							</div>
+							<div class="swiper-slide" >
+								<img src="../img/xq-4.jpg" alt="" >
+							</div>
+						</div>
+						<div class="my-bullet"></div>
+					</div>	
+				</div>
+				
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+	</section>
+	
+</body>
+<script type="text/javascript" src="../js/index.js"></script>
+<script type="text/javascript">
+		var myswiper1= new Swiper("#swiper1",{
+			direction:"horizontal", 
+			resistanceRatio:0,
+			// autoHeight: true,
+			pagination:".swiper-pagination", //初始化分页器
+			paginationClickable:true,
+			paginationBulletRender:function(index,className){
+			var array=["介绍","详情","实拍"];
+			return '<span class= "iconfont '+className+'">'+array[index]+'</span>'
+			},
+
+		});
+		var myswiper2= new Swiper("#swiper2",{
+			direction:"horizontal", 
+			resistanceRatio:0,
+			pagination:".pagination", 
+			bulletClass : 'my-bullet',
+			paginationClickable:true,
+
+		});
+</script>
+</html>

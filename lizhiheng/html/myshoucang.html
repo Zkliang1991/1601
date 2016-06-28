@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>浏览记录</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../css/dingdan.css">
+</head>
+<body>
+	<header>
+		<div class="huitui">
+			<a href="javascript:history.go(-1)" title="">
+				<img src="../img/houtui.jpg" alt="">
+			</a>
+		</div>
+		<div class="g-top">
+			<span>我的收藏</span>
+		</div>
+	</header>
+	<section>
+		<div class="goods">
+			<ul>
+				<li id="glist">
+					<div class="g-pic">
+						<img src="../img/gpic1.jpg" alt="">
+					</div>
+					<div class="g-info">
+						<p>ESPRIT 气质V领玫红</p>
+						<p>【买一赠一】</p>
+						<p>单价:<b>￥199</b></p>
+						<p>单价 : <span id="discount">3.8折</span><b id="gprice">￥199</b></p>
+						
+						<a href="javascript:;" id="buy">
+							<i class="icon iconfont">&#xe726;</i>
+						</a>
+						<a href="javascript:;" title="" id="shanchu"></a>
+					</div>
+				</li>
+				<li id="glist">
+					<div class="g-pic">
+						<img src="../img/gpic1.jpg" alt="">
+					</div>
+					<div class="g-info">
+						<p>ESPRIT 气质V领玫红</p>
+						<p>【买一赠一】</p>
+						<p>单价:<b>￥199</b></p>
+						<p>单价 : <span id="discount">3.8折</span><b id="gprice">￥199</b></p>
+						<a href="javascript:;" id="buy">
+							<i class="icon iconfont">&#xe726;</i>
+						</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<footer>
+		
+	</footer>
+</body>
+<script type="text/javascript" src="../js/index.js"></script>
+<script type="text/javascript">
+	$("footer").load('footer.html',function(){
+	 	$("#uli li").eq(0).on("tap",function(){
+		window.location.href='../html/shouye.html';
+		});
+		$("#uli li").eq(1).on("tap",function(){
+			window.location.href='../html/list.html';
+		});
+		$("#uli li").eq(2).on("tap",function(){
+			window.location.href='../html/goodscar.html';
+		});
+		$("#uli li").eq(3).on("tap",function(){
+			window.location.href='../html/myshow.html';
+		});
+		$("#uli li").eq(4).on("tap",function(){
+			window.location.href='../html/more.html';
+		});
+	 });
+</script>
+</html>

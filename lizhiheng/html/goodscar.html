@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物车</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../css/goodscar.css">
+</head>
+<body>
+	<header>
+		<div class="huitui">
+			<a href="javascript:history.go(-1)" title="">
+				<img src="../img/houtui.jpg" alt="">
+			</a>
+		</div>
+		<div class="g-top">
+			<span>购物车</span>
+			<a href="javascript:;" title="" id="jiesuan">去结算</a>
+		</div>
+	</header>
+	<section>
+		<div class="total">
+			商品数量 : <span>1</span> 应付总额(不含运费) :<b>￥199</b>
+		</div>
+		<div class="goods">
+			<ul>
+				<li id="glist">
+					<div class="g-pic">
+						<img src="../img/gpic1.jpg" alt="">
+					</div>
+					<div class="g-info">
+						<p>ESPRIT 气质V领玫红</p>
+						<p>T恤</p>
+						<p>单价 : <b id="gprice">￥199</b></p>
+						<p>
+							数量 :
+							<span id="add">+</span>
+							<input type="number" name="" id="count" value="1">
+							<span id="les">-</span>
+						</p>
+					</div>
+					<div class="g-del">
+						<a href="javascript:;" title="" id="delgood"></a>
+						<p>L</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<footer>
+		
+	</footer>
+</body>
+<script type="text/javascript" src="../js/goodscar.js"></script>
+<script>
+	$("footer").load('footer.html',function(){
+	 	$("#uli li").eq(0).on("tap",function(){
+		window.location.href='../html/shouye.html';
+		});
+		$("#uli li").eq(1).on("tap",function(){
+			window.location.href='../html/list.html';
+		});
+		$("#uli li").eq(2).on("tap",function(){
+			window.location.href='../html/goodscar.html';
+		});
+		$("#uli li").eq(3).on("tap",function(){
+			window.location.href='../html/myshow.html';
+		});
+		$("#uli li").eq(4).on("tap",function(){
+			window.location.href='../html/more.html';
+		});
+	 });
+</script>
+</html>

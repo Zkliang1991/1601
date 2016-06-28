@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>走秀app</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+		<link rel="stylesheet" href="../css/index.css" />
+	</head>
+	<body>
+		<section>
+		<div id="mask"></div>
+			<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide s1" >
+					<img src="../img/bg2.jpg" alt="" >	
+				</div>
+				<div class="swiper-slide s2" >
+					<img src="../img/bg3.jpg" alt="">			
+				</div>
+				<div class="swiper-slide s3" >
+					<img src="../img/bg4.jpg" alt="">	
+				</div>
+				<div class="swiper-slide s4" >
+					<img src="../img/bg5.jpg" alt="" >
+					<a href="javascript:;" title=""></a>
+				</div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+
+		</section>
+	
+	</body>
+	<script src="../js/index.js"></script>
+	<script type="text/javascript">
+		var myswiper= new Swiper(".swiper-container",{
+			pagination:".swiper-pagination", //初始化分页器
+			paginationClickable:true,
+			initialSlide:0, //初始化索引号，0,1,2,3
+			direction:"horizontal", //运动方向 horizontal vertical
+			speed:1000, //表示开始到结束时间
+			autoplayDisableOnInteraction:false, //表示用户操swiper后的行为 false为不会停止swiper 
+			autoplayStopOnLast:true, 
+		});
+		setTimeout(function(){
+			// var mask=document.getElementById('mask');
+			// mask.style.display="none";
+			$("#mask").hide();
+		},2000)
+		$("a").on('tap',function(){
+			window.location.href="shouye.html";
+		})
+</script>
+</html>

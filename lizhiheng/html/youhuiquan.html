@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>优惠券</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../css/yhq.css">
+</head>
+<body>
+	<header>
+		<div class="huitui">
+			<a href="javascript:history.go(-1)" title="">
+				<img src="../img/houtui.jpg" alt="">
+			</a>
+		</div>
+		<div class="g-top">
+			<span>我的优惠券</span>
+		</div>
+	</header>
+	<section>
+		<ul id="u-list">
+			<li>已使用</li>
+			<li>未使用</li>
+			<li>已过期</li>
+			<li>未激活</li>
+		</ul>
+		<div class="yhg-info">
+			<p>40元现金券(满299元可用)</p>
+			<p>号码:<b>DKDJFKDSKJD345</b> </p>
+			<p>过期时间:<b>2016年08月01号</b></p>
+			<p>状态:<b>未使用</b></p>
+		</div>
+	</section>
+	<footer>
+		
+	</footer>
+</body>
+<script type="text/javascript" src="../js/index.js"></script>
+<script type="text/javascript">
+	$("footer").load('footer.html',function(){
+	 	$("#uli li").eq(0).on("tap",function(){
+		window.location.href='../html/shouye.html';
+		});
+		$("#uli li").eq(1).on("tap",function(){
+			window.location.href='../html/list.html';
+		});
+		$("#uli li").eq(2).on("tap",function(){
+			window.location.href='../html/goodscar.html';
+		});
+		$("#uli li").eq(3).on("tap",function(){
+			window.location.href='../html/myshow.html';
+		});
+		$("#uli li").eq(4).on("tap",function(){
+			window.location.href='../html/more.html';
+		});
+	 });
+</script>
+</html>
