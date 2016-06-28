@@ -237,3 +237,28 @@ section {
     background: -webkit-linear-gradient(top, #f8618c 10%, #d7114f 90%);
     box-shadow: 0.20833rem -0.20833rem 0.125rem 0.04167rem #ccc;
     border-style: none; }
+
+.yincang {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #000;
+  opacity: .8;
+  display: none; }
+  .yincang .yincang0 {
+    width: 12.5rem;
+    height: 8.33333rem;
+    background: #fff;
+    margin: 12.5rem auto;
+    text-align: center; }
+    .yincang .yincang0 p {
+      line-height: 6.25rem; }
+    .yincang .yincang0 input {
+      width: 4.16667rem;
+      height: 2.08333rem;
+      line-height: 2.08333rem;
+      background: #000;
+      color: #fff;
+      border: none; }
