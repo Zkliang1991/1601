@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+	<meta charset="UTF-8">
+	<title>注册页面</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<script type="text/javascript" src="../js/jquery-1.10.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/public.css">
+	<link rel="stylesheet" type="text/css" href="../ux/iconfont.css">
+	<style type="text/css">
+	*{
+		padding:0;
+		margin:0;
+	}
+	body{
+		background:#f7f7f7;
+	}
+
+	.reg-top{
+		display: flex;
+		width:100%;
+		height: 0.87rem;
+		background: #e4366b;
+		border-bottom: 0.03rem solid #000;
+		position:relative;
+		padding:0 0.4rem;
+		box-sizing: border-box;
+		justify-content: space-between;
+		line-height: 0.84rem;
+		overflow: hidden;
+	}
+	.reg-top span{
+		display: block;
+		/*visibility: hidden;*/
+		width:0.5rem;
+		height: 0.35rem;
+		margin-top: 0.25rem;
+		background: url(../images/reg-jt.jpg) left top no-repeat;
+		background-size:0.5rem 0.35rem;
+	}
+	.reg-top b{
+		display:block;
+		width:1rem;
+		height: 0.5rem;
+		font-size: 0.45rem;
+		color:#fff;
+		margin-left:0.8rem;
+	}
+	.reg-top a{
+		display:inline-block;
+		width:1.1rem;
+		height:0.55rem;
+		margin-top:0.15rem;
+		border-radius: 10px;
+		font-size:0.24rem;
+		line-height: 0.55rem;
+		text-align: center;
+		color:#fff;
+		border:none;
+		background:#e4366b;
+		box-shadow: 0 0 0.02rem #fff;
+		text-decoration: none;
+	}
+
+
+
+	.reg-box{
+		width:100%;
+		padding:0.1rem 0.4rem 0 0.4rem;
+		box-sizing: border-box;
+	}
+
+	input{
+		margin-top:0.5rem;
+		width: 5.6rem;
+		height: 0.78rem;
+		background: #fff;
+		display: block;
+		border: 0;
+		outline: none;
+		font-size: 0.36rem;
+		font-weight: 300;
+		border-radius: 10px;
+		padding-left: 0.25rem;
+		box-sizing: border-box;
+		line-height: 0.8rem;
+	}
+	.reg-box a{
+		display: block;
+		width:5.6rem;
+		height: 0.88rem;
+		line-height: 0.88rem;
+		text-align: center;
+		margin-top: 1.2rem;
+		color:#fff;
+		font-size: 0.36rem;
+		font-weight: 300;
+		border-radius: 10px;
+		text-decoration: none;
+		background:-webkit-linear-gradient(top,deeppink,#d91351);
+
+	}
+
+	input::-webkit-input-placeholder{
+		color:#666;
+	}
+	
+	</style>
+
+</head>
+<body>
+	<!-- <span>字体大小会变化</span> -->
+	<header class="reg-top">
+		<span></span>
+		<b>注册</b>
+		<a>登录</a>
+
+		<script type="text/javascript">
+			$('.reg-top a').on('click',function(){
+				window.location="login.html";
+			})			
+		</script>
+	</header>
+	<div class="reg-box">
+		<input type="text" name="username" class="username" placeholder="账号">
+		<input type="password" name="pass" id="pass" placeholder="密码">
+		<input type="password" name="pass" id="pass" placeholder="重复密码">
+		<a href="#">同意服务协议并注册</a>
+	</div>
+	
+	<div class="footer"></div>
+	<script type="text/javascript">
+		$('class').load('footer.html');
+	</script>
+
+
+	<script type="text/javascript">
+		var width=document.body.clientWidth;
+		//求出当前设备的宽
+		var html=document.getElementById('html');
+		html.style.fontSize=width/640*100+'px';
+		//rem通过设备宽改变rem值
+		console.log(width);
+		//窗口改变的时候求出宽
+		window.onresize=function(){
+			var width=document.body.clientWidth;
+			html.style.fontSize=width/640*100+'px';
+		}
+		$(".goback").on("click",function(){
+				window.location.href = "login.html";
+		})
+	</script>
+</body>
+</html>
