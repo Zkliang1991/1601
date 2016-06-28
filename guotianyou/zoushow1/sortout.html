@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html id="html">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+		
+		<link rel="stylesheet" type="text/css" href="ux_1466824116_6402702/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="css/more.css"/>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+	
+		<link rel="stylesheet" type="text/css" href="css/sortout.css"/>
+	</head>
+	<script src="js/jquery-1.8.3.js" type="text/javascript" charset="utf-8"></script>
+	
+	<body>
+		<header id="header"></header>
+		<div class="indexMain">
+			<div class="ser">
+				<div class="serbox">
+					<input type="text" placeholder="请输入要搜索的内容" />
+				</div>
+				
+			</div>
+		</div>
+		<div id="alltype">
+			全部<span>></span>
+			
+		</div>
+		<ul id="detailtype">
+			<!--<li>毛衣<span>></span></li>
+			<li>毛衣<span>></span></li>
+			<li>毛衣<span>></span></li>
+			<li>毛衣<span>></span></li>-->
+		</ul>
+		<footer id="footer"></footer>
+	</body>
+	
+	
+	
+	
+	
+	<script type="text/javascript">
+	getheadfoot()
+	//获取头尾
+	function getheadfoot(){
+		$("#header").load("header.html",function(){
+			
+			$('.title').html('ZXIU 走秀').css("text-indent","0");
+			$('em').css("display","none");
+		});
+		$("#footer").load("footer.html",function(){
+			$(".home").on("click",function(){
+				window.location.href = "in.html";
+				
+			})
+			$(".type").on("click",function(){
+				window.location.href = "sortout.html";
+				
+			})
+			$(".shopping").on("click",function(){
+				window.location.href = "myCart.html";
+				
+			})
+			$(".own").on("click",function(){
+				window.location.href = "myShow.html";
+				
+			})
+			$(".more").on("click",function(){
+				window.location.href = "more.html";
+				
+			})
+		});
+	};
+	clickalltype()
+	//点击全部后
+	function clickalltype(){
+		$.ajax({
+			type:"get",
+			url:"http://datainfo.duapp.com/shopdata/getclass.php",
+//			datatype:"JSONP",
+			
+			success:function(data){
+				console.log(data)
+				var data = JSON.parse(data)
+				for(var i in data){
+				    var icon=data[i].icon;
+					var name =data[i].className;
+					$('#detailtype').append("<li>"+name+"<span>></span></li>")
+				}
+					
+			}
+		})	
+	}	
+	</script>
+	
+	
+</html>
+<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>

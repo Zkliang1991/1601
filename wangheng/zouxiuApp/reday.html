@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name='viewport' content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        <meta charset="utf-8">
+        <title>reday</title>
+        <style>
+        	*{margin:0;padding:0;}
+        	.reday{
+        		width:100%;
+        		height:100%;
+        	}
+        </style>
+    </head>
+    <body>
+
+       <img src="img/01.jpg" alt="" id='reday'>
+
+       <script>
+
+       	   var oWidth = document.documentElement.clientWidth;
+       	   var oHeight= document.documentElement.clientHeight;
+           var reday  = document.getElementById('reday')
+           onload = onresize = function(){
+	           reday.height = oHeight;
+	           reday.width  = oWidth;
+	       }
+	       
+	       setInterval(function(){
+               location.href = 'Go.html'
+	       },3000) 
+       </script>
+    </body>
+</html>

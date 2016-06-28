@@ -1,0 +1,94 @@
+.indexMain{
+	width:100%;
+}
+body{
+	height:140%;
+}
+.indexMain .ser{
+	width: 100%;
+	height:60px;
+	padding:15px 0.21rem 0 0.21rem;
+	font-size:0.28rem;
+	background: #52525a;
+	box-sizing: border-box;
+}
+.indexMain .ser .serbox{
+	width:100%;
+	height:30px;
+	background: #fff;
+	border-radius: 7px;
+	padding-left:0.27rem;
+	box-sizing: border-box;
+}
+.indexMain .ser .serbox input{
+	height:30px;
+	outline:none;
+	border:0;
+}
+/*Swiper*/
+.swiper-container {
+  	width:100%;
+	height:250px;
+}  
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: -15px;
+    left: 0;
+    width: 100%;
+}
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: red;
+}
+
+/*商品列表*/
+.shopList {
+	font-size:0.31rem;
+	width:100%;
+	height:200px;
+	border-bottom:1px solid #ccc;
+	padding:13px 0.52rem 23px 0.16rem;
+	box-sizing: border-box;
+}
+.shopList dt{
+	width:30.375%;
+	height:150px;
+	float:left;
+}
+.shopList dt img{
+	width:90%;
+	height:150px;
+}
+.shopList dd{
+	width:69.3125%;
+	height:150px;
+	float:left;
+	font-size: 0.34rem;
+}
+.shopList dd p{
+	   display: -webkit-box;
+       	-webkit-line-clamp:2;
+        -webkit-box-orient:vertical;
+        height:90px;line-height: 45px;overflow: hidden;text-overflow: ellipsis;
+}
+.shopList dd .price{
+
+	color: #f00;
+}
+.shopList dd .price b{
+	font-size: 0.25rem;
+}
+.shopList dd .shopCar{
+	display: block;
+	float:right;
+	width:1.12rem;
+	height:51px;
+	background: #e83a6f;
+	border-radius: 10px;
+	text-align: center;
+	line-height: 51px;
+	font-size:0.38rem;
+	color:#fff;
+	position:relative;
+	bottom:20px;
+	cursor: pointer;
+}

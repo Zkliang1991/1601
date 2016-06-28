@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+	<title>我的订单</title>
+	
+	<!-- <link rel="stylesheet" type="text/css" href="../css/mobile.css"> -->
+	<link rel="stylesheet" type="text/css" href="../css/myorder.css">
+</head>
+<body>
+	<header>
+		<a href="javascript:history.go(-1);"></a>
+		<p>我的订单</p>
+	</header><!-- /header -->
+	<ul class="order-list">
+		<li>
+			<dl  class="order-dl">
+				<dt><img src=""></dt>
+				<dd>
+					<p></p>
+					<p></p>
+					<p>单价：</p>
+
+					<p>数量：</p>
+					<a href="#">取消订单</a>
+				</dd>
+			</dl>
+		</li>
+	</ul>
+	<footer id="footer"></footer>
+	<script type="text/javascript" src="../js/myorder.js"></script>
+	<script type="text/javascript">
+		$("#footer").load("footer.html",function(){
+			$('#footer ul li').eq(3).addClass('active');
+		});
+	</script>
+
+</body>
+</html>

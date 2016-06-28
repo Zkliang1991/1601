@@ -1,0 +1,68 @@
+
+	<link rel="stylesheet" type="text/css" href="../css/foot.css">
+	<link rel="stylesheet" type="text/css" href="../ux/iconfont.css">
+	<script type="text/javascript" src="../js/zepto.js"></script>
+	<script type="text/javascript" src="../js/zepto-tap.js"></script>
+    
+	<footer>
+		<div>
+			<span class="iconfont">&#xe629;</span>
+			<p>首页</p>
+		</div>
+		<div>
+			<span class="iconfont">&#xe617;</span>
+			<p>分类</p>
+		</div>
+		<div>
+			<span class="iconfont">&#xe618;</span>
+			<p>购物车</p>
+		</div>
+		<div >
+			<span class="iconfont">&#xe62a;</span>
+			<p>我的秀</p>
+		</div>
+		<div>
+			<span class="iconfont">&#xe62f;</span>
+			<p>更多</p>
+		</div>
+	</footer>
+		<script type="text/javascript">
+	var arrhtml=['zxiu','fenlei','bcar','login','more'];
+	
+   
+	//onbeforeunload 页面关闭(包括浏览器关闭)的时候触发
+	window.onbeforeunload = function()
+	{
+	    // return "真的离开?";
+	}
+
+	$('footer div').on('tap',function(){
+		
+		var index=$(this).index();//取出对应的点击的li标签的下标
+		window.location.href=arrhtml[index]+".html";
+       
+       localStorage.setItem(arrhtml[index],window.location.href);
+		$(this).addClass('active').siblings().removeClass('active');
+		getTypeByLocal(index);
+
+	})
+	//每次一点击tap 到新页面的时候，就把 对应的url中 .html前面的值存到localStorage来，
+	function getTypeByLocal(index){
+		var reg = /^htmlType_/;
+
+		for(var i=0;i<localStorage.length;i++){
+			var key = localStorage.key(i);
+			if(reg.test(key)){
+				var oIndex = key.split('_')[1];
+				//取出对应key的htmlType_n里面n的值，
+				if(oIndex==index){   
+					//然后就跳转到点击的li下标的htmlType的值得页面
+					var myHtml = localStorage.getItem(key);
+
+					window.location.href=myHtml+'.html';
+				}
+			}
+		}
+	}
+</script>
+	
