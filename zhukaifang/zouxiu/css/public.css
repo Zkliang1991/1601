@@ -1,0 +1,209 @@
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img { margin:0; padding:0; } 
+fieldset, img { border:none; } 
+img{display: block;} 
+address, caption, cite, code, dfn, th, var { font-style:normal; font-weight:normal; } 
+ul, ol { list-style:none; } 
+a { color:#666; text-decoration:none; }
+
+	*{
+		margin:0;
+		padding: 0;
+	}
+	body,html{
+		width: 100%;
+		height: 100%;
+	}
+
+/*------------------------------带搜索框header*/
+.zx-top{
+	display: block;
+	width:100%;
+	height: 1.76rem;
+	border-top:0.02rem solid gray; 
+	border-bottom:0.02rem solid gray;
+}
+
+.zx-top p{			
+	display:flex;
+	width:100%;
+	height:0.87rem;
+	line-height: 0.87rem;
+	background: #e4366b;
+	border-bottom:0.03rem solid #000; 
+	font-size: 0.45rem;
+	color:#fff;
+	font-family: "黑体";
+	overflow:hidden;
+	position: relative;
+}
+
+.zx-top p a{
+	display:none;	
+	width:0.5rem;
+	height: 0.35rem;
+	margin-top: 0.25rem;
+	background: red;
+	background: url(../images/reg-jt.jpg) left top no-repeat;
+	background-size:0.5rem 0.35rem;
+	margin-left: 0.18rem;
+}
+.zx-top p span{
+	position: absolute;
+	top:0;
+	left:1.95rem;
+}
+.zx-top p b{
+	display:none;
+	width:1.1rem;
+	height:0.55rem;
+	border:1px solid #fff;
+	border-radius:10px;
+	position: absolute;
+	top:0.15rem;
+	right:0.18rem;
+	font-size:0.26rem;
+	line-height: 0.55rem;
+	text-align: center;
+	color:#fff;
+	border:none;
+	background:#ef4979;
+	box-shadow: 0 0 0.02rem #fff;
+	text-decoration: none;
+	font-weight: normal;
+
+}
+.zx-topx{
+	width:100%;
+	height:0.87rem;
+	background: #52525a; 
+	border-bottom:0.02rem solid #000;
+	display: flex;
+	box-sizing: border-box;
+	padding:0.17rem 0.23rem 0 0.25rem;
+	position: relative;
+}		
+.zx-topx .zx-ser{
+	display: flex;
+	width:5.8rem;
+	height: 0.55rem;
+	line-height: 0.6rem;
+	border-radius:10px; 
+	background: #fff;
+	border:0;
+	outline:none;
+	padding-left:0.7rem;
+	box-sizing: border-box;
+	font-size: 0.24rem;
+
+}
+.iconfont{
+	font-size:0.5rem;
+	color: hsl(120,50%,100%);
+
+}
+.zx-topx .icon-ser:before{
+	content: "\e610";
+	font-size:0.4rem;
+	color:gray;
+	position: absolute;
+	left:0.4rem;
+	top:0.21rem;
+}
+
+
+
+
+
+/*=======================================heade*/
+
+	.reg-top{
+		display: flex;
+		width:100%;
+		height: 0.87rem;
+		background: #e4366b;
+		border-bottom: 0.03rem solid #000;
+		position:relative;
+		padding:0 0.4rem;
+		box-sizing: border-box;
+		justify-content: space-between;
+		line-height: 0.87rem;
+		overflow: hidden;
+	}
+	.reg-top span{
+		display: block;
+		/*visibility: hidden;*/
+		width:0.5rem;
+		height: 0.35rem;
+		margin-top: 0.25rem;
+		background: url(../images/reg-jt.jpg) left top no-repeat;
+		background-size:0.5rem 0.35rem;
+	}
+	.reg-top b{
+		display:block;
+		width:1.5rem;
+		height: 0.5rem;
+		font-size: 0.45rem;
+		color:#fff;
+		margin-left:0.8rem;
+	}
+	.reg-top a{
+		display:block;
+		/*visibility:hidden;*/
+		width:1.1rem;
+		height:0.55rem;
+		margin-top:0.15rem;
+		border-radius: 10px;
+		font-size:0.24rem;
+		line-height: 0.55rem;
+		text-align: center;
+		color:#fff;
+		border:none;
+		background:#e4366b;
+		box-shadow: 0 0 0.02rem #fff;
+		text-decoration: none;
+	}
+
+
+
+
+
+	/*-------------------------------------footer*/
+
+
+.footer{
+	width: 100%;
+	height: 1rem;
+	background:#484850;
+	overflow: hidden;
+	position:fixed;
+	bottom:0;
+	left: 0;
+	z-index: 999;
+}
+.footer ul{
+	display: flex;
+	justify-content: space-around;
+	margin-top: 0.06rem;
+}
+.icon-home:before{
+	content:"\e60d";
+}
+.icon-fen:before{
+	content:"\e798";
+}
+.icon-cart:before{
+	content:"\e60b";
+}
+.icon-show:before{
+	content:"\e60f";
+}
+.icon-more:before{
+	content:"\f0013";
+}
+.footer dd{
+	font-size: 0.24rem;
+	font-family: "微软雅黑";
+}
+.footer .dd{
+	margin-left:-0.1rem;
+}
