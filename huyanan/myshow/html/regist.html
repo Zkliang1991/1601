@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+	<meta charset="UTF-8">
+	<title>我的秀</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="../css/login.css">
+</head>
+<body>
+	<div class="model" id="regmodel">div</div>
+	<header>
+		<a href="javascript:history.go(-1);"></a>
+		<p>注册</p>
+		<span id="reg-login">登录</span>
+	</header>
+	<div class="inp">
+		<input type="text" name="username" class="reg-username" id="reguser" placeholder="账号">
+		<input type="password" name="userpwd" class="reg-userpwd" id="regpwd" placeholder="密码">
+		<input type="password" name="userpwd" class="reg-userpwd2" id="regpwd2" placeholder="重复密码">
+		<a href="javascript:;" class="login-log" id="regist-regist">同意服务协议并注册</a>
+	</div>
+	<div id="footer"></div>
+	<script type="text/javascript" src="../js/lr.js"></script>
+	<script type="text/javascript">
+	      $('#footer').load('../html/footer.html',function(){
+	      	$('#foot-ul li').siblings().removeClass('active').eq(2).addClass('active');
+	      	var url = window.location.href;
+			var htmlName = url.split('/');
+			var thisHtml = null;
+			for(var i=0;i<htmlName.length;i++){
+				if(htmlName[i].indexOf('.html')!=-1){
+					thisHtml = htmlName[i].split('.html')[0];
+				}
+			}
+			// console.log(thisHtml);
+			var reg = /^htmlType_/;
+			var myHtml = 'htmlType_';
+			for(var i=0;i<localStorage.length;i++){
+				var key = localStorage.key(i);
+				if(reg.test(key)){
+					var oIndex = key.split('_')[1];
+					if(oIndex==3){
+						localStorage.setItem(myHtml+'3',thisHtml);
+					}
+				}
+			}
+	      });
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+	<meta charset="UTF-8">
+	<title>我的秀</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="../css/order.css">
+</head>
+<body>
+	<header>
+		<a href="javascript:history.go(-1);"></a>
+		<p>我的优惠券</p>
+	</header>
+	<div class="mycheap-tab" id="mycheap-tab">
+		<ul class="ct-ul" id="ct-ul">
+			<li class="cheap-active">未使用</li>
+			<li>已使用</li>
+			<li>已过期</li>
+			<li>未激活</li>
+		</ul>
+		<div>
+			<p>40元现金券(满299元可使用)</p>
+			<p>号码：<span>DSASDFGHJKO</span></p>
+			<p>过期时间：<span>2013年5月19日</span></p>
+			<p>状态：<span>未使用</span></p>
+		</div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+	<div id="footer"></div>
+	<script type="text/javascript" src="../js/lr.js"></script>
+	<script type="text/javascript">
+	    $('#footer').load('../html/footer.html',function(){
+	    	$('#foot-ul li').siblings().removeClass('active').eq(2).addClass('active');
+	    	var url = window.location.href;
+			var htmlName = url.split('/');
+			var thisHtml = null;
+			for(var i=0;i<htmlName.length;i++){
+				if(htmlName[i].indexOf('.html')!=-1){
+					thisHtml = htmlName[i].split('.html')[0];
+				}
+			}
+			// console.log(thisHtml);
+			var reg = /^htmlType_/;
+			var myHtml = 'htmlType_';
+			for(var i=0;i<localStorage.length;i++){
+				var key = localStorage.key(i);
+				if(reg.test(key)){
+					var oIndex = key.split('_')[1];
+					if(oIndex==3){
+						localStorage.setItem(myHtml+'3',thisHtml);
+					}
+				}
+			}
+	    });
+	</script>
+	
+</body>
+</html>
