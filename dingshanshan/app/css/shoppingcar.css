@@ -191,6 +191,22 @@ nav {
     right: 0;
     bottom: 0; }
 
+.carmain {
+  width: 100%;
+  position: relative; }
+  .carmain .shopcar, .carmain .empty {
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0; }
+
+.shopcar {
+  display: none; }
+
+.empty {
+  display: block; }
+
 .total {
   width: 100%;
   height: 3.58333rem;
@@ -225,8 +241,7 @@ nav {
     height: 9.58333rem;
     padding-top: 0.83333rem;
     box-sizing: border-box;
-    border-top: 1px solid #636363;
-    border-bottom: 1px solid #282828; }
+    border-bottom: 1px solid #636363; }
     .list li img {
       display: block;
       width: 7.16667rem;
@@ -251,6 +266,10 @@ nav {
         justify-content: space-between; }
         .list li .li-right p .price {
           color: #a30b3a; }
+      .list li .li-right p:nth-of-type(1) b:nth-of-type(2) {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; }
       .list li .li-right p:nth-of-type(4) {
         justify-content: flex-start; }
         .list li .li-right p:nth-of-type(4) strong {

@@ -262,7 +262,7 @@ nav {
     display: block;
     width: 100%;
     text-align: center; }
-  #taninfo .close {
+  #taninfo #close {
     display: block;
     width: 5.41667rem;
     height: 3.33333rem;
