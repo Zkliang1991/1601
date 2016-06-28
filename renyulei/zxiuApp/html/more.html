@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>更多</title>
+	<meta name="viewport" content="width=divce-width,initial-scale=1,user-scalable=no,minimum-scale=1,maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="../prc/css/more.css">
+	<link rel="stylesheet" type="text/css" href="../prc/css/common.css">
+	<script type="text/javascript" src="../prc/js/jquery-1.8.3.js"></script>
+</head>
+</head>
+<body>
+	<header>
+		<h3>更多</h3>
+		<a href="javascript:history.go(-1);"></a>
+	</header>
+	<div class="content">
+		<ul>
+			<li>常见问题</li>
+			<li>系统设置</li>
+			<li>软件更新</li>
+			<li>扫面二维码</li>
+			<!-- <li>我要提意见</li>
+			<li>关于</li> -->
+				
+		</ul>
+		<ul>
+			<li>我要提意见</li>
+			<li>关于</li>			
+		</ul>
+		<div class="exit">退出登录</div>
+	</div>
+	
+	<div id="footer">
+		<script type="text/javascript">
+			$("#footer").load('footer.html',function(){
+				$('.shouye').on('tap',function(){
+					window.location.href='index.html'
+				});
+				$('.sort').on('tap',function(){
+					console.log(22)
+					window.location.href='sort.html'
+					
+				});
+				$('.car').on('tap',function(){
+					console.log(22)
+					window.location.href='cart.html'
+					
+				});
+				$('.myshow').on('tap',function(){
+					console.log(22)
+					window.location.href='myshow.html'
+					
+				});
+
+
+				//刷新购物车数量
+				addCount()	 
+				function addCount(){
+					var reg=/^goodsTy-/;
+					var mycount=0;
+					for (var i = 0; i < localStorage.length; i++) {
+						var localkey=localStorage.key(i);
+
+						if(reg.test(localkey)){
+							var myData=JSON.parse(localStorage.getItem(localkey))
+							
+							mycount+=myData.buysCount
+				
+						}
+					}
+	
+						$('.car-num').html(mycount)
+				}	 
+
+
+			})
+		</script>
+		<script type="text/javascript" src="../prc/js/more.js"></script>
+	</div>
+</body>
+</html>

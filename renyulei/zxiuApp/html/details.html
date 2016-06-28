@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>商品</title>
+	<meta name="viewport" content="width=divce-width,initial-scale=1,user-scalable=no,minimum-scale=1,maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="../prc/css/details.css">
+	
+	<script type="text/javascript" src="../prc/js/jquery-1.8.3.js"></script>
+</head>
+<body>
+	<header>
+		<h3>商品详情</h3>
+		<div class="fenxiang">分享</div>
+		<a href="javascript:history.go(-1);"></a>
+	</header>
+	<div class=" slide2" >
+		<div class="content2">
+			<div class="photo2">
+				<img src="../prc/images/002.jpg" alt="">
+				<div class="txt">
+					<p>产地：土耳其&nbsp;&nbsp;品牌：LIU.JO
+					&nbsp;&nbsp;商品名称 ：灰色个性团印花短袖Txu（配饰品）</p>
+					<p>舒适的领口，时尚大方，极简的的风格，彰显女人本色。兽头人身的团，彰显另类个性。小小的胸花随心点缀女人的可爱气质。</p>
+					<p>细节靓点：印花，</p>
+					<p>舒适的领口，时尚大方，极简的的风格，彰显女人本色。兽头人身的团，彰显另类个性。小小的胸花随心点缀女人的可爱气质。</p>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide " ><img src="../prc/images/1.jpg" alt=""></div>
+			<div class="swiper-slide "  ><img src="../prc/images/2.jpg" alt=""></div>
+			<div class="swiper-slide " ><img src="../prc/images/3.jpg" alt=""></div>
+			<div class="swiper-slide " ><img src="../prc/images/4.jpg" alt=""></div>
+
+		</div>
+		<div class="swiper-pagination"></div>
+		
+	</div>
+	
+	
+
+		
+
+	<footer>
+		<ul>
+			<li class='inc'>介绍</li>
+			<li class='details'>详情</li>
+			<li>实拍</li>
+		</ul>
+	</footer>
+<script type="text/javascript" src="../prc/js/details.js"></script>
+	<script>
+		var myswiper= new Swiper('.swiper-container',{
+			lazyLoading : true,
+			pagination : '.swiper-pagination',
+		
+			paginationClickable :true,
+			resistanceRatio:0,
+			
+			// autoplay:2000,
+			
+  			
+  			
+		})
+	</script>
+	<script type="text/javascript">
+		$('.inc').on('click',function(){
+			window.location.href='introduce.html'
+			
+		})
+
+	</script>
+</body>
+</html>
