@@ -9,9 +9,13 @@ body, h1, h2, h3, h4, h5, h6, blockquote, ol, ul, dl, dd, p, textarea, input, se
 
 body {
 <<<<<<< HEAD
+  background: #f5f4f0;
+=======
+<<<<<<< HEAD
 =======
   background: #f5f4f0;
 >>>>>>> 0c508d2b37dbbc9dbe8ca4cf282edeec00ea8915
+>>>>>>> 3157549bb0ee72b36633a0c580607321e4d63388
   -webkit-tap-highlight-color: transparent; }
 
 ol, ul, textarea, input, option, th, td {

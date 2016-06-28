@@ -8,14 +8,7 @@ body, h1, h2, h3, h4, h5, h6, blockquote, ol, ul, dl, dd, p, textarea, input, se
   padding: 0; }
 
 body {
-<<<<<<< HEAD
   background: #f5f4f0;
-=======
-<<<<<<< HEAD
-=======
-  background: #f5f4f0;
->>>>>>> 0c508d2b37dbbc9dbe8ca4cf282edeec00ea8915
->>>>>>> 3157549bb0ee72b36633a0c580607321e4d63388
   -webkit-tap-highlight-color: transparent; }
 
 ol, ul, textarea, input, option, th, td {
@@ -88,12 +81,12 @@ textarea {
 @media only screen and (min-width: 375px) {
   html {
     font-size: 87.89063% !important;
-    /*320/12=375/x;x=14.0625; 14.0625÷16=73.2% */ } }
+    /* 14.0625÷16=73.2% */ } }
 
 @media only screen and (min-width: 414px) {
   html {
     font-size: 97.03% !important;
-    /*414-15.525 15.525÷16=94% */ } }
+    /* 15.525÷16=94% */ } }
 
 @media only screen and (min-width: 480px) {
   html {
@@ -131,87 +124,84 @@ textarea {
     /* 36÷16=146.43% */ } }
 
 * {
-  margin: 0rem;
-  padding: 0rem; }
+  padding: 0;
+  margin: 0; }
 
-body {
-  /*-----------------------------mine--------------------------------------------------*/ }
-  body header {
+header {
+  width: 100%;
+  height: 3.58333rem;
+  padding: 0.83333rem 8.25rem 0.83333rem 8.25rem;
+  box-sizing: border-box;
+  background: #e4366b;
+  border-top: 1px solid #636363;
+  border-bottom: 1px solid #282828; }
+  header a {
+    display: block;
+    width: 2.08333rem;
+    height: 3.58333rem;
+    background: url(../img/return.png) center no-repeat;
+    background-size: 2.08333rem 1.375rem;
+    position: absolute;
+    left: 0.91667rem;
+    top: 0.41667rem; }
+  header b {
     width: 100%;
     height: 3.58333rem;
-    background: #e4366b;
     text-align: center;
     line-height: 3.58333rem;
-    font-size: 1.66667rem;
     color: #fff;
-    border-top: 0.04167rem solid #636363;
-    border-bottom: 0.04167rem solid #000; }
-    body header a {
-      display: block;
-      position: absolute;
-      left: 0.83333rem;
-      top: 1.25rem;
-      width: 2.125rem;
-      height: 1.41667rem;
-      background: url(../img/back.png) no-repeat; }
-  body .mine {
-    width: 25.20833rem;
-    height: 6.91667rem;
-    margin: 2.58333rem 0rem 3.41667rem 1.45833rem; }
-    body .mine dl {
+    font-size: 2rem;
+    font-family: "微软雅黑";
+    position: absolute;
+    left: 0;
+    top: 0; }
+  header span {
+    color: #fff;
+    font-size: 1.66667rem;
+    font-family: "微软雅黑"; }
+
+.moremain {
+  width: 100%;
+  padding: 1.66667rem 1.66667rem 0 1.66667rem;
+  box-sizing: border-box; }
+  .moremain .thelist {
+    list-style: none;
+    width: 23.16667rem;
+    background: #fff;
+    border: 1px solid #dedede;
+    border-radius: 0.625rem;
+    margin-bottom: 1rem; }
+    .moremain .thelist li {
       width: 100%;
-      height: 100%; }
-      body .mine dl dt {
-        width: 8.25rem;
-        height: 100%;
-        float: left; }
-        body .mine dl dt img {
-          border-radius: 0.5rem;
-          border: 0.04167rem solid #aaa;
-          width: 6.79167rem;
-          height: 6.79167rem; }
-      body .mine dl dd {
+      height: 3.58333rem;
+      padding-left: 1.66667rem;
+      padding-right: 1.41667rem;
+      box-sizing: border-box;
+      border-bottom: 1px solid #dedede;
+      z-index: 999; }
+      .moremain .thelist li span:nth-of-type(1) {
+        display: block;
+        height: 3.58333rem;
+        line-height: 3.58333rem;
         float: left;
-        height: 100%; }
-        body .mine dl dd p:nth-of-type(1) {
-          font-size: 1.41667rem;
-          line-height: 3.91667rem;
-          height: 4.33333rem; }
-          body .mine dl dd p:nth-of-type(1) span {
-            display: inline-block; }
-        body .mine dl dd p:nth-of-type(2) {
-          width: 10.75rem; }
-          body .mine dl dd p:nth-of-type(2) span {
-            text-align: center;
-            color: #fff;
-            line-height: 2.33333rem;
-            display: inline-block;
-            width: 4.5rem;
-            height: 2.33333rem;
-            background: #e5346a;
-            font-size: 1rem;
-            border-radius: 0.33333rem; }
-          body .mine dl dd p:nth-of-type(2) span:nth-of-type(2) {
-            float: right; }
-  body .my-info {
-    width: 23.125rem;
-    border-radius: 0.58333rem;
-    border: 0.08333rem solid #dedede;
-    margin: 0rem auto; }
-    body .my-info p {
-      height: 3.66667rem;
-      text-indent: 1.16667rem;
-      line-height: 3.66667rem;
-      font-size: 1.41667rem;
-      border-top: 0.08333rem solid #dedede; }
-      body .my-info p span {
+        color: #000;
+        font-size: 1.58333rem;
+        font-family: "微软雅黑"; }
+      .moremain .thelist li span:nth-of-type(2) {
+        display: block;
+        height: 3.58333rem;
+        line-height: 3.58333rem;
+        width: 1.25rem;
         float: right;
-        transform: translateY(1.25rem);
-        display: inline-block;
-        width: 1.16667rem;
-        height: 1.16667rem;
-        margin-right: 1rem;
-        background: url(../img/more.png) no-repeat;
-        background-size: 1.16667rem 1.16667rem; }
-    body .my-info p:nth-of-type(1) {
-      border: none; }
+        background: url(../img/right.png) center center no-repeat;
+        background-size: 1.25rem 1.04167rem; }
+  .moremain .quitlogin {
+    width: 23.16667rem;
+    height: 3.66667rem;
+    text-align: center;
+    line-height: 3.66667rem;
+    color: #fff;
+    font-size: 1.33333rem;
+    font-family: "微软雅黑";
+    background: -webkit-linear-gradient(top, #f8618c, #d7114f);
+    border-radius: 0.83333rem; }
