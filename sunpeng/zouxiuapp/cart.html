@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>购物车</title>
+		<link rel="stylesheet" href="prd/css/cart.css" />
+	</head>
+	<body>
+		<header>
+			<img src="prd/img/return.png"/>
+			购物车
+			<div id="reg">去结算</div>
+		</header>
+		<ul class="count">
+	 		<li>
+	 			商品数量：<span class="count1"></span>
+	 		</li>
+	 		<li>
+	 			应付总额(不含运费)：<b id="zongjia"></b>
+	 		</li>
+	 	</ul>
+		<div id="buycar">
+			<dl>
+				<dt>
+					<img id="img" src="" alt="">
+				</dt>
+				<dd>
+					<h3></h3>
+					<!--<span>长袖</span>-->
+					<p>单价:￥<b id="danjia"></b></p>
+					<div>
+					    <span>数量:<b class="count1"></b></span>
+						<input id="dec" type="button" value="-">
+						<input class="num" type="text" value="1">
+						<input id="add" type="button" value="+"> 
+					</div>
+				</dd>
+			</dl>
+		</div>
+
+		
+		
+		<script src="prd/js/common.js" type="text/javascript" charset="utf-8"></script>
+		<!--尾部-->
+		<footer id="footer">	
+		</footer>
+		<script type="text/javascript">
+			$('#footer').load('footer.html',function(){
+				$('#cart').addClass('active');
+				
+			});
+		</script>
+		<script type="text/javascript">
+			var xinxi = JSON.parse(localStorage.getItem('gType_1'));
+			console.log(xinxi);
+			huoqu();
+			function huoqu(){
+				$('h3').html(xinxi.name);
+				$('#img').attr('src',xinxi.img);
+				$('#danjia').html(xinxi.price);
+				$('#zongjia').html((xinxi.price)*(xinxi.count));
+				$('.count1').html(xinxi.count);
+				$('.num').val(xinxi.count);
+			}
+			
+			
+			
+			$('#add').on('touchstart',function(){
+				xinxi.count++;
+				var goodsType = 'gType_1';
+				var setObjData = {'img':xinxi.img,'name':xinxi.name,'price':xinxi.price,'count':xinxi.count};
+				localStorage.setItem(goodsType,JSON.stringify(setObjData));
+				huoqu();
+			})
+			$('#dec').on('touchstart',function(){
+				if(xinxi.count>=1){
+					xinxi.count--;
+				}else{
+					$('#dec').attr('disabled',true);
+				}
+				
+				var goodsType = 'gType_1';
+				var setObjData = {'img':xinxi.img,'name':xinxi.name,'price':xinxi.price,'count':xinxi.count};
+				localStorage.setItem(goodsType,JSON.stringify(setObjData));
+				huoqu();
+			})
+			
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

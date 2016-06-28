@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>商品详情</title>
+		<link rel="stylesheet" type="text/css" href="prd/css/details.css"/>
+	</head>
+	<body>
+		<header>
+			<img id="return" src="prd/img/return.png"/>
+			商品介绍
+			<div id="login">分享</div>
+		</header>
+		<article></article>
+		
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide on1" data-hash='slide1'>
+					<div>
+						<img src="../zouxiuapp/prd/img/details-pic1.png"/>	
+					</div>
+					<div>
+						<span>￥259</span>
+						<span>灰色印花短袖T恤</span>
+					</div>
+					<div>
+						<span>市场价：</span>
+						<span>￥439</span>
+						<span>4.8折</span>
+						<span>125人购买</span>
+					</div>
+				</div>
+				<div class="swiper-slide on2" data-hash='slide2'>
+					<div>
+						<img src="prd/img/details-pic3.png"/>
+					</div>
+					
+				</div>
+				<div class="swiper-slide on3" data-hash='slide3'>
+					<div class="swiper-container">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide sn1" data-hash='slide1'>
+								<img src="prd/img/details-pic4.png"/>
+							</div>
+							<div class="swiper-slide sn2" data-hash='slide2'>
+								<img src="prd/img/details-pic4.png"/>
+							</div>
+							<div class="swiper-slide sn3" data-hash='slide3'>
+								<img src="prd/img/details-pic4.png"/>
+							</div>
+							<div class="swiper-slide sn4" data-hash='slide3'>
+								<img src="prd/img/details-pic4.png"/>
+							</div>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+				
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+		
+		
+		<!--<script src="prd/js/index.js" type="text/javascript" charset="utf-8"></script>-->
+		<script src="prd/js/common.js" type="text/javascript" charset="utf-8"></script>
+		
+		
+		<script type="text/javascript">
+			var n=60*60*24*4;
+           	function run(){
+           	   	if(n==0){
+           	   	 	clearInterval(t);
+           	   	}
+//         	   	console.log(n);
+           	   	var d = Math.floor(n/86400);  //计算得出天数
+           	   	
+				  if(d<10){  //调整为两位数的格式
+				    d = '0'+d;
+				  }
+           	   	 var h = Math.floor(n/60/60-24*d);  //计算得出小时数
+				  if(h<10){  //调整为两位数的格式
+				    h = '0'+h;
+				  }
+				  
+				  var m = Math.floor(n/60%60);  //计算得出分钟数
+				  if(m<10){  //调整为两位数的格式
+				    m = '0'+m;
+				  }
+				  
+				  var s = n%60;  //计算得出剩下的秒数
+				  if(s<10){  //调整为两位数的格式
+				    s = '0'+s;
+				  }
+           		$('article').html('距离结束时间：'+d+'天'+h+'时'+m+'分'+s+'秒');
+           		n--;
+           	}
+           	var t = setInterval(run,1000);
+			
+			$('#return').on('tap',function(){
+				window.location.href = 'zouxiu-index.html';
+			})
+		</script>
+	</body>
+</html>

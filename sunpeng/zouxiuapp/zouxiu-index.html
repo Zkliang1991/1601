@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>走秀首页</title>
+		<link rel="stylesheet" type="text/css" href="prd/css/zouxiu-index.css"/>
+		
+	</head>
+	<body>
+		<article>zxlu 走秀网</article>
+		<header>
+			<div>
+				<input type="text" placeholder="请输入搜素内容"/>
+			</div>
+		</header>
+		<div class="swiper-container" id="zxIndex-swiper">
+			<div class="swiper-wrapper" >
+				<!--<div class="swiper-slide" ></div>
+				<div class="swiper-slide" ></div>
+				<div class="swiper-slide" ></div>
+				<div class="swiper-slide" ></div>-->
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+		<div id="wrapper">
+			<!-- 滑动区域 -->
+			<div id="scroller">
+				<div id="pullDown">
+					<span class="pullDownIcon"></span>
+					<span class="pullDownLabel">下拉刷新...</span>
+				</div>
+				<ul id="thelist">
+					<!--<li>
+						<div>
+							<img src="prd/img/index-list1.png"/>
+						</div>
+						<div>
+							<div>0元大抽奖！走秀携古尔莎为你开启，价值28880的土耳其...</div>
+							<div>
+								<div>
+									<span>￥0</span>
+									<span>￥28880</span>
+								</div>
+								<div>0折</div>
+							</div>
+							<div>
+								<button></button>
+							</div>
+						</div>
+					</li>-->
+					
+				</ul>
+				<div id="pullUp">
+					<span class="pullUpIcon"></span>
+					<span class="pullUpLabel">加载更多...</span>
+				</div>
+			</div>
+		</div>
+		
+		<script src="prd/js/index.js" type="text/javascript" charset="utf-8"></script>
+		<!--尾部-->
+		<footer id="footer">	
+		</footer>
+		<script type="text/javascript">
+			$('#footer').load('footer.html',function(){
+
+				$('#home').addClass('active');
+				var url = window.location.href;
+				//每次刷新新的页面，就把url里.html的前面值截取出来
+				var htmlName = url.split('/');
+				console.log(htmlName);
+				var thisHtml = null;
+				for(var i=0;i<htmlName.length;i++){
+					if(htmlName[i].indexOf('.html')!=-1){
+						//在.html前截取
+						thisHtml = htmlName[i].split('.html')[0];
+					}
+				}
+				console.log(thisHtml);
+				var reg = /^htmlType_/;
+				var myHtml = 'htmlType_';
+				for(var i=0;i<localStorage.length;i++){
+					var key = localStorage.key(i);
+					if(reg.test(key)){
+						var oIndex = key.split('_')[1];
+						if(oIndex==0){
+							// 然后就修改li的本地localStorage的htmlType_n的值
+							localStorage.setItem(myHtml+'0',thisHtml)
+						}
+					}
+				}
+				$('#person').on('touchstart',function(){
+					var url = window.location.href;
+					var name = url.split('?')[1].split('=')[1];
+					console.log(name);
+					window.location.href = 'person.html?username='+name;
+				})
+
+			});
+		</script>
+		<script type="text/javascript">
+			
+			$.ajax({
+				url: 'http://datainfo.duapp.com/shopdata/getBanner.php',
+				type: 'get',
+				dataType: 'jsonp',
+				success:function(data){
+					for(var i=0;i<4;i++){
+						var imgs = JSON.parse(data[i].goodsBenUrl)[0];
+						console.log(imgs);
+						$('.swiper-wrapper').append('<div class="swiper-slide"><img src='+imgs+' /></div>');
+					}
+					var myzxIndexSwiper = new Swiper('#zxIndex-swiper', {
+						autoplay:3000,
+		
+						loop:true,
+		
+						pagination:'.swiper-pagination',
+			
+						paginationClickable:true,
+			
+						paginationType:'bullets',
+			
+		
+			
+					});
+				}
+			})
+			$.ajax({
+				url:'http://datainfo.duapp.com/shopdata/getGoods.php',
+				type:'get',
+				dataType:'jsonp',
+				success:function(data){
+					console.log(data);
+					for( var i=0;i<4;i++){
+						var name = data[i].goodsName;
+					    var discounts = data[i].discount;
+					    var img = data[i].goodsListImg;
+					    var prices = data[i].price; 
+					 //    <li>
+	//									<div>
+	//										<img src="prd/img/index-list1.png"/>
+	//									</div>
+	//									<div>
+	//										<div>0元大抽奖！走秀携古尔莎为你开启，价值28880的土耳其...</div>
+	//										<div>
+	//											<div>
+	//												<span>￥0</span>
+	//												<span>￥28880</span>
+	//											</div>
+	//											<div>0折</div>
+	//										</div>
+	//										<div>
+	//											<button></button>
+	//										</div>
+	//									</div>
+	//								</li>
+					    $('#thelist').append('<li><div><img src='+img+'></div><div><div>'+name+'</div><div><div><span>￥'+prices+'</span></div><div>'+discounts+'折</div></div><div><button id="cart-btn" data-img='+img+' data-name='+name+' data-prices='+prices+' data-count='+discounts+'></button></div></div></li>');
+					    $('#thelist li img').on('touchstart',function(){
+//							console.log(111);
+							window.location.href = 'details.html';
+						})
+					    $(document).on('touchstart','#cart-btn',function(){
+//					    	console.log(222);
+							
+							var $img = $(this).attr('data-img');
+							var $name = $(this).attr('data-name');
+							var $prices = $(this).attr('data-prices');
+							var $count = $(this).attr('data-count');
+							var $count=1;
+							var goodsType = 'gType_1';
+							var setObjData = {'img':$img,'name':$name,'price':$prices,'count':$count};
+							localStorage.setItem(goodsType,JSON.stringify(setObjData));
+							window.location.href = 'cart.html';
+						});	
+					}
+				}
+				
+			})
+			
+			localStorage.setItem('htmlType_0','zouxiu-index');
+			localStorage.setItem('htmlType_1','fenl');
+			localStorage.setItem('htmlType_2','cart');
+			localStorage.setItem('htmlType_3','person');
+			localStorage.setItem('htmlType_4','more');
+			
+				
+			
+		</script>
+	</body>
+</html>

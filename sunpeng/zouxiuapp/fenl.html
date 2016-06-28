@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>分类</title>
+		<link rel="stylesheet" type="text/css" href="prd/css/fenl.css"/>
+	</head>
+	<body>
+		<article>
+			<img src="prd/img/return.png"/>
+			zxlu 走秀网
+		</article>
+		<header>
+			<div>
+				<input type="text" placeholder="请输入搜素内容"/>
+			</div>
+		</header>
+		<section>
+			<div>全部</div>
+			<!--<div class="fenl1">衬衫</div>-->
+		</section>
+		<script src="prd/js/common.js" type="text/javascript" charset="utf-8"></script>
+		<!--尾部-->
+		<footer id="footer">	
+		</footer>
+		<script type="text/javascript">
+			$('#footer').load('footer.html',function(){
+//				$('footer li').on('tap',function(){
+					$('#fenl').addClass('active');
+//				})
+			});
+		</script>
+		<script type="text/javascript">
+			$.ajax({
+				url:'http://datainfo.duapp.com/shopdata/getclass.php',
+				type:'get',
+				
+				success:function(data){
+					console.log(data);
+					for( var i=0;i<data.length;i++){
+						var className = JSON.parse(data)[i].className;
+//					    console.log(classname);
+					 	
+					    $('section').append('<div class="fenl1">'+className+'</div>')
+					    	
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
