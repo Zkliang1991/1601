@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html id="html">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+		
+		<link rel="stylesheet" type="text/css" href="ux_1466824116_6402702/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+
+		<link rel="stylesheet" type="text/css" href="css/detail.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+	</head>
+	<script src="js/jquery-1.8.3.js" type="text/javascript" charset="utf-8"></script>
+
+	<body>
+		<header id="header"></header>
+		<div class="main-wrap">
+			<!--      -->
+			<div class="slide" id="slide1">
+		        	<p class='time'>距离结束时间还有:</p>
+		        	<div class="imgpic">
+		        		<img src="" alt="加载中。。。。"/>
+		        	</div>
+		        	<div class="priceName">
+		        		<div class="arc"></div>
+		        		<span calss="detailPrice">￥259 韩都衣舍长袖衬衫</span>
+		        	</div>
+		        	<div class="markPriceNum">
+		        		<span class="markPrice">
+		        			市场价:
+		        		</span>
+		        		<b></b>
+		        		<span class="num">
+		        			125人购买
+		        		</span>
+		        	</div>
+		        	
+		    </div>
+	        <div class="slide" id="slide2">
+	        	<img src="img/14060315414548435341.jpg"/>
+	        	<p>
+	        		产地 :&nbsp;&nbsp;&nbsp;<span> 美国</span><br>
+	        		品牌:&nbsp;&nbsp;&nbsp;<b>LV</b><br>
+	        		商品名称:&nbsp;&nbsp;&nbsp;<i></i>
+	  
+	        	</p>
+	        	<p class="goodsdetail">
+	        		ajax请求banner和商品列表ajax请求banner和商品列表ajax请求banner和商品列表ajax请求banner和商品列表ajax请求banner和商品列表
+	        	</p>
+	        </div>
+	        <div class="slide">
+	        	<!---->
+	        	<div class="swiper-container"id="swiper-container2">
+				    <div class="swiper-wrapper">
+				        <div class="swiper-slide"><img src="img/14060315414548435341.jpg"/></div>
+				        <div class="swiper-slide"><img src="img/14060315414548435341.jpg"/></div>
+				        <div class="swiper-slide"><img src="img/14060315414548435341.jpg"/></div>
+				    </div>
+				    <!-- 如果需要分页器 -->
+				    <div class="swiper-pagination"></div>
+				    <!--<div class="swiper-scrollbar"></div>-->
+				   
+				</div>
+	        	<!---->
+	        </div>
+			<!--     -->
+		</div>
+		
+
+		<ul class="detailUl">
+			<li>介绍</li>
+			<li>详情</li>
+			<li>实拍</li>
+		</ul>
+	</body>
+		<script src="js/swiper-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$("#header").load("header.html",function(){
+			$('.title').html('商品介绍');
+			$('em').html('分享');
+		});
+		
+		var mySwiper = new Swiper ('.swiper-container', {
+		   	
+    		pagination: '.swiper-pagination',
+//		    scrollbar: '.swiper-scrollbar',
+    		
+		})
+		$(".detailUl li").on("click",function(){
+			var num =$(this).index();
+			$(this).parent().children().css("color","#fff")
+			$(this).css("color","red")
+			console.log(num);
+			if(num==0){
+				$("#header").load("header.html",function(){
+					$('.title').html('商品介绍');
+					$('em').html('分享');
+				});
+			}
+			if(num==1){
+				$("#header").load("header.html",function(){
+					$('.title').html('商品详情');
+					$('em').html('分享');
+				});
+			}
+			if(num==2){
+				$("#header").load("header.html",function(){
+					$('.title').html('商品详情');
+					$('em').html('分享');
+				});
+			}
+			var height = $(".slide").height();
+			$(".main-wrap").scrollTop(num*height)    
+		})
+		getUrl()
+		//处理url
+		function getUrl(){
+			var url = window.location.href;
+			if(url.indexOf('?')>0){
+				var arr = url.split('?')
+				var arr1 = arr[1].split('=')
+				console.log(arr1[1])
+			}
+			return arr1[1];
+		}
+		ajaxRequest()
+		//ajax
+		function ajaxRequest(){
+			$.ajax({
+				type:"get",
+				url:"http://datainfo.duapp.com/shopdata/getGoods.php",
+				dataType:"jsonp",
+				data:{'goodsID':getUrl()},
+				success:function(data){
+//					console.log(JSON.stringify(data))
+					$.each(data, function(n, value) {
+						var price = value.price;
+						var goodsBenUrl = value.goodsBenUrl;
+						var discount = value.discount;
+						var buynumber = value.buynumber;
+						var goodsID = value.goodsID;
+						var goodsName = value.goodsName;
+						var detail = value.detail;
+						var className = value.className;
+						var imgsUrl = JSON.parse(value.imgsUrl);
+//						console.log(JSON.parse(imgsUrl));
+//						console.log(JSON.parse(goodsBenUrl)[0])
+						$('.imgpic img').attr('src',JSON.parse(goodsBenUrl)[0])
+						$('.priceName span').html("￥"+price + '  '+goodsName)
+						$('.markPriceNum b').html("￥"+Math.round(price/(discount/10))+' 折扣'+discount+"折")
+						$('.markPriceNum .num').html(buynumber+"人购买");
+						$('#slide2 img').attr('src',JSON.parse(goodsBenUrl)[1])
+						$('#slide2 i').html(goodsName);
+						$('.goodsdetail').html(detail);
+						$('.swiper-slide').eq(0).children().attr('src',imgsUrl[0])
+						$('.swiper-slide').eq(1).children().attr('src',imgsUrl[1])
+						$('.swiper-slide').eq(2).children().attr('src',imgsUrl[2])
+						
+					})
+				}
+			});
+		}
+		
+	</script>
+
+</html>
+<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+	<meta charset="UTF-8">
+	<title>商品介绍</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="stylesheet" href="../css/swiper-3.3.1.min.css">
+	<link rel="stylesheet" href="../css/iscroll.scss">
+	<link rel="stylesheet" href="../css/ux/iconfont.css">
+	<link rel="stylesheet" href="../css/myshopint.css">
+	<script src = "../js/swiper-3.3.1.min.js"></script>
+	<script src="../js/zepto.js"></script>
+	<script src="../js/zepto-tap.js"></script>
+</head>
+<body>
+	
+	<header class="iconfont tit">
+		<a href="#">&#xe63a;</a>
+		<span>商品介绍</span>
+		<input class="log" type="button" value="分享">
+	</header>
+
+	<div class="swiper-container">
+	    <div class="swiper-wrapper">
+
+	        <div class="swiper-slide on1">
+	        	<header class="time">
+	        		距离结束时间：<span>1</span>
+	        	</header>
+				<div class="img">
+					<img src="" alt="">
+				</div>
+	        </div>
+
+	        <div class="swiper-slide on2">
+	        	<img  class="img2" src="../images/allnew1.jpg" alt="">
+	        	<div class="img">
+					<img src="" alt="">
+				</div>
+	        </div>
+
+	        <div class="swiper-slide on3">
+				<div class="swiper-container2">
+				    <div class="swiper-wrapper2">
+				        <div class="swiper-slide2 slide1"></div>
+				        <div class="swiper-slide2 slide2"></div>
+				        <div class="swiper-slide2 slide3"></div>
+				        <div class="swiper-slide2 slide4"></div>
+				    </div>
+			   		<div class="swiper-pagination2"></div>
+				</div>
+			</div>
+
+	    </div>
+   		<div class="swiper-pagination"></div>
+	</div>
+
+	
+	
+</body>
+	<script type="text/javascript">
+		var width = document.documentElement.clientWidth;
+		var html = document.getElementById("html");
+		html.style.fontSize = width/640*100 + 'px';
+		// console.log(width);
+		window.onresize = function() {
+			// 随着窗口的改变求设备的宽度
+			var width = document.body.clientWidth;
+			html.style.fontSize = width/640*100 + 'px';
+		}
+		
+	    var mySwiper = new Swiper('.swiper-container',{
+			pagination : '.swiper-pagination',
+			paginationBulletRender: function (index, className) {
+						var arr= ["介绍","详情","实拍"];
+						return '<span class="' + className + '">' + (arr[index]) + '</span>';  
+				}
+
+		   })
+
+	    var mySwiper2 = new Swiper('.swiper-container2',{
+			pagination : '.swiper-pagination2',
+			paginationBulletRender: function (index, className) {
+						var arr= ["介绍","详情","实拍"];
+						return '<span class="' + className + '">' + (arr[index]) + '</span>';  
+				}
+
+		   })
+	</script>
+</html>

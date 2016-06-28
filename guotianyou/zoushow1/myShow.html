@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html id="html">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+		
+		<link rel="stylesheet" type="text/css" href="ux_1466824116_6402702/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="css/base.css"/>
+		<link rel="stylesheet" type="text/css" href="css/myShow.css"/>
+	</head>
+	<script src="js/jquery-1.8.3.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+	
+	<body>
+		<header id="header"></header>
+		<div id="myshow">
+			<div class="ownpic">
+				<img src="img/14060315414548435341.jpg"/>
+			</div>
+			<div class="userinfo">
+				<p>昵称:<span>未知</span></p>
+				<a href="login.html">登录</a>
+				<a href="register.html">注册</a>
+				
+			</div>
+			<div class="box">
+				
+			</div>
+			<ul>
+				<li>我的订单<span>&gt;</span></li>
+				<li>我的优惠券<span>&gt;</span></li>
+				<li>浏览记录<span>&gt;</span></li>
+				<li>我的收藏<span>&gt;</span></li>
+			
+			</ul>
+			
+		</div>
+		<p class='quit'>退出登录</p>
+		<footer id="footer"></footer>
+		<div class="space">
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+	getheadfoot()
+	//加载头部尾部
+	function getheadfoot(){
+		$("#header").load("header.html",function(){
+			$('.title').html('我的秀');
+			$('em').css('display',"none");
+		});
+		$("#footer").load("footer.html",function(){
+			$(".home").on("click",function(){
+				window.location.href = "in.html";
+				
+			})
+			$(".type").on("click",function(){
+				window.location.href = "in.html";
+				
+			})
+			$(".shopping").on("click",function(){
+				window.location.href = "myCart.html";
+				
+			})
+			$(".own").on("click",function(){
+				window.location.href = "myShow.html";
+				
+			})
+			$(".more").on("click",function(){
+				window.location.href = "more.html";
+				
+			})
+		})
+	};
+	judgeLogin()
+	//判定是否登录
+	function judgeLogin(){
+		console.log(getCookie('username'))
+		if(getCookie('flag')==1){
+			$('.userinfo span').html(getCookie('username'))
+			$('.userinfo a').css('display','none')
+			$('.quit').css('display','block')
+		}else{
+			$('.userinfo a').css('display','inline-block')
+			$('.quit').css('display','none')
+		}
+//		if(getCookie('flag')==1){
+//			var arr=["userID:"+getCookie('username'),]
+//			$.ajax({
+//				type:"get",
+//				url:"http://datainfo.duapp.com/shopdata/getuser.php",
+//				dataType:"jsonp",
+//				data:getCookie('username'),
+//				success:function(data){
+////					var data = JSON.parse(data);
+//					console.log(1)
+//				},
+//				error:function(){
+//					console.log('cuow')
+//				}
+//			});
+//		}
+	};
+	quitLogin()
+	//退出
+	function quitLogin(){
+		$('.quit').on('click',function(){
+			setCookie("flag",'0')
+			$('.userinfo span').html("未知")
+			
+			$('.userinfo a').css('display','inline-block')
+			$('.quit').css('display','none')
+		})
+	}
+	</script>
+</html>
