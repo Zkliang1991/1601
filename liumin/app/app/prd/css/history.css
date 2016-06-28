@@ -1,0 +1,187 @@
+@charset "UTF-8";
+html {
+  font-size: 62.5%;
+  font-family: "微软雅黑", "Microsoft yahei"; }
+
+body, h1, h2, h3, h4, h5, h6, blockquote, ol, ul, dl, dd, p, textarea, input, select, option, form {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #f5f4f0;
+  -webkit-tap-highlight-color: transparent; }
+
+ol, ul, textarea, input, option, th, td {
+  padding: 0; }
+
+.page {
+  min-width: 320px;
+  max-width: 750px;
+  margin: 0 auto; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-size: 100%; }
+
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+  display: block; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+ul, ol {
+  list-style-type: none; }
+
+.clearfix:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden; }
+
+/* ios默认文本框阴影 */
+input[type=text], textarea {
+  -webkit-appearance: none; }
+
+/* 低版本安卓文本框层级问题 */
+input:focus {
+  -webkit-user-modify: read-write-plaintext-only; }
+
+fieldset, img {
+  border: 0; }
+
+a {
+  text-decoration: none; }
+
+a, textarea, input {
+  outline: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+textarea {
+  overflow: auto;
+  resize: none; }
+
+@media only screen and (min-width: 320px) {
+  html {
+    font-size: 75% !important;
+    /* 12÷16=73.4% */ } }
+
+@media only screen and (min-width: 375px) {
+  html {
+    font-size: 87.89063% !important;
+    /* 14.0625÷16=73.2% */ } }
+
+@media only screen and (min-width: 414px) {
+  html {
+    font-size: 97.03% !important;
+    /* 15.525÷16=94% */ } }
+
+@media only screen and (min-width: 480px) {
+  html {
+    font-size: 112.5% !important;
+    /* 18÷16=94% */ } }
+
+@media only screen and (min-width: 560px) {
+  html {
+    font-size: 131.25% !important;
+    /* 21÷16=109% */ } }
+
+@media only screen and (min-width: 640px) {
+  html {
+    font-size: 150% !important;
+    /* 24÷16=125% */ } }
+
+@media only screen and (min-width: 720px) {
+  html {
+    font-size: 168.75% !important;
+    /* 27÷16=146.43% */ } }
+
+@media only screen and (min-width: 750px) {
+  html {
+    font-size: 175.78125% !important;
+    /* 28.125÷16=146.43% */ } }
+
+@media only screen and (min-width: 800px) {
+  html {
+    font-size: 187.5% !important;
+    /* 30÷16=146.43% */ } }
+
+@media only screen and (min-width: 960px) {
+  html {
+    font-size: 225% !important;
+    /* 36÷16=146.43% */ } }
+
+section {
+  position: absolute;
+  top: 3.83333rem;
+  padding: 0; }
+
+.shoplist {
+  width: 100%;
+  background: #fff;
+  overflow: scroll; }
+  .shoplist li {
+    height: 9.25rem;
+    border-bottom: 0.08333rem solid #707070;
+    box-sizing: border-box;
+    padding: 0.83333rem 2.20833rem 1.08333rem 0.66667rem;
+    font-weight: 600; }
+    .shoplist li img {
+      display: block;
+      box-sizing: border-box;
+      float: left;
+      width: 7.20833rem;
+      height: 7.20833rem;
+      border: 1px solid #c8c8c6;
+      margin-right: 0.66667rem; }
+    .shoplist li p, .shoplist li span, .shoplist li a {
+      float: left; }
+    .shoplist li p {
+      box-sizing: border-box;
+      width: 15.91667rem;
+      height: 2.91667rem;
+      padding-top: 0.41667rem;
+      font-size: 1.16667rem; }
+    .shoplist li div {
+      width: 11rem;
+      height: 3.75rem;
+      box-sizing: border-box;
+      float: left;
+      padding: 0.66667rem 4.08333rem 0rem 0.25rem;
+      overflow: hidden; }
+      .shoplist li div .price {
+        font-size: 1.08333rem;
+        color: #f42a76;
+        margin-top: 0.20833rem; }
+      .shoplist li div .line-price {
+        font-size: 0.83333rem;
+        color: #bbbbbb;
+        text-decoration: line-through;
+        margin-left: 0.70833rem;
+        margin-top: 0.20833rem; }
+      .shoplist li div .cost {
+        margin-top: 0.33333rem; }
+    .shoplist li a {
+      display: block;
+      width: 4.91667rem;
+      height: 2.16667rem;
+      box-sizing: border-box;
+      background-image: -webkit-linear-gradient(#f1658c, #dd245e);
+      border-radius: 0.41667rem;
+      margin-top: 1.66667rem;
+      color: #fff;
+      text-align: center;
+      line-height: 2.16667rem;
+      font-size: 1.66667rem; }
