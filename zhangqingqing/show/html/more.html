@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>更多</title>
+	<link rel="stylesheet" type="text/css" href="../css/more.css">
+</head>
+<body>
+	<header>
+		<a href="javascript:history.go(-1);"></a>
+		<p>更多</p>
+	</header><!-- /header -->
+	<section>
+		<div class="my">
+			<p class="p1" id="p1">常见问题</p>
+			<p class="p2" id="p2">系统设置</p>
+			<p class="p3" id="p3">软件更新</p>
+			<p class="p4" id="p4">扫二维码</p>
+		</div>
+		<div class="about">
+			<p class="p5" id="p1">我要提意见</p>
+			<p class="p6" id="p2">关于</p>
+		</div>
+	</section>
+	<a href="#" id="tui">退出登录</a>
+	<footer id="footer"></footer>
+	<script type="text/javascript" src="../js/more.js"></script>
+	<script type="text/javascript">
+		$("#footer").load("footer.html",function(){
+			$('#footer ul li').eq(4).addClass('active');
+		});
+
+	</script>
+</body>
+</html>

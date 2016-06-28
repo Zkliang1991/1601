@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>我的秀</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="../css/show.css">
+</head>
+<body>
+	<header>
+		<a href="javascript:history.go(-1);"></a>
+		<p class="myhistory-p">浏览记录</p>
+	</header>
+	<div class="myhistory-ul">
+		<ul class="mu-aul">
+			<li>
+				<dl>
+					<dt><img src="" alt=""></dt>
+					<dd>
+						<div class="show-tit">你好来不回复</div>
+						<div class="show-prb">
+							<div class="show-left">
+								<p class="show-price">￥<span>0</span></p>
+								<p class="show-pr"><span>0</span>折</p>
+							</div>
+							<div class="iconfont show-font">&#xe615;</div>
+						</div>
+					</dd>
+				</dl>
+			</li>
+			
+		</ul>
+	</div>
+	<div id="footer"></div>
+	<script type="text/javascript" src="../js/load.js"></script>
+	<script type="text/javascript">
+	      $('#footer').load('../html/footer.html',function(){
+	      	$('#foot-ul li').siblings().removeClass('active').eq(2).addClass('active');
+	      	var url = window.location.href;
+			var htmlName = url.split('/');
+			var thisHtml = null;
+			for(var i=0;i<htmlName.length;i++){
+				if(htmlName[i].indexOf('.html')!=-1){
+					thisHtml = htmlName[i].split('.html')[0];
+				}
+			}
+			// console.log(thisHtml);
+			var reg = /^htmlType_/;
+			var myHtml = 'htmlType_';
+			for(var i=0;i<localStorage.length;i++){
+				var key = localStorage.key(i);
+				if(reg.test(key)){
+					var oIndex = key.split('_')[1];
+					if(oIndex==3){
+						localStorage.setItem(myHtml+'3',thisHtml);
+					}
+				}
+			}
+	      });
+	</script>
+</body>
+</html>

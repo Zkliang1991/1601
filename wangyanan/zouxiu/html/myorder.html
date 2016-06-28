@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../css/myorder.css">
+	<link rel="stylesheet" type="text/css" href="../ux/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="../css/scroll.css">
+	<script type="text/javascript" src="../js/iscroll.js"></script>
+	<script type="text/javascript" src="../js/tscroll.js"></script>
+	<script type="text/javascript" src=../js/zepto.js></script>
+	<script type="text/javascript" src="../js/zepto-tap.js"></script>
+</head>
+<body>
+	<div class="header">
+		<a href="javascript:history.go(-1);"></a>
+		<p>我的订单</p>
+		
+	</div>
+	
+	<div id="wrapper">
+	<div id="scroller">
+		<div id="pullDown">
+			<span class="pullDownIcon"></span>
+			<span class="pullDownLabel">下拉刷新...</span>
+		</div>
+		<ul id="thelist">
+			<li>
+				<dl>
+					<dt>
+						<img src="">
+					</dt>
+					<dd>
+						<p>气质玫瑰红<span>L</span></p>
+						<p>T恤</p>
+						<p>单价：<b>￥199</b></p>
+						<p>数量：<b>1</b>
+							<a href="">取消订单</a>
+							
+						</p>
+						
+					</dd>
+				</dl>
+			</li>
+			
+			
+		</ul>
+		<div id="pullUp">
+			<span class="pullUpIcon"></span>
+			<span class="pullUpLabel">加载更多...</span>
+		</div>
+	</div>
+</div>
+<div id="foot">
+		<script type="text/javascript">
+			$("#foot").load("foot.html");
+		</script>
+	</div>	
+</body>
+</html>

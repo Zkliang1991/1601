@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="../css/youhui.css">
+	<script type="text/javascript" src=../js/zepto.js></script>
+	<script type="text/javascript" src="../js/zepto-tap.js"></script>
+</head>
+<body>
+	<div class="header">
+		<a href="javascript:history.go(-1);"></a>
+		<p>我的优惠劵</p>
+		
+	</div>
+	<section>
+		<ul>
+			<li class="select">未使用</li>
+			<li>已使用</li>
+			<li>已过期</li>
+			<li>未激活</li>
+		</ul>
+		<div>
+			<p>40元现金券(满299使用)</p>
+			<p><b>号码:</b><span>afsdghgftj</span></p>
+			<p><b>过期时间:</b><span>2016年8月12日</span></p>
+			<p><b>状态:</b><span>未使用</span></p>
+
+		</div>
+		
+	</section>
+		
+	
+	
+<div id="foot">
+		<script type="text/javascript">
+			$("#foot").load("foot.html");
+
+         $("#foot").load("foot.html",function(){
+			$('footer div').eq(3).addClass('active');
+			var url = window.location.href;
+			//每次刷新新的页面，就把url里.html的前面值截取出来
+			var htmlName = url.split('/');
+			console.log(htmlName);
+			var thisHtml = null;
+			for(var i=0;i<htmlName.length;i++){
+				if(htmlName[i].indexOf('.html')!=-1){
+					//在.html前截取
+					thisHtml = htmlName[i].split('.html')[0];
+				}
+			}
+			console.log(thisHtml);
+			var reg = /^htmlType_/;
+			var myHtml = 'htmlType_';
+			for(var i=0;i<localStorage.length;i++){
+				var key = localStorage.key(i);
+				if(reg.test(key)){
+					var oIndex = key.split('_')[1];
+					if(oIndex==0){
+						// 然后就修改li的本地localStorage的htmlType_n的值
+						localStorage.setItem(myHtml+'0',thisHtml)
+					}
+				}
+			}
+		});
+		</script>
+	</div>	
+</body>
+</html>
