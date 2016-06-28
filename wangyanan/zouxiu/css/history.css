@@ -1,0 +1,196 @@
+html {
+  font-size: 62.5%;
+  font-family: "Microsoft Yahei"; }
+
+body, h1, h2, h3, h4, h5, h6, blockquote, ol, ul, dl, dd, p, textarea, input, select, option, form {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #f5f4f0;
+  -webkit-tap-highlight-color: transparent; }
+
+ol, ul, textarea, input, option, th, td {
+  padding: 0; }
+
+.page {
+  min-width: 320px;
+  max-width: 750px;
+  margin: 0 auto; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-size: 100%; }
+
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+  display: block; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+ul, ol {
+  list-style-type: none; }
+
+.clearfix:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden; }
+
+input[type=text], textarea {
+  -webkit-appearance: none; }
+
+input:focus {
+  -webkit-user-modify: read-write-plaintext-only; }
+
+fieldset, img {
+  border: 0; }
+
+a {
+  text-decoration: none; }
+
+a, textarea, input {
+  outline: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+textarea {
+  overflow: auto;
+  resize: none; }
+
+@media only screen and (min-width: 320px) {
+  html {
+    font-size: 75% !important; } }
+@media only screen and (min-width: 375px) {
+  html {
+    font-size: 87.89063% !important; } }
+@media only screen and (min-width: 414px) {
+  html {
+    font-size: 97.03% !important; } }
+@media only screen and (min-width: 480px) {
+  html {
+    font-size: 112.5% !important; } }
+@media only screen and (min-width: 560px) {
+  html {
+    font-size: 131.25% !important; } }
+@media only screen and (min-width: 640px) {
+  html {
+    font-size: 150% !important; } }
+@media only screen and (min-width: 720px) {
+  html {
+    font-size: 168.75% !important; } }
+@media only screen and (min-width: 750px) {
+  html {
+    font-size: 175.78125% !important; } }
+@media only screen and (min-width: 800px) {
+  html {
+    font-size: 187.5% !important; } }
+@media only screen and (min-width: 960px) {
+  html {
+    font-size: 225% !important; } }
+.header {
+  background: #e4366b;
+  width: 100%;
+  height: 3.58333rem;
+  color: #fff;
+  font-size: 1.66667rem;
+  line-height: 3.58333rem;
+  text-align: center; }
+  .header a {
+    position: absolute;
+    left: 0.75rem;
+    top: 1.375rem;
+    display: block;
+    width: 2.16667rem;
+    height: 1.45833rem;
+    background: url(../images/back.png) left center no-repeat;
+    background-size: 2.08333rem 1.5rem; }
+
+#wrapper {
+  position: absolute;
+  z-index: 1;
+  top: 3.66667rem;
+  bottom: 4.16667rem;
+  width: 100%;
+  background: #fff;
+  overflow: auto; }
+
+#scroller {
+  position: absolute;
+  z-index: 1;
+  box-sizing: border;
+  -webkit-tap-highlight-color: transparent;
+  width: 100%;
+  padding: 0; }
+
+#scroller ul {
+  list-style: none; }
+
+#scroller li {
+  width: 100%;
+  height: 9.16667rem;
+  padding: 0.83333rem 2.16667rem 0.83333rem 0.58333rem;
+  box-sizing: border-box;
+  border-bottom: 0.04167rem solid #ccc; }
+  #scroller li dl {
+    display: flex; }
+    #scroller li dl dt {
+      width: 7.16667rem;
+      height: 7.16667rem;
+      border: 0.04167rem solid #ddd; }
+      #scroller li dl dt img {
+        width: 100%;
+        height: 100%; }
+    #scroller li dl dd {
+      position: relative;
+      width: 16.625rem;
+      height: 7.16667rem;
+      box-sizing: border-box;
+      padding: 0.5rem 0 0.5rem 0.625rem; }
+      #scroller li dl dd a {
+        font-size: 1.125rem;
+        display: block;
+        width: 100%;
+        height: 3.58333rem; }
+      #scroller li dl dd b {
+        font-size: 1.33333rem;
+        color: #f15b88; }
+      #scroller li dl dd span {
+        font-size: 0.91667rem;
+        color: #bcbabb;
+        text-decoration: line-through; }
+      #scroller li dl dd div {
+        width: 4.91667rem;
+        height: 2.20833rem;
+        background: -webkit-linear-gradient(top, #f2648c 40%, #da1c58 60%);
+        position: absolute;
+        border-radius: 0.41667rem;
+        right: 0;
+        bottom: 0;
+        text-align: center;
+        color: #fff;
+        line-height: 2.20833rem;
+        font-size: 1.83333rem; }
+
+#foot {
+  width: 100%;
+  height: 4.16667rem;
+  position: absolute;
+  z-index: 444;
+  bottom: 0; }
+  #foot .active {
+    color: #db1b57 !important; }
+
+/*# sourceMappingURL=history.css.map */

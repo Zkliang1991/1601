@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>我的秀</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="../css/show.css">
+</head>
+<body>
+	<div class="model" id="addcart">div</div>
+	<header>
+		<p>ZXIU 走秀网</p>
+	</header>
+	<div class="show-ser">
+		<div>
+			<a id="show-search" href="javascript:;"><img src="../images/show-ser.jpg"></a>
+			<input id="show-setxt" type="text" name="" placeholder="请输入搜索内容">
+		</div>
+	</div>
+	<div>
+	<div class="swiper-container" id="show-con">
+		<div class="swiper-wrapper" id="show-wraper">
+			<!-- <div class="swiper-slide show-slide"><img src="../images/index1.jpg"></div>
+			<div class="swiper-slide show-slide"><img src="../images/index2.jpg"></div>
+			<div class="swiper-slide show-slide"><img src="../images/index3.jpg"></div>
+			<div class="swiper-slide show-slide"><img src="../images/index4.jpg"></div> -->
+		</div>
+	</div></div>
+	<div id="wrapper">
+		<div id="scroller">
+			<div id="pullDown">
+				<span class="pullDownIcon"></span>
+				<span class="pullDownLabel">下拉刷新...</span>
+			</div>
+			<ul id="thelist">
+				<!-- <li>
+					<dl>
+						<dt><img src="" alt=""></dt>
+						<dd>
+							<div class="show-tit">你好来不回复</div>
+							<div class="show-prb">
+								<div class="show-left">
+									<p class="show-price">￥<span>0</span></p>
+									<p class="show-pr"><span>0</span>折</p>
+								</div>
+								<div class="iconfont show-font">&#xe615;</div>
+							</div>
+						</dd>
+					</dl>
+				</li> -->
+				
+			</ul>
+			<div id="pullUp">
+				<span class="pullUpIcon"></span>
+				<span class="pullUpLabel">加载更多...</span>
+			</div>
+		</div>
+	</div>
+	<div id="footer"></div>
+	<script type="text/javascript" src="../js/load.js"></script>
+	<script type="text/javascript">
+	      $('#footer').load('../html/footer.html',function(){
+	      		var url = window.location.href;
+				var htmlName = url.split('/');
+				// console.log(htmlName);
+				var thisHtml = null;
+				for(var i=0;i<htmlName.length;i++){
+					if(htmlName[i].indexOf('.html')!=-1){
+						thisHtml = htmlName[i].split('.html')[0];
+					}
+				}
+				// console.log(thisHtml);
+				var reg = /^htmlType_/;
+				var myHtml = 'htmlType_';
+				for(var i=0;i<localStorage.length;i++){
+					var key = localStorage.key(i);
+					if(reg.test(key)){
+						var oIndex = key.split('_')[1];
+						if(oIndex==0){
+							localStorage.setItem(myHtml+'0',thisHtml)
+						}
+					}
+				}
+
+				
+	      });
+	</script>
+</body>
+</html>

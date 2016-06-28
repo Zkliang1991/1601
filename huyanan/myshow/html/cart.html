@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+	<meta charset="UTF-8">
+	<title>我的秀</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="../css/login.css">
+</head>
+<body>
+	<header>
+		<a href="javascript:history.go(-1);"></a>
+		<p>购物车</p>
+		<span >去结算</span>
+	</header>
+	<div class="emporty" id="emporty">
+		<p class="emportyp">您的购物车为空</p>
+		<a class="goto" id="gotoshow" href="javascript:;">去逛逛</a>
+	</div>
+	<div class="cart-money" id="noemporty">
+		<p class="cart-tit"><span>商品数量：</span><span class="ct-num" id="ctnum">0</span> <span>应付总额(不含运费)：</span><span class="ct-allmo">￥<i id="cartallmo">0</i></span></p>
+		<ul class="cart-ul" id="cartul">
+			<!-- <li id="cart-li">
+				<dl id="cl-d">
+					<dt><img src="../images/myshow.jpg"></dt>
+					<dd id="cl-dd">
+						<p class="cdl-tit"><span>美国加州无籽红提1kg装</span><a href="javascript:;" id="cartdel"><img src="../images/del.jpg"></a></p>
+						<p class="cdl-price">单价：<span class="cdlp-left">￥<b id="cartprice">199</b></span> <span class="cdlp-right" >L</span></p>
+						<p class="cdl-num"><span>数量：</span><span><a id="dec" href="javascript:;">-</a><input id="inputtxt" type="text" name="" value="1"><a href="javascript:;" id="add">+</a></span></p>
+					</dd>
+				</dl>
+			</li> -->
+		</ul>
+	</div>
+	<div id="footer"></div>
+	<script type="text/javascript" src="../js/cart.js"></script>
+	<script type="text/javascript">
+	    $('#footer').load('../html/footer.html',function(){
+	    	$('#foot-ul li').siblings().removeClass('active').eq(1).addClass('active');
+	    	
+	    });
+	   
+	</script>
+	
+</body>
+</html>
