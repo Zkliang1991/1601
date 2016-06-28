@@ -1,0 +1,208 @@
+@fe :"Microsoft yahei";
+* {
+  margin: 0;
+  padding: 0; }
+
+
+
+/*header矢量图标*/
+
+.iconfont2 {
+  font-size: 30px;
+  
+  font-family: "iconfont2" !important; }
+  
+  
+  
+  
+  
+  .back:before{
+  	content:"\f007a";
+		width: 0.97rem;	
+		height:0.86rem;
+		float: left;
+		color:#000000;
+		font-size:0.40rem;
+		text-align: center;
+		line-height: 0.86rem;
+  }
+
+  .fangdajing{
+  	background: #fff;
+  	width: 0.6rem;
+  	height:0.53rem;
+  	border-bottom-left-radius: 0.2rem;
+    border-top-left-radius:0.2rem;
+    text-align: center;
+		
+  }
+  
+  
+  .fangdajing:before{
+  	content:"\e624";
+		
+		/*float: left;*/
+		color:#000000;
+		font-size:0.40rem;
+		
+		line-height: 0.53rem;
+				
+  }
+
+
+
+
+
+#header{
+  position: relative;
+  width: 100%;
+	height: 0.98rem;
+  line-height: 0.4rem;
+  color: #fff;
+ 
+/*  text-align: center;*/
+  background: #e4366b; }
+  
+  /*去结算*/
+ .btn{	
+ 	float: right;
+ 	/*display: block;*/
+ 	width: 1.09rem;
+ 	height:0.53rem;
+ 	color:#fefefe;
+ 	line-height: 0.53rem;
+ 	background: #e53269;
+ 	font-size: 0.24rem;
+ 	font-family: "微软雅黑";
+ 	border:1px solid deeppink;
+ 	text-align: center;
+ 	text-decoration:none;
+ 	border-radius:0.15rem;
+ 	margin-right:0.2rem;
+ 	margin-top:0.15rem;
+ }
+ 
+  
+  #header span {
+  /*	position:absolute;*/
+  	padding-left:0.96rem ;
+    display: inline-block;
+    height: 0.27rem;
+    font-size: 0.27rem;
+    font-family: arial; }
+  #header h1 {
+  	
+    display: inline-block;
+    padding-left: 0.25rem;
+    font-size: 0.4rem;
+    color: yellow;
+    line-height: 0.98rem;
+    height: 0.4rem; }
+
+#search {
+  width: 100%;
+  height: 0.85rem;
+  background: #52525a;
+  display: flex;
+  box-sizing: border-box;
+  padding-left: 0.3rem;
+  padding-top: 0.17rem; }
+  #search .ser {
+  	border: none;
+    outline: none;
+    width: 5rem;
+    height: 0.53rem;
+    display: block;
+    border-bottom-right-radius: 0.2rem;
+    border-top-right-radius:0.2rem;
+   /* border-radius: 0.2rem;*/
+   /* text-indent: 0.3rem;*/
+    font-size: 0.26rem; }
+
+/************************bar**********************/
+
+
+
+/****************main*****************/
+
+
+
+#banner {
+  display: block;
+  width: 100%;
+  height: 8rem;
+  background: red; }
+  #banner .swiper-container {
+    width: 100%;
+    height: 100%; }
+    #banner .swiper-container .swiper-wrapper {
+      width: 100%;
+      height: 100%; }
+      #banner .swiper-container .swiper-wrapper .swiper-slide {
+        width: 100%;
+        height: 100%; }
+        #banner .swiper-container .swiper-wrapper .swiper-slide img {
+          width: 100%;
+          height: 100%; }
+        
+          
+          
+ /*----------------------------------------*/     
+
+
+
+  /*--------------------------------------*/          
+            
+.swiper-pagination{
+	width: 100%;
+	height:0.98rem;
+	position:absolute;
+	bottom:0;
+	background: #58575d;
+}
+
+.swiper-pagination li{
+	
+	width: 33%;
+	height: 0.98rem;
+	border-radius: 0;
+	float: left;
+	margin: 0;
+	padding: 0;
+	font-size:0.45rem;
+	list-style:none ;
+	text-align: center;
+	line-height: 0.98rem;
+	color:#fff;
+}
+
+
+
+/*商品删除矢量图标*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

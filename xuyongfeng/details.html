@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+    <meta charset="utf-8">
+   
+<meta name="viewport" content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no'>
+
+
+    <title>分类</title>
+    <link rel="stylesheet" type="text/css" href="css/details.css"/>
+    <link rel="stylesheet" href="iconfont/ux/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="iconfont/ux2/iconfont.css"/>	
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css">    
+    <link rel="stylesheet" href="iconfont/ux/iconfont.css">
+    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+ 	
+    <script src="js/public.js" type="text/javascript" ></script>
+    <script type="text/javascript" src="js/swiper-3.3.1.min.js">
+    	
+    </script>
+</head>
+<body>
+	<div id="header">
+		<a href="index.html" class="iconfont2 back"> </a>
+		<span> &nbsp &nbsp &nbsp   </span><h1>商品详情</h1>
+		<!--<input type="button" name="" class="btn" value="去结算"/>-->
+		<a href="javaseript:;"class="btn" >分享</a>	
+	</div>	
+	<div id="search">	
+		<div class="iconfont2 fangdajing"></div>
+		<input type="text" placeholder="请输入搜索内容" autocomplete="off" class="ser" value=""/>
+	</div>
+<!--详情页商品图片滑动-->	
+
+<div id="banner">
+		<div class="swiper-container">
+		  <div class="swiper-wrapper">
+		    <div class="swiper-slide"><a href="javascript:;"><img src="img/girl1.jpg" alt="banner1"></a></div>
+		    <div class="swiper-slide"><a href="javascript:;"><img src="img/girl2.jpg" alt="banner2"></a></div>
+		    <div class="swiper-slide"><a href="javascript:;"><img src="img/girl3.jpg" alt="banner3"></a></div>
+		   
+		  </div>
+		  <div class="swiper-pagination"></div>
+		</div>
+</div>
+<!--详情页footer-->
+
+
+<!--重要的swiper初始化-->
+<script>        
+ var myswiper = new Swiper('.swiper-container',{
+			/*prevButton:'.swiper-button-prev',
+			nextButton:'.swiper-button-next',
+			autoplay:1000,
+			loop:true,		//循环播放   用loop不要用css3结构选择器
+			initialSlide:0,  //初始化slide的索引
+			direction:"horizontal" , //表示swiper的滑动方向
+			speed:500,
+			autoplayDisableOnInteraction:false,
+			pagination:'.swiper-pagination',
+			paginationClickable:true,  //分页能否点击
+			paginationType:"bullets",//分页类型，  fraction 分数    progress百分数
+			paginationHide:true,
+			paginationElement:"li",
+			paginationBulletRender:function(index,className){
+				//var array=['首页','深圳','优雅','怀念'];
+				//return '<li class='+className+'>'+(index+1)+'</li>';
+				//return '<li class='+className+'>'+array[index]+'</li>';
+				var array=['&#xe601;','&#xe614;','&#xe631;','&#xe67a;'];
+				return '<li class= "iconfont '+className+' ">'+array[index]+'</li>';
+			},
+			
+			touchRatio:0.5,*/
+			
+			
+			prevButton:'.swiper-button-prev',
+			nextButton:'.swiper-button-next',
+			autoplay:1000,
+			loop:true,		
+			initialSlide:0,  
+			direction:"horizontal" , 
+			speed:500,
+			autoplayDisableOnInteraction:false,
+			pagination:'.swiper-pagination',
+
+
+			paginationClickable:true, 
+			paginationType:"bullets",
+			paginationHide:true,
+			paginationElement:"li",
+			paginationBulletRender:function(index,className){
+			
+				var array=['介绍','详情','实拍'];
+				return '<li class= "iconfont '+className+' ">'+array[index]+'</li>';
+			},
+			
+			touchRatio:0.5,
+
+			
+		})   
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -628,31 +628,44 @@ html {
         color: #fff;
         line-height: 3.70833rem; }
     html body #swiper1 {
-      width: 100%; }
+      width: 21.75rem;
+      height: 2.66667rem;
+      margin: 1.29167rem 2.5rem 1.08333rem 2.41667rem;
+      background: #f2f2f2;
+      border-radius: 0.20833rem;
+      line-height: 2.66667rem;
+      color: #454545;
+      text-align: center; }
       html body #swiper1 .swiper-slide {
-        font-size: "微软雅黑";
-        width: 25%;
-        text-align: center;
-        line-height: 50px;
-        height: 50px;
-        color: #fff;
-        background: #ccc;
-        font-weight: bold; }
+        width: 5.41667rem;
+        height: 2.66667rem;
+        border-top: 0.04167rem solid #a8a8a8;
+        border-bottom: 0.04167rem solid #d4d4d4;
+        border-left: 0.04167rem solid #c7c7c7;
+        border-right: 0.04167rem solid #a9a9a9;
+        box-sizing: border-box;
+        font-size: "微软雅黑"; }
       html body #swiper1 .active-nav {
-        background: #f2cc1c !important;
+        background: #f25580;
         color: #fff; }
     html body #swiper2 {
-      width: 100%; }
+      width: 21.66667rem;
+      height: 6rem;
+      border: 0.04167rem solid #a1a1a1;
+      box-sizing: border-box;
+      margin: 1.08333rem 2.54167rem 0 2.45833rem;
+      border-radius: 0.41667rem;
+      background: #fff; }
       html body #swiper2 .swiper-slide {
         width: 100%;
-        height: 300px;
-        text-align: center;
-        line-height: 300px;
-        color: #fff;
-        font-weight: bold;
-        font-size: "微软雅黑";
-        font-size: 60px; }
-      html body #swiper2 .swiper-slide:nth-child(even) {
-        background: red; }
-      html body #swiper2 .swiper-slide:nth-child(odd) {
-        background: deeppink; }
+        padding: 0.5rem 0 0 0.58333rem;
+        box-sizing: border-box;
+        font-family: "微软雅黑";
+        font-size: 0.95833rem; }
+        html body #swiper2 .swiper-slide p {
+          height: 1.29167rem;
+          color: #464646; }
+          html body #swiper2 .swiper-slide p span {
+            color: #898989; }
+        html body #swiper2 .swiper-slide p:nth-of-type(1) {
+          height: 1.5rem; }
