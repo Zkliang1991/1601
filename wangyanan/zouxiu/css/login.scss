@@ -1,0 +1,209 @@
+@function pxToRem($px, $base: 24) {
+  @return ($px / $base) * 1rem;
+}
+$ff:'Microsoft Yahei';
+html {
+   font-size: 62.5%; 
+    font-family:$ff; 
+}
+body,h1,h2,h3,h4,h5,h6,blockquote,ol,ul,dl,dd,p,textarea,input,select,option,form {
+    margin:0; padding:0;
+}
+body{
+    background: #f5f4f0;
+    -webkit-tap-highlight-color:transparent;
+}
+ 
+ol,ul,textarea,input,option,th,td {
+    padding:0;
+}
+
+.page{
+    min-width: 320px;max-width: 750px;margin: 0 auto;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    font-size:100%;
+}
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+    display: block;
+}
+table {
+    border-collapse:collapse;border-spacing: 0;
+}
+ul,ol {
+    list-style-type:none;
+}
+.clearfix:after {
+    content:'.';display:block;height:0;clear:both;visibility:hidden;
+}
+
+.clear {
+    clear:both;height:0;overflow:hidden;
+}
+
+input[type=text],textarea{
+    -webkit-appearance:none;
+}
+input:focus{
+    -webkit-user-modify:read-write-plaintext-only;
+}
+fieldset, img {
+    border: 0;
+}
+a {
+    text-decoration:none;
+}
+a,textarea,input{
+    outline:none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+textarea {
+    overflow:auto;resize:none;
+}
+
+@media only screen and (min-width: 320px){
+    html {
+        font-size: 75%!important; 
+    }
+}
+@media only screen and (min-width: 375px){
+    html {
+        font-size: 87.890625%!important; 
+    }
+}
+@media only screen and (min-width: 414px){
+    html {
+        font-size: 97.03%!important; 
+    }
+}
+@media only screen and (min-width: 480px){
+    html {
+        font-size: 112.5%!important; 
+    }
+}
+@media only screen and (min-width: 560px){
+    html {
+        font-size: 131.25%!important;
+    }
+}
+@media only screen and (min-width: 640px){
+    html {
+        font-size: 150%!important; 
+    }
+}
+@media only screen and (min-width: 720px){
+    html {
+        font-size: 168.75%!important; 
+    }
+}
+@media only screen and (min-width: 750px){
+    html {
+        font-size: 175.78125%!important; 
+    }
+}
+@media only screen and (min-width: 800px){
+    html {
+        font-size: 187.5%!important;
+    }
+}
+@media only screen and (min-width: 960px){
+    html {
+        font-size: 225%!important; 
+    }
+}
+.header{
+    background:#e4366b;
+    width:100%;
+    height: pxToRem(86);
+    color:#fff;
+    font-size: pxToRem(40);
+    line-height: pxToRem(86);
+    text-align: center;
+    position:relative;
+
+    a{  position:absolute;
+        left: pxToRem(18);
+        top:pxToRem(33);
+        display: block;
+        width: pxToRem(52);
+        height: pxToRem(35);
+        background:url(../images/back.png) left center no-repeat; 
+        background-size:pxToRem(50) pxToRem(36);
+    }
+    span{
+        position:absolute;
+        right:pxToRem(18);
+        top:pxToRem(15);
+        display: block;
+        width: pxToRem(110);
+        height: pxToRem(53);
+        font-size: pxToRem(24);
+        line-height:pxToRem(53);
+        text-align: center;
+        border-radius:pxToRem(10); 
+        background:-webkit-linear-gradient(top,#f65e87 40%,#dc1c58 60%);
+    }
+
+}
+
+section{
+        width: 100%;
+        height: 100%;
+        background:#f7f7f7;
+        overflow: hidden;
+        padding:0 pxToRem(37);
+        box-sizing:border-box;
+        input{
+            width: pxToRem(564);
+            height: pxToRem(72);
+            display: block;
+            border-radius:pxToRem(15);
+            margin-top: pxToRem(62);
+            font-size: pxToRem(36);
+        }
+        div{
+            font-size: pxToRem(25);
+            input{
+                display: inline;               
+                width: pxToRem(30);
+                height: pxToRem(30);
+               /* background:url(../images/yes.png) 0 0 no-repeat;
+                background-size:pxToRem(30) pxToRem(30);*/
+            }
+            a{
+                color: #ccc;
+                text-decoration: underline;
+                text-decoration-color:#ccc;
+                margin-left: pxToRem(5); 
+            }
+        }
+        p{
+            width: pxToRem(564);
+            height: pxToRem(88);
+            text-align: center;
+            line-height: pxToRem(88);
+            color: #fff;
+            margin-top: pxToRem(50);
+            font-size: pxToRem(36);
+            border-radius:pxToRem(20);
+            background:-webkit-linear-gradient(top,#f65e87 40%,#dc1c58 60%); 
+        }
+    }
+
+
+#foot{
+    width: 100%;
+    height:pxToRem(100);   
+    position: fixed; 
+    bottom:0;
+    .active{
+        color: #e42f66;
+    }
+}

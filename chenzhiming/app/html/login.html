@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+	<head>
+		<meta charset="UTF-8">
+		<title>登录</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../prd/css/login.css">
+	</head>
+	<body>
+		<header>
+			<a href="javascript:history.go(-1)"></a>
+			<span>登录</span>
+			<a href="reg.html" class="goreg">注册</a>
+		</header>
+		<div>
+			<input type="text" name="username" class="username" placeholder="账号" />
+			<input type="password" name="pass" class="pass" placeholder="密码" />
+			<div class="mm">
+				<input type="checkbox" name="" class="check">
+				<span>记住密码</span>
+				<a href="#">忘记密码?</a>
+			</div>
+			<a href="#" class="login">登录</a>
+		</div>
+		
+		<script type="text/javascript" src="../prd/js/login.js">
+		</script>
+
+		<footer id="footer"></footer>
+		<script type="text/javascript">
+			$("#footer").load("footer.html",function(){
+				$('#footer ul li').eq(3).addClass('active');
+			});
+		</script>
+	</body>
+</html>

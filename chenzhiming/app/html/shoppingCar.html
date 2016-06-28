@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物车</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="../prd/css/shoppingCar.css">
+</head>
+<body>
+	<header>
+		<a href="javascript:history.go(-1)"></a>
+		<h2>购物车</h2>
+		<b>去结算</b>
+	</header>
+	<section>
+		 <ul>
+			<li class="list-header">
+				<div class="list-header-box">
+					<span>商品数量：1</span>
+					<p>应付金额(不含运费)：<b>￥199</b></p>
+					
+				</div>	
+			</li>
+			<li>
+				<dl>
+					<dt>
+						<img src="">
+					</dt>
+					<dd>
+						<div class="goodinfo">
+							<span>ESPRIT 气质V领玫红T恤</span>
+							<p>单件：<a href="#">￥199</a></p>
+							<b>数量：
+								<a href="#">-</a>
+								<input type="text" name="" value="1">
+								<a href="#">+</a>
+							</b>
+						</div>
+						<span></span>
+					</dd>
+				</dl>
+			</li>
+		</ul> 
+		<div class="empty">
+			<span>你的购物车空空~</span>
+			<dl>
+				<dt>
+				</dt>
+				<dd><a href="homepage.html">去逛逛</a></dd>
+			</dl>
+		</div>
+	</section>
+	<script type="text/javascript" src="../prd/js/shoppingCar.js"></script>
+	<footer id="footer"></footer>
+	<script type="text/javascript">
+		$("#footer").load("footer.html",function(){
+			$('#footer ul li').eq(2).addClass('active');
+		});
+	</script>
+</body>
+</html>
