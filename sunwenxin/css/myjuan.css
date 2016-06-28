@@ -1,0 +1,21 @@
+.juanlist {
+  margin: 0.3rem 0 0.24rem 0.56rem;
+  width: 5.26rem;
+  height: 0.64rem;
+  border: 1px solid #666;
+  list-style-type: none;
+  border-radius: 0.1rem;
+  background: -webkit-linear-gradient(top, #eee 50%, #ccc 100%); }
+  .juanlist li {
+    display: block;
+    float: left;
+    width: 1.3rem;
+    line-height: 0.64rem;
+    text-align: center;
+    font-size: 0.3rem;
+    font-weight: bolder;
+    border-right: 1px solid #666; }
+  .juanlist .jihuo {
+    border-right: 0; }
+
+/*# sourceMappingURL=myjuan.css.map */

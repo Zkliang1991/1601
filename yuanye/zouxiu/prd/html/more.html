@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<title>走秀网</title>
+	<link rel="stylesheet" type="text/css" href="../css/more.css">
+</head>
+<body>
+<header>
+	<div>
+	<a href="javascript:history.go(-1);">
+	<img src="../img/houtui.jpg">
+	</a>
+	更多
+	</div>
+</header>
+
+<section>
+	<ul>
+		<li>常见问题</li>
+		<li>系统设置</li>
+		<li>软件更新</li>
+		<li>扫描二维码</li>
+	</ul>
+	<ul>
+		<li>我要提意见</li>
+		<li>关于</li>
+	</ul>
+	<input class="outID" type="button" name="" value="退出登录">
+</section>
+
+<footer id="foot">
+</footer>
+<script type="text/javascript" src="../js/more.js"></script>
+	<script type="text/javascript">
+		$("#foot").load('footer.html',function(){
+			$('.Qumore').addClass('backgroundT').siblings().removeClass('backgroundT');
+		});
+	</script>
+</body>
+</html>

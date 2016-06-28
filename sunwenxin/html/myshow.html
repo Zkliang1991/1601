@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+	<meta charset="UTF-8">
+	<title>我的秀</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="stylesheet" href="../css/swiper-3.3.1.min.css">
+	<link rel="stylesheet" href="../css/myfooter.css">
+	<link rel="stylesheet" href="../css/myself.css">
+	<link rel="stylesheet" href="../css/iscroll.scss">
+	<link rel="stylesheet" href="../css/ux/iconfont.css">
+	<script src = "../js/swiper-3.3.1.min.js"></script>
+	<script src="../js/zepto.js"></script>
+	<script src="../js/zepto-tap.js"></script>
+</head>
+<body>
+	<header class="iconfont">
+			<a href="#">&#xe63a;</a>
+			<span>我的秀</span>
+	</header>
+	
+   
+	<dl>
+		<dt></dt>
+		<dd>
+			<p  class="niname">昵称：<!-- <span></span> --></p>
+			<input  class="login" type="button" value="登录">
+			<input class="second degist" type="button" value="注册">
+		
+		</dd>
+	</dl>
+
+<div>
+   <ul>
+	   <li class="iconfont order">
+		  <span>我的订单</span>
+		  <a href="#">&#xe734;</a>
+	   </li>
+	    <li class="iconfont">
+		  <span>我的优惠券</span>
+		  <a href="#">&#xe734;</a>
+	   </li>
+	    <li class="iconfont">
+		  <span>浏览记录</span>
+		  <a href="#">&#xe734;</a>
+	   </li>
+	    <li class="iconfont last">
+		  <span>我的收藏</span>
+		  <a href="#">&#xe734;</a>
+	   </li>
+	</ul>
+</div>
+
+
+	<footer>
+		<ul class="iconfont">
+			<li class="index">
+				<i>
+					&#xe601;
+				</i>
+				<span>首页</span>
+			</li>
+			<li class="type">
+				<i>
+					&#xe60d;
+				</i>
+				<span>分类</span>
+			</li>
+			<li class="buycar">
+				<i>
+					&#xe6ef;
+				</i>
+				<span>购物车</span>
+			</li>
+			<li class="myshow">
+				<i>
+				   &#xe605;
+				</i>
+				<span>我的秀</span>
+			</li>
+			<li class="more">
+				<i>
+					&#xf0013;
+				</i>
+				<span>更多</span>
+			</li>
+		</ul>
+	</footer>
+	
+</body>
+	<script type="text/javascript">
+		var url = window.location.href;
+		if (url.indexOf("myshow") > 0) {
+			$('.myshow').removeClass().addClass('active');
+		}
+
+		var width = document.documentElement.clientWidth;
+		var html = document.getElementById("html");
+		html.style.fontSize = width/640*100 + 'px';
+		
+		window.onresize = function() {
+			// 随着窗口的改变求设备的宽度
+			var width = document.body.clientWidth;
+			html.style.fontSize = width/640*100 + 'px';
+			
+		}
+
+		$('.login').on('tap',function(){
+			window.location.href = "login.html";
+		})
+
+		$('.degist').on('tap',function(){
+			window.location.href = "degist.html";
+		})
+		$('.order').on('tap',function(){
+			window.location.href = "myorder.html";
+		})
+
+		// $.ajax({
+		// 	url:'http://datainfo.duapp.com/shopdata/getuser.php',
+		// 	type: 'get',
+		// 	data:{
+		// 		userID:"1235350508",
+		// 	},
+		// 	dataType:'jsonp',
+		// 	success:function(data){
+		// 		for(var i=0;i<1;i++) {
+		// 			var niname = data[i].userID;
+		// 			$('.niname').append('<span>'+niname+'</span>');
+		// 			console.log(niname);
+		// 		}
+				
+
+		// 	},
+		// 	error:function(){
+		// 		alert(1);
+		// 	}
+		// })
+		var i = localStorage.getItem('key');
+		console.log(i);
+		$('.niname').append('<span>'+i+'</span>');
+		
+	</script>
+
+	<script>
+		$('.index').on('tap',function(){
+			window.location.href = "index.html";
+		})
+		$('.type').on('tap',function(){
+			window.location.href = "type.html";
+		})
+		$('.buycar').on('tap',function(){
+			window.location.href = "buycar.html";
+		})
+		$('.myshow').on('tap',function(){
+			window.location.href = "myshow.html";
+		})
+		$('.more').on('tap',function(){
+			window.location.href = "more.html";
+		})
+	</script>
+</html>

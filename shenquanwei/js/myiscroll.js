@@ -1,5 +1,11 @@
 onload=function(){
 	pullDownAction();
+	$(".putincar").on("touchstart", function() {
+		alert();
+//		var gid=$(this).parent().parent().parent().attr("goodsid");
+//		var num=$(this).prev().val();
+//		tongbu(gid,num,'-');
+	})
 }
 var myScroll,
 	pullDownEl, pullDownOffset, _maxScrollY,
@@ -16,7 +22,7 @@ function pullDownAction() {
 			dataType: "jsonp",
 			success: function(datas) {
 				for (var i = 0 in datas) {
-					$('<li goodsid="' + datas[i].goodsID + 'classid=' + datas[i].classID + '"><dl><dt><a href="detail.html?goodsID=' + datas[i].goodsID + '"><img src="' + datas[i].goodsListImg + '"/></a></dt><dd><h3>' + datas[i].goodsName + '</h3><div><span>￥' + datas[i].price * datas[i].discount / 10 + '</span><span>￥' + datas[i].price + '</span><span>' + datas[i].discount + '折</span></div><a href=""><img src="../img/gwc.png" /></a></dd></dl></li>').appendTo("#thelist");
+					$('<li goodsid="' + datas[i].goodsID + 'classid=' + datas[i].classID + '"><dl><dt><a href="detail.html?goodsID=' + datas[i].goodsID + '"><img src="' + datas[i].goodsListImg + '"/></a></dt><dd><h3>' + datas[i].goodsName + '</h3><div><span>￥' + datas[i].price * datas[i].discount / 10 + '</span><span>￥' + datas[i].price + '</span><span>' + datas[i].discount + '折</span></div><a href="javascript:;" class="putincar" ><img src="../img/gwc.png" /></a></dd></dl></li>').appendTo("#thelist");
 				}
 			}
 		});

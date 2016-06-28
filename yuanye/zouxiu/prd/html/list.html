@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<title>走秀网</title>
+	<link rel="stylesheet" type="text/css" href="../css/list.css">
+</head>
+<body>
+<header>
+	<div><a href="javascript:history.go(-1);"><img src="../img/houtui.jpg"></a>ZXIU 走秀网</div>
+	<div>
+		<input type="text" name="" placeholder="请输入搜索内容">
+	</div>
+</header>
+
+<section>
+	<div id="wrapper">
+		<div id="scroller">
+			<!--滑动区域-->
+			<div id="pullDown">
+				<span class="pullDownIcon"></span>
+				<span class="pullDownLabel">下拉刷新...</span>
+			</div>
+			<ul id="thelist">
+				<li>全部</li>
+			</ul>
+			<div id="pullUp">
+				<span class="pullUpIcon"></span>
+				<span class="pullUpLabel">加载更多...</span>
+			</div>
+		</div>
+	</div>
+</section>
+
+<footer id="foot">
+</footer>
+<script type="text/javascript" src="../js/list.js"></script>
+	<script type="text/javascript">
+		$("#foot").load('footer.html',function(){
+			$('.Qulist').addClass('backgroundT').siblings().removeClass('backgroundT');
+		});
+	</script>
+</body>
+</html>

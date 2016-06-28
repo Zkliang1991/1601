@@ -47,8 +47,72 @@ $(function() {
 		$(".dengl,.zhuc").hide();
 		$(".userhead").attr("src",getlocation().userimg_url);
 	}
-
+	
+	
+	
+	if(localStorage.getItem("userID")){
+		var userid={
+			'userID':localStorage.getItem("userID"),
+		};
+		
+		$.ajax({
+			type: "get",
+			url: "http://datainfo.duapp.com/shopdata/getCar.php",
+			data: userid,
+			dataType:"jsonp",
+			success: function(da) {
+				if (da==0) {
+					$(".emptycar").css("display","block");
+					$(".notempty").css("display","none");
+				}
+				else{
+					$(".emptycar").css("display","none");
+					$(".notempty").css("display","block");
+					$(".car-foods").html('<li goodsID='+da[0].goodsID+'><div><img src="'+da[0].goodsListImg+'" /></div><div class="nm"><p class="car-foods-name">'+da[0].goodsName+'<a href="" class="iconfont">&#xe63a;</a></p><p class="car-foods-price">单价：<span>￥'+da[0].price+'</span><span class="daxiao"> L </span></p><p class="car-foods-count">数量：<a href="javascript:;" class="countjian">-</a><input type="text" value="'+da[0].number+'"><a href="javascript:;"class="countjia">+</a></p></div></li>');
+				}
+			},
+		});
+	}
+	
+	
+	
+	
 })
+onload=function(){
+	$(".countjian").on("touchstart", function() {
+		var gid=$(this).parent().parent().parent().attr("goodsid");
+		var num=$(this).next().val();
+		tongbu(gid,num,'+');
+	});
+	$(".countjia").on("touchstart", function() {
+		var gid=$(this).parent().parent().parent().attr("goodsid");
+		var num=$(this).prev().val();
+		tongbu(gid,num,'-');
+	})
+	
+}
+
+function tongbu(goodsid,num,j){
+	var userinf={
+		'userID':localStorage.getItem("userID"),
+		'goodsID':goodsid,
+		'number': j=="+"? --num : ++num,
+	};
+	$.ajax({
+		type: "get",
+		url: "http://datainfo.duapp.com/shopdata/updatecar.php",
+		data: userinf,
+		success: function(da) {
+			if(da==0){
+				console.log("cuowu");
+			}else if(da==1){
+				$(".car-foods-count input").val(num);
+			}
+		},
+	});
+}
+
+
 
 function getlocation(){
 	var url = window.location.href;

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<title>走秀网</title>
+	<link rel="stylesheet" type="text/css" href="../css/record.css">
+</head>
+<body>
+<header>
+	<div>
+	<a href="javascript:history.go(-1);">
+	<img src="../img/houtui.jpg">
+	</a>
+	我的收藏
+	</div>
+</header>
+
+
+<footer id="foot">
+</footer>
+<script type="text/javascript" src="../js/record.js"></script>
+	<script type="text/javascript">
+		$("#foot").load('footer.html',function(){
+			$('.Qumyshow').addClass('backgroundT').siblings().removeClass('backgroundT');
+		});
+	</script>
+</body>
+</html>
