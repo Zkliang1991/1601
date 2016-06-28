@@ -1,0 +1,30 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+		
+.swiper-slide{
+			
+	width: 100%;
+	
+		
+}
+		
+.swiper-slide img{
+	width: 100%;
+	
+}
+.swiper-container-horizontal>.swiper-pagination-bullets{
+	bottom: .5rem;
+			
+}
+.swiper-pagination-bullet{
+	width: .3rem;
+	height:.3rem;
+			
+}
+		
+.swiper-pagination-bullet-active{
+	background:#e63569;
+	color:#fff;	
+}

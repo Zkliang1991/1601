@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<title>zxiu走秀网</title>
+	<link rel="stylesheet" type="text/css" href="../css/sort.css">
+</head>
+<body>
+	<header>
+		<a href="javascript:history.go(-1);"></a>
+		<p>zxiu 走秀网</p>
+	</header><!-- /header -->
+	<div class="search">
+		<p>
+			<span></span>
+			<input type="text" class="search" name="" placeholder="请输入搜索内容">
+		</p>
+	</div>
+	<section id="sortS">
+		<h3>全部</h3>
+		<p>衬衫</p>
+	</section>
+	<footer id="footer"></footer>
+	<script type="text/javascript" src="../js/sort.js"></script>
+	<script type="text/javascript">
+		$("#footer").load("footer.html",function(){
+			$('#footer ul li').eq(3).addClass('active');
+		});
+	</script>
+</body>
+</html>

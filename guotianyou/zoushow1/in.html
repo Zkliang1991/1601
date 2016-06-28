@@ -1,0 +1,193 @@
+<!DOCTYPE html >
+<html id="html">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+		<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="ux_1466824116_6402702/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="ux_1466824116_6402702/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<script src="js/jquery-1.8.3.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/swiper-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/rem.js" type="text/javascript" charset="utf-8"></script>
+	<body>
+		<header id="header"></header>
+		<div class="indexMain">
+			<div class="ser">
+				<div class="serbox">
+					<input type="text" placeholder="请输入要搜索的内容" />
+				</div>
+				
+			</div>
+		</div>
+		<div class="swiper-container">
+		    <div class="swiper-wrapper">
+		        <div class="swiper-slide "><img class="banner1" src="" width="100%" height="250"/></div>
+		        <div class="swiper-slide "><img class="banner2" src="" width="100%" height="250"/></div>
+		        <div class="swiper-slide"><img class="banner3" src="" width="100%" height="250"/></div>
+		        <div class="swiper-slide"><img class="banner4"src="" width="100%" height="250"/></div>
+		        
+		    </div>
+		    <!-- 如果需要分页器 -->
+		    <div class="swiper-pagination"></div>
+		</div>
+		<!--<dl class='shopList'>
+			<dt><img src='img/14060315414548435341.jpg' /></dt>
+			<dd>
+				<p>如果需要分页器如果需要分页器如果需要分页器</p>
+				<span class='price'>
+					￥0<br/>
+					<b>0折</b>
+				</span>
+				
+				<span class='shopCar iconfont'>
+					&#xf00a6;
+				</span>
+			</dd>
+		</dl>-->
+		<footer id="footer"></footer>
+		
+	</body>
+	<script type="text/javascript">
+	headerFooter()
+	//加载头部尾部
+	function headerFooter(){
+		$("#header").load("header.html",function(){
+			$('.go-back').css("display","none")
+			$('.title').html('ZXIU 走秀').css("text-indent","0");
+			$('em').css("display","none");
+		});
+		$("#footer").load("footer.html",function(){
+			$(".home").on("click",function(){
+				window.location.href = "in.html";
+				
+			})
+			$(".type").on("click",function(){
+				window.location.href = "sortout.html";
+				
+			})
+			$(".shopping").on("click",function(){
+				window.location.href = "myCart.html";
+				
+			})
+			$(".own").on("click",function(){
+				
+				window.location.href = "myShow.html";
+				
+			})
+			$(".more").on("click",function(){
+				window.location.href = "more.html";
+				
+			})
+		});
+		setTimeout(function(){
+			var space = $("<div class='space'></div>");
+			$('body').append(space)
+		},5000)
+	};
+	
+	SwiperInt()
+	//Swiper插件
+	function SwiperInt(){
+		var mySwiper = new Swiper ('.swiper-container', {
+	    autoplay:2000,
+	    loop: true,
+	    // 分页器
+	    pagination: '.swiper-pagination',
+  		})        
+	};
+	getBanner()
+	//ajax请求banner和商品列表
+	function getBanner(){
+		$.ajax({
+			url:"http://datainfo.duapp.com/shopdata/getBanner.php",
+			type:"get",
+			dataType:"jsonp",
+			success:function(data){
+//				console.log(data);
+				var num = 1;
+				 $.each(data, function (n, value) {  
+		            for( n in value){
+		              	if(n=='goodsBenUrl'){
+		              		var url = JSON.parse(value[n])[0];
+//		              		console.log(url)
+		              		$('.banner'+num).attr("src",url)
+		              		num++;
+		              	}
+		            }  
+         		 }); 
+			},
+			error:function(){
+				console.log("ajax请求banner数据失败！")
+			}
+		})
+		$.ajax({
+			type:"get",
+			url:"http://datainfo.duapp.com/shopdata/getGoods.php",
+			dataType:"jsonp",
+			success:function(data){
+				console.log(JSON.stringify(data))
+				$.each(data, function(n, value) {
+					var price = value.price;
+					var imgList = value.goodsListImg;
+					var discount = value.discount;
+					var shopname = value.goodsName;
+					var goodsID = value.goodsID;
+					console.log(goodsID)
+					$('body').append("<dl class='shopList'><dt><img src="+imgList+" /></dt><dd><p>"+shopname+"</p><span class='price'>￥"+price+"<br/><b>"+discount+"折</b></span><span  class='shopCar iconfont' data-id="+goodsID+">&#xf00a6;</span></dd></dl>")
+				})
+			}
+		});
+			
+		
+	}
+	addcar()
+	//加入购物车
+	function addcar(){
+		$('.shopCar').live("click",function(){
+			//
+			var that = $(this);
+			if(getCookie('flag')==1){
+				$.ajax({
+					type:"get",
+					url:"http://datainfo.duapp.com/shopdata/updatecar.php",
+	//				dataType:"jsonp",
+					data:{"userID":getCookie('username'),"goodsID":that.attr('data-id'),"number":1},
+					success:function(data){
+						console.log(data)
+						if(data==1){
+							alert('宝贝已经加入购物车！')
+						}else{
+							alert('加入购物车失败！')
+						}
+					}
+				});
+			}else{
+				alert("请先登录")
+			}
+			//
+			
+			
+		})
+	}
+	toDetail()
+	//跳转详情页
+	function toDetail(){
+		$(".shopList dd p").live('click',function(){
+			var goodsID = $(this).parent().children().last().attr('data-id');
+			window.location.href = "detail.html?goodsID="+goodsID;
+		})
+		$(".shopList dt img").live('click',function(){
+			var goodsID = $(this).parent().next().children().last().attr('data-id');
+			window.location.href = "detail.html?goodsID="+goodsID;
+		})
+	}
+	
+	
+	</script>
+	
+</html>

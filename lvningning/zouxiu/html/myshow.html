@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>我的秀</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="../css/myshow.css">
+	<link rel="stylesheet" href="../img/iconfont/ux/iconfont.css">
+</head>
+<body>
+	<div class="tit">
+		<a href="javascript:history.go(-1);"></a>
+		<p>我的秀</p>
+	</div>
+	<dl>
+		<dt><img src="" alt=""></dt>
+		<dd>
+			<p >昵称：<span id="youname">未知</span></p>
+			<span id="sp1">登录</span>
+			<span id="sp2">注册</span>
+		</dd>
+	</dl>
+	<ul class="info">
+		<li>我的订单<i></i></li>
+		<li>我的优惠券<i></i></li>
+		<li>浏览记录<i></i></li>
+		<li>我的收藏<i></i></li>
+	</ul>
+	<script type="text/javascript" src="../js/myshow.js"></script>
+	<div id="footer11"></div>
+		<script type="text/javascript">
+			$("#footer11").load("footer.html",function(){
+				$("#tubiao li").eq(3).addClass('active').siblings().removeClass('active');
+				
+					var url = window.location.href;
+					console.log(url);
+					var htmlName = url.split("/");
+					console.log(htmlName);
+					var thisHtml = null;
+					for(var i=0;i<htmlName.length;i++){
+						if(htmlName[i].indexOf(".html")!=-1){
+							thisHtml = htmlName[i].split(".html")[0];
+						}
+					}
+					console.log(thisHtml);
+
+					var reg = /^htmlType_/;
+					var myHtml = "htmlType_";
+					for(var i=0;i<localStorage.length;i++){
+						var key = localStorage.key(i);
+						if(reg.test(key)){
+							var oIndex = key.split("_")[1];
+							if(oIndex==3){
+								localStorage.setItem(myHtml+"3",thisHtml);
+							}
+						}
+					};
+
+
+
+
+			});
+		</script>
+</body>
+</html>

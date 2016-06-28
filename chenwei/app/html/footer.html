@@ -1,0 +1,39 @@
+<footer>
+    <ul id="footerlist">
+
+        <li>
+            <span class="iconfont">&#x344c;</span>
+            <p>首页</p>
+        </li>
+        <li>
+            <span class="iconfont">&#xe666;</span>
+            <p>分类</p>
+        </li>
+        <li>
+            <span class="iconfont">&#xe6b5;</span>
+            <p>购物车</p>
+        </li>
+        <li>
+            <span class="iconfont">&#xe605;</span>
+            <p>我的秀</p>
+        </li>
+        <li>
+            <span class="iconfont">&#xf0013;</span>
+            <p>更多</p>
+        </li>
+
+
+    </ul>
+</footer>
+<script type="text/javascript">
+$("#footerlist").on("tap","li",function(){
+    console.log(222)
+    var attr=["index.html","fenlei.html","shoppingcar.html","myshow.html","more.html"]
+    $(this).css("color","#e4366b").siblings().css("color","")
+    console.log($(this).index())
+    var index=$(this).index();
+    console.log(attr[1])
+    window.location.href=attr[index];
+
+})
+</script>

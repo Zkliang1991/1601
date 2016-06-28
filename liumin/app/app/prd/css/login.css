@@ -1,0 +1,183 @@
+@charset "UTF-8";
+html {
+  font-size: 62.5%;
+  font-family: "微软雅黑", "Microsoft yahei"; }
+
+body, h1, h2, h3, h4, h5, h6, blockquote, ol, ul, dl, dd, p, textarea, input, select, option, form {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #f5f4f0;
+  -webkit-tap-highlight-color: transparent; }
+
+ol, ul, textarea, input, option, th, td {
+  padding: 0; }
+
+.page {
+  min-width: 320px;
+  max-width: 750px;
+  margin: 0 auto; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-size: 100%; }
+
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+  display: block; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+ul, ol {
+  list-style-type: none; }
+
+.clearfix:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden; }
+
+/* ios默认文本框阴影 */
+input[type=text], textarea {
+  -webkit-appearance: none; }
+
+/* 低版本安卓文本框层级问题 */
+input:focus {
+  -webkit-user-modify: read-write-plaintext-only; }
+
+fieldset, img {
+  border: 0; }
+
+a {
+  text-decoration: none; }
+
+a, textarea, input {
+  outline: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+textarea {
+  overflow: auto;
+  resize: none; }
+
+@media only screen and (min-width: 320px) {
+  html {
+    font-size: 75% !important;
+    /* 12÷16=73.4% */ } }
+
+@media only screen and (min-width: 375px) {
+  html {
+    font-size: 87.89063% !important;
+    /* 14.0625÷16=73.2% */ } }
+
+@media only screen and (min-width: 414px) {
+  html {
+    font-size: 97.03% !important;
+    /* 15.525÷16=94% */ } }
+
+@media only screen and (min-width: 480px) {
+  html {
+    font-size: 112.5% !important;
+    /* 18÷16=94% */ } }
+
+@media only screen and (min-width: 560px) {
+  html {
+    font-size: 131.25% !important;
+    /* 21÷16=109% */ } }
+
+@media only screen and (min-width: 640px) {
+  html {
+    font-size: 150% !important;
+    /* 24÷16=125% */ } }
+
+@media only screen and (min-width: 720px) {
+  html {
+    font-size: 168.75% !important;
+    /* 27÷16=146.43% */ } }
+
+@media only screen and (min-width: 750px) {
+  html {
+    font-size: 175.78125% !important;
+    /* 28.125÷16=146.43% */ } }
+
+@media only screen and (min-width: 800px) {
+  html {
+    font-size: 187.5% !important;
+    /* 30÷16=146.43% */ } }
+
+@media only screen and (min-width: 960px) {
+  html {
+    font-size: 225% !important;
+    /* 36÷16=146.43% */ } }
+
+#header .head {
+  height: 3.66667rem;
+  border-bottom: 0.08333rem solid #000; }
+  #header .head .search {
+    display: none; }
+
+#footer .foot li:nth-of-type(4) {
+  color: #e43669;
+  border-top: 0.29167rem solid #e43669; }
+
+section {
+  position: absolute;
+  top: 3.66667rem;
+  padding: 0 1.58333rem; }
+  section form {
+    color: #6f6f6f; }
+    section form input {
+      box-sizing: border-box;
+      margin-top: 2.58333rem;
+      width: 23.25rem;
+      height: 3.41667rem;
+      padding-left: 0.83333rem;
+      border: 1px solid #a5a5a5;
+      font-size: 1.41667rem;
+      font-weight: 600;
+      border-radius: 0.625rem; }
+    section form #select {
+      width: 1.33333rem;
+      height: 1.33333rem;
+      margin: 1.5rem 0.66667rem 0;
+      float: left; }
+    section form span {
+      display: block;
+      width: 4.5rem;
+      height: 1.33333rem;
+      float: left;
+      margin-top: 1.5rem;
+      color: #707070;
+      font-weight: 600;
+      margin-right: 1.45833rem; }
+    section form a {
+      display: block;
+      margin-top: 1.5rem;
+      text-decoration: underline;
+      color: #9d9d9d;
+      font-weight: 600; }
+  section .denglu {
+    display: block;
+    width: 23.25rem;
+    height: 3.83333rem;
+    text-align: center;
+    line-height: 3.83333rem;
+    color: #fff;
+    font-size: 1.41667rem;
+    font-weight: 600;
+    background-image: -webkit-linear-gradient(#f1658c, #dd245e);
+    border-radius: 0.625rem;
+    margin-top: 2.25rem; }

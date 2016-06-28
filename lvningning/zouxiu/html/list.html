@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>商品列表</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="../css/list.css">
+	<link rel="stylesheet" href="../img/iconfont/ux/iconfont.css">
+</head>
+<body>
+	<div class="tit">
+		<a href="javascript:history.go(-1);"></a>
+		<p><span>ZXIU</span>走秀网</p>
+	</div>
+	<div class="top">
+		<form action="">
+			<a href=""></a>
+			<input type="text" placeholder="请输入搜索内容">
+		</form>
+	</div>
+	<div class="all">
+		<p>全部</p>
+		<a class="list1" href="javascript:void(0)"></a>
+	</div>
+	<ul class="dis">
+	<!-- 	<li>
+			<p>衬衫</p>
+			<a href="javascript:void(0)"></a>
+		</li>
+		<li>
+			<p>衬衫</p>
+			<a href="javascript:void(0)"></a>
+		</li>
+		<li>
+			<p>衬衫</p>
+			<a href="javascript:void(0)"></a>
+		</li>
+		<li>
+			<p>衬衫</p>
+			<a href="javascript:void(0)"></a>
+		</li> -->
+	</ul>
+
+	<script type="text/javascript" src="../js/list.js"></script>
+	<div id="footer11"></div>
+		<script type="text/javascript">		
+			$("#footer11").load("footer.html",function(){
+				$("#tubiao li").eq(1).addClass('active').siblings().removeClass('active');
+			});
+		</script>
+
+</body>
+</html>
