@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>首页</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="../css/sy.css">
+	<link rel="stylesheet" type="text/css" href="../ux/iconfont.css">
+</head>
+<body>
+	<header><b>ZOUXIU</b><span>走秀网</span></header>
+	<nav><input type="text" name="" id="search" placeholder="请输入搜索内容"></nav>
+	<div class="swiper-container" id="myswiper1">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide slide1"></div>
+			<div class="swiper-slide slide2">banner2</div>
+			<div class="swiper-slide slide3">banner3</div>
+			<div class="swiper-slide slide4">banner4</div>
+		</div>
+		<div class="swiper-pagination"></div>
+	</div>
+	<script type="text/javascript" src="../js/sy.js"></script>
+	<div id="wrapper" class="wrapper">
+		<div id="scroller">
+			<div id="pullDown">
+				<span class="pullDownIcon"></span>
+				<span class="pullDownLabel">下拉刷新...</span>
+			</div>
+			<ul id="thelist">
+				<li>
+					<img src="" class="li-img"/>
+					<div class="li-right">
+						<span>0元大抽奖，走秀携古尔莎为你开启走秀携古尔莎为你开启走秀携古尔莎为你开启</span>
+						<span>￥<b>590</b> <b>￥5900</b></span>
+						<span><b>0</b>折</span>
+						<p class="iconfont">&#xe60f;</p>
+					</div>
+				</li>
+				<li>
+					<img src="" class="li-img"/>
+					<div class="li-right">
+						<span>0元大抽奖，走秀携古尔莎为你开启走秀携古尔莎为你开启走秀携古尔莎为你开启</span>
+						<span>￥<b>590</b> <b>￥5900</b></span>
+						<span><b>0</b>折</span>
+						<p class="iconfont">&#xe60f;</p>
+					</div>
+				</li>
+			</ul>
+			<div id="pullUp">
+				<span class="pullUpIcon"></span>
+				<span class="pullUpLabel">加载更多...</span>
+			</div>
+		</div>
+	</div>
+
+	<footer id="footer"></footer>
+	<script type="text/javascript">
+		$("#footer").load("footer.html",function(){
+			$('#footer ul li').eq(0).addClass('active');
+			var url = window.location.href;
+			//每次刷新新的页面，就把url里.html的前面值截取出来
+			var htmlName = url.split('/');
+			console.log(htmlName);
+			var thisHtml = null;
+			for(var i=0;i<htmlName.length;i++){
+				if(htmlName[i].indexOf('.html')!=-1){
+					//在.html前截取
+					thisHtml = htmlName[i].split('.html')[0];
+				}
+			}
+			console.log(thisHtml);
+			var reg = /^htmlType_/;
+			var myHtml = 'htmlType_';
+			for(var i=0;i<localStorage.length;i++){
+				var key = localStorage.key(i);
+				if(reg.test(key)){
+					var oIndex = key.split('_')[1];
+					if(oIndex==0){
+						// 然后就修改li的本地localStorage的htmlType_n的值
+						localStorage.setItem(myHtml+'0',thisHtml)
+					}
+				}
+			}
+		});
+	</script>
+	
+</body>
+</html>

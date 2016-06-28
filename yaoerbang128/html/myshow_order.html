@@ -1,0 +1,28 @@
+
+<section>
+<ul class="main">
+		<li class="my-order lm">
+					<h1><span class="iconfont" id="back">&#xe604;</span>我的订单</h1>
+					<ul class="ul">
+						<li class = "list">
+							<img src="" alt="">
+							<ul>
+								<li>气质<span class="iconfont">L</span></li>
+								<li>T恤</li>
+								<li>单价</li>
+								<li>
+									数量：
+									<button type="button">取消订单</button>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+</ul>
+</section>
+<script>
+	$("#back").on("tap",function(){
+		// window.history.back();
+		$('section').load('myshow_user.html');
+	})
+</script>

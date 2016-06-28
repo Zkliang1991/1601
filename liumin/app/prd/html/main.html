@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>我的秀-首页</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<script type="text/javascript" src="../js/jquery-2.2.3.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+
+</head>
+<body>
+	<header id="header"></header>
+	<script type="text/javascript">
+		$("#header").load("head.html");
+	</script>
+	<section>
+		<div class="swiper-container" id="myswiper1" style="border-bottom:1 solid #222">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide slide1" data-hash='slide1'>
+					<img />
+				</div>
+				<div class="swiper-slide slide2" data-hash='slide2'>
+					<img />
+
+				</div>
+
+				<div class="swiper-slide slide3" data-hash='slide3'>
+					<img />
+
+				</div>
+				<div class="swiper-slide slide4" data-hash='slide4'>
+					<img />
+
+				</div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+		
+	</section>
+	<div id="wrapper">
+		<div id="scroller">
+			<div id="pullDown">
+				<span class="pullDownIcon"></span>
+				<span class="pullDownLabel">下拉刷新...</span>
+			</div>
+			<ul class="shoplist" id="thelist">
+				<li>
+					<img src="../img/shop1.jpg">
+					<p class="title">0元大抽奖！走秀携古尔莎为你开启,价值28880元的土耳其...
+					</p>
+					<div class="lf">
+						<span class="price">￥0</span>
+						<span class="line-price">￥28880</span>
+						<span class="cost">0折</span>
+					</div>
+					
+					<a href="javascript:;" class="bugcar iconfont">&#xe611;</a>
+				</li>
+			</ul>
+			<div id="pullUp">
+				<span class="pullUpIcon"></span>
+				<span class="pullUpLabel">加载更多...</span>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../js/main.js"></script>
+	<footer id="footer"></footer>
+	<script type="text/javascript">
+		$("#footer").load("foot.html",function(){
+			var url = window.location.href;
+			//每次刷新新的页面，就把url里.html的前面值截取出来
+			var htmlName = url.split('/');
+			console.log(htmlName);
+			var thisHtml = null;
+			for(var i=0;i<htmlName.length;i++){
+				if(htmlName[i].indexOf('.html')!=-1){
+					//在.html前截取
+					thisHtml = htmlName[i].split('.html')[0];
+				}
+			}
+			console.log(thisHtml);
+			var reg = /^htmlType_/;
+			var myHtml = 'htmlType_';
+			for(var i=0;i<localStorage.length;i++){
+				var key = localStorage.key(i);
+				if(reg.test(key)){
+					var oIndex = key.split('_')[1];
+					if(oIndex==0){
+						// 然后就修改li的本地localStorage的htmlType_n的值
+						localStorage.setItem(myHtml+'0',thisHtml)
+					}
+				}
+			}
+		});
+	</script>
+	
+</body>
+</html>

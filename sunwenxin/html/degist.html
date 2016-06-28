@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+	<meta charset="UTF-8">
+	<title>注册</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="stylesheet" href="../css/swiper-3.3.1.min.css">
+	<link rel="stylesheet" href="../css/myfooter.css">
+	<link rel="stylesheet" href="../css/login.css">
+	<link rel="stylesheet" href="../css/iscroll.scss">
+	<link rel="stylesheet" href="../css/ux/iconfont.css">
+	<script src = "../js/swiper-3.3.1.min.js"></script>
+	<script src="../js/zepto.js"></script>
+	<script src="../js/zepto-tap.js"></script>
+</head>
+<body>
+	<header class="iconfont">
+			<a href="#">&#xe63a;</a>
+			<span>注册</span>
+			<input class="log" type="button" value="登录">
+	</header>
+	
+	<div>
+		<input type="text" name="username" class="username" placeholder="账号">
+		<input type="password" name="pass" class="pass" placeholder="密码">
+		<input type="password" name="pass" class="repass" placeholder="重复密码">
+		<a href="#" class="agreendig">同意服务协议并注册</a>
+		<b class="hint"></b>
+	</div>
+
+
+	<footer>
+		<ul class="iconfont">
+			<li class="index">
+				<i>
+					&#xe601;
+				</i>
+				<span>首页</span>
+			</li>
+			<li class="type">
+				<i>
+					&#xe60d;
+				</i>
+				<span>分类</span>
+			</li>
+			<li class="buycar">
+				<i>
+					&#xe6ef;
+				</i>
+				<span>购物车</span>
+			</li>
+			<li class="myshow">
+				<i>
+				   &#xe605;
+				</i>
+				<span>我的秀</span>
+			</li>
+			<li class="more">
+				<i>
+					&#xf0013;
+				</i>
+				<span>更多</span>
+			</li>
+		</ul>
+	</footer>
+	
+</body>
+	<script type="text/javascript">
+		var width = document.documentElement.clientWidth;
+		var html = document.getElementById("html");
+		html.style.fontSize = width/640*100 + 'px';
+		// console.log(width);
+		window.onresize = function() {
+			// 随着窗口的改变求设备的宽度
+			var width = document.body.clientWidth;
+			html.style.fontSize = width/640*100 + 'px';
+		}
+		// //密码验证
+		// $(".pass").on("blur",function() {
+		// 	 $pass = $(".pass").val();
+		// 	 pass = /^[a-zA-Z]\w{5,19}$/;
+		// 	if(pass.test($pass)==2) {
+		// 		$(".pass").css("color","red");
+		// 	}
+		// })
+		// //确认密码
+		// $(".rpass").on("blur",function() {
+		// 	 $pass = $(".pass").val();
+		// 	 $rpass = $(".rpass").val();
+		// 	if($rpass!=$pass) {
+		// 		$(".repass").css("color","red");
+		// 	}
+		// })
+
+		$('.agreendig').on('tap',function(){
+			// console.log(0000);
+			var $name = $('.username').val();
+			var $pass = $('.pass').val();
+			var $repass = $('.repass').val();
+			$.ajax({
+				url:'http://datainfo.duapp.com/shopdata/userinfo.php',
+				type:'post',
+				data:{
+					status:'register',
+					userID: $name,
+					password: $pass,
+				},
+				success:function(data){
+					if(data=='0') {
+						$('.hint').html('用户名重名');
+					}else if(data=='1'){
+						$('.hint').html('注册成功');
+						console.log(data);
+						// window.location.href = "login.html";
+					}else if(data=='2') {
+						$('.hint').html('数据库报错');
+					}
+				},
+				error:function(data){
+					return false;
+				}
+			})
+		})
+		
+		
+
+		$('.log').on('tap',function(){
+			window.location.href = "login.html";
+		})
+
+        $('.index').on('tap',function(){
+			window.location.href = "index.html";
+		})
+		$('.type').on('tap',function(){
+			window.location.href = "type.html";
+		})
+		$('.buycar').on('tap',function(){
+			window.location.href = "buycar.html";
+		})
+		$('.myshow').on('tap',function(){
+			window.location.href = "myshow.html";
+		})
+		$('.more').on('tap',function(){
+			window.location.href = "more.html";
+		})
+	</script>
+</html>

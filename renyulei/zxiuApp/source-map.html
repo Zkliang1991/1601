@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+	<meta charset="UTF-8">
+	<title>HTML地图</title>
+	<style type="text/css" media="screen">
+		*{
+			padding:0;
+			margin:0;
+		}
+		ul{
+			list-style: none;
+		}
+		a{
+			text-decoration: none;
+		}
+		h3{
+			width: 100%;
+			height: 1rem;
+			background: #F35415;
+			text-align: center;
+			line-height: 1rem;
+			font-size: 0.5rem;
+		}
+		ul{
+			width:100;
+
+		}
+		ul li{
+				width:50%;
+				height: 1rem;
+				background: #8CEDE2;
+				float: left;
+				border:2px solid #7E7373;
+				box-sizing: border-box;
+				line-height: 0.5rem;
+				text-align: center;
+			}
+		ul li a{
+			font-size: 0.3rem;
+			color: #0480F9;
+			
+		}
+	</style>
+</head>
+<body>
+	<h3>HTML 页面地图</h3>
+	<ul>
+		<li><a href="html/start.html">开始页面</a></li>
+		<li><a href="html/index.html">首页</a></li>
+		<li><a href="html/cart.html">购物车</a></li>
+		<li><a href="html/order.html">订单页</a></li>
+		<li><a href="html/details.html">商品详情页</a></li>
+		<li><a href="html/more.html">更多</a></li>
+		<li><a href="html/collect.html">收藏页</a></li>
+		<li><a href="html/login.html">登录页</a></li>
+		<li><a href="html/register.html">注册页</a></li>
+		<li><a href="html/myshow.html">我的秀</a></li>
+		<li><a href="html/sort.html">列表页</a></li>
+		<li><a href="html/priv.html">优惠券页</a></li>
+		<li><a href="html/record.html">浏览记录页</a></li>
+		<li><a href="html/introduce.html">商品介绍</a></li>
+	</ul>
+	
+	<script type="text/javascript">
+		var html=document.getElementById('html');
+		var width=document.documentElement.clientWidth;
+		html.style.fontSize=width/640*100+'px';
+		window.onresize=function(){
+			var width=document.documentElement.clientWidth;
+			html.style.fontSize=width/640*100+'px';
+		}
+	</script>
+</body>
+
+</html>

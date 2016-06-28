@@ -2,6 +2,7 @@ $('.btm-list ul').on('tap','li',function(){
 	$(this).addClass('active').siblings().removeClass('active');
 })
 
+<<<<<<< HEAD
 // $('.btm-list ul').on('tap','li',function(){
 // 	var index=$(this).index() ;
 // 	var key=("htmlType_"+index) ;
@@ -9,6 +10,8 @@ $('.btm-list ul').on('tap','li',function(){
 // 	window.location.href=localStorage.key+".html";
 // });
 
+=======
+>>>>>>> 0c508d2b37dbbc9dbe8ca4cf282edeec00ea8915
 $('.btm-list ul li').eq(0).on('tap',function(){
 	window.location.href=localStorage.htmlType_0+".html";
 })

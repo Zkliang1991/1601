@@ -1,0 +1,104 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+header {
+  width: 100%;
+  border-bottom: 0.01rem solid black;
+  background: deeppink;
+  position: relative; }
+  header a {
+    display: block;
+    text-decoration: none;
+    line-height: 0.88rem;
+    position: absolute;
+    font-size: 0.4rem;
+    font-weight: bolder;
+    left: 0.16rem;
+    color: black; }
+  header span {
+    display: block;
+    font-size: 0.38rem;
+    line-height: 0.88rem;
+    color: #fff;
+    font-weight: bold;
+    text-align: center; }
+  header input {
+    display: block;
+    width: 1.06rem;
+    height: 0.6rem;
+    position: absolute;
+    right: 0.2rem;
+    top: 0.15rem;
+    border: 0;
+    border-radius: 0.1rem;
+    color: #fff;
+    text-align: center;
+    line-height: 0.6rem;
+    background: -webkit-linear-gradient(top, pink 1%, deeppink 100%); }
+
+div {
+  width: 100%;
+  padding: 0 0.4rem;
+  box-sizing: border-box; }
+  div input {
+    margin-top: 0.5rem;
+    width: 5.6rem;
+    height: 0.8rem;
+    background: #fff;
+    display: block;
+    outline: none;
+    font-size: 0.36rem;
+    font-weight: 300;
+    border-radius: 0.1rem;
+    padding-left: 0.25rem;
+    box-sizing: border-box; }
+  div .rempass {
+    display: block;
+    margin-top: 0.5rem;
+    width: 0.3rem;
+    height: 0.3rem;
+    background: #fff;
+    padding-left: 0.1rem;
+    box-sizing: border-box;
+    float: left; }
+  div span {
+    display: block;
+    float: left;
+    margin-top: 0.5rem;
+    padding-left: 0.1rem;
+    font-size: 0.24rem;
+    color: #666; }
+  div .forgot {
+    display: block;
+    float: left;
+    margin-top: 0.5rem;
+    padding-left: 0.9rem;
+    font-size: 0.24rem;
+    color: #ccc; }
+  div input::-moz-input-placeholder {
+    color: #666; }
+  div a {
+    display: block;
+    width: 5.6rem;
+    height: 0.9rem;
+    margin-top: 1.2rem;
+    color: #fff;
+    font-size: 0.36rem;
+    font-weight: bolder;
+    border-radius: 0.1rem;
+    text-align: center;
+    text-decoration: none;
+    line-height: 0.9rem;
+    background: -webkit-linear-gradient(top, pink 10%, deeppink 100%); }
+  div .hint {
+    display: block;
+    font-style: none;
+    text-align: center;
+    line-height: 0.9rem;
+    width: 5.6rem;
+    height: 0.9rem;
+    color: deeppink;
+    font-size: 0.3rem; }
+
+/*# sourceMappingURL=login.css.map */

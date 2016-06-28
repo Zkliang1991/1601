@@ -1,1 +1,313 @@
-空
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+    <meta charset="utf-8">  
+<meta name="viewport" content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no'>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <title>xiu秀出你的每一天</title>
+    <link rel="stylesheet" type="text/css" href="css/show.css"/>
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css">
+    <link rel="stylesheet" href="iconfont/ux/iconfont.css">
+ 	<script src="js/swiper-3.3.1.min.js"></script>	
+ 	<script src="js/iscroll.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="js/index-iscroll.js"></script>
+ <script type="text/javascript" src="js/jquery-1.11.3.js">
+ </script>
+ 
+ 
+ 
+ 
+<script type="text/javascript">
+
+var myScroll,
+	pullDownEl, pullDownOffset,_maxScrollY,
+	pullUpEl, pullUpOffset,
+	generatedCount = 0;
+
+function pullDownAction () {
+	setTimeout(function () {	
+		var el, li, i;
+		el = document.getElementById('main');
+
+//		for (i=0; i<2; i++) {			
+//			li = document.createElement('li');
+//			li.innerText = 'Generated down ' + (++generatedCount);
+//			el.insertBefore(li, el.childNodes[0]);
+			getajax();			
+//		}
+		//刷新myscroll
+		myScroll.refresh();		
+	}, 1000);	
+}
+
+function pullUpAction () {
+	setTimeout(function () {	
+		var el, li, i;
+		el = document.getElementById('main');
+
+		for (i=0; i<2; i++) {
+//			li = document.createElement('li');
+//			li.innerText = 'Generated up ' + (++generatedCount);
+//			el.appendChild(li, el.childNodes[0]);
+			getajax();
+		}
+// 03	ajax({
+// 04	url:"RemoteInterface.cgi",
+// 05	method:"get",
+// 06	data:{pageIndex:pageIndex},
+// 07	callback:callback
+// 08	});
+// 把加载更多的接口写在这里
+		myScroll.refresh();		// Remember to refresh when contents are loaded (ie: on ajax completion)
+	}, 1000);	// <-- Simulate network congestion, remove setTimeout from production!
+}
+
+function loaded() {
+	pullDownEl = document.getElementById('pullDown');
+	pullDownOffset = pullDownEl.offsetHeight;
+	console.log(pullDownOffset)   
+	pullUpEl = document.getElementById('pullUp');
+	pullUpOffset = pullUpEl.offsetHeight;
+
+
+	//初始化scroll  
+	myScroll = new iScroll('wrapper', {
+		useTransition: true,       //是否使用css 变形
+		topOffset: pullDownOffset,   //已经滚动的基准值
+		hideScrollbar:true,          //表示用户没有操作scroll时会隐藏滚动条
+		fadeScrollbar:true,
+		//表示滚动条重新 刷新 
+		onRefresh: function () {
+			//this  ==>scroll
+
+			//this.maxScrollY 表示滚动到底部的距离  (定值前提是scroll不加载更多)
+			//myScroll.maxScrollX  myScroll.maxScrollY
+			// 当滚动到底部时的 myScroll.x/y
+            _maxScrollY = this.maxScrollY = this.maxScrollY + pullUpOffset;
+
+            //match
+			if (pullDownEl.className.match('loading')) {
+				pullDownEl.className = '';
+				pullDownEl.querySelector('.pullDownLabel').innerHTML = '下拉刷新...';
+			} else if (pullUpEl.className.match('loading')) {
+				pullUpEl.className = '';
+				pullUpEl.querySelector('.pullUpLabel').innerHTML = '加载更多...';
+			}
+		},
+		//表示滚动条开始滑动
+		onScrollMove: function () {
+			// console.log(this.y);
+			// console.log(this.maxScrollY)
+			// y:滚动条距离垂直初始位置 (负值)
+			if (this.y > 5 && !pullDownEl.className.match('flip')) {
+				// debugger;
+				pullDownEl.className = 'flip';
+				pullDownEl.querySelector('.pullDownLabel').innerHTML = '松开刷新...';  //松开刷新
+				// console.log(this.minScrollY)
+				this.minScrollY = 0;
+				
+			} else if (this.y < 5 && pullDownEl.className.match('flip')) {
+				// debugger;
+				pullDownEl.className = '';
+				pullDownEl.querySelector('.pullDownLabel').innerHTML = '下拉刷新...';
+				this.minScrollY = -pullDownOffset;
+				console.log(this.minScrollY);
+			} else if (this.y <= (_maxScrollY - pullUpOffset) && !pullUpEl.className.match('flip')) {
+				pullUpEl.className = 'flip';
+				// debugger;
+
+				pullUpEl.querySelector('.pullUpLabel').innerHTML = '松开刷新...';
+                this.maxScrollY = this.maxScrollY - pullUpOffset;
+
+			} else if (this.y > (_maxScrollY - pullUpOffset) && pullUpEl.className.match('flip')) {
+				pullUpEl.className = '';
+				pullUpEl.querySelector('.pullUpLabel').innerHTML = '加载更多...';
+                this.maxScrollY = this.maxScrollY + pullUpOffset;
+
+			}
+		},
+		//表示滚动条滑动结束时候
+		onScrollEnd: function () {
+			if (pullDownEl.className.match('flip')) {
+				pullDownEl.className = 'loading';
+				pullDownEl.querySelector('.pullDownLabel').innerHTML = '加载中...';
+				pullDownAction();	// Execute custom function (ajax call?)
+			} else if (pullUpEl.className.match('flip')) {
+				// debugger;
+				pullUpEl.className = 'loading';
+				pullUpEl.querySelector('.pullUpLabel').innerHTML = '加载中...';
+				pullUpAction();	// Execute custom function (ajax call?)
+			}
+		}
+	});
+
+setTimeout(function () { document.getElementById('wrapper').style.left = '0'; }, 800);
+}
+
+//处理浏览器默认事件
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+//当 DOM 元素 已经加载好内容后执行
+document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, 200); }, false);
+</script>
+ 
+</head>
+<body>
+	<div id="header">
+		<span>zxiu</span><h1>走秀网</h1>
+	</div>	
+
+	<div id="search">	
+		<input type="text" placeholder="请输入搜索内容" autocomplete="off" class="ser" />
+	</div>
+
+<!-- 轮播图 -->
+
+	<div id="banner">
+		<div class="swiper-container">
+		  <div class="swiper-wrapper">
+		    <div class="swiper-slide"><a href="javascript:;"><img src="img/banner1.jpg" alt="banner1"></a></div>
+		    <div class="swiper-slide"><a href="javascript:;"><img src="img/banner2.jpg" alt="banner2"></a></div>
+		    <div class="swiper-slide"><a href="javascript:;"><img src="img/banner3.jpg" alt="banner3"></a></div>
+		    <div class="swiper-slide"><a href="javascript:;"><img src="img/banner4.jpg" alt="banner4"></a></div>
+		  </div>
+		  <div class="swiper-pagination"></div>
+		</div>
+	</div>
+<!--中部的图片刷新功能-->
+<div id="wrapper">				
+	<div id="scroller">
+			<div id="pullDown">
+				<span class="pullDownIcon"></span>
+				<span class="pullDownLabel">下拉刷新...</span>
+			</div>
+			<ul id="main">
+				
+				<li>		
+					<div class="main-left"><img src="img/g1.jpg" alt="商品"></div>
+	
+					<div class="main-right">
+						<div class="main-rig-top">0元抽大奖抽大奖抽大奖
+						抽大奖抽大奖抽</div>
+						<div class="main-rig-bottom">						
+							<div class="main-rig-bott-l">							
+								<div class="main-rig-bott-l-top">
+									<div class="price">￥0</div>
+									<div class="noprice">￥28880</div>
+								</div>
+								<div class="main-rig-bott-l-bottom">0折</div>
+							</div>
+							
+							<div class="main-rig-bott-r">
+								<a href="javascript:;" class="iconfont cart"></a>
+							</div>
+						</div>
+					</div>	
+				</li>
+							
+			</ul>	
+
+			<div id="pullUp">
+				<span class="pullUpIcon"></span>
+				<span class="pullUpLabel">加载更多...</span>
+			</div>		
+	</div>					
+</div>	
+				
+	<footer>
+		<a href="javascript:;">
+			<dl>
+				<dt class="iconfont home_page"></dt>
+				<dd>首页</dd>
+				
+			</dl>
+		</a>
+
+
+		<a href="sort.html">
+			<dl>
+				<dt class="iconfont sort"></dt>
+				<dd>分类</dd>
+			</dl>
+		</a>
+		
+		
+		<a href="cart.html">
+			<dl>
+				<dt class="iconfont cart"></dt>
+				<dd>购物车</dd>
+			</dl>
+		</a>
+		
+		<a href="myshow.html">
+			<dl>
+				<dt class="iconfont my_show"></dt>
+				<dd>我的秀</dd>
+			</dl>
+		</a>
+
+		<a href="more.html">
+			<dl>
+				<dt class="iconfont more"></dt>
+				<dd>更多</dd>
+			</dl>
+		</a>
+	</footer>
+		
+		
+		
+		
+	<script type="text/javascript">
+		var html = document.getElementById('html');
+		var width = document.documentElement.clientWidth;
+		html.style.fontSize = width/640*100 + "px";
+
+		window.onresize = function(){
+			var html = document.getElementById('html');
+			var width = document.documentElement.clientWidth;
+			html.style.fontSize = width/640*100 + "px";	
+		}
+
+		// swiper设置。
+
+		var mySwiper = new Swiper('.swiper-container',{
+		pagination : '.swiper-pagination',
+		paginationClickable :true,
+		})
+
+		 var mySwiper = new Swiper('.swiper-container',{
+		    loop: true,
+			autoplay: 3000,
+		  });
+	console.log('dee')
+	
+		
+	
+function getajax(){
+	
+	$.ajax({
+		url:"http://datainfo.duapp.com/shopdata/getGoods.php",
+		type:"get",
+		dataType:'jsonp',
+		success:function(data){
+			for(var i = 0; i<2;i++){
+				var name = data[i].goodsName;
+				var img = data[i].goodsListImg;
+				var pricee = data[i].price;		
+				var discount = data[i].discount;
+				var className = data[i].className;	  
+
+	$('#main').append('<li><div class="main-left"><img src='+img+'></div><div class="main-right"><div class="main-rig-top">'+name+'</div><div class="main-rig-bottom"><div class="main-rig-bott-l"><div class="main-rig-bott-l-top"><div class="price">$'+pricee+'</div><div class="noprice">￥28880</div></div><div class="main-rig-bott-l-bottom">'+discount+'折</div></div><div class="main-rig-bott-r"><a href="javascript:;" class="iconfont cart"></a></div></div></div></li>')
+			}
+		}
+	});
+	
+}
+
+	</script>
+
+</body>
+</html>

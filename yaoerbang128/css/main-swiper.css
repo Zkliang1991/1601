@@ -1,0 +1,593 @@
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  width: 100%;
+  height: 100%; }
+
+#swiper-out {
+  width: 100%;
+  height: 100%; }
+  #swiper-out .swiper-pagination-bullet-active p {
+    color: #d60f12; }
+  #swiper-out .sw1 {
+    width: 100%; }
+    #swiper-out .sw1 .index h1 {
+      box-sizing: border-box;
+      width: 100%;
+      height: 1.28rem;
+      font-size: 0.42rem;
+      text-align: center;
+      color: white;
+      font-family: "Microsoft yahei";
+      padding-top: 0.5rem;
+      background: #e4366b; }
+    #swiper-out .sw1 .index .search {
+      width: 100%;
+      height: 0.88rem;
+      background: #52525a;
+      overflow: hidden;
+      position: relative; }
+      #swiper-out .sw1 .index .search span {
+        display: block;
+        width: 0.52rem;
+        height: 0.44rem;
+        position: absolute;
+        left: 0.6rem;
+        top: 0.2rem;
+        background: url(../images/search.jpg) center no-repeat;
+        background-size: cover; }
+      #swiper-out .sw1 .index .search input {
+        outline: none;
+        display: block;
+        text-indent: 0.78rem;
+        width: 5.54rem;
+        height: 0.6rem;
+        margin: 0 auto;
+        border: 0;
+        border-radius: 0.2rem/50%;
+        margin-top: 0.12rem; }
+    #swiper-out .sw1 .index #swiper-in {
+      width: 100%; }
+      #swiper-out .sw1 .index #swiper-in .swiper-pagination-bullet-active {
+        background: #d60f12; }
+      #swiper-out .sw1 .index #swiper-in .sw2 {
+        width: 100%; }
+        #swiper-out .sw1 .index #swiper-in .sw2 .swiper-slide {
+          width: 100%;
+          height: 2.52rem;
+          background-size: cover; }
+        #swiper-out .sw1 .index #swiper-in .sw2 .slide1 {
+          background: yellow; }
+        #swiper-out .sw1 .index #swiper-in .sw2 .slide2 {
+          background: blue; }
+        #swiper-out .sw1 .index #swiper-in .sw2 .slide3 {
+          background: green; }
+        #swiper-out .sw1 .index #swiper-in .sw2 .slide4 {
+          background: purple; }
+    #swiper-out .sw1 .index .main {
+      width: 100%;
+      height: 5.7rem;
+      overflow: hidden; }
+      #swiper-out .sw1 .index .main .ul {
+        width: 100%; }
+        #swiper-out .sw1 .index .main .ul .list {
+          width: 100%;
+          height: 2.2rem;
+          border-top: solid 0.01rem black;
+          box-sizing: border-box;
+          padding: 0.18rem 0.52rem 0.26rem 0.16rem;
+          -webkit-display: flex;
+          -moz-display: flex;
+          -ms-display: flex;
+          -o-display: flex;
+          display: flex;
+          -webkit-flex-flow: row; }
+          #swiper-out .sw1 .index .main .ul .list img {
+            display: inline-block;
+            width: 1.74rem;
+            height: 1.74rem; }
+          #swiper-out .sw1 .index .main .ul .list ul {
+            width: 3.82rem;
+            height: 1.74rem;
+            margin-left: 0.18rem;
+            font-size: 0.26rem;
+            line-height: 0.44rem;
+            position: relative; }
+            #swiper-out .sw1 .index .main .ul .list ul button {
+              width: 1.2rem;
+              height: 0.52rem;
+              font-size: 0.5rem;
+              text-align: center;
+              line-height: 0.52rem;
+              border: 0;
+              border-radius: 0.1rem;
+              position: absolute;
+              bottom: 0.2rem;
+              right: 0;
+              background-image: -webkit-linear-gradient(top, #f3608c, #e4366b); }
+    #swiper-out .sw1 .devide {
+      overflow: hidden; }
+      #swiper-out .sw1 .devide h1 {
+        box-sizing: border-box;
+        width: 100%;
+        height: 1.28rem;
+        font-size: 0.42rem;
+        text-align: center;
+        color: white;
+        font-family: "Microsoft yahei";
+        padding-top: 0.5rem;
+        background: #e4366b; }
+        #swiper-out .sw1 .devide h1 span {
+          float: left;
+          color: #690c27; }
+      #swiper-out .sw1 .devide .search {
+        width: 100%;
+        height: 0.88rem;
+        background: #52525a;
+        overflow: hidden;
+        position: relative; }
+        #swiper-out .sw1 .devide .search span {
+          display: block;
+          width: 0.52rem;
+          height: 0.44rem;
+          position: absolute;
+          left: 0.6rem;
+          top: 0.2rem;
+          background: url(../images/search.jpg) center no-repeat;
+          background-size: cover; }
+        #swiper-out .sw1 .devide .search input {
+          outline: none;
+          display: block;
+          text-indent: 0.78rem;
+          width: 5.54rem;
+          height: 0.6rem;
+          margin: 0 auto;
+          border: 0;
+          border-radius: 0.2rem/50%;
+          margin-top: 0.12rem; }
+      #swiper-out .sw1 .devide ul.main {
+        width: 100%;
+        height: 8.2rem;
+        overflow: hidden; }
+        #swiper-out .sw1 .devide ul.main .list {
+          text-indent: 0.2rem;
+          overflow: hidden; }
+          #swiper-out .sw1 .devide ul.main .list ul {
+            display: none; }
+        #swiper-out .sw1 .devide ul.main li {
+          width: 100%;
+          border-bottom: solid 0.01rem black;
+          font-size: 0.44rem;
+          text-indent: 0.4rem;
+          line-height: 0.86rem; }
+          #swiper-out .sw1 .devide ul.main li span {
+            float: right; }
+    #swiper-out .sw1 .cart h1 {
+      box-sizing: border-box;
+      width: 100%;
+      height: 1.28rem;
+      font-size: 0.42rem;
+      text-align: center;
+      color: white;
+      font-family: "Microsoft yahei";
+      padding-top: 0.5rem;
+      background: #e4366b; }
+      #swiper-out .sw1 .cart h1 span {
+        float: left;
+        color: #690c27; }
+      #swiper-out .sw1 .cart h1 button {
+        float: right;
+        width: 1.1rem;
+        height: 0.62rem;
+        line-height: 0.62rem;
+        background: #e4366b;
+        color: white;
+        border: solid 0.02rem grey;
+        border-radius: 0.15rem;
+        margin-right: 0.16rem;
+        font-size: 0.24rem; }
+    #swiper-out .sw1 .cart .qgg {
+      width: 100%;
+      height: 9rem;
+      border: solid 0.01rem blue;
+      position: absolute;
+      left: 0;
+      top: 1.28rem;
+      background: #f7f7f7;
+      display: none; }
+      #swiper-out .sw1 .cart .qgg p {
+        text-align: center;
+        height: 1.22rem;
+        line-height: 1.56rem;
+        font-size: 0.36rem;
+        font-weight: bold; }
+      #swiper-out .sw1 .cart .qgg .cart-empty {
+        width: 2.6rem;
+        height: 2.64rem;
+        margin: 0 auto;
+        background: url(../images/cart-empty.jpg) center no-repeat;
+        background-size: cover; }
+      #swiper-out .sw1 .cart .qgg button {
+        display: block;
+        width: 4.26rem;
+        height: 0.98rem;
+        background-image: -webkit-linear-gradient(top, #f3608c, #e23167);
+        font-size: 0.5rem;
+        color: white;
+        text-align: center;
+        line-height: 0.98rem;
+        border: 0;
+        margin: 0.72rem auto;
+        border-radius: 0.2rem; }
+    #swiper-out .sw1 .cart .search {
+      width: 100%;
+      height: 0.88rem;
+      background: #52525a;
+      overflow: hidden;
+      position: relative;
+      font-size: 0.32rem;
+      text-align: center;
+      line-height: 0.88rem;
+      color: white; }
+      #swiper-out .sw1 .cart .search span {
+        border: solid 0.01rem white; }
+    #swiper-out .sw1 .cart ul.ul {
+      width: 100%;
+      display: block;
+      box-sizing: border-box;
+      padding: 0.28rem 0.38rem 0.32rem 0.32rem; }
+      #swiper-out .sw1 .cart ul.ul img {
+        width: 1.76rem;
+        height: 1.76rem;
+        background: red; }
+      #swiper-out .sw1 .cart ul.ul li.list {
+        width: 100%;
+        height: 2.32rem;
+        border-bottom: solid 0.01rem black; }
+        #swiper-out .sw1 .cart ul.ul li.list ul {
+          width: 3.6rem;
+          height: 1.76rem;
+          float: right; }
+          #swiper-out .sw1 .cart ul.ul li.list ul li {
+            width: 100%;
+            height: 0.32rem;
+            font-size: 0.32rem;
+            margin: 0.12rem 0; }
+            #swiper-out .sw1 .cart ul.ul li.list ul li span.iconfont {
+              float: right; }
+            #swiper-out .sw1 .cart ul.ul li.list ul li input {
+              width: 0.76rem;
+              height: 0.32rem; }
+    #swiper-out .sw1 .myshow .main {
+      width: 100%; }
+      #swiper-out .sw1 .myshow .main .lm {
+        position: absolute;
+        width: 100%; }
+      #swiper-out .sw1 .myshow .main .user h1 {
+        box-sizing: border-box;
+        width: 100%;
+        height: 1.28rem;
+        font-size: 0.42rem;
+        text-align: center;
+        color: white;
+        font-family: "Microsoft yahei";
+        padding-top: 0.5rem;
+        background: #e4366b; }
+        #swiper-out .sw1 .myshow .main .user h1 span {
+          float: left;
+          color: #690c27; }
+      #swiper-out .sw1 .myshow .main .user .content {
+        width: 5.6rem;
+        margin: 0 auto;
+        box-sizing: border-box;
+        padding-top: 0.62rem;
+        -webkit-display: flex;
+        -moz-display: flex;
+        -ms-display: flex;
+        -o-display: flex;
+        display: flex;
+        -webkit-flex-flow: row wrap;
+        justify-content: space-between; }
+        #swiper-out .sw1 .myshow .main .user .content .head {
+          width: 1.66rem;
+          height: 1.66rem;
+          font-size: 1.6rem;
+          color: grey;
+          background: #202020;
+          border-radius: 0.1rem;
+          display: inline-block; }
+        #swiper-out .sw1 .myshow .main .user .content .top {
+          width: 3.6rem;
+          height: 1.64rem; }
+          #swiper-out .sw1 .myshow .main .user .content .top .list1 {
+            height: 1.04rem;
+            font-size: 0.36rem;
+            line-height: 1.2rem; }
+          #swiper-out .sw1 .myshow .main .user .content .top .list2 button {
+            display: block;
+            width: 1.1rem;
+            height: 0.54rem;
+            border-radius: 0.1rem;
+            border: 0;
+            float: left;
+            margin-right: 0.44rem;
+            background: #ea3f73;
+            color: white;
+            text-align: center;
+            line-height: 0.54rem; }
+        #swiper-out .sw1 .myshow .main .user .content .bottom {
+          width: 100%;
+          height: 3.62rem;
+          margin-top: 0.86rem;
+          border-radius: 0.2rem;
+          border: 0.01rem solid grey; }
+          #swiper-out .sw1 .myshow .main .user .content .bottom li {
+            width: 100%;
+            height: 0.9rem;
+            text-indent: 0.3rem;
+            line-height: 0.9rem;
+            font-size: 0.4rem;
+            border-bottom: 0.01rem solid grey; }
+            #swiper-out .sw1 .myshow .main .user .content .bottom li span {
+              float: right; }
+          #swiper-out .sw1 .myshow .main .user .content .bottom .le {
+            border: 0; }
+      #swiper-out .sw1 .myshow .main .log-up h1 {
+        box-sizing: border-box;
+        width: 100%;
+        height: 1.28rem;
+        font-size: 0.42rem;
+        text-align: center;
+        color: white;
+        font-family: "Microsoft yahei";
+        padding-top: 0.5rem;
+        background: #e4366b; }
+        #swiper-out .sw1 .myshow .main .log-up h1 span {
+          float: left;
+          color: #690c27; }
+        #swiper-out .sw1 .myshow .main .log-up h1 button {
+          float: right;
+          width: 1.1rem;
+          height: 0.62rem;
+          line-height: 0.62rem;
+          background: #e4366b;
+          color: white;
+          border: solid 0.02rem grey;
+          border-radius: 0.15rem;
+          margin-right: 0.16rem;
+          font-size: 0.24rem; }
+      #swiper-out .sw1 .myshow .main .log-up .log {
+        width: 5.64rem;
+        margin: 0 auto;
+        box-sizing: border-box;
+        padding-top: 0.62rem; }
+        #swiper-out .sw1 .myshow .main .log-up .log li {
+          width: 100%;
+          height: 1.24rem; }
+          #swiper-out .sw1 .myshow .main .log-up .log li input {
+            width: 100%;
+            height: 0.78rem;
+            border-radius: 0.2rem;
+            text-indent: 0.28rem;
+            line-height: 0.78rem;
+            font-size: 0.32rem; }
+        #swiper-out .sw1 .myshow .main .log-up .log button {
+          width: 100%;
+          height: 0.92rem;
+          color: white;
+          font-family: "Microsoft yahei";
+          font-size: 0.38rem;
+          text-align: center;
+          line-height: 0.92rem;
+          background-image: -webkit-linear-gradient(top, #f3608c, #e23167);
+          border: 0;
+          border-radius: 0.2rem;
+          margin-top: 0.32rem; }
+      #swiper-out .sw1 .myshow .main .log-in h1 {
+        box-sizing: border-box;
+        width: 100%;
+        height: 1.28rem;
+        font-size: 0.42rem;
+        text-align: center;
+        color: white;
+        font-family: "Microsoft yahei";
+        padding-top: 0.5rem;
+        background: #e4366b; }
+        #swiper-out .sw1 .myshow .main .log-in h1 span {
+          float: left;
+          color: #690c27; }
+        #swiper-out .sw1 .myshow .main .log-in h1 button {
+          float: right;
+          width: 1.1rem;
+          height: 0.62rem;
+          line-height: 0.62rem;
+          background: #e4366b;
+          color: white;
+          border: solid 0.02rem grey;
+          border-radius: 0.15rem;
+          margin-right: 0.16rem;
+          font-size: 0.24rem; }
+      #swiper-out .sw1 .myshow .main .log-in .log {
+        width: 5.64rem;
+        margin: 0 auto;
+        box-sizing: border-box;
+        padding-top: 0.62rem; }
+        #swiper-out .sw1 .myshow .main .log-in .log li {
+          width: 100%;
+          height: 1.24rem;
+          font-size: 0.14rem; }
+          #swiper-out .sw1 .myshow .main .log-in .log li input {
+            width: 100%;
+            height: 0.78rem;
+            border-radius: 0.2rem;
+            text-indent: 0.28rem;
+            line-height: 0.78rem;
+            font-size: 0.32rem;
+            margin-right: 0.14rem; }
+          #swiper-out .sw1 .myshow .main .log-in .log li #check {
+            width: 0.3rem;
+            height: 0.3rem;
+            font-size: 0.26rem; }
+        #swiper-out .sw1 .myshow .main .log-in .log button {
+          width: 100%;
+          height: 0.92rem;
+          color: white;
+          font-family: "Microsoft yahei";
+          font-size: 0.38rem;
+          text-align: center;
+          line-height: 0.92rem;
+          background-image: -webkit-linear-gradient(top, #f3608c, #e23167);
+          border: 0;
+          border-radius: 0.2rem;
+          margin-top: 0.32rem; }
+      #swiper-out .sw1 .myshow .main .my-order h1 {
+        box-sizing: border-box;
+        width: 100%;
+        height: 1.28rem;
+        font-size: 0.42rem;
+        text-align: center;
+        color: white;
+        font-family: "Microsoft yahei";
+        padding-top: 0.5rem;
+        background: #e4366b; }
+        #swiper-out .sw1 .myshow .main .my-order h1 span {
+          float: left;
+          color: #690c27; }
+        #swiper-out .sw1 .myshow .main .my-order h1 button {
+          float: right;
+          width: 1.1rem;
+          height: 0.62rem;
+          line-height: 0.62rem;
+          background: #e4366b;
+          color: white;
+          border: solid 0.02rem grey;
+          border-radius: 0.15rem;
+          margin-right: 0.16rem;
+          font-size: 0.24rem; }
+      #swiper-out .sw1 .myshow .main .my-order ul.ul {
+        width: 100%;
+        display: block;
+        box-sizing: border-box;
+        padding: 0.28rem 0.38rem 0.32rem 0.32rem; }
+        #swiper-out .sw1 .myshow .main .my-order ul.ul img {
+          width: 1.76rem;
+          height: 1.76rem;
+          background: red; }
+        #swiper-out .sw1 .myshow .main .my-order ul.ul li.list {
+          width: 100%;
+          height: 2.32rem;
+          border-bottom: solid 0.01rem black; }
+          #swiper-out .sw1 .myshow .main .my-order ul.ul li.list ul {
+            width: 3.6rem;
+            height: 1.76rem;
+            float: right; }
+            #swiper-out .sw1 .myshow .main .my-order ul.ul li.list ul li {
+              width: 100%;
+              height: 0.32rem;
+              font-size: 0.32rem;
+              margin: 0.12rem 0; }
+              #swiper-out .sw1 .myshow .main .my-order ul.ul li.list ul li span.iconfont {
+                float: right; }
+              #swiper-out .sw1 .myshow .main .my-order ul.ul li.list ul li button {
+                width: 1.38rem;
+                height: 0.54rem;
+                color: white;
+                font-family: "Microsoft yahei";
+                font-size: 0.28rem;
+                text-align: center;
+                line-height: 0.54rem;
+                background-image: -webkit-linear-gradient(top, #f3608c, #e23167);
+                border: 0;
+                border-radius: 0.1rem;
+                float: right; }
+    #swiper-out .sw1 .more h1 {
+      box-sizing: border-box;
+      width: 100%;
+      height: 1.28rem;
+      font-size: 0.42rem;
+      text-align: center;
+      color: white;
+      font-family: "Microsoft yahei";
+      padding-top: 0.5rem;
+      background: #e4366b; }
+      #swiper-out .sw1 .more h1 span {
+        float: left;
+        color: #690c27; }
+    #swiper-out .sw1 .more ul {
+      width: 5.6rem;
+      margin: 0 auto;
+      border: 0.01rem solid grey;
+      border-radius: 0.2rem; }
+      #swiper-out .sw1 .more ul li {
+        width: 100%;
+        height: 0.9rem;
+        font-size: 0.4rem;
+        text-indent: 0.32rem;
+        line-height: 0.9rem;
+        border-bottom: solid 0.01rem grey; }
+        #swiper-out .sw1 .more ul li span {
+          float: right; }
+      #swiper-out .sw1 .more ul .list-last {
+        border: 0; }
+    #swiper-out .sw1 .more .ul1 {
+      height: 3.64rem;
+      margin-bottom: 0.26rem;
+      margin-top: 0.4rem; }
+    #swiper-out .sw1 .more .ul2 {
+      height: 1.82rem;
+      margin-bottom: 0.26rem; }
+    #swiper-out .sw1 .more button {
+      width: 5.6rem;
+      height: 0.9rem;
+      display: block;
+      color: white;
+      font-family: "Microsoft yahei";
+      font-size: 0.36rem;
+      text-align: center;
+      line-height: 0.9rem;
+      background-image: -webkit-linear-gradient(top, #f3608c, #e23167);
+      border: 0;
+      border-radius: 0.2rem;
+      margin: 0 auto; }
+    #swiper-out .sw1 .swiper-slide {
+      width: 100%;
+      height: 100%; }
+  #swiper-out #sp-out {
+    -webkit-display: flex;
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
+    display: flex;
+    -webkit-flex-flow: row;
+    position: absolute;
+    bottom: 0; }
+    #swiper-out #sp-out .iconfont {
+      width: 20%;
+      height: 0.98rem;
+      background: #484850;
+      text-align: center;
+      color: white;
+      border-radius: 0;
+      margin: 0; }
+      #swiper-out #sp-out .iconfont p {
+        font-weight: bold; }
+      #swiper-out #sp-out .iconfont p:nth-child(1) {
+        width: 100%;
+        height: 0.56rem;
+        line-height: 0.56rem;
+        font-size: 0.42rem; }
+      #swiper-out #sp-out .iconfont p:nth-child(2) {
+        width: 100%;
+        height: 0.42rem;
+        line-height: 0.42rem;
+        font-size: 0.24rem; }
+
+/*# sourceMappingURL=main-swiper.css.map */
