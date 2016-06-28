@@ -11,11 +11,7 @@
   font-size: 30px;
   
   font-family: "iconfont2" !important; }
-  
-  
-  
-  
-  
+
   .back:before{
   	content:"\f007a";
 		width: 0.97rem;	
@@ -48,10 +44,6 @@
 		line-height: 0.53rem;
 				
   }
-
-
-
-
 
 #header{
   position: relative;
@@ -93,10 +85,6 @@
     font-size: 0.26rem; }
 
 
-
-
-
- 
        
 /* <!--常见问题那一栏-->  */  
 .sorts{
@@ -172,6 +160,9 @@
 /*------------------我的订单------------------------*/
 
 
+
+
+/*------------------------------------------------*/
 footer {
   width: 6.4rem;
   height: 0.98rem;

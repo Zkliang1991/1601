@@ -181,7 +181,9 @@ header {
 	display: flex;
 	color: #f1f1f1;
 	z-index: 1;
-	position: relative;
+	position: fixed;
+	top: 0;
+	left: 0;
 }
 
 header a:nth-of-type(1) {
@@ -225,6 +227,9 @@ header p {
 section {
 	width: 100vw;
 	background: #fefcfd;
+	position: absolute;
+	top: 14.1vw;
+	left: 0;
 }
 
 .search {
@@ -236,7 +241,7 @@ section {
 	background: #52525a;
 	position: absolute;
 	left: 0;
-	top: 14.1vw;
+	top: 0vw;
 	z-index: 100;
 }
 

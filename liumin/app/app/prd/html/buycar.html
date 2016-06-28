@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>购物车</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<script type="text/javascript" src="../js/jquery-2.2.3.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="../css/head.css">
+	<link rel="stylesheet" type="text/css" href="../ux1/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="../css/buycar.css">
+</head>
+<body>
+	<header id="header">
+		<div class="head">
+			<header>
+				<a src="javascript:;" onClick="javascript:history.go(-1);" class="iconfont">&#xe63d;</a>
+				<span class="name">购物车</span>
+				<a href="javascript:;" class="kuang">去结算</a>
+			</header>
+			
+		</div>
+	</header>
+	
+	<section>
+		<div class="nogoods" >
+			<span>您的购物车空空~</span>
+			<img src="../img/buy.jpg">
+			<a href="javascript:;">去逛逛</a>
+		</div>
+		<div class="goods" style="display: none"> 
+			<h3>
+				<span>商品数量：<i class="count">1</i></span>
+				<span class="mr0">应付总额(不含邮费)：<i class="price col">￥199</i></span>
+			</h3>
+			<ul class="mylist">
+				<li>
+					<dl>
+						<dt><img src="../img/shop2.jpg"></dt>
+						<dd>
+							<p class="name">ESPRIT 气质V领玫红</p>
+							<p class="classname">T恤</p>
+							<p>单价：<span class="price">￥199</span></p>
+							<p>数量：
+								<span id="jian" class="move">-</span>
+								<input type="text" id="number" value="1">
+								<span id="jia" class="move">+</span>
+							</p>
+							
+						</dd>
+					</dl>
+					<b class="del"></b>
+				</li>
+			
+			</ul>
+		</div>
+	</section>
+	
+	<footer id="footer"></footer>
+	<script type="text/javascript">
+		$("#footer").load("foot.html");
+	</script>
+	
+</body>
+</html>

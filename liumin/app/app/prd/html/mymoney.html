@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>我的秀</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<script type="text/javascript" src="../js/jquery-2.2.3.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/login.css">
+	<link rel="stylesheet" type="text/css" href="../css/head.css">
+	<link rel="stylesheet" type="text/css" href="../ux1/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="../css/mymoney.css">
+	
+</head>
+<body>
+	<header id="header">
+		<div class="head">
+			<header>
+				<a src="javascript:;" onClick="javascript:history.go(-1);" class="iconfont">&#xe63d;</a>
+				<span class="name">我的优惠券</span>				
+			</header>			
+		</div>
+	</header>
+	
+	<section>
+		<div class="swiper-container" id="myswiper1">
+
+			<div class="swiper-pagination"></div>
+			<div class="swiper-wrapper">
+				<div class="swiper-slide slide1" data-hash='slide1'>
+					<p>40元现金券（满299元可使用）</p>
+					<p>号码：<span>DSACEFRYJUIKYM</span></p>
+					<p>过期时间：<span>2020年5月20日</span></p>
+					<p>状态：<span>未使用</span></p>
+				</div>
+				<div class="swiper-slide slide2" data-hash='slide2'>
+					
+				</div>
+
+				<div class="swiper-slide slide3" data-hash='slide3'>
+					
+				</div>
+				<div class="swiper-slide slide4" data-hash='slide4'>
+					
+				</div>
+			</div>	
+		</div>
+	</section>
+	
+	<footer id="footer"></footer>
+	<script type="text/javascript">
+		$("#footer").load("foot.html");
+	</script>
+	<script type="text/javascript" src="../js/mymoney.js"></script>
+</body>
+</html>

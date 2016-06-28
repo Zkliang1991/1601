@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+	<meta charset="UTF-8">
+	<title>走秀网</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="stylesheet" href="../css/index1.css">
+	<link rel="stylesheet" href="../css/ux/iconfont.css">
+	<link rel="stylesheet" href="../css/type.css">
+	<script src="../js/zepto.js"></script>
+	<script src="../js/zepto-tap.js"></script>
+</head>
+<body>
+	<header>
+		<section>
+			<span>zxiu</span>
+			<h3>走秀网</h3>
+		</section>
+	</header>
+
+	<div class="search">
+		<div class="se iconfont">
+			<span>&#xe635;</span>
+			<input class="ser" type="text" placeholder="请输入搜索内容">
+		</div>
+	</div>
+	
+	<div id="container">
+		<div class="top iconfont">
+			<span>全部</span>
+			<a href="#">&#xe610;</a>
+		</div>
+		<!-- <ul class="iconfont">
+			<li>
+				<span>衬衫</span>
+				<a href="#">&#xe734;</a>
+			</li>
+		</ul> -->
+	</div>
+
+	<footer>
+		<ul class="iconfont">
+			<li class="index">
+				<i>
+					&#xe601;
+				</i>
+				<span>首页</span>
+			</li>
+			<li class="type">
+				<i>
+					&#xe60d;
+				</i>
+				<span>分类</span>
+			</li>
+			<li class="buycar">
+				<i>
+					&#xe6ef;
+				</i>
+				<span>购物车</span>
+			</li>
+			<li class="myshow">
+				<i>
+				   &#xe605;
+				</i>
+				<span>我的秀</span>
+			</li>
+			<li class="more">
+				<i>
+					&#xf0013;
+				</i>
+				<span>更多</span>
+			</li>
+		</ul>
+	</footer>
+	
+</body>
+	<script type="text/javascript">
+		var url = window.location.href;
+		if (url.indexOf("type") > 0) {
+			$('.type').removeClass().addClass('active');
+		}
+		var width = document.documentElement.clientWidth;
+		var html = document.getElementById("html");
+		html.style.fontSize = width/640*100 + 'px';
+		console.log(width);
+		window.onresize = function() {
+			// 随着窗口的改变求设备的宽度
+			var width = document.body.clientWidth;
+			html.style.fontSize = width/640*100 + 'px';
+			console.log(width);
+		}
+	</script>
+
+	<script>
+		$('.index').on('tap',function(){
+			window.location.href = "index.html";
+		})
+		$('.type').on('tap',function(){
+			window.location.href = "type.html";
+		})
+		$('.buycar').on('tap',function(){
+			window.location.href = "buycar.html";
+		})
+		$('.myshow').on('tap',function(){
+			window.location.href = "myshow.html";
+		})
+		$('.more').on('tap',function(){
+			window.location.href = "more.html";
+		})
+	</script>
+	<script>
+
+		$.ajax({
+				url:'http://datainfo.duapp.com/shopdata/getclass.php',
+				type:'get',
+				success:function(data){
+					for( var i=0;i<6;i++){
+						var names = JSON.parse(data)[i].className;
+						console.log(names);
+					    $('#container').append('<ul><li><span>'+names+'</span><a href="#" class="iconfont">&#xe734;</a></li></ul>')
+					}
+				},
+				error:function(data){
+					return false;
+				}
+
+			})
+
+		
+	</script>
+</html>

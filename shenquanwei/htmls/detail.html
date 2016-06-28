@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="../css/swiper.css" />
+		<link rel="stylesheet" href="../css/common.css" />
+		<link rel="stylesheet" href="../css/login.css" />
+		<script type="text/javascript" src="../js/zepto.min.js" ></script>
+		<script type="text/javascript" src="../js/detail.js" ></script>
+		<script type="text/javascript" src="../js/swiper.min.js" ></script>
+	</head>
+
+	<body>
+		<header class="iconfont">
+			<a href="javascript:history.go(-1)">&#xe631;</a>
+			<p>商品介绍</p>
+			<a href="signup.html">分享</a>
+		</header>
+
+		<section class="detail-i">
+			<div class="djs"><p>距离结束时间：<span class="djs-time">00天00小时00分钟00秒</span></p></div>
+			<img class="detail-i-bimg" src="../img/S2.jpg" />
+			<div class="detail-i-info">
+				<p><span>￥1212</span><span>灰色短袖</span></p>
+				<p>市场价：<span>￥222</span><span>4.3折</span><span>323人购买</span></p>
+			</div>
+		</section>
+		<section class="detail-d">
+			<img class="detail-d-bimg" src="../img/S2.jpg" />
+			<div class="detail-d-info">
+				<p>产地：<span>中国</span>品牌：<span>GG</span>商品名称：<span>短袖</span></p>
+				<p class="detail-d-info-l">一大堆乱七八糟的东西。。。</p>
+			</div>
+		</section>
+		<section class="detail-p">
+			<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide"><img src="../img/S2.jpg" /></div>
+				<div class="swiper-slide"><img src="../img/S3.jpg" /></div>
+				<div class="swiper-slide"><img src="../img/S4.jpg" /></div>
+				<div class="swiper-slide"><a href="main.html" class="haveread" onclick="localStorage.setItem('haveread','1')"><img src="../img/S5.jpg" /></a></div>
+			</div>
+			<p class="detail-d-info-l"></p>
+			<div class="swiper-pagination"></div>
+		</div>
+		</section>
+		
+
+		<footer class="iconfont">
+			<ul class="detail">
+				<li>
+					<p>介绍</p>
+				</li>
+				<li>
+					<p>详情</p>
+				</li>
+				<li>
+					<p>实拍</p>
+				</li>
+			</ul>
+		</footer>
+		<script>
+			var sw = new Swiper(".swiper-container", {
+				pagination: '.swiper-pagination',
+				slidesPerView: 1,
+				centeredSlides: true,
+				coverflow: {
+					rotate: 30,
+					stretch: 10,
+					depth: 60,
+					modifier: 2,
+					slideShadows: true
+				},
+				longSwiperRatio:0.5,
+			})
+		</script>
+	</body>
+
+</html>

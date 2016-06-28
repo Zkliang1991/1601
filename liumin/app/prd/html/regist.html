@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>我的秀</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<script type="text/javascript" src="../js/jquery-2.2.3.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/login.css">
+	<link rel="stylesheet" type="text/css" href="../css/head.css">
+	<link rel="stylesheet" type="text/css" href="../ux1/iconfont.css">
+	<!-- <script type="text/javascript" src="../js/regist.js"></script> -->
+</head>
+<body>
+	<header id="header">
+		<div class="head">
+			<header>
+				<a src="javascript:;" onClick="javascript:history.go(-1);" class="iconfont">&#xe63d;</a>
+				<span class="name">注册</span>
+				<a href="login.html" class="kuang">登录</a>
+			</header>
+			
+		</div>
+	</header>
+	
+	<section>
+		<form class="login">
+			<input type="text" placeholder="账号" class="number" id="number">
+			<input type="password" placeholder="密码" class="pwd" id="pwd">
+			<input type="password" placeholder="重复密码" class="pwd" id="doublepwd">
+		</form>
+		<a href="javascript:;" class="denglu">同意服务协议并注册</a>
+	</section>
+	
+	<footer id="footer"></footer>
+	<script type="text/javascript">
+		$("#footer").load("foot.html",function(){
+			var url = window.location.href;
+			var htmlName = url.split('/');
+			var thisHtml = null;
+			for(var i=0;i<htmlName.length;i++){
+				if(htmlName[i].indexOf('.html')!=-1){
+					thisHtml = htmlName[i].split('.html')[0];
+				}
+			}
+			console.log(thisHtml);
+			var reg = /^htmlType_/;
+			var myHtml = 'htmlType_';
+			for(var i=0;i<localStorage.length;i++){
+				var key = localStorage.key(i);
+				if(reg.test(key)){
+					var oIndex = key.split('_')[1];
+					//判断属于footer第几个li
+					if(oIndex==3){
+						localStorage.setItem(myHtml+'3',thisHtml)
+					}
+				}
+			}
+		});
+	</script>
+	
+</body>
+</html>
