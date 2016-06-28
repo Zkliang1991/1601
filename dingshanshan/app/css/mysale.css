@@ -739,8 +739,29 @@ header {
 
 .mysale {
   width: 100%;
-  padding: 1.41667rem 1.25rem 0 1.25rem;
+  padding: 1.41667rem 1.25rem 0 2.08333rem;
   box-sizing: border-box; }
   .mysale .salelist {
     width: 21.66667rem;
-    height: 2.58333rem; }
+    height: 2.58333rem;
+    box-sizing: border-box;
+    border: 0.04167rem solid #aaa;
+    border-radius: 0.41667rem;
+    background: #ddd;
+    margin-bottom: 1.41667rem; }
+    .mysale .salelist li {
+      float: left;
+      width: 24%;
+      height: 2.5rem;
+      line-height: 2.5rem;
+      text-align: center;
+      border-left: 0.04167rem solid #aaa; }
+    .mysale .salelist .useactive {
+      background: #df235e;
+      color: #fff; }
+  .mysale .useinfo {
+    width: 21.66667rem;
+    height: 5.91667rem;
+    background: #fff;
+    border: 0.04167rem solid #aaa;
+    border-radius: 0.41667rem; }

@@ -4,13 +4,46 @@
 	<meta charset="UTF-8">
 	<title>更多</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
-	<style type="text/css">
-		div{
-			font-size: 30px;
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="../css/more.css">
+	<link rel="stylesheet" type="text/css" href="../ux/iconfont.css">
 </head>
 <body>
-	<div>未完待续...</div>
+	<header><a href="javascript:history.go(-1);"></a><b>更多</b></header>
+	<div class="moremain">
+		<ul class="thelist  thelist1">
+		<li>
+			<span>常见问题</span><span></span>
+		</li>
+		<li>
+			<span>系统设置</span><span></span>
+		</li>
+		<li>
+			<span>软件更新</span><span></span>
+		</li>
+		<li>
+			<span>扫描二维码</span><span></span>
+		</li>
+	</ul>
+	<ul class="thelist">
+		<li>
+			<span>我要提意见</span><span></span>
+		</li>
+		<li>
+			<span>关于</span><span></span>
+		</li>
+	</ul>
+	<p class="quitlogin">退出登录</p>
+	</div>
+	
+
+	<script type="text/javascript" src="../js/more.js"></script>
+	<footer id="footer"></footer>
+	<script type="text/javascript">
+		$("#footer").load("footer.html",function(){
+			$('#footer ul li').eq(4).addClass('active');
+		});
+
+	</script>
+	
 </body>
 </html>

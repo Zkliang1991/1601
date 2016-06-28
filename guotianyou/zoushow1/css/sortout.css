@@ -1,0 +1,49 @@
+.indexMain .ser{
+	width: 100%;
+	height:90px;
+	padding:20px 0.21rem 0 0.21rem;
+	font-size:0.28rem;
+	background: #52525a;
+	box-sizing: border-box;
+}
+.indexMain .ser .serbox{
+	width:100%;
+	height:50px;
+	background: #fff;
+	border-radius: 15px;
+	padding-left:0.27rem;
+	box-sizing: border-box;
+}
+.indexMain .ser .serbox input{
+	height:50px;
+	outline:none;
+	border:0;
+}
+#alltype{
+	width:100%;
+	box-sizing: border-box;
+	height:83px;
+	line-height: 83px;
+	border-bottom:1px solid #ccc;
+	padding : 0 0.24rem 0 0.24rem;
+	font-size:0.42rem;
+}
+#alltype span{
+	float:right;
+	
+}
+#detailtype{
+	width:100%;
+}
+#detailtype li{
+	width:100%;
+	box-sizing: border-box;
+	height:83px;
+	line-height: 83px;
+	border-bottom:1px solid #ccc;
+	padding : 0 0.28rem 0 0.4rem;
+	font-size:0.42rem;
+}
+#detailtype span{
+	float:right;
+}
