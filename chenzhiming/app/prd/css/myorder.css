@@ -1,0 +1,212 @@
+@charset "UTF-8";
+html {
+  font-size: 62.5%;
+  font-family: "微软雅黑", "Microsoft yahei"; }
+
+body, h1, h2, h3, h4, h5, h6, blockquote, ol, ul, dl, dd, p, textarea, input, select, option, form {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #f5f4f0;
+  -webkit-tap-highlight-color: transparent; }
+
+ol, ul, textarea, input, option, th, td {
+  padding: 0; }
+
+.page {
+  min-width: 320px;
+  max-width: 750px;
+  margin: 0 auto; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-size: 100%; }
+
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+  display: block; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+ul, ol {
+  list-style-type: none; }
+
+.clearfix:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden; }
+
+/* ios默认文本框阴影 */
+input[type=text], textarea {
+  -webkit-appearance: none; }
+
+/* 低版本安卓文本框层级问题 */
+input:focus {
+  -webkit-user-modify: read-write-plaintext-only; }
+
+fieldset, img {
+  border: 0; }
+
+a {
+  text-decoration: none; }
+
+a, textarea, input {
+  outline: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+textarea {
+  overflow: auto;
+  resize: none; }
+
+@media only screen and (min-width: 320px) {
+  html {
+    font-size: 75% !important;
+    /* 12÷16=73.4% */ } }
+
+@media only screen and (min-width: 375px) {
+  html {
+    font-size: 87.89063% !important;
+    /* 14.0625÷16=73.2% */ } }
+
+@media only screen and (min-width: 414px) {
+  html {
+    font-size: 97.03% !important;
+    /* 15.525÷16=94% */ } }
+
+@media only screen and (min-width: 480px) {
+  html {
+    font-size: 112.5% !important;
+    /* 18÷16=94% */ } }
+
+@media only screen and (min-width: 560px) {
+  html {
+    font-size: 131.25% !important;
+    /* 21÷16=109% */ } }
+
+@media only screen and (min-width: 640px) {
+  html {
+    font-size: 150% !important;
+    /* 24÷16=125% */ } }
+
+@media only screen and (min-width: 720px) {
+  html {
+    font-size: 168.75% !important;
+    /* 27÷16=146.43% */ } }
+
+@media only screen and (min-width: 750px) {
+  html {
+    font-size: 175.78125% !important;
+    /* 28.125÷16=146.43% */ } }
+
+@media only screen and (min-width: 800px) {
+  html {
+    font-size: 187.5% !important;
+    /* 30÷16=146.43% */ } }
+
+@media only screen and (min-width: 960px) {
+  html {
+    font-size: 225% !important;
+    /* 36÷16=146.43% */ } }
+
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: "微软雅黑"; }
+
+header {
+  background: #e4366b;
+  width: 100%;
+  display: flex;
+  border-top: 1px solid #636363;
+  border-bottom: 1px solid #282828;
+  position: relative;
+  height: 3.66667rem; }
+  header a {
+    display: block;
+    width: 2.125rem;
+    height: 1.41667rem;
+    margin-top: 1.25rem;
+    float: left;
+    margin-left: 0.83333rem;
+    background: url(../img/header_arrow.png) 0 0 no-repeat;
+    background-size: 2.16667rem 1.41667rem; }
+  header h2 {
+    height: 3.66667rem;
+    line-height: 3.66667rem;
+    display: inline-block;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.66667rem; }
+
+section {
+  width: 100%; }
+  section ul {
+    width: 100%;
+    list-style: none; }
+    section ul li {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 1.16667rem 1rem 1.16667rem 1.33333rem;
+      border-bottom: 1px solid #aaa;
+      background: #fff; }
+      section ul li dl {
+        width: 100%;
+        display: flex; }
+        section ul li dl dt {
+          float: left;
+          width: 7.25rem;
+          height: 7.25rem;
+          background: yellow;
+          margin-right: 1.125rem; }
+        section ul li dl dd {
+          width: 16rem;
+          padding-top: 0.41667rem;
+          height: 6.33333rem;
+          position: relative; }
+          section ul li dl dd .goodinfo {
+            width: 13.33333rem;
+            font-size: 1.16667rem;
+            float: left; }
+            section ul li dl dd .goodinfo span {
+              display: block;
+              width: 11.66667rem;
+              height: 3.41667rem; }
+            section ul li dl dd .goodinfo p {
+              height: 1.58333rem; }
+              section ul li dl dd .goodinfo p a {
+                color: #e7366a; }
+            section ul li dl dd .goodinfo b {
+              height: 1.75rem;
+              line-height: 1.75rem;
+              font-weight: normal; }
+          section ul li dl dd .goodsize {
+            float: right; }
+          section ul li dl dd .qx {
+            display: inline-block;
+            position: absolute;
+            width: 5.75rem;
+            height: 2.25rem;
+            bottom: 0;
+            right: 0.41667rem;
+            border-radius: 0.41667rem;
+            color: #fff;
+            text-align: center;
+            line-height: 2.25rem;
+            background: -webkit-linear-gradient(top, #f8618c, #a30b3c); }

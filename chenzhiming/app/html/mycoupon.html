@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>我的优惠劵</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<link rel="stylesheet" type="text/css" href="../prd/css/mycoupon.css">
+</head>
+<body>
+	<header>
+		<a href="javascript:history.go(-1)"></a>
+		<h2>我的优惠劵</h2>
+	</header>
+	<section>
+		<ul class="ullist">
+			<li class="active">未使用</li>
+			<li>已使用</li>
+			<li>已过期</li>
+			<li>未激活</li>
+		</ul>
+		<span class="box">
+			<div class="block">
+				<p>40元现金券(满299可以使用)</p>
+				<b>号码：<i>DSMSADASDAS</i></b>
+				<b>过期时间：<i>2013年05月29日</i></b>
+				<b>状态：<i>未使用</i></b>
+			</div>
+			<div>
+				<p>40元现金券(满299可以使用)</p>
+				<b>号码：<i>DSMSADASDAS</i></b>
+				<b>过期时间：<i>2013年05月29日</i></b>
+				<b>状态：<i>已使用</i></b>
+			</div>
+			<div>
+				<p>40元现金券(满299可以使用)</p>
+				<b>号码：<i>DSMSADASDAS</i></b>
+				<b>过期时间：<i>2013年05月29日</i></b>
+				<b>状态：<i>已过期</i></b>
+			</div>
+			<div>
+				<p>40元现金券(满299可以使用)</p>
+				<b>号码：<i>DSMSADASDAS</i></b>
+				<b>过期时间：<i>2013年05月29日</i></b>
+				<b>状态：<i>未激活</i></b>
+			</div>
+		</span>
+	</section>
+	<script type="text/javascript" src="../prd/js/mycoupon.js"></script>
+	<footer id="footer"></footer>
+	<script type="text/javascript">
+		$("#footer").load("footer.html",function(){
+			$('#footer ul li').eq(3).addClass('active');
+		});
+	</script>
+</body>
+</html>
