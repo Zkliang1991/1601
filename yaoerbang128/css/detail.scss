@@ -59,11 +59,39 @@ html,body{
 				width:100%;
 				height:0.88rem;
 				background:#333333;
+				font-size:0.34rem;
+				line-height: 0.88rem;
+				text-align:left!important;
+				text-indent: 0.24rem;
+				text-align:center;
+				color:white;
+
 			}
 			.pro{
 				width:100%;
 				height:8.25rem;
 				background:yellow;
+				overflow: hidden;
+				img{
+					background:red;
+					width:4.4rem;
+					height:3.68rem;
+					display:block;
+					margin:0.32rem auto;
+				}
+				.p1{
+					width:4.64rem;
+					height:0.82rem;
+					background:#f45482;
+					margin:0.32rem auto;
+					font-size:0.34rem;
+					color:white;
+					line-height:0.82rem ;
+				}
+				.p2{
+					font-size: 0.22rem;
+					text-align:center;
+				}
 			}
 		}
 		.pro2{
@@ -94,10 +122,16 @@ html,body{
 					font-size:0.24rem;
 				}
 			}
-			.time{
+			.pro-img{
 				width:100%;
-				height:0.88rem;
+				height:3.24rem;
 				background:#333333;
+			}
+			article{
+				width:100%;
+				height:4.12rem;
+				background:blue;
+				overflow: hidden;
 			}
 			.pro{
 				width:100%;
@@ -137,9 +171,13 @@ html,body{
 				.swiper-pagination-bullet-active {
 								    background:red;
 								}
+
 				.sw2{
 					.swiper-slide{
 					height:9.1rem;
+					img{
+					background-size:cover;
+				}
 					}
 					.slide1{
 						background:yellow;

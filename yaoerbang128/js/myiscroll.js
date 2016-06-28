@@ -42,6 +42,8 @@ function getData(dat,i,j,li,el){
 				var goodsListImg = dat[i].goodsListImg;
 				var goodsName = dat[j].goodsName;
 				var price = dat[j].price;
+				var goodsID = dat[j].goodsID;
+				li.setAttribute("data-goods",goodsID);
 				li.innerHTML = "<img src='"+goodsListImg+"' alt=''><ul><li>"+goodsName+"</li><li>￥"+price+"</li><li>"+discount+"折</li><button class='iconfont' type='button'  id='cart-in'>&#xe632;</button></ul>";
 				el.appendChild(li, el.childNodes[0]);
 			}

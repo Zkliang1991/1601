@@ -40,6 +40,7 @@ var width = document.documentElement.clientWidth;
 		var mySwiper2 = new Swiper('#swiper-in',{
 			grabCursor : true,
 			simulateTouch : true,
+			autoplay:1000,
 			pagination : '#sp-in',
 			paginationClickable :true,
 			watchSlidesProgress : true,
@@ -78,8 +79,10 @@ var width = document.documentElement.clientWidth;
 		}
 	}
 
-$("#scroller li.list").on("tap",function(){
-	window.location.href = '../html/detail.html';
+$("#scroller").on("tap","#scroller li.list",function(){
+	var $goodsID = $(this).attr("data-goods");
+	console.log($goodsID);
+	window.location.href = '../html/detail.html?data-goods='+$goodsID;
 })
 //加入购物车
 

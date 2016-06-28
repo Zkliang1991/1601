@@ -46,11 +46,35 @@ html, body {
     #swiper-out .sw1 .pro1 .time {
       width: 100%;
       height: 0.88rem;
-      background: #333333; }
+      background: #333333;
+      font-size: 0.34rem;
+      line-height: 0.88rem;
+      text-align: left !important;
+      text-indent: 0.24rem;
+      text-align: center;
+      color: white; }
     #swiper-out .sw1 .pro1 .pro {
       width: 100%;
       height: 8.25rem;
-      background: yellow; }
+      background: yellow;
+      overflow: hidden; }
+      #swiper-out .sw1 .pro1 .pro img {
+        background: red;
+        width: 4.4rem;
+        height: 3.68rem;
+        display: block;
+        margin: 0.32rem auto; }
+      #swiper-out .sw1 .pro1 .pro .p1 {
+        width: 4.64rem;
+        height: 0.82rem;
+        background: #f45482;
+        margin: 0.32rem auto;
+        font-size: 0.34rem;
+        color: white;
+        line-height: 0.82rem; }
+      #swiper-out .sw1 .pro1 .pro .p2 {
+        font-size: 0.22rem;
+        text-align: center; }
     #swiper-out .sw1 .pro2 h1 {
       box-sizing: border-box;
       width: 100%;
@@ -75,10 +99,15 @@ html, body {
         border-radius: 0.15rem;
         margin-right: 0.16rem;
         font-size: 0.24rem; }
-    #swiper-out .sw1 .pro2 .time {
+    #swiper-out .sw1 .pro2 .pro-img {
       width: 100%;
-      height: 0.88rem;
+      height: 3.24rem;
       background: #333333; }
+    #swiper-out .sw1 .pro2 article {
+      width: 100%;
+      height: 4.12rem;
+      background: blue;
+      overflow: hidden; }
     #swiper-out .sw1 .pro2 .pro {
       width: 100%;
       height: 8.25rem;
@@ -111,6 +140,8 @@ html, body {
       background: red; }
     #swiper-out .sw1 .pro3 #swiper-in .sw2 .swiper-slide {
       height: 9.1rem; }
+      #swiper-out .sw1 .pro3 #swiper-in .sw2 .swiper-slide img {
+        background-size: cover; }
     #swiper-out .sw1 .pro3 #swiper-in .sw2 .slide1 {
       background: yellow; }
     #swiper-out .sw1 .pro3 #swiper-in .sw2 .slide2 {
