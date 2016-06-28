@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="stylesheet" href="../css/swiper-3.3.1.min.css">
+	<link rel="stylesheet" type="text/css" href="../ux/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="../css/zx-scroll.css">
+	<link rel="stylesheet" type="text/css" href="../css/public.css">
+	<script type="text/javascript" src="../js/swiper-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-1.10.1.min.js"></script>
+	<script type="text/javascript" src="../js/zepto.js"></script>
+	<script type="text/javascript" src="../js/zx-scroll.js"></script>
+	<script type="text/javascript" src="../js/iscroll.js"></script>
+	<title>走秀网</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		ul,ol{
+			list-style: none;
+		}
+		body,html{
+			width: 100%;
+			height: 100%;
+		}
+	
+	
+
+		.swiper-container{
+			width: 100%;
+			height:2.51rem;
+			border-bottom:0.02rem solid gray;
+
+		}
+		.swiper-slide{
+			width:100%;
+			height:100%;
+		}
+		.swiper-slide img{
+			width:100%;
+			height:100%;
+			display: block;
+		}
+		.swiper-container-horizontal>.swiper-pagination-bullets{
+			bottom:0rem;
+		}		
+		.swiper-pagination-bullet-active{
+			background:deeppink;
+		}
+
+
+
+		.goods-list{
+			display:-webkit-box;
+			width: 100%;
+			height: 2.18rem;
+			border-bottom:1px solid gray;
+			padding:0.21rem 0.54rem 0.24rem 0.16rem;
+			box-sizing: border-box;
+		}
+		.goods-list dt{
+			width:1.72rem;
+			height:1.72rem;
+			border:1px solid #ccc;
+		}
+		.goods-list img{
+			width:100%;
+			height: 100%; 
+		}
+		.goods-list dd{
+			margin-left:0.18rem;
+			width:3.8rem;
+			height: 1.7rem;
+			font-size:0.3rem;
+			font-family: "微软雅黑";
+			overflow: hidden;
+		}
+		.goods-list p{
+		    display: -webkit-box;
+		    text-overflow: ellipsis;
+		    overflow : hidden;
+		    -webkit-line-clamp:2;
+		    -webkit-box-orient:vertical;
+		}
+		.price{
+			float: left;
+			margin-top:0.08rem;
+		}
+		.price b{
+			font-style: normal;
+			color:deeppink;
+		}
+		.price i{
+			font-size:0.2rem;
+			color:#ccc;
+			text-decoration: line-through;
+			margin-left:0.16rem; 
+		}
+		.price p{
+			font-style: normal;
+			font-size: 0.25rem;
+			margin-bottom:0.2rem; 
+		}
+		.list-cart{
+			display: block;
+			width: 1.2rem;
+			height: 0.52rem;
+			text-align: center;
+			border-radius:10px; 
+			background: #ea517f;
+			float: right;
+			margin-top:0.3rem;
+		}
+
+		#thelist{
+			width:100%;
+		}	
+
+	</style>
+</head>
+<body>
+	<header class="zx-top">
+		<!-- <span>ZXIU 走秀网</span> 
+		<div class="zx-topx">
+			<input class="zx-ser" type="text" name="" placeholder="请输入搜索内容">
+			<a href="" class="iconfont icon-ser"></a>
+		</div> -->
+	</header>
+	<script type="text/javascript">
+	$('.zx-top').load('header.html',function(){
+		// $('.goback').css('display','none');
+		// $('.gosuan').css('display','none');
+	});
+	</script>
+
+
+	<div class="swiper-container" id="myswiper">
+		<div class="swiper-wrapper" >
+			<div class="swiper-slide slide1" data-hash="slide1">
+				<img src="" class="img1" />
+			</div>
+			<div class="swiper-slide slide2" data-hash="slide2">
+				<img src="" class="img2">
+			</div>
+			<div class="swiper-slide slide3" data-hash="slide3">
+				<img src="" class="img3">
+			</div>
+			<div class="swiper-slide slide4" data-hash="slide4">
+				<img src="" class="img4">
+			</div>
+		</div>
+		<div class="swiper-pagination"></div>
+	</div>
+		
+<div id="wrapper" style="top:4.43rem">
+	<!-- 滑动区域 -->
+	<div id="scroll">
+		<div id="pullDown">
+			<span class="pullDownIcon"></span>
+			<span class="pullDownLabel">下拉刷新...</span>
+		</div>
+
+		
+	<ul id="thelist">
+		<li class="active">
+		<dl  class="goods-list">
+			<dt><img src="../images/list.jpg"></dt>
+			<dd>
+				<p>0元大抽奖！走秀携古尔莎为你开启价值28880元的土耳其之旅</p>
+				<span class="price">
+					<b>￥0</b><i>￥28880</i>
+					<p>0折</p>
+				</span>
+				<span class="list-cart iconfont">&#xe612;</span>
+			</dd>						
+		</dl>
+		</li>
+		<li class="active">
+		<dl  class="goods-list">
+			<dt><img src="../images/list.jpg"></dt>
+			<dd>
+				<p>0元大抽奖！走秀携古尔莎为你开启价值28880元的土耳其之旅</p>
+				<span class="price">
+					<b>￥0</b><i>￥28880</i>
+					<p>0折</p>
+				</span>
+				<span class="list-cart iconfont">&#xe612;</span>
+			</dd>						
+		</dl>
+		</li>
+		<li class="active">
+		<dl  class="goods-list">
+			<dt><img src="../images/list.jpg"></dt>
+			<dd>
+				<p>0元大抽奖！走秀携古尔莎为你开启价值28880元的土耳其之旅</p>
+				<span class="price">
+					<b>￥0</b><i>￥28880</i>
+					<p>0折</p>
+				</span>
+				<span class="list-cart iconfont">&#xe612;</span>
+			</dd>						
+		</dl>
+		</li>
+	</ul>
+
+		
+
+		<div id="pullUp">
+			<span class="pullUpIcon"></span>
+			<span class="pullUpLabel">加载更多...</span>
+		</div>
+	</div>
+</div>
+
+
+
+	<footer class="footer">
+		<ul>
+			<dl class="iconfont icon-home">
+				<dd>首页</dd>
+			</dl>
+			<dl class="iconfont icon-fen">
+				<dd>分类</dd>
+			</dl>
+			<dl class="iconfont icon-cart">
+				<dd class="dd">购物车</dd>
+			</dl>
+			<dl class="iconfont icon-show">
+				<dd class="dd">我的秀</dd>
+			</dl>
+			<dl class="iconfont icon-more">
+				<dd>更多</dd>
+			</dl>			
+		</ul>
+	</footer>
+	<script type="text/javascript">
+		$('.footer').load('footer.html',function(){
+			$('.icon-home').css('color','deeppink');
+		})
+	</script>
+
+
+
+
+
+
+
+	<script type="text/javascript">
+		var width=document.body.clientWidth;
+		var html=document.getElementById('html');			
+		html.style.fontSize=width/640*100+'px';
+			console.log(width);
+		window.onresize=function(){
+			var width=document.body.clientWidth;
+			html.style.fontSize=width/640*100+'px';
+		}
+		
+		var myswiper = new Swiper('#myswiper',{
+			// autoplay:1000,
+			autoplayDisableOnInteraction : false,
+			speed:500,
+			effect : 'slide',
+			loop : true,
+			pagination : '.swiper-pagination',
+			speed:500,
+			paginationElement : 'li',
+			resistanceRatio : 0,
+		});
+
+//获取banner数据
+		$.ajax({
+			url:"http://datainfo.duapp.com/shopdata/getBanner.php",
+			type:"get",
+			dataType:"jsonp",
+			success:function(data){
+				console.log(data);
+				getBannerData(data);
+			},
+			error:function(){
+				console.log("ajax请求banner数据失败");
+			}
+		})
+		function getBannerData(data){
+			var length=data.length;
+			var num=1;
+			for(var i=0;i<length;i++){
+				var src=JSON.parse(data[i].goodsBenUrl)[0];
+				$(".img"+num).attr("src",src);
+				num++;
+			}
+		}
+
+
+//获取Goodslist数据
+
+	// $.ajax({
+	// 	url:"http://datainfo.duapp.com/shopdata/getGoods.php",
+	// 	type:"get",
+	// 	dataType:"jsonp",
+	// 	success:function(data){
+	// 		console.log(data);
+	// 		var length = data.length;
+	// 		for(i=0;i<length;i++){
+	// 			var Img = data[i].goodsListImg;
+	// 			var Goodsname = data[i].goodsName;
+	// 			var Price = data[i].price;
+	// 			var Discount = data[i].discount;
+	// 			$('#scroll').append("<li class='active'><dl  class='goods-list'><dt><img src="+Img+"></dt><dd><p>"+Goodsname+"</p><span class='price'><b>￥"+Price+"</b><i>￥</i><p>"+Discount+"折</p></span><span class='list-cart iconfont'>&#xe612;</span></dd></dl></li>");
+	// 		}
+	// 	}
+	// })
+
+		$(".icon-fen").on("tap",function(e){
+			console.log(1234);
+			window.location.href = "fenlei.html";				
+		})
+	</script>
+
+</body>
+</html>
