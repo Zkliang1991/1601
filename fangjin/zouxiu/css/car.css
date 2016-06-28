@@ -8,7 +8,10 @@ body, h1, h2, h3, h4, h5, h6, blockquote, ol, ul, dl, dd, p, textarea, input, se
   padding: 0; }
 
 body {
+<<<<<<< HEAD
+=======
   background: #f5f4f0;
+>>>>>>> 0c508d2b37dbbc9dbe8ca4cf282edeec00ea8915
   -webkit-tap-highlight-color: transparent; }
 
 ol, ul, textarea, input, option, th, td {
@@ -217,6 +220,36 @@ body {
               body .section1 .list-good ul li dl dd p {
                 font-size: 1.16667rem;
                 line-height: 1.79167rem; }
+<<<<<<< HEAD
+              body .section1 .list-good ul li dl dd .ddtop .remove {
+                float: right;
+                width: 2.08333rem;
+                height: 2.08333rem;
+                background: url(../img/del.png) no-repeat 0 0.625rem;
+                background-size: 1.125rem 1.375rem;
+                left: 14.75rem;
+                top: 0.33333rem;
+                display: inline-block; }
+              body .section1 .list-good ul li dl dd .ddtop p {
+                display: inline-block;
+                width: 11.91667rem;
+                position: relative;
+                display: -webkit-box;
+                display: -moz-box;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2; }
+              body .section1 .list-good ul li dl dd .dd2 {
+                width: 15.83333rem; }
+                body .section1 .list-good ul li dl dd .dd2 .xinghao {
+                  display: block;
+                  float: right;
+                  color: #e43669; }
+              body .section1 .list-good ul li dl dd .dd3 {
+                width: 13.33333rem; }
+                body .section1 .list-good ul li dl dd .dd3 input {
+=======
               body .section1 .list-good ul li dl dd p:nth-of-type(1) {
                 width: 11.91667rem;
                 position: relative; }
@@ -238,6 +271,7 @@ body {
               body .section1 .list-good ul li dl dd p:nth-of-type(3) {
                 width: 13.33333rem; }
                 body .section1 .list-good ul li dl dd p:nth-of-type(3) input {
+>>>>>>> 0c508d2b37dbbc9dbe8ca4cf282edeec00ea8915
                   margin-left: 0.58333rem;
                   margin-right: 0.58333rem;
                   box-sizing: border-box;
@@ -249,7 +283,11 @@ body {
                   line-height: 1.79167rem;
                   font-size: 1rem;
                   text-align: center; }
+<<<<<<< HEAD
+                body .section1 .list-good ul li dl dd .dd3 span {
+=======
                 body .section1 .list-good ul li dl dd p:nth-of-type(3) span {
+>>>>>>> 0c508d2b37dbbc9dbe8ca4cf282edeec00ea8915
                   float: right;
                   display: inline-block;
                   text-align: center;

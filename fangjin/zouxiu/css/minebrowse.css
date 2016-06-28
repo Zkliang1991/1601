@@ -8,7 +8,10 @@ body, h1, h2, h3, h4, h5, h6, blockquote, ol, ul, dl, dd, p, textarea, input, se
   padding: 0; }
 
 body {
+<<<<<<< HEAD
+=======
   background: #f5f4f0;
+>>>>>>> 0c508d2b37dbbc9dbe8ca4cf282edeec00ea8915
   -webkit-tap-highlight-color: transparent; }
 
 ol, ul, textarea, input, option, th, td {
