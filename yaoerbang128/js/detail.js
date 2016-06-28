@@ -59,3 +59,38 @@ $(document.body).on("touchstart",mySwiper1,function(){
 $("#back").on("tap",function(){
 	window.history.go(-1);
 })
+
+var url = window.location.href;
+var  a = url.split("html?")
+var goodsID = a[1].split("=")[1];
+$.ajax({
+		url:"http://datainfo.duapp.com/shopdata/getGoods.php",
+		type:"post",
+		dataType:"jsonp",
+		data:{
+			goodsID:goodsID,
+		},
+		success:function(data){
+			detail(data,goodsID);
+		}
+	})
+	function detail(data,goodsID){
+		console.log(goodsID)
+		for(var i=0;i<data.length;i++){
+			if(data[i].goodsID == goodsID){
+				var discount = data[i].discount;
+				var price = data[i].price;
+				var goodsName = data[i].goodsName;
+				var imgsUrl = data[i].imgsUrl;
+				var arrUrl = JSON.parse(imgsUrl);
+				console.log(arrUrl)
+				for(var j=0;j<4;j++){
+				console.log(arrUrl);
+					// $("#swiper-in .swiper-slide")[j].find("img").src = "url("arrUrl[j]")";
+				}
+				
+			}
+		}
+		
+		
+	}
