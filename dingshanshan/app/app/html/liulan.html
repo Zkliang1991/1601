@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>浏览记录</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="../css/liulan.css">
+	<link rel="stylesheet" type="text/css" href="../ux/iconfont.css">
+</head>
+<body>
+	<header><div class="head"><a href="javascript:history.go(-1);"></a><b>浏览记录</b></div></header>
+	
+	<ul id="thelist">
+		<li>
+			<img src="../img/syli1.png" class="li-img"/>
+			<div class="li-right">
+				<span class="goodsName">0元大抽奖，走秀携古尔莎为你开启走秀携古尔莎为你开启走秀携古尔莎为你开启</span>
+				<span><b>￥590</b> <b>￥5900</b></span>
+				<span><b>1</b>折</span>
+				<p class="iconfont">&#xe60f;</p>
+			</div>
+		</li>
+	</ul>
+	<script type="text/javascript" src="../js/more.js"></script>	
+	<footer id="footer"></footer>
+	<script type="text/javascript">
+		$("#footer").load("footer.html",function(){
+			$('#footer ul li').eq(0).addClass('active');
+			
+		});
+
+	</script>
+	
+</body>
+</html>

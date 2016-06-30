@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>我的秀</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="../css/myshow.css">
+	<link rel="stylesheet" type="text/css" href="../ux/iconfont.css">
+</head>
+<body>
+	<header><div class="head"><a href="javascript:history.go(-1);"></a><b>我的秀</b></div></header>
+	<div class="person">
+		<img src="" class="li-img"/>
+		<div class="li-right">
+			<p>昵称：<b class="name">未知</b></p>
+			<p><span id="login">登录</span><span id="regist">注册</span></p>
+			<!-- <p id="quit">退出</p> -->
+		</div>
+	</div>
+	<ul class="thelist">
+		<li class="mymenu">
+			<span>我的订单</span><span></span>
+		</li>
+		<li class="mysale">
+			<span>优惠券</span><span></span>
+		</li>
+		<li class="myliulan">
+			<span>浏览记录</span><span></span>
+		</li>
+		<li class="mysave">
+			<span>我的收藏</span><span></span>
+		</li>
+		
+	</ul>
+
+	
+	
+<script type="text/javascript" src="../js/myshow.js"></script>
+
+	<footer id="footer"></footer>
+	<script type="text/javascript">
+		$("#footer").load("footer.html",function(){
+			$('#footer ul li').eq(3).addClass('active');
+		});
+
+	</script>
+	
+</body>
+</html>

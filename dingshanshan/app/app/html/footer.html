@@ -1,0 +1,54 @@
+<link rel="stylesheet" type="text/css" href="../css/footer.css">
+<link rel="stylesheet" type="text/css" href="../ux/iconfont.css">
+<script type="text/javascript" src="../js/sy.js"></script>
+<footer id="footer">
+	<ul>
+		<li>
+			<p></p>
+			<b class="icon iconfont">&#xe628;</b>
+			<b class="txt">首页</b>
+		</li>
+		<li>
+			<p></p>
+			<b class="icon iconfont">&#xe61f;</b>
+			<b class="txt">分类</b>
+		</li>
+		<li>
+			<p></p>
+			<b class="icon iconfont">&#xe60f;</b>
+			<b class="txt">购物车</b>
+		</li>
+		<li>
+			<p></p>
+			<b class="icon iconfont">&#xe61a;</b>
+			<b class="txt">我的秀</b>
+		</li>
+		<li>
+			<p></p>
+			<b class="icon iconfont">&#xe61c;</b>
+			<b class="txt">更多</b>
+		</li>
+	</ul>
+</footer>
+<script type="text/javascript">
+	var arrhtml=['sy','fenlei','shoppingcar','myshow','more'];
+	$('#footer ul li').on('tap',function(){
+		$(this).addClass('active').siblings().removeClass('active');
+		var index=$(this).index();
+		console.log(index);
+		var userID=localStorage.getItem('userID');
+		var islogin=localStorage.getItem('loginC');
+		// console.log()
+		if(userID!=null && islogin==1){
+			window.location.href=arrhtml[index]+'.html?userID='+userID;
+		}else{
+			window.location.href=arrhtml[index]+'.html';
+		}
+		// if(index==3){
+		// 	var islogin=localStorage.getItem('loginC');
+		// 	var userID=localStorage.getItem('userID');
+		// 	window.location.href;
+		// }
+		// window.location.href=arrhtml[index]+'.html';
+	})
+</script>
