@@ -1,0 +1,158 @@
+*{
+	margin: 0;
+	padding: 0;
+}	
+ul ,li{
+	list-style: none;
+}		
+body{
+	background: #f7f7f7;
+	width: 100%;
+	height: 100%;
+}
+header{
+	width:100%;
+	border-bottom:1px solid #282828;
+	background:#e4366b;
+	box-sizing:border-box;
+	height:.86rem;
+}
+header a{
+	display:block;
+	width:.51rem;
+	height:.34rem;
+	margin-top:.3rem;
+	float:left;
+	margin-left:.2rem;
+	background:url(../img/zjt.jpg) 0 0 no-repeat;
+	background-size:.52rem .34rem;
+}
+header h2{
+	height:.86rem;
+	line-height:.86rem;
+	font-size:.38rem;
+	display:block;
+	float:left;
+	color:#fff;
+	margin-left:1.68rem;
+	font-family: "微软雅黑";
+}
+
+
+
+
+.list{
+	width: 100%;
+	box-sizing: border-box;
+	border-bottom: 1px solid #333;
+}
+.listshop{
+	width: 6.06rem;
+	height: 1.74rem;
+	box-sizing: border-box;
+	margin: 0.28rem 0 0.3rem 0.34rem;
+	
+	
+}
+.shoppic{
+	width: 1.74rem;
+	height: 1.74rem;
+	box-sizing: border-box;
+	border: 1px solid #CCCCCC;
+	float: left;
+}
+.detail{
+	width: 4.08rem;
+	height: 1.74rem;
+	box-sizing: border-box;
+	
+	float: left;
+	margin-left: 0.24rem;
+}
+
+
+.shopname{
+	height: 0.78rem;
+	width: 4.08rem;
+	
+}
+#name{
+	display: block;
+	width: 3.32rem;
+	height: 0.78rem;
+	float: left;
+	font-family: "微软雅黑";
+	font-size: 0.24rem;
+	
+	
+}
+#del{
+	display: block;
+	width: 0.76rem;
+	
+	float: left;
+	font-family: "微软雅黑";
+	font-size: 0.2rem;
+}
+.ps{
+	height: 0.48rem;
+	width: 4.08rem;
+	
+}
+#price{
+	display: block;
+	width: 3.32rem;
+	height: 0.48rem;
+	float: left;
+	font-family: "微软雅黑";
+	font-size: 0.24rem;
+	
+	
+}
+#price b{
+	color:#e43669;
+}
+#size{
+	display: block;
+	width: 0.76rem;
+	
+	float: left;
+	font-family: "微软雅黑";
+	font-size: 0.2rem;
+}
+.btn{
+	height: 0.48rem;
+	width: 4.08rem;
+}
+#count{
+	display: block;
+	width: 2.38rem;
+	height: 0.48rem;
+	line-height: 0.48rem;
+	float: left;
+	font-family: "微软雅黑";
+	font-size: 0.24rem;
+}
+
+#sp{
+	
+	
+	font-family: "微软雅黑";
+	font-size: 0.24rem;
+	text-decoration: line-through;
+	color: #ccc;
+	
+	padding-left: ;
+}
+#cancel{
+	display: block;
+	width: 1.38rem;
+	height: 0.52rem;
+	border: 0;
+	border-radius:0.15rem;
+	background: -webkit-linear-gradient(top,#f8618a,#d91351);
+	float: left;
+	color: #fff;
+	font-size: 0.3rem;
+	
+}
