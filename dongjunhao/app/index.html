@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+	<meta charset="UTF-8">
+	<title>走秀</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="stylesheet" type="text/css" href="prd/css/index.css">
+	<script type="text/javascript" src="prd/js/index.js"></script>
+	</head>
+<body id="index">
+	<header>
+		<div class="top">
+			<span>ZXIU</span> 
+			<span>走秀网</span>
+		</div>
+		<div class="search">
+			<div class="serBox">
+				<a href="#"></a>
+				<input type="text" name="search" placeholder="请输入搜索内容">
+			</div>
+		</div>
+	</header>
+<section>
+	
+
+<!-- ==========轮播图========== -->
+	<div class="pic">
+		<div class="swiper-container">
+		  <div class="swiper-wrapper">
+		    <div class="swiper-slide slide1"><img /></div>
+		    <div class="swiper-slide slide2"><img /></div>
+		    <div class="swiper-slide slide3"><img /></div>
+		    <div class="swiper-slide slide4"><img /></div>
+		  </div>
+		  <div class="swiper-pagination"></div>
+		</div>	
+	</div>
+<!-- ===========商品列表============= -->
+	<div class="goods-wrap">
+		<div class="goods">
+			<dl>
+				<dt><img src="prd/img/good-1.jpg"></dt>
+				<dd>
+					<span>0元大抽奖！走秀携古尔莎为你开启，价值28880元的土耳其...</span>
+					<p class="p1">￥0</p>
+					<span class="pA">￥28888</span>
+					<p class="p2">0折</p>
+					<a href="javascript:;" class="iconfont">&#xe611;</a>
+				</dd>
+			</dl>
+		</div>
+	</div>
+	<div class="bottom"></div>
+</section>	
+	
+	<!--**********************通用尾部***********************-->
+		<footer id="footer"></footer>
+		<script type="text/javascript">	
+			$("#footer").load("prd/html/footer.html");
+		</script>
+	<!--**********************尾部结束***********************-->
+
+	<script type="text/javascript">
+		var mySwiper = new Swiper('.swiper-container', {
+			autoplay: 2000,
+			pagination : '.swiper-pagination',
+			paginationClickable :true,
+			paginationElement : 'span',
+		})
+		$('.goods dl').on('click',function(){
+			window.location.href="prd/html/good-detail.html";
+		})
+		//商品信息
+		getList();
+		function getList(){
+			$.ajax({
+				url:"http://datainfo.duapp.com/shopdata/getGoods.php",
+				type:"get",
+				dataType:'jsonp',    //表示跨域
+				success:function(data){
+					setList(data);
+				},
+				error:function(data){
+					console.log('出错');
+				}
+			})
+		}
+		function setList(data){
+			var l = data.length;
+			for(var i=0;i<l;i++){
+				var $title = data[i].goodsName;
+				var $img = data[i].goodsListImg;
+				var $line_price = data[i].price;
+				var $discount = data[i].discount;				
+				var $price = Math.ceil($line_price*$discount*0.1);	
+				$('.goods-wrap').append("<div class='goods'><dl><dt><img src="+$img+" data-title="+$title
+					+" data-img="+$img
+					+" data-oldprice"+$line_price
+					+" data-price"+$price
+					+" data-discount"+$discount
+					+"></dt><dd><span>"+$title+"</span><p class='p1'>￥"+$price+"</p><span class='pA'>￥"+$line_price+"</span><p class='p2'>"+$discount+"折</p><a href='javascript:;' class='iconfont'>&#xe611;</a></dd></dl></div>")
+			}
+		}
+	</script>
+</body>
+</html>
