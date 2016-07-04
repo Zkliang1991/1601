@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>my</title>
+	<style type="text/css">
+	p{
+		font-size: 100px;
+		color:deeppink;
+	}
+	</style>
+</head>
+<body>
+	郑州1601最棒的啊
+
+	<P>svn</P>
+	<p>提交之前先 update</p>
+	<p>然后commit</p>
+</body>
+</html>
