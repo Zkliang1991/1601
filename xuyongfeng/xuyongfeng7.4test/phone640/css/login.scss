@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding:0;
+}
+//header
+header{
+     width:100%;
+     height:0.88rem;
+     background:#dc0a4b;  
+     font-size: 0.3rem; 
+     font-family: "microsoft yahei";
+     
+     #about{
+         
+         color: #fff;
+         float: left;
+         font-size:0.4rem ;
+        padding-left: 0.23rem;
+        line-height: 0.88rem;
+        a{
+            
+            
+            text-decoration: none;
+            color:#FFf;
+        }
+     }
+     
+     #city{
+          color: #fff;
+         line-height: 0.88rem;
+         float: left;
+         padding-left: 1.9rem;
+         width: 1.34rem;
+         height: 0.88rem;
+        
+         
+     }
+     #login{
+         line-height: 0.88rem;
+         padding-left: 1.25rem;
+         float: left;   
+         a{
+             text-decoration: none;
+             color: #FFFFFF;
+             
+         } 
+     }    
+}
+
+//--------------------------------------------------
+    
+    #main{
+        padding-top: 0.37rem;
+        .sa{
+            display: block;
+            width:6rem ;
+            height:0.64rem;
+            border-radius: 0.05rem;
+            font-size:0.26rem;
+            border: 1px solid red;
+            margin:0 auto; 
+            outline: none;
+            text-indent:0.33rem;
+            
+        }
+        
+        .pas{
+            margin-top:0.32rem;
+            
+            
+            
+            
+        }
+        
+        
+        
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

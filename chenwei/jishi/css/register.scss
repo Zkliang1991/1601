@@ -1,0 +1,114 @@
+@charset  "UTF-8";
+@import "mobile.scss";
+header{
+  width:100%;
+  height:rem(90);
+  background: #dc0a4b;
+  color:#fff;
+  text-align:center;
+  font-size:rem(36);
+  line-height:rem(90);
+  padding:0 rem(18);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: flex;
+  justify-content:space-between;
+  span{
+
+    font-size:rem(40);
+  }
+
+}
+section{
+  width:100%;
+  padding:0 rem(18);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin:rem(20) 0;
+
+
+
+  input{
+    width:100%;
+    height:rem(60);
+    background:#fff;
+    border:0;
+    border-bottom:1px #ddd solid;
+    font-size:rem(40);
+    text-indent: rem(20);
+  }
+  input:nth-child(1){
+    border-radius: rem(20) rem(20)  0 0;
+  }
+  .box{
+    display: block;
+  position:relative;
+    border-bottom:1px #ddd solid;
+
+    span{
+      position:absolute;
+      display: block;
+      right:0;
+      top:50%;
+      transform: translateY(-50%);
+      width:rem(130);
+      height:rem(40);
+      background: #9ecc6b;
+      color:#fff;
+      text-align:center;
+      line-height:rem(40);
+      border-radius:rem(10);
+      font-size:rem(16);
+    }
+    input{
+      border:0;
+    }
+  }
+  input:nth-child(4){
+    border-radius: 0 0 rem(20) rem(20)  ;
+
+  }
+  input::-webkit-input-placeholder{
+    font-size:rem(30);
+
+  }
+}
+footer{
+  width:100%;
+  padding:0 rem(18);
+  box-sizing:border-box;
+  a{
+    width:100%;
+    height:rem(50);
+    display: block;
+    background:#00a0e9;
+    line-height:rem(50);
+    font-size:rem(36);
+    text-align:center;
+    color:#fff;
+    border-radius:rem(20);
+  }
+  .ft{
+    width:100%;
+    margin-top:rem(10);
+    height:rem(30);
+    display: flex;
+    align-items: center;
+    span,input{
+      display: block;
+      float:left;
+    }
+    input{
+      width:rem(20);
+      height:rem(20);
+      line-height:rem(30);
+    }
+    span{
+      font-size:rem(26);
+      color:#00a0e9;
+    }
+  }
+
+}
