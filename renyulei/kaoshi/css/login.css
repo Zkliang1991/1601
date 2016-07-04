@@ -1,0 +1,90 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+ul, ol {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+body {
+  background: #f6f5f5; }
+
+header {
+  width: 100%;
+  height: 0.9rem;
+  background: #dc0a4b;
+  font-size: 0.33rem;
+  color: #fff;
+  text-align: center;
+  line-height: 0.9rem;
+  padding: 0 0.2rem 0 0.2rem;
+  box-sizing: border-box; }
+  header em {
+    display: block;
+    width: 0.21rem;
+    height: 0.38rem;
+    background: url(../images/jian.png) 0 0 no-repeat;
+    background-size: 100% 100%;
+    position: absolute;
+    left: 0.2rem;
+    top: 0.24rem; }
+  header span {
+    font-size: 0.25rem;
+    color: #fff;
+    float: right; }
+
+.content {
+  width: 100%;
+  padding: 0 0.23rem 0  0.12rem;
+  box-sizing: border-box; }
+  .content .username {
+    width: 100%;
+    height: 0.96rem; }
+    .content .username input {
+      width: 100%;
+      height: 0.64rem;
+      border: 0;
+      border-radius: 0.15rem;
+      font-size: 0.3rem;
+      line-height: 0.64rem;
+      text-indent: 0.78rem;
+      color: #aaaaaa;
+      background: #fff url(../images/user-bg.png) 0.28rem 0.12rem no-repeat;
+      background-size: 0.29rem 0.39rem; }
+  .content .pwd {
+    width: 100%;
+    height: 1.08rem; }
+    .content .pwd input {
+      width: 100%;
+      height: 0.64rem;
+      border: 0;
+      background: #fff;
+      border-radius: 0.10rem;
+      font-size: 0.3rem;
+      line-height: 0.64rem;
+      text-indent: 0.78rem;
+      color: #aaaaaa;
+      background: #fff url(../images/pwd-bg.png) 0.28rem 0.12rem no-repeat;
+      background-size: 0.26rem 0.31rem; }
+  .content .login {
+    width: 3.4rem;
+    height: 0.62rem;
+    background: #00a0e9;
+    margin-left: 1.42rem;
+    font-size: 0.33rem;
+    color: #fff;
+    text-align: center;
+    line-height: 0.62rem;
+    margin-top: 0.45rem; }
+  .content .wj {
+    width: 100%;
+    height: 0.62rem;
+    color: #fff;
+    line-height: 0.62rem;
+    text-align: center;
+    font-size: 0.3rem;
+    color: #00a0e9; }
+
+/*# sourceMappingURL=login.css.map */
