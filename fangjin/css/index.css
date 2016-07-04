@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #f6f5f5;
+  /*-----------------------------mine--------------------------------------------------*/ }
+  body header {
+    width: 100%;
+    height: 90px;
+    text-align: center;
+    line-height: 90px;
+    font-size: 32px;
+    color: #fff;
+    background: #dc0a4b url(../img/location.png) 372px 32px no-repeat; }
+    body header a {
+      display: block;
+      position: absolute;
+      text-decoration: none;
+      color: #fff; }
+    body header a:nth-of-type(1) {
+      left: 24px; }
+    body header a:nth-of-type(2) {
+      right: 24px;
+      top: 22px;
+      width: 40px;
+      height: 40px;
+      background: url(../img/wo.png) no-repeat; }
+  body section {
+    width: 100%;
+    position: absolute;
+    top: 90px;
+    bottom: 90px;
+    overflow-y: auto; }
+    body section .wrapper {
+      position: absolute; }
+      body section .wrapper #myswiper {
+        width: 100%;
+        height: 212px; }
+        body section .wrapper #myswiper .slide1 {
+          background: pink; }
+        body section .wrapper #myswiper .slide2 {
+          background: deeppink; }
+        body section .wrapper #myswiper .slide3 {
+          background: yellow; }
+        body section .wrapper #myswiper .slide4 {
+          background: green; }
+      body section .wrapper .list {
+        height: 272px;
+        padding-left: 45px; }
+        body section .wrapper .list ul {
+          width: 100%;
+          height: 100%;
+          list-style-type: none; }
+          body section .wrapper .list ul li {
+            float: left;
+            margin-top: 16px;
+            margin-right: 48px;
+            width: 100px;
+            height: 120px; }
+            body section .wrapper .list ul li dl {
+              width: 100%;
+              height: 100%; }
+              body section .wrapper .list ul li dl dt {
+                width: 84px;
+                height: 84px;
+                border-radius: 50%;
+                margin: 0 auto;
+                background: deeppink url(../img/wanju.png) 18px 30px no-repeat; }
+              body section .wrapper .list ul li dl dd {
+                font-size: 22px;
+                line-height: 32px;
+                text-align: center; }
+      body section .wrapper .hot-active {
+        width: 100%;
+        height: 380px; }
+        body section .wrapper .hot-active h3 {
+          height: 52px;
+          font-size: 24px;
+          line-height: 64px;
+          text-indent: 24px; }
+        body section .wrapper .hot-active .wrapper {
+          width: 592px;
+          height: 328px;
+          margin: 0 auto; }
+          body section .wrapper .hot-active .wrapper ul {
+            list-style: none; }
+            body section .wrapper .hot-active .wrapper ul li {
+              border: 1px solid #b5b5b6;
+              float: left;
+              width: 282px;
+              height: 98px;
+              background: yellow; }
+            body section .wrapper .hot-active .wrapper ul li:nth-of-type(3), body section .wrapper .hot-active .wrapper ul li:nth-of-type(4) {
+              margin-top: 14px;
+              margin-bottom: 14px; }
+            body section .wrapper .hot-active .wrapper ul li:nth-of-type(odd) {
+              margin-right: 24px; }
+      body section .wrapper .shangjia {
+        width: 100%;
+        height: 520px; }
+        body section .wrapper .shangjia h3 {
+          height: 52px;
+          font-size: 24px;
+          line-height: 64px;
+          text-indent: 24px; }
+        body section .wrapper .shangjia ul {
+          width: 100%;
+          height: 468px;
+          list-style: none; }
+          body section .wrapper .shangjia ul li {
+            float: left;
+            width: 180px;
+            height: 126px;
+            background: pink;
+            margin: 12px 13px; }
+
+/*# sourceMappingURL=index.css.map */
