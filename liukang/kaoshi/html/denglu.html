@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=divce-width,initial-scale=1,user-scalable=no,minimum-scale=1,maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/login.css">
+	<link rel="stylesheet" type="text/css" href="../css/ux2/iconfont.css">
+	<script type="text/javascript" src="../js/zepto.min.js"></script>
+	</script>
+</head>
+<body>
+	<header>
+		<h3>送送登录</h3>
+		<div class="register">注册</div>
+		<a href="javascript:history.go(-1);"></a>
+	</header>
+	<section>
+		<input type="text" name="" class="iconfont" placeholder="&#xe601;手机号码">
+		<input type="password" name="" class="iconfont" placeholder="&#xe736;输入密码">
+		<div class="memory">
+			<input type="checkbox" name="" checked="checked">
+			<p>记住密码</p>
+			
+		</div>
+		<div class="btn">登录</div>
+		<p><a href="#">忘记密码</a></p>
+	</section>
+
+</body>
+</html>
+<script>
+	var oWidth = document.documentElement.clientWidth;
+	var oHeight = document.documentElement.clientHeight;
+	
+	var html = document.getElementById('html');
+	var width = document.documentElement.clientWidth;
+	html.style.fontSize = width/640*100 + "px";
+
+	window.onresize = function(){
+		var html = document.getElementById('html');
+		var width = document.documentElement.clientWidth;
+		html.style.fontSize = width/640*100 + "px";	
+	}
+</script>
+<script type="text/javascript" src="../js/login.js"></script>

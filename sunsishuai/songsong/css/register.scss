@@ -1,0 +1,142 @@
+@import "mobile";
+@mixin radius($px1){
+  -webkit-border-radius:$px1;
+  -moz-border-radius:$px1;
+  -ms-border-radius:$px1;
+  -o-border-radius:$px1;
+  border-radius:$px1;
+}
+@mixin bor($b){
+  box-sizing:$b;
+  -webkit-box-sizing:$b;
+  -moz-box-sizing:$b;
+  -ms-box-sizing:$b;
+  -o-box-sizing:$b;
+}
+html,body{
+  width: 100%;
+  height: 100%;
+  background: #f6f5f5;
+}
+header{
+  width: 100%;
+  height: pxToRem(88);
+  background: #dc0a4b;
+  color: #FFFFFF;
+  line-height: pxToRem(88);
+  .header-left{
+    float: left;
+    font-size: pxToRem(38);
+    height: pxToRem(88);
+    margin-left: pxToRem(25);
+  }
+  h3{
+    float: left;
+    font-size: pxToRem(28);
+    height: pxToRem(88);
+    text-align: center;
+    width: pxToRem(510);
+  }
+}
+section{
+  width: 100%;
+  height: pxToRem(982);
+  background: #f6f5f5;
+  padding-top: pxToRem(28);
+  div{
+    width: pxToRem(600);
+    height: pxToRem(58);
+    background: #FFFFFF;
+    margin: 0 auto;
+    @include radius(pxToRem(5));
+    @include bor(border-box);
+    display: flex;
+    display: -webkit-flex;
+    padding-left: pxToRem(25);
+    align-items: center;
+    border-bottom: 2px solid #f6f5f5;
+    input{
+      width: pxToRem(425);
+      height: 100%;
+      border: 0;
+      font-size: pxToRem(24);
+      color: #AAAAAA;
+    }
+    span{
+      display: inline-block;
+      width: pxToRem(137);
+      height: pxToRem(42);
+      @include radius(pxToRem(8));
+      background: #9ecc6b;
+      font-size: pxToRem(16);
+      text-align: center;
+      color: #FFFFFF;
+      line-height: pxToRem(42);
+    }
+  }
+  div:nth-child(1) img{
+    display: inline-block;
+    width: pxToRem(27);
+    height: pxToRem(39);
+    margin-right: pxToRem(19);
+  }
+  div:nth-child(2) img{
+    display: inline-block;
+    width: pxToRem(24);
+    height: pxToRem(30);
+    margin-right: pxToRem(20);
+  }
+  p{
+    border: 0;
+    width: pxToRem(600);
+    height: pxToRem(58);
+    background: #00a0e9;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: pxToRem(64);
+    font-size: pxToRem(28);
+    @include radius(pxToRem(6));
+    margin: pxToRem(44) auto pxToRem(20);
+    box-shadow:1px 1px 0 1px #005072;
+  }
+  b{
+    display: block;
+    width: pxToRem(600);
+    height: pxToRem(30);
+    margin-left: pxToRem(36);
+    input{
+      float: left;
+      margin-top: pxToRem(4);
+    }
+    span{
+      font-size: pxToRem(16);
+      font-weight: 400;
+      float: left;
+      margin: 0 pxToRem(6);
+      line-height: pxToRem(35);
+    }
+    a{
+      color: #00a0e9;
+      font-size: pxToRem(24);
+      float: left;
+      line-height: pxToRem(30);
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

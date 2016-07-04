@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>swiper</title>
+	<link rel="stylesheet" type="text/css" href="swiper.min.css">
+	<script type="text/javascript" src="swiper.min.js"></script>
+	<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	html,body{
+		width: 100%;
+		height: 100%;
+	}
+	.swiper-container{
+		width: 100%;
+		height: 100%;
+	}
+	.swiper-slide{
+		width: 100%;
+		height: 100%;
+		font-size: 50px;
+		display: flex;
+		font-family: "微软雅黑";
+		justify-content: center;
+		align-items:center;
+		box-shadow:inset 0 0  20px pink;
+	}
+	</style>
+</head>
+<body>
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide">slide1</div>
+			<div class="swiper-slide">slide2</div>
+			<div class="swiper-slide">slide3</div>
+			<div class="swiper-slide">slide4</div>
+			<div class="swiper-slide">slide5</div>
+			<div class="swiper-slide">slide6</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+	var myswiper = new Swiper('.swiper-container',{
+		speed:2000,
+		loop:true,
+	})
+	</script>
+</body>
+</html>
