@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>送送登录</title>
+		<link rel="stylesheet" type="text/css" href="../css/login.css"/>
+	</head>
+	<body>
+		<header>
+			<img src="../img/iconfont-right.png"/>
+			送送登陆
+			<div id="reg">注册</div>
+		</header>
+		<section>
+			<input type="text" placeholder="手机号码"/>
+			<input type="text" placeholder="输入密码"/>
+			<button>登录</button>
+			<span>忘记密码？</span>
+		</section>
+		<footer></footer>
+		<script type="text/javascript">
+			var width = document.body.clientWidth;
+			console.log(width);
+			var html = document.getElementById('html');
+			//求出设备宽度
+			html.style.fontSize = width/640*100 + 'px';
+			// rem 通过设备宽度来改变rem 
+			console.log(width);
+			//窗口改变的时候求出宽度
+			window.onresize =function(){
+				var width = document.body.clientWidth;
+				html.style.fontSize = width/640*100 + 'px';
+			}
+		</script>
+	</body>
+</html>
