@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-1.11.3.js">
+			
+		</script>
+		<script type="text/javascript">
+			
+	$.ajax({
+		url:'http://data.daydays.com/general/statistic.do?startTime=2015-12-01%2000:00:00&endTime=2015-12-18%2000:00:00&uniqueCode=zl9001',
+		type:'get',
+		dataType:'jsonp',
+		success:function(data){
+			console.log(data);
+			var mydata = data.result;
+			var dateTime = mydata.map(function(item){
+				return item.dateTime
+			})
+			var generalCount = mydata.map(function(item){
+				return item.generalCount
+			})
+			var totalCount = mydata.map(function(item){
+				return item.totalCount
+			})
+			mydata.map(function(item,index){
+				localStorage.setItem("item"+index,item.generalCount)
+				// console.log(index);
+			})
+			console.log(totalCount);
+			// for(var i=0;i<data.result.length;i++)
+		}
+	})
+
+	
+
+
+
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

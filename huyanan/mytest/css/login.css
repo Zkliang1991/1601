@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #f6f5f5; }
+  body header {
+    width: 100%;
+    height: 0.88rem;
+    background: #dc0a4b;
+    color: #fff;
+    box-sizing: border-box;
+    padding: 0 0.24rem;
+    font-size: 0.34rem;
+    display: -webkit-flex;
+    justify-content: space-between;
+    align-items: center; }
+    body header img {
+      width: 0.21rem;
+      height: 0.38rem; }
+    body header a {
+      text-decoration: none;
+      font-size: 0.25rem;
+      color: #fff; }
+  body section ul {
+    list-style: none;
+    width: 100%;
+    display: -webkit-flex;
+    justify-content: center;
+    flex-wrap: wrap; }
+    body section ul li:nth-child(1), body section ul li:nth-child(2) {
+      background: #fff;
+      font-size: 0.29rem;
+      height: 0.64rem;
+      width: 93.75%;
+      display: -webkit-flex;
+      align-items: center;
+      border-radius: 0.05rem; }
+      body section ul li:nth-child(1) input, body section ul li:nth-child(2) input {
+        height: 100%;
+        width: 83.3%;
+        border: 0;
+        font-size: 0.29rem;
+        outline: none; }
+      body section ul li:nth-child(1) input::-webkit-input-placeholder, body section ul li:nth-child(2) input::-webkit-input-placeholder {
+        color: #b5b5b5; }
+    body section ul li:nth-child(1) {
+      margin-top: 0.37rem; }
+      body section ul li:nth-child(1) img {
+        width: 0.29rem;
+        height: 0.39rem;
+        margin: 0 0.16rem 0 0.35rem; }
+    body section ul li:nth-child(2) {
+      margin-top: 0.32rem; }
+      body section ul li:nth-child(2) img {
+        width: 0.26rem;
+        height: 0.31rem;
+        margin: 0 0.16rem 0 0.36rem; }
+    body section ul li:nth-child(3) {
+      width: 3.38rem;
+      height: 0.6rem;
+      background: #00a0e9;
+      font-size: 0.34rem;
+      color: #fff;
+      text-align: center;
+      line-height: 0.6rem;
+      margin-top: 0.44rem;
+      border-radius: 0.05rem;
+      box-shadow: 0.03rem 0.03rem #627e88; }
+    body section ul li:nth-child(4) {
+      width: 3.38rem;
+      height: 0.6rem;
+      font-size: 0.29rem;
+      color: #00a0e9;
+      margin-top: 0.17rem; }
+  body section p {
+    font-size: 0.3rem;
+    color: #807f7f;
+    position: absolute;
+    right: 0.2rem;
+    bottom: 0.2rem; }
+
+/*# sourceMappingURL=login.css.map */

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> 我的秀</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../css/index.css">
+</head>
+<body>
+	<img src="../images/index.jpg" id="disimg">
+	<div class="swiper-container" id="index-con">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide index-1" ><img src="../images/index1.jpg"></div>
+			<div class="swiper-slide index-1"><img src="../images/index2.jpg"></div>
+			<div class="swiper-slide index-1"><img src="../images/index3.jpg"></div>
+			<div class="swiper-slide index-4">
+				<img src="../images/index4.jpg">
+				<div id="sign">开始体验</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../js/index.js"></script>
+	<script type="text/javascript">
+		var arrhtml=['show','clasify','cart','login','more'];
+		if(localStorage.pCount){
+		localStorage.pCount = JSON.parse(localStorage.pCount) + 1;
+		}else{
+			localStorage.pCount = 1;
+		}
+		for(var i =0;i<arrhtml.length;i++){
+			if(localStorage.pCount==1){   
+				var htmlType = 'htmlType_'+i;
+				localStorage.setItem(htmlType,arrhtml[i]);
+			}
+		}
+	</script>
+</body>
+</html>

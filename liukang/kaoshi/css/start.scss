@@ -1,0 +1,52 @@
+@import 'mobile';
+@import 'swiper-3.3.1.min';
+@charset "UTF-8";
+section{
+		width: 100%;
+		position: relative;
+		#start{
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 100;
+			width: 100%;
+			height: 100%;
+			background: url(../images/start.jpg) no-repeat 0 0;
+			background-size: 100% 100%;
+		}
+		.swiper-container{
+		width:100%;
+		height:100%;
+		.swiper-slide{
+				width:100%;
+				height:100%;
+				position: relative;
+				img{
+					width: 100%;
+					height: 100%;
+				}
+				a{
+					position: absolute;
+					left: pxToRem(177);
+					top: pxToRem(676);
+					width: pxToRem(286);
+					height:pxToRem(95); 
+					background:transparent;
+
+				}
+			}
+			.swiper-pagination{
+				bottom:pxToRem(10);
+				.swiper-pagination-bullet{
+					width: pxToRem(20);
+					height:pxToRem(20);
+					border-radius:100%;
+					margin: 0 pxToRem(20);
+				}
+				.swiper-pagination-bullet-active{
+				background: #E4366B;
+				}
+			}
+			
+		}
+}
