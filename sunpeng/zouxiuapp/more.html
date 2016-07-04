@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>更多</title>
+		<link rel="stylesheet" href="prd/css/more.css" />
+	</head>
+	<body>
+		<header>
+			<img src="prd/img/return.png"/>
+			更多
+		</header>
+		<div class="morelisttop">
+	   		<ul>
+			   <li class="iconfont order">
+				  <span>常见问题</span>
+				  <a href="#"><img src="prd/img/person-gt.png"/></a>
+			   </li>
+			    <li class="iconfont">
+				  <span>系统设置</span>
+				  <a href="#"><img src="prd/img/person-gt.png"/></a>
+			   </li>
+			    <li class="iconfont">
+				  <span>软件更新</span>
+				  <a href="#"><img src="prd/img/person-gt.png"/></a>
+			   </li>
+			    <li class="iconfont last">
+				  <span>扫描二维码</span>
+				  <a href="#"><img src="prd/img/person-gt.png"/></a>
+			   </li>
+			</ul>
+		</div>
+	
+		<div class="morelistbot">
+	   		<ul>
+			   <li class="iconfont order">
+				  <span>我要提意见</span>
+				  <a href="#"><img src="prd/img/person-gt.png"/></a>
+			   </li>
+			    <li class="iconfont lastlist">
+				  <span>关于</span>
+				  <a href="#"><img src="prd/img/person-gt.png"/></a>
+			   </li>
+			</ul>
+		</div>
+	
+		<div class="tuichu">
+			<a id="exit" href="#">退出登录</a>
+		</div>
+		
+		<script src="prd/js/common.js" type="text/javascript" charset="utf-8"></script>
+		
+		<!--尾部-->
+		<footer id="footer">	
+		</footer>
+		<script type="text/javascript">
+			$('#footer').load('footer.html',function(){
+				$('#more').addClass('active');
+			});
+			$('#exit').on('touchstart',function(){
+				window.location.href = 'zouxiu-index.html';
+				var u = /^username_/; 
+				for(var i=0;i<localStorage.length;i++){
+					var key = localStorage.key(i);	
+					if(u.test(key)){
+						console.log(key);
+						localStorage.removeItem(key);
+					}
+				}
+			})
+			
+		</script>
+	</body>
+</html>
