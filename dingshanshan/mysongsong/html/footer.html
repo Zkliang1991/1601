@@ -1,0 +1,34 @@
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="../css/footer.css">
+<link rel="stylesheet" type="text/css" href="../img/ux/iconfont.css">
+<script type="text/javascript" src="../js/zepto.js.js"></script>
+<footer id="footer">
+	<ul>
+		<li>
+			<p></p>
+			<b class="icon iconfont">&#xe6af;</b>
+			<b class="txt">首页</b>
+		</li>
+		<li>
+			<p></p>
+			<b class="icon iconfont">&#xe66c;</b>
+			<b class="txt">活动</b>
+		</li>
+		<li>
+			<p></p>
+			<b class="icon iconfont">&#xe66c;</b>
+			<b class="txt">订单</b>
+		</li>
+		<li>
+			<p></p>
+			<b class="icon iconfont">&#xe618;</b>
+			<b class="txt">消息</b>
+		</li>
+	</ul>
+</footer>
+<script type="text/javascript">
+	var arrhtml=['sy','fenlei','shoppingcar','myshow','more'];
+	$('#footer ul li').on('tap',function(){
+		$(this).addClass('active').siblings().removeClass('active');
+	})
+</script>

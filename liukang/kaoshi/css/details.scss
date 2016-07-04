@@ -1,0 +1,134 @@
+@import 'mobile';
+@import 'swiper-3.3.1.min';
+@charset "UTF-8";
+body{
+	background:#f7f7f7;
+}
+header{
+	width:100%;
+	height:pxToRem(86);
+	background:#e4366b;
+	text-align:center;
+	box-sizing:border-box;
+	border-bottom:1px solid #636363;
+	border-top:1px solid #282828;
+	font-size:pxToRem(40);
+	color:#fff;
+	line-height:pxToRem(86);
+	position: relative;
+	.fenxiang{
+		width: pxToRem(112);
+		height: pxToRem(56);
+		background:#e93d6f;
+		position:absolute;
+		top:pxToRem(15);
+		right: pxToRem(18);
+		border-radius:pxToRem(15);
+		background:url(../images/car-bg.jpg) 0 0 repeat-x;
+		background-size:pxToRem(4) pxToRem(56);
+		font-size: pxToRem(25);
+		line-height: pxToRem(56);
+		text-align: center;
+
+	}
+	a{
+		display: block;
+		width: pxToRem(54);
+		height: pxToRem(36);
+		background:url(../images/jiantou.jpg) no-repeat 0 0;
+		background-size:pxToRem(54) pxToRem(36);
+		position:absolute;
+		left:pxToRem(18);
+		top:pxToRem(28);
+	}
+}
+
+
+
+
+
+.slide2{
+	width: 100%;
+	display:none;
+	.content2{
+		width: 100%;
+		.photo2{
+			width: 100%;
+			height: pxToRem(323);
+			img{
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+
+		}
+		.txt{
+			width: 100%;
+			padding:pxToRem(27) pxToRem(50) 0 pxToRem(20);
+			box-sizing:border-box;
+			p{
+				font-size: pxToRem(25);
+				color: #656565;
+				line-height: pxToRem(30);
+				margin-bottom:pxToRem(38);
+			}
+		}
+
+	}
+}
+
+.swiper-container{
+		width:100%;
+		height:100%;
+		.swiper-slide{
+				width:100%;
+				height:100%;
+				position: relative;
+				img{
+					width: 100%;
+					height: 100%;
+				}
+		}	
+		.swiper-pagination{
+			bottom:pxToRem(20);
+			.swiper-pagination-bullet{
+				width: pxToRem(40);
+				height:pxToRem(40);
+				border-radius:100%;
+				margin: 0 pxToRem(20);
+				background:#fff;
+				opacity: 1;
+			}
+			.swiper-pagination-bullet-active{
+				background: #E4366B;
+
+			}
+		}
+			
+		
+
+
+}
+
+	
+	
+footer{
+	width:100%;
+	height:pxToRem(98);
+	position:absolute;
+	bottom:0;
+	left:0;
+	background: #626167;
+	li{
+		float: left;
+		width: pxToRem(213);
+		height: 100%;
+		font-family: '微软雅黑';
+		font-size: pxToRem(40);
+		line-height: pxToRem(98);
+		text-align: center;
+		color:#fff;
+		
+	}
+	
+}

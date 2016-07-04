@@ -1,0 +1,433 @@
+'utf-8'
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #f7f7f7;
+  margin: 0; }
+
+a {
+  text-decoration: none;
+  color: #fff; }
+
+ol, ul {
+  list-style: none; }
+
+header {
+  width: 100%;
+  height: .9rem;
+  box-sizing: border-box;
+  display: flex;
+  background: #e4366b;
+  position: relative; }
+  header a {
+    display: block;
+    font-size: .38rem;
+    color: #670d27;
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%); }
+  header p {
+    margin: 0;
+    height: .9rem;
+    font-size: .38rem;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    line-height: .9rem;
+    font-family: 'Microsoft Yahei'; }
+
+section {
+  height: 10rem;
+  width: 100%;
+  position: relative; }
+  section .content {
+    height: 10rem;
+    width: 100%;
+    background: #f7f7f7; }
+    section .content .person {
+      box-sizing: border-box;
+      padding: 0 .34rem;
+      height: 2.9rem;
+      width: 100%;
+      display: flex;
+      align-items: center; }
+      section .content .person .personpic {
+        height: 1.62rem;
+        width: 1.62rem;
+        border: .02rem solid #ccc;
+        border-radius: .2rem; }
+        section .content .person .personpic img {
+          display: block;
+          width: 100%;
+          height: 100%; }
+      section .content .person .personinfo {
+        height: 1.64rem;
+        margin-left: .3rem;
+        width: 3.24rem; }
+        section .content .person .personinfo .personname {
+          width: 100%;
+          height: 1.06rem;
+          line-height: .84rem;
+          font-size: .34rem;
+          font-weight: 700;
+          word-space: nowrap; }
+        section .content .person .personinfo .personlogin {
+          height: .63rem;
+          width: 100%;
+          display: flex; }
+          section .content .person .personinfo .personlogin a {
+            display: block;
+            height: .54rem;
+            width: 1.08rem;
+            border-radius: .1rem;
+            text-align: center;
+            line-height: .54rem;
+            color: #fff;
+            font-size: .22rem;
+            background: -webkit-linear-gradient(top, #f8618c, #a30b3c); }
+          section .content .person .personinfo .personlogin a:nth-child(1) {
+            margin-right: .52rem; }
+    section .content .orderinfo {
+      box-sizing: border-box;
+      padding: 0 .32rem;
+      height: 3.64rem;
+      width: 100%; }
+      section .content .orderinfo #orderlist {
+        width: 100%;
+        height: 3.64rem;
+        border-radius: .2rem;
+        border: .01rem solid #ccc;
+        margin: 0;
+        padding: 0;
+        overflow: hidden; }
+        section .content .orderinfo #orderlist li {
+          background-color: #fafafa;
+          font-size: .34rem;
+          font-weight: 700;
+          box-sizing: border-box;
+          padding: 0 .44rem 0 .33rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          height: 25%;
+          border-bottom: .02rem solid #ccc;
+          font-weight: 600; }
+        section .content .orderinfo #orderlist li:last-child {
+          border: 0; }
+  section .orderlist-wrap #oneorderlist {
+    min-height: 3rem;
+    width: 100%;
+    padding: 0;
+    font-size: .28rem; }
+    section .orderlist-wrap #oneorderlist li {
+      box-sizing: border-box;
+      padding: 0 .24rem 0 .33rem;
+      display: flex;
+      align-items: center;
+      height: 2.3rem;
+      border-bottom: .02rem solid #333;
+      font-weight: 600; }
+      section .orderlist-wrap #oneorderlist li .goodpic {
+        height: 1.74rem;
+        width: 1.74rem;
+        background: #ccc;
+        margin-right: .26rem; }
+        section .orderlist-wrap #oneorderlist li .goodpic img {
+          width: 100%;
+          height: 100%; }
+      section .orderlist-wrap #oneorderlist li .goodchoose {
+        margin-right: .26rem;
+        width: 3.2rem;
+        height: 1.74rem; }
+        section .orderlist-wrap #oneorderlist li .goodchoose p {
+          height: .76rem;
+          line-height: .38rem;
+          width: 100%;
+          margin: 0;
+          padding: 0; }
+        section .orderlist-wrap #oneorderlist li .goodchoose .everyprice {
+          margin-top: .1rem;
+          width: 100%;
+          height: .38rem;
+          line-height: .38rem; }
+          section .orderlist-wrap #oneorderlist li .goodchoose .everyprice span {
+            color: #e43669;
+            margin-left: .1rem; }
+        section .orderlist-wrap #oneorderlist li .goodchoose .goodcount {
+          width: 100%;
+          height: .6rem;
+          align-items: center;
+          line-height: .6rem;
+          position: relative; }
+          section .orderlist-wrap #oneorderlist li .goodchoose .goodcount span {
+            margin-left: .2rem; }
+          section .orderlist-wrap #oneorderlist li .goodchoose .goodcount a {
+            display: block;
+            width: 1.4rem;
+            height: .54rem;
+            background: -webkit-linear-gradient(top, #f8618c, #a30b3c);
+            color: #fff;
+            font-size: .24rem;
+            text-align: center;
+            line-height: .54rem;
+            border-radius: .1rem;
+            position: absolute;
+            top: 0;
+            left: 2.4rem; }
+      section .orderlist-wrap #oneorderlist li .delgood {
+        width: .27rem;
+        height: 1.74rem; }
+        section .orderlist-wrap #oneorderlist li .delgood p {
+          width: .27rem;
+          height: .38rem;
+          line-height: .38rem;
+          text-align: center;
+          margin: 0; }
+  section .coupon #twomycoupon {
+    margin: 0;
+    padding: 0;
+    width: 5.22rem;
+    height: .64rem;
+    border-radius: .1rem;
+    border: .01rem solid #ccc;
+    margin-left: .58rem;
+    margin-top: .3rem; }
+    section .coupon #twomycoupon li {
+      float: left;
+      font-size: .3rem;
+      width: 25%;
+      text-align: center;
+      line-height: .64rem;
+      height: .64rem;
+      box-sizing: border-box;
+      border-right: .01rem solid #ccc; }
+    section .coupon #twomycoupon li:hover {
+      background: -webkit-linear-gradient(top, #f8618c, #a30b3c);
+      color: #fff; }
+  section .coupon .coupondetail {
+    width: 5.2rem;
+    height: 1.42rem;
+    border: .01rem solid #ccc;
+    border-radius: .1rem;
+    margin-left: .64rem;
+    margin-top: .26rem; }
+    section .coupon .coupondetail p {
+      box-sizing: border-box;
+      padding: 0 .14rem;
+      height: .37rem;
+      width: 100%;
+      line-height: .37rem;
+      font-size: .22rem;
+      margin: 0; }
+      section .coupon .coupondetail p span {
+        color: #898989; }
+  section .lookcookie #threecookielist {
+    min-height: 3rem;
+    width: 100%;
+    padding: 0;
+    font-size: .28rem; }
+    section .lookcookie #threecookielist li {
+      box-sizing: border-box;
+      padding: 0 .24rem 0 .33rem;
+      display: flex;
+      align-items: center;
+      height: 2.3rem;
+      border-bottom: .02rem solid #333;
+      font-weight: 600; }
+      section .lookcookie #threecookielist li .goodpic {
+        height: 1.74rem;
+        width: 1.74rem;
+        background: #ccc;
+        margin-right: .26rem; }
+        section .lookcookie #threecookielist li .goodpic img {
+          width: 100%;
+          height: 100%; }
+      section .lookcookie #threecookielist li .goodchoose {
+        margin-right: .26rem;
+        width: 3.2rem;
+        height: 1.74rem; }
+        section .lookcookie #threecookielist li .goodchoose p {
+          height: .76rem;
+          line-height: .38rem;
+          width: 100%;
+          margin: 0;
+          padding: 0; }
+        section .lookcookie #threecookielist li .goodchoose .everyprice {
+          margin-top: .1rem;
+          width: 100%;
+          height: .38rem;
+          line-height: .38rem; }
+          section .lookcookie #threecookielist li .goodchoose .everyprice span {
+            color: #e43669;
+            margin-left: .1rem; }
+        section .lookcookie #threecookielist li .goodchoose .goodcount {
+          width: 100%;
+          height: .6rem;
+          line-height: .6rem;
+          position: relative;
+          font-size: .24rem; }
+          section .lookcookie #threecookielist li .goodchoose .goodcount del {
+            margin-left: .2rem;
+            color: #bcbcbc;
+            font-size: .24rem; }
+          section .lookcookie #threecookielist li .goodchoose .goodcount a {
+            display: block;
+            width: 1.2rem;
+            height: .54rem;
+            background: -webkit-linear-gradient(top, #f8618c, #a30b3c);
+            color: #fff;
+            font-size: .34rem;
+            text-align: center;
+            line-height: .54rem;
+            border-radius: .1rem;
+            position: absolute;
+            top: 0;
+            left: 2.4rem; }
+  section .storelist #fourstorelist {
+    min-height: 3rem;
+    width: 100%;
+    padding: 0;
+    font-size: .28rem; }
+    section .storelist #fourstorelist li {
+      box-sizing: border-box;
+      padding: 0 .24rem 0 .33rem;
+      display: flex;
+      align-items: center;
+      height: 2.3rem;
+      border-bottom: .02rem solid #333;
+      font-weight: 600; }
+      section .storelist #fourstorelist li .goodpic {
+        height: 1.74rem;
+        width: 1.74rem;
+        background: #ccc;
+        margin-right: .26rem; }
+        section .storelist #fourstorelist li .goodpic img {
+          width: 100%;
+          height: 100%; }
+      section .storelist #fourstorelist li .goodchoose {
+        margin-right: .26rem;
+        width: 3.2rem;
+        height: 1.74rem; }
+        section .storelist #fourstorelist li .goodchoose p {
+          height: .76rem;
+          line-height: .38rem;
+          width: 100%;
+          margin: 0;
+          padding: 0; }
+        section .storelist #fourstorelist li .goodchoose .everyprice {
+          margin-top: .1rem;
+          width: 100%;
+          height: .38rem;
+          line-height: .38rem; }
+          section .storelist #fourstorelist li .goodchoose .everyprice span {
+            color: #e43669;
+            margin-left: .1rem; }
+        section .storelist #fourstorelist li .goodchoose .goodcount {
+          width: 100%;
+          height: .6rem;
+          line-height: .6rem;
+          position: relative;
+          font-size: .24rem; }
+          section .storelist #fourstorelist li .goodchoose .goodcount del {
+            margin-left: .2rem;
+            color: #bcbcbc;
+            font-size: .24rem; }
+          section .storelist #fourstorelist li .goodchoose .goodcount a {
+            display: block;
+            width: 1.2rem;
+            height: .54rem;
+            background: -webkit-linear-gradient(top, #f8618c, #a30b3c);
+            color: #fff;
+            font-size: .34rem;
+            text-align: center;
+            line-height: .54rem;
+            border-radius: .1rem;
+            position: absolute;
+            top: 0;
+            left: 2.4rem; }
+      section .storelist #fourstorelist li .delgood {
+        width: .27rem;
+        height: 1.74rem; }
+        section .storelist #fourstorelist li .delgood a {
+          color: #a30b3c;
+          display: block;
+          width: .27rem;
+          height: 1.74rem; }
+
+#footer {
+  width: 100%;
+  height: .9rem;
+  margin: 0;
+  position: absolute;
+  bottom: 0; }
+  #footer #footerlist {
+    padding: 0;
+    margin: 0;
+    height: .9rem;
+    width: 100%;
+    display: flex;
+    font-size: .1rem; }
+    #footer #footerlist li {
+      width: 20%;
+      background: #484850;
+      height: .9rem;
+      border-top: .05rem solid #484850;
+      color: #fff; }
+      #footer #footerlist li p {
+        font-family: 'iconfont';
+        height: .63rem;
+        width: 100%;
+        margin: 0;
+        font-size: .48rem;
+        text-align: center; }
+      #footer #footerlist li b {
+        display: block;
+        height: .22rem;
+        width: 100%;
+        font-size: .24rem;
+        text-align: center;
+        font-weight: 100; }
+    #footer #footerlist li:hover {
+      color: #e4366b; }
+
+@-webkit-keyframes loading {
+  from {
+    -webkit-transform: rotate(0deg) translateZ(0); }
+  to {
+    -webkit-transform: rotate(360deg) translateZ(0); } }
+
+@font-face {
+  font-family: "iconfont";
+  src: url("iconfont.eot?t=1466772499");
+  /* IE9*/
+  src: url("iconfont.eot?t=1466772499#iefix") format("embedded-opentype"), url("iconfont.woff?t=1466772499") format("woff"), url("iconfont.ttf?t=1466772499") format("truetype"), url("iconfont.svg?t=1466772499#iconfont") format("svg");
+  /* iOS 4.1- */ }
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-iconfontcolor14:before {
+  content: "\e67b"; }
+
+.icon-30:before {
+  content: "\e66c"; }
+
+.icon-shopper:before {
+  content: "\e617"; }
+
+.icon-fenlei:before {
+  content: "\e631"; }
+
+.icon-shouye:before {
+  content: "\e608"; }
+
+.icon-gengduo:before {
+  content: "\e635"; }

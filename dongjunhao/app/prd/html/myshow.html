@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+	<meta charset="UTF-8">
+	<title>myshow</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="stylesheet" type="text/css" href="../css/index.css">
+	<link rel="stylesheet" type="text/css" href="../ux/iconfont.css">
+	<script type="text/javascript" src="../js/index.js"></script>
+</head>
+<body id="myshow" class="fenye">
+	<header>
+		<div class="top">
+			<a href="javascript:history.back(-1)"></a>
+			<span>我的秀</span>
+		</div>	
+	</header>
+	<section id="main">
+		<div>
+			<dl class="me">
+				<dt></dt>
+				<dd>
+					<p>昵称：未知</p>
+					<a href="login.html">登陆</a>
+					<a href="regist.html">注册</a>
+				</dd>
+			</dl>
+
+			<ul class="imp">
+				<li>
+					<span>我的订单</span>
+					<i class="iconfont">&#xe6dc;</i>
+				</li>
+				<li>
+					<span>我的优惠券</span>
+					<i class="iconfont">&#xe6dc;</i>
+				</li>
+				<li>
+					<span>浏览记录</span>
+					<i class="iconfont">&#xe6dc;</i>
+				</li>
+				<li>
+					<span>我的收藏</span>
+					<i class="iconfont">&#xe6dc;</i>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<!--**********************通用尾部***********************-->
+		<footer id="footer"></footer>
+		<script type="text/javascript">	
+			$("#footer").load("footer.html");
+
+
+			$(function(){
+				$("#main ul li:eq(0)").on('click',function(){
+					window.location.href="myorder.html";
+				})
+				$("#main ul li:eq(1)").on('click',function(){
+					window.location.href="mycoupon.html";
+				})
+				$("#main ul li:eq(2)").on('click',function(){
+					window.location.href="myhistory.html";
+				})
+				$("#main ul li:eq(3)").on('click',function(){
+					window.location.href="mycollect.html";
+				})
+			})
+		</script>
+	<!--**********************尾部结束***********************-->
+</body>
+</html>

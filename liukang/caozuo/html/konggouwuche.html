@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=divce-width,initial-scale=1,user-scalable=no,minimum-scale=1,maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/konggouwuche.css">
+	<link rel="stylesheet" type="text/css" href="../css/ux/iconfont.css">
+	<script type="text/javascript" src="../js/zepto.min.js"></script>
+	</script>
+</head>
+<body>
+	<header>
+		<h3>购物车</h3>
+		<div class="register">去结算</div>
+		<a href="javascript:history.go(-1);"></a>
+	</header>
+	<section>
+		
+	</section>
+	
+		<footer class="iconfont" id= 'footer'>
+		<ul>
+				<li>&#xe604;
+					<p>首页</p>
+				</li>
+				<li>&#xe67f;
+					<p>分类</p>
+				</li>
+				<li>&#xe62d;
+					<p>购物车</p>
+				</li>
+				<li>&#xe60d;
+					<p>我的秀</p>
+				</li>
+				<li>&#xe669;
+					<p>更多</p>
+				</li>
+		</ul>
+	</footer>
+</body>
+</html>
+<script>
+	var oWidth = document.documentElement.clientWidth;
+	var oHeight = document.documentElement.clientHeight;
+	
+	var html = document.getElementById('html');
+	var width = document.documentElement.clientWidth;
+	html.style.fontSize = width/640*100 + "px";
+
+	window.onresize = function(){
+		var html = document.getElementById('html');
+		var width = document.documentElement.clientWidth;
+		html.style.fontSize = width/640*100 + "px";	
+	}
+</script>

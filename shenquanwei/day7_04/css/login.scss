@@ -1,0 +1,95 @@
+section{
+    width: 100vw;
+    margin-top: 13.75vw;
+    padding: 5.6vw 3.75vw 0 1.8vw;
+    box-sizing: border-box;
+    .user,.password{
+        width: 94.5vw;
+        height: 10vw;
+        background: #FFFFFF;
+        display: flex;
+        border-radius: 1.8vw;
+        span{
+            display: flex;
+            width: 11.7vw;
+            height: 10vw;
+            justify-content: flex-end;
+            align-items: center;
+            font-size: 8vw;
+            color: #bbb;
+        }
+        input{
+            outline: 0;
+            border: none;
+            display: flex;
+            width: 81vw;
+            height: 10vw;
+            font-size: 6vw;
+            color: #bbb;
+        }
+        input::-webkit-input-placeholder{
+            font-size: 4.8vw;
+            color: #bbb;
+            border: 0;
+        }
+    }
+    .password{
+        margin-top: 5.6vw;
+    }
+    .dl{
+        width: 98vw;
+        height: 14vw;
+        margin-top: 8vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a{
+            display: flex;
+            width: 50vw;
+            height: 15.6vw;
+            background: #00a0e9;
+            border-radius: 1.8vw;
+            justify-content: center;
+            align-items: center;
+            font-size: 6.2vw;
+            color: #fff;
+            font-family: "microsoft yahei";
+            text-decoration: none;
+        }
+    }
+    .wjmm{
+        margin-left: 25vw;
+        color: #00A0E9;
+        display: flex;
+        width: 25vw;
+        height: 4vw;
+        margin-top: 4vw;
+    }
+    .tip{
+        color: #f1f1f1;
+        display: flex;
+        width: 50vw;
+        height: 6vw;
+        position: absolute;
+        bottom: 20vw;
+        left: 25vw;
+        background: #000;
+        border-radius: 1vw;
+        justify-content: center;
+        align-items: center;
+        font-size: 4.2vw;
+    }
+    .xy{
+        display: flex;
+        width: 100vw;
+        justify-content: flex-end;
+        align-items: center;
+        height: 4vw;
+        font-size: 4.8vw;
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        text-decoration: none;
+        color: #999;
+    }
+}

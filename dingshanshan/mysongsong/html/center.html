@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>个人中心</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="../img/ux/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="../css/center.css">
+</head>
+<body>
+	<header>
+		<a href="javascript:histtory.go(-1);" class="iconfont">&#xe66c;</a>
+		<p>个人中心</p>
+	</header>
+	<nav>
+		<div>
+			<img src="../img/touxiang.png">
+		</div>
+		<span>13412341234</span>
+	</nav>
+	<ul class="tab">
+		<li>我的订单</li>
+		<li>送送币</li>
+		<li>送送券</li>
+		<li>送送分</li>
+	</ul>
+	<ul class="info">
+		<li></li>
+	</ul>
+	<div class="ad">广告位</div>
+	<footer id="footer"></footer>
+	<script type="text/javascript" src="../js/zepto.js"></script>
+	<script type="text/javascript" src="../js/zepto-tap.js"></script>
+	<script type="text/javascript">
+		$("#footer").load("footer.html",function(){
+			$('#footer ul li').eq(0).addClass('active');
+			
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>我的订单</title>
+		<link rel="stylesheet" href="prd/css/myorder.css" />
+	</head>
+	<body>
+		<header>
+			<img src="prd/img/return.png"/>
+			我的订单
+		</header>
+		<div id="buycar">
+			<dl>
+				<dt>
+					<img id="img" src="" alt="">
+				</dt>
+				<dd>
+					<h3></h3>
+					<!--<span>长袖</span>-->
+					<p>单价:￥<b id="danjia"></b></p>
+					<div>
+					    <span>数量:<b class="count1"></b></span>
+						<!--<input id="dec" type="button" value="-">
+						<input class="num" type="text" value="1">-->
+						<input id="add" type="button" value="取消订单"> 
+					</div>
+				</dd>
+			</dl>
+		</div>
+		
+		<script src="prd/js/common.js" type="text/javascript" charset="utf-8"></script>
+		<!--尾部-->
+		<footer id="footer">	
+		</footer>
+		<script type="text/javascript">
+			$('#footer').load('footer.html',function(){
+				$('#person').addClass('active');
+				
+			});
+		</script>
+		<script type="text/javascript">
+			var xinxi = JSON.parse(localStorage.getItem('gType_1'));
+			console.log(xinxi);
+			huoqu();
+			function huoqu(){
+				$('h3').html(xinxi.name);
+				$('#img').attr('src',xinxi.img);
+				$('#danjia').html(xinxi.price);
+				$('#zongjia').html((xinxi.price)*(xinxi.count));
+				$('.count1').html(xinxi.count);
+				$('.num').val(xinxi.count);
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,133 @@
+@import 'mobile';
+@import '../images/ux/iconfont.css';
+@charset "UTF-8";
+body{
+	background:#f7f7f7;
+}
+*{
+	padding:0;
+	margin:0;
+}
+header{
+	width:100%;
+	height:pxToRem(86);
+	background:#e4366b;
+	text-align:center;
+	box-sizing:border-box;
+	border-bottom:1px  solid #636363;
+	border-top:1px  solid #282828;
+	font-size:pxToRem(40);
+	color:#fff;
+	line-height:pxToRem(86);
+	position: relative;
+	position:fixed;
+	
+	a{
+		display: block;
+		width: pxToRem(54);
+		height: pxToRem(36);
+		background:url(../images/jiantou.jpg) no-repeat 0 0;
+		background-size:pxToRem(54) pxToRem(36);
+		position:absolute;
+		left:pxToRem(18);
+		top:pxToRem(28);
+	}
+}
+
+.content{
+	width:100%;
+	position:absolute;
+	top:pxToRem(86);
+	z-index:-4;
+	li{
+		width: 100%;
+		height: pxToRem(228);
+		background:#fff;
+		border-bottom:1px  solid #cbcbcb;
+		padding:pxToRem(26) pxToRem(22) 0 pxToRem(32);
+		box-sizing:border-box;
+		dt{
+			width: pxToRem(200);
+			height: 100%;
+			float: left;
+			img{
+				display: block;
+				width: pxToRem(175);
+				height: pxToRem(175);
+			}
+		}
+		dd{
+			float: left;
+			width: pxToRem(380);
+			height: 100%;
+			.title{
+				width:100%;
+				padding-right:pxToRem(111);
+				box-sizing:border-box;
+				height:pxToRem(87);
+				font-size: pxToRem(24);
+				font-family: '微软雅黑';
+				color: #333333;
+				line-height: pxToRem(30);
+				letter-spacing: pxToRem(2);
+				position:relative;
+				em{
+					display: block;
+					width: pxToRem(14);
+					height: pxToRem(24);
+					position:absolute;
+					right: pxToRem(10);
+					top: pxToRem(10);
+					background:url(../images/shoucang.jpg) 0 0 no-repeat;
+					background-size:100% 100%;
+				}
+			}
+			.price{
+				padding-right:pxToRem(111);
+				box-sizing:border-box;
+				height:pxToRem(40);
+				font-size: pxToRem(30);
+				font-family: '微软雅黑';
+				color: #333333;
+				line-height: pxToRem(40);
+				position:relative;
+				span{
+					color: #e7366c;
+				}
+				
+
+			}
+			.count{
+				width: 100%;
+				height: pxToRem(44);
+				p{
+					width: pxToRem(88);
+					height: 100%;
+					float: left;
+					line-height: pxToRem(44);
+					font-family: '微软雅黑';
+					color: #333333;
+					font-size: pxToRem(28);
+					line-height: pxToRem(40);
+				}
+				p:nth-child(3){
+					width: pxToRem(138);
+					height: pxToRem(50);
+					background:#e93c71;
+					float: right;
+					border-radius:pxToRem(10);
+					line-height: pxToRem(50);
+					text-align: center;
+					color: #fff;
+					font-size: pxToRem(22);
+					font-family: '微软雅黑';
+				}
+				
+				
+			}
+
+		}
+
+	}
+
+}
