@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css">
+	
+	<script type="text/javascript" src="js/zepto.js"></script>
+	<script type="text/javascript" src="js/zepto-tap.js"></script>
+	<script type="text/javascript" src="js/swiper-3.3.1.min.js"></script>
+	
+<!-- 	<script type="text/javascript" src="js/my.js"></script> -->
+</head>
+<body>
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<!-- <div class="swiper-slide slide1"><img src="prd/img/pic1"></div> -->
+			<div class="swiper-slide slide2"><img src="images/pic2.png"></div>
+			<div class="swiper-slide slide3"><img src="images/pic3.png"></div>
+			<div class="swiper-slide slide4"><img src="images/pic4.png"></div>
+			<div class="swiper-slide slide4"><img src="images/pic5.png"></div>
+		
+		</div>
+		<div class="swiper-pagination"></div>
+		
+	</div>
+	<script type="text/javascript">
+	var myswiper=new Swiper(".swiper-container",{
+		speed:1000,
+		resistanceRatio:0,
+		pagination:'.swiper-pagination',
+		paginationClickable:true,
+		
+	})
+	$(document).on('tap',function(){
+		window.location.href="html/zxiu.html";
+	})
+</script>
+</body>
+</html>

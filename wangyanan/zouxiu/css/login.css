@@ -1,0 +1,180 @@
+html {
+  font-size: 62.5%;
+  font-family: "Microsoft Yahei"; }
+
+body, h1, h2, h3, h4, h5, h6, blockquote, ol, ul, dl, dd, p, textarea, input, select, option, form {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #f5f4f0;
+  -webkit-tap-highlight-color: transparent; }
+
+ol, ul, textarea, input, option, th, td {
+  padding: 0; }
+
+.page {
+  min-width: 320px;
+  max-width: 750px;
+  margin: 0 auto; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-size: 100%; }
+
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+  display: block; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+ul, ol {
+  list-style-type: none; }
+
+.clearfix:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden; }
+
+input[type=text], textarea {
+  -webkit-appearance: none; }
+
+input:focus {
+  -webkit-user-modify: read-write-plaintext-only; }
+
+fieldset, img {
+  border: 0; }
+
+a {
+  text-decoration: none; }
+
+a, textarea, input {
+  outline: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+textarea {
+  overflow: auto;
+  resize: none; }
+
+@media only screen and (min-width: 320px) {
+  html {
+    font-size: 75% !important; } }
+@media only screen and (min-width: 375px) {
+  html {
+    font-size: 87.89063% !important; } }
+@media only screen and (min-width: 414px) {
+  html {
+    font-size: 97.03% !important; } }
+@media only screen and (min-width: 480px) {
+  html {
+    font-size: 112.5% !important; } }
+@media only screen and (min-width: 560px) {
+  html {
+    font-size: 131.25% !important; } }
+@media only screen and (min-width: 640px) {
+  html {
+    font-size: 150% !important; } }
+@media only screen and (min-width: 720px) {
+  html {
+    font-size: 168.75% !important; } }
+@media only screen and (min-width: 750px) {
+  html {
+    font-size: 175.78125% !important; } }
+@media only screen and (min-width: 800px) {
+  html {
+    font-size: 187.5% !important; } }
+@media only screen and (min-width: 960px) {
+  html {
+    font-size: 225% !important; } }
+.header {
+  background: #e4366b;
+  width: 100%;
+  height: 3.58333rem;
+  color: #fff;
+  font-size: 1.66667rem;
+  line-height: 3.58333rem;
+  text-align: center;
+  position: relative; }
+  .header a {
+    position: absolute;
+    left: 0.75rem;
+    top: 1.375rem;
+    display: block;
+    width: 2.16667rem;
+    height: 1.45833rem;
+    background: url(../images/back.png) left center no-repeat;
+    background-size: 2.08333rem 1.5rem; }
+  .header span {
+    position: absolute;
+    right: 0.75rem;
+    top: 0.625rem;
+    display: block;
+    width: 4.58333rem;
+    height: 2.20833rem;
+    font-size: 1rem;
+    line-height: 2.20833rem;
+    text-align: center;
+    border-radius: 0.41667rem;
+    background: -webkit-linear-gradient(top, #f65e87 40%, #dc1c58 60%); }
+
+section {
+  width: 100%;
+  height: 100%;
+  background: #f7f7f7;
+  overflow: hidden;
+  padding: 0 1.54167rem;
+  box-sizing: border-box; }
+  section input {
+    width: 23.5rem;
+    height: 3rem;
+    display: block;
+    border-radius: 0.625rem;
+    margin-top: 2.58333rem;
+    font-size: 1.5rem; }
+  section div {
+    font-size: 1.04167rem; }
+    section div input {
+      display: inline;
+      width: 1.25rem;
+      height: 1.25rem;
+      /* background:url(../images/yes.png) 0 0 no-repeat;
+       background-size:pxToRem(30) pxToRem(30);*/ }
+    section div a {
+      color: #ccc;
+      text-decoration: underline;
+      text-decoration-color: #ccc;
+      margin-left: 0.20833rem; }
+  section p {
+    width: 23.5rem;
+    height: 3.66667rem;
+    text-align: center;
+    line-height: 3.66667rem;
+    color: #fff;
+    margin-top: 2.08333rem;
+    font-size: 1.5rem;
+    border-radius: 0.83333rem;
+    background: -webkit-linear-gradient(top, #f65e87 40%, #dc1c58 60%); }
+
+#foot {
+  width: 100%;
+  height: 4.16667rem;
+  position: fixed;
+  bottom: 0; }
+  #foot .active {
+    color: #e42f66; }
+
+/*# sourceMappingURL=login.css.map */

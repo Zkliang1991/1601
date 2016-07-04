@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name='viewport' content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        <title>我的订单</title>
+        <link rel="stylesheet" href="css/myorder.css">
+    </head>
+    <body>
+       <header><img src="img/more.jpg" alt="">我的订单</header>
+       <ul id="thelist">
+			<li>
+				<dl>
+					<dt><img src="img/order1.jpg" alt=""></dt>
+					<dd>
+					     ESPRIT 气质V领玫红T恤
+					     <p>单价 : <span>￥ 199</span></p>
+					     <div>数量 : 1</div>
+					     <button class='iconfont'>取消订单</button>
+					</dd>
+				</dl>
+			</li>
+			<li>
+				<dl>
+					<dt><img src="img/order2.jpg" alt=""></dt>
+					<dd>
+					    CACBM 盖尔思条纹单肩包
+					    <p>单价 : <span>￥ 399</span></p>
+					    <div>数量 : 1</div>
+					    <button class='iconfont'>取消订单</button>
+					</dd>
+				</dl>
+			</li>
+			
+		</ul>
+        <div id='myorder-footer'></div>
+         <script src='common/jquery-1.10.1.min.js'></script>
+         <script>
+         	$('#myorder-footer').load('common/footer.html')
+         </script>
+    </body>
+</html>

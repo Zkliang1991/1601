@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html id="html">
+	<head>
+		<meta charset="UTF-8">
+		<title>我的优惠券</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		
+		<link rel="stylesheet" type="text/css" href="../css/coupon.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/swiper-3.3.1.min.css"/>
+		<script src="../js/swiper-3.3.1.min.js"></script>
+		<script src="../js/jquery-1.10.1.min.js"></script>
+		
+	</head>
+	<body>
+		<header>
+			<a href="javascript:history.go(-1)" ></a>
+
+			<h2>我的优惠券</h2>
+			
+		</header>
+	
+			
+		<div class="swiper-container" id="swiper1">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide active-nav">未使用</div>
+				<div class="swiper-slide">已使用</div>
+				<div class="swiper-slide">已过期</div>
+				<div class="swiper-slide">未激活</div>
+				
+			</div>
+		</div>
+		<div class="swiper-container" id="swiper2">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">slide1</div>
+				<div class="swiper-slide">slide2</div>
+				<div class="swiper-slide">slide3</div>
+				<div class="swiper-slide">slide4</div>
+				
+			</div>
+		</div>
+			
+		
+		
+		
+
+		
+		<footer id="footer"></footer>
+	</body>
+	<script type="text/javascript">
+		$("#footer").load("footer.html");
+	</script>
+	<script type="text/javascript" src="../js/rem2.js" >
+		
+	</script>
+	
+	
+	
+	<script type="text/javascript">
+	var swiper1 = new Swiper('#swiper1',{
+		slidesPerView:"auto",
+		watchSlidesProgress : true,
+		watchSlidesVisibility : true,
+		//开启watchSlidesVisibility选项前需要先开启watchSlidesProgress，如果开启了watchSlidesVisibility，则会在每个可见slide增加一个classname，默认为'swiper-slide-visible'。
+		resistanceRatio:0,
+		// onTap:function(){
+		// 	swiper2.slideTo(swiper1.clickedIndex);
+		// }
+		onTap:function(){
+			// console.log(swiper1.activeIndex);
+			// console.log(swiper1.clickedIndex);
+			// swiper2.slideTo(swiper1.)
+			swiper2.slideTo(swiper1.clickedIndex);
+		}
+	})
+	var swiper2 = new Swiper('#swiper2',{
+		effect : 'fade',
+		fade: {
+		  crossFade: false,
+		}
+	});
+	function updateNavposition(){
+		
+		var currentIndex = swiper2.activeIndex;
+		console.log(currentIndex);
+		$('#swiper1 .active-nav').removeClass('active-nav');
+		var activeNav = $('#swiper1 .swiper-slide').eq(currentIndex).addClass('active-nav');
+		// console.log(activeNav.index())
+		if(!activeNav.hasClass('swiper-slide-visible')){
+			if(currentIndex>swiper1.activeIndex){
+				var num = Math.floor(swiper1.width/activeNav.width()-1);
+				// swiper1.activeIndex;
+				swiper1.slideTo(currentIndex-num)
+			}else{
+				swiper1.slideTo(currentIndex)
+			}
+		}
+	}
+
+	// swiper1.on('tap',function(){
+	// 	var index = swiper1.clickedIndex;
+	// 	console.log(swiper1.clickedIndex);
+	// 	$('#swiper1 .swiper-slide').eq(index).addClass('active-nav').siblings().removeClass('active-nav');
+	// })
+
+
+	function change(){
+		var currentIndex = swiper2.activeIndex;
+		// console.log(currentIndex);
+		var activeNav = $('#swiper1 .swiper-slide').removeClass('active-nav').eq(currentIndex).addClass('active-nav');
+		//表示执行高亮先生  activeNav 指向高亮对象 jq对象
+		if(!activeNav.hasClass('swiper-slide-visible')){
+			if(currentIndex>swiper1.activeIndex){
+				var oNum = Math.floor(swiper1.width/activeNav.width());
+				var swiper1ActiveIndex = currentIndex - oNum + 1;
+				swiper1.slideTo(swiper1ActiveIndex);
+			}else{
+				swiper1.slideTo(currentIndex);
+			}
+		}
+	}
+	</script>	
+	
+</html>

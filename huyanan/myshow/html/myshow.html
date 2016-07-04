@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+	<meta charset="UTF-8">
+	<title>我的秀</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="../css/login.css">
+</head>
+<body>
+	<header>
+		<a href="javascript:history.go(-1);"></a>
+		<p>我的秀</p>
+	</header>
+	<dl class="myshow-person">
+		<dt><img id="myshow-img" src="../images/myshow.jpg"></dt>
+		<dd>
+			<p>昵称：<span id="myshow-name">未知</span></p>
+			<P>
+				<a id="myshow-login" href="javascript:;">登录</a>
+				<a id="myshow-regist" href="javascript:;">注册</a>
+			</P>
+		</dd>
+	</dl>
+	<div class="myshow-link">
+		<ul class="myshow-ul1">
+			<li>我的订单</li>
+			<li>我的优惠券</li>
+			<li>浏览记录</li>
+			<li>我的收藏</li>
+		</ul>
+	</div>
+	<div id="footer"></div>
+	<script type="text/javascript" src="../js/lr.js"></script>
+	<script type="text/javascript">
+	    $('#footer').load('../html/footer.html',function(){
+	    	$('#foot-ul li').siblings().removeClass('active').eq(2).addClass('active');
+	    });
+	</script>
+	
+</body>
+</html>

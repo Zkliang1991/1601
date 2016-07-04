@@ -1,0 +1,66 @@
+section {
+  width: 100vw;
+  margin-top: 13.75vw;
+  padding: 5.6vw 2.2vw 0 3vw;
+  box-sizing: border-box; }
+  section .zc {
+    width: 94.5vw;
+    height: 37.5vw;
+    border-radius: 1.8vw;
+    background: #F6F5F5; }
+    section .zc ul li {
+      list-style: none;
+      width: 94.5vw;
+      height: 9.38vw;
+      background: #fff;
+      margin-bottom: 1px;
+      display: flex; }
+      section .zc ul li input {
+        display: flex;
+        margin: 0 2vw;
+        width: 90vw;
+        height: 9.38vw;
+        border: 0;
+        outline: 0; }
+    section .zc ul li:nth-of-type(1) {
+      border-top-left-radius: 1.8vw;
+      border-top-right-radius: 1.8vw; }
+    section .zc ul li:nth-of-type(2) {
+      display: flex;
+      align-items: center; }
+      section .zc ul li:nth-of-type(2) input {
+        width: 58vw; }
+      section .zc ul li:nth-of-type(2) a {
+        display: flex;
+        height: 7.2vw;
+        width: 30vw;
+        background: #9ecc6b;
+        border-radius: 2vw;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        text-decoration: none; }
+    section .zc ul li:nth-of-type(4) {
+      border-bottom-left-radius: 1.8vw;
+      border-bottom-right-radius: 1.8vw; }
+  section .zhuce {
+    display: flex;
+    width: 94.5vw;
+    height: 12vw;
+    background: #00a0e9;
+    border-radius: 1.8vw;
+    margin-top: 4vw;
+    color: #fff;
+    font-family: "microsoft yahei";
+    justify-content: center;
+    align-items: center;
+    font-size: 6vw;
+    text-decoration: none; }
+  section .checkbox {
+    margin-top: 3vw;
+    font-size: 3.2vw; }
+  section .xy {
+    text-decoration: none;
+    color: #00a0e9; }
+
+/*# sourceMappingURL=register.css.map */

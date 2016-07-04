@@ -31,10 +31,24 @@
 	</ul>
 </footer>
 <script type="text/javascript">
-	var arrhtml=['sy','fenlei','shoppingcar','login','more']
+	var arrhtml=['sy','fenlei','shoppingcar','myshow','more'];
 	$('#footer ul li').on('tap',function(){
 		$(this).addClass('active').siblings().removeClass('active');
 		var index=$(this).index();
-		window.location.href=arrhtml[index]+'.html';
+		console.log(index);
+		var userID=localStorage.getItem('userID');
+		var islogin=localStorage.getItem('loginC');
+		// console.log()
+		if(userID!=null && islogin==1){
+			window.location.href=arrhtml[index]+'.html?userID='+userID;
+		}else{
+			window.location.href=arrhtml[index]+'.html';
+		}
+		// if(index==3){
+		// 	var islogin=localStorage.getItem('loginC');
+		// 	var userID=localStorage.getItem('userID');
+		// 	window.location.href;
+		// }
+		// window.location.href=arrhtml[index]+'.html';
 	})
 </script>
