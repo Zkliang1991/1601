@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+	<meta charset="UTF-8">
+	<title>个人中心</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<link rel="stylesheet" href="../css/geren.css">
+	<script src="../js/zepto.js"></script>
+</head>
+<body>
+	<header id="header"></header>
+	<script>
+		$('#header').load('header.html',function(){
+			$('header p').html('个人中心');
+			$('header span').hide();
+		});
+	</script>
+
+	<div class="top">
+		<img src="../img/arc.png" alt="">
+		<p>点击登录</p>
+	</div>
+	<ul>
+		<li>我的订单</li>
+		<li>送送币</li>
+		<li>送送券</li>
+		<li>送送分</li>
+	</ul>
+	<dl class="bottom">
+		<dt><img src="../img/tel.png" alt=""></dt>
+		<dd></dd>
+	</dl>
+
+
+</body>
+<script>
+	var html = document.getElementById('html');
+	var width = document.documentElement.clientWidth;
+	var height = document.documentElement.clientHeight;
+	html.style.fontSize = width/640*100+'px';
+	window.onresize=function(){
+		var html=document.getElementById('html');
+		var width = document.documentElement.clientWidth;
+		html.style.fontSize = width/640*100+'px';
+	}	
+
+
+</script>
+</html>
