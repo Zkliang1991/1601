@@ -61,7 +61,8 @@ section {
         height: 10vw;
         color: #666;
         line-height: 8vw;
-        font-size: 4vw; }
+        font-size: 4vw;
+        display: flex; }
         section .list ul li p span {
           display: flex;
           width: 9vw;
@@ -71,5 +72,19 @@ section {
           align-items: center;
           justify-content: center;
           font-size: 6vw; }
+        section .list ul li p b {
+          display: flex;
+          width: 70vw;
+          height: 10vw;
+          line-height: 10vw;
+          margin-left: 3vw; }
+
+.ad {
+  width: 100vw;
+  height: 15vw;
+  background: #9ECC6B;
+  position: fixed;
+  bottom: 14vw;
+  left: 0; }
 
 /*# sourceMappingURL=userCenter_noLogin.css.map */
