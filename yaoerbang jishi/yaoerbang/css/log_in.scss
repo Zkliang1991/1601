@@ -1,0 +1,96 @@
+@charset "utf-8";
+$font_family:"Microsoft yahei";
+*{
+	margin:0;
+	padding:0;
+}
+html,body{
+	width:100%;
+	color:white;
+	font-family:$font_family;
+	background:#f6f5f5;
+}
+ul{list-style:none;}
+a{
+	text-decoration:none;
+}
+header{
+	width:100%;
+	height:1.28rem;
+	background:#dc0a4b;
+	font-size:0.34rem;
+	text-align:center;
+	line-height:1.68rem;
+	margin-bottom:0.26rem;
+	.sp1{
+		display:block;
+		width:0.32rem;
+		height:0.42rem;
+		background:url(../img/icon.jpg)  center no-repeat;
+		background-size:cover;
+		float:left;
+		margin-top:0.62rem;
+		margin-left:0.24rem;
+	}
+	button{
+		float:right;
+		margin-right:0.2rem;
+		background:#dc0a4b;
+		border:0;color:white;
+		margin-top:0.72rem;
+	}
+}
+
+section{
+	width:100%;
+	ul{
+		width:6.02rem;
+		height:2rem;
+		margin:0 auto;
+		li:nth-child(1) span{
+			background:white url(../img/s1.png) center no-repeat;
+			background-size:0.3rem 0.38rem;
+		}
+		li:nth-child(2) span{
+			background:white url(../img/s2.png)  center no-repeat;
+			background-size:0.3rem 0.38rem;
+		}
+		li{
+			width:100%;
+			height:1rem;
+			span{
+				display:block;
+				width:0.6rem;
+				height:0.64rem;
+				float:left;
+			}
+			input{
+				position:absolute;
+				width:5.2rem;
+				height:0.64rem;
+				border:0;
+				font-size:0.24rem;
+				line-height:0.64rem;
+				outline: none;
+			}
+		}
+	}
+	button{
+		display: block;
+		width:3.4rem;
+		height:0.64rem;
+		font-size: 0.34rem;
+		text-align:center;
+		line-height:0.64rem;
+		border-radius:0.1rem;
+		margin:0 auto;
+		color:white;
+		background:#00a0e9;
+		margin-top:0.2rem;
+	}
+	p{
+		font-size:0.24rem;
+			color:#00a0e9;
+			text-indent:1.54rem;
+	}
+}

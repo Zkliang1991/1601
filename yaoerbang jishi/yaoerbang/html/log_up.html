@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+	<meta charset="UTF-8">
+	<title>注册</title>
+	<meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1,minimum-scale=1,initial-scale=1">
+	<link rel="stylesheet" href="../css/log_up.css" type="text/css">
+	<!-- <script src="../js/rem.js"></script> -->
+</head>
+<body>
+	<header><span></span>注册</header>
+	<section>
+		<ul class="log-ul">
+			<li><input type="text" value="手机号码"></li>
+			<li>
+				<input type="text" value="验证码">
+				<button type="button">发送验证码</button>
+			</li>
+			<li><input type="password" placeholder="密码"></li>
+			<li><input type="password" placeholder="确认密码"></li>
+		</ul>
+		<button type="button" class="btn">注册</button>
+		<div class="check">
+			<input type="checkbox" >我已阅读并同意
+			<span>使用条款和隐私协议</span>
+		</div>
+	</section>
+	<script>
+		var width = document.documentElement.clientWidth;
+		var html = document.getElementById("html");
+		html.style.fontSize = width/640*100 + "px";
+		window.onresize = function(){
+			var width = document.documentElement.clientWidth;
+			html.style.fontSize = width/640*100 + "px";
+		}
+	</script>
+	
+</body>
+</html>
