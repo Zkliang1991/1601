@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+ul, ol {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+header {
+  width: 100%;
+  background: #dc0a4b;
+  height: 0.88rem; }
+  header .about {
+    display: block;
+    width: 1.08rem;
+    height: 0.88rem;
+    line-height: 0.88rem;
+    color: #fff;
+    font-size: 0.28rem;
+    text-align: center;
+    float: left;
+    box-sizing: border-box; }
+  header .adress {
+    display: block;
+    width: 4.3rem;
+    height: 0.88rem;
+    box-sizing: border-box;
+    line-height: 0.88rem;
+    color: #fff;
+    font-size: 0.28rem;
+    text-align: center;
+    float: left; }
+    header .adress em {
+      color: #fff;
+      font-size: 0.28rem; }
+  header .person {
+    display: block;
+    width: 1.02rem;
+    height: 0.88rem;
+    box-sizing: border-box;
+    line-height: 0.88rem;
+    color: #fff;
+    font-size: 0.28rem;
+    text-align: center;
+    float: left; }
+    header .person span {
+      color: #fff;
+      font-size: 0.28rem; }
+
+.swiper-container {
+  width: 100%; }
+  .swiper-container .swiper-slide {
+    width: 100%;
+    height: 2.12rem;
+    background: green;
+    line-height: 2.12rem;
+    text-align: center; }
+
+/*# sourceMappingURL=style.css.map */
