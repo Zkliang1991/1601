@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+	<meta charset="UTF-8">
+	<title>我的秀</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="../css/login.css">
+</head>
+<body>
+	<header>
+		<a href="javascript:history.go(-1);"></a>
+		<p>更多</p>
+	</header>
+	<div class="more">
+		<ul class="more-ul1">
+			<li>常见问题</li>
+			<li>系统设置</li>
+			<li>软件更新</li>
+			<li>扫描二维码</li>
+		</ul>
+		<ul class="more-ul2">
+			<li>我要提意见</li>
+			<li>关于</li>
+		</ul>
+		<span class="more-login" >退出登录</span>
+	</div>
+	<div id="footer"></div>
+	<script type="text/javascript" src="../js/lr.js"></script>
+	<script type="text/javascript">
+	      $('#footer').load('../html/footer.html',function(){
+	      	$('#foot-ul li').siblings().removeClass('active').eq(3).addClass('active');
+	      	$('.more-login').on('tap',function(){
+	      		window.location.href = './index.html';
+	      		localStorage.clear();
+	      	})
+	      });
+	</script>
+	
+</body>
+</html>

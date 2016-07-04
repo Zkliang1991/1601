@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>登录页面</title>
+		<link rel="stylesheet" type="text/css" href="prd/css/login.css"/>
+	</head>
+	<body>
+		<header>
+			<img src="prd/img/return.png"/>
+			登陆
+			<div id="reg">注册</div>
+		</header>
+		<section>
+			<div>
+				<input id="username" type="text" placeholder="账号" />
+				<input id="pwd" type="password" placeholder="密码" />
+				<div>
+					<input id="check" type="checkbox"/>
+					<span>记住密码</span>
+					<a href="JavaScript:;">忘记密码</a>
+				</div>
+				<button id="btn">登录</button>
+				<span id="hint"></span>
+			</div>
+		</section>
+		
+		<script src="prd/js/common.js" type="text/javascript" charset="utf-8"></script>
+		
+		<!--尾部-->
+		<footer id="footer">	
+		</footer>
+		<script type="text/javascript">
+			$('#footer').load('footer.html',function(){
+				$('#person').addClass('active');
+				var url = window.location.href;
+				var htmlName = url.split('/');
+				var thisHtml = null;
+				for(var i=0;i<htmlName.length;i++){
+					if(htmlName[i].indexOf('.html')!=-1){
+						thisHtml = htmlName[i].split('.html')[0];
+					}
+				}
+				console.log(thisHtml);
+				var reg = /^htmlType_/;
+				var myHtml = 'htmlType_';
+				for(var i=0;i<localStorage.length;i++){
+					var key = localStorage.key(i);
+					if(reg.test(key)){
+						var oIndex = key.split('_')[1];
+						if(oIndex==3){
+							localStorage.setItem(myHtml+'3',thisHtml)
+						}
+					}
+				}
+			});
+		</script>
+		
+		
+		<script type="text/javascript">
+//			$('#check').on('tap',function(){
+//				if($(this).checked==true){
+//					$(this).addClass('check');
+//				}
+//				else{
+//					$(this).removeClass('check');
+//				}
+//			})
+			
+			$('#reg').on('tap',function(){
+				window.location.href = 'reg.html';
+			})
+		</script>
+		<script type="text/javascript">
+		
+			$.ajax({
+				url: 'http://datainfo.duapp.com/shopdata/getuser.php',
+				type: 'get',
+				dataType: 'jsonp',
+				success:function(data){
+					console.log(data);
+					for(var i=0;i<4;i++){
+						var imgs = JSON.parse(data[i].goodsBenUrl)[0];
+						console.log(imgs);
+						$('.swiper-wrapper').append('<div class="swiper-slide"><img src='+imgs+' /></div>');
+					}
+					var myzxIndexSwiper = new Swiper('#zxIndex-swiper', {
+						autoplay:3000,
+		
+						loop:true,
+		
+						pagination:'.swiper-pagination',
+			
+						paginationClickable:true,
+			
+						paginationType:'bullets',
+			
+		
+			
+					});
+				}
+			})
+			
+			$('section').on('touchstart','#btn',function(){
+				var $name = $('#username').val();
+				var $pwd = $('#pwd').val();
+				$.ajax({
+					url:'http://datainfo.duapp.com/shopdata/userinfo.php',
+					type:'post',
+					data:{
+						status:'login',
+						userID:$name,
+						password:$pwd
+					},
+					success:function(data){
+						if(data=='0'){
+							$('#hint').html('用户名不存在！');
+							$('#hint').addClass('error');
+						}else if(data=='2'){
+							$('#hint').html('用户名密码不符！');
+							$('#hint').addClass('error');
+						}else{
+//							console.log(JSON.parse(data).userID);
+
+							var name = JSON.parse(data).userID;
+							console.log(name);
+							localStorage.setItem('htmlType_3','person');
+							localStorage.setItem('username_'+name,name);
+							window.location.href = 'zouxiu-index.html';
+						}
+					}
+				})
+			})
+		</script>
+	</body>
+</html>

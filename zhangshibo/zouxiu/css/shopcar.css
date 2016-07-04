@@ -1,0 +1,214 @@
+'utf-8'
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #f7f7f7;
+  margin: 0; }
+
+a {
+  text-decoration: none;
+  color: #fff; }
+
+ol, ul {
+  list-style: none; }
+
+header {
+  width: 100%;
+  height: .9rem;
+  box-sizing: border-box;
+  display: flex;
+  background: #e4366b;
+  padding: 0 .2rem;
+  justify-content: space-between;
+  align-items: center; }
+  header .back {
+    font-family: 'iconfont';
+    font-size: .38rem;
+    color: #670d27; }
+  header span {
+    font-size: .38rem;
+    color: #fff;
+    font-family: 'Microsoft Yahei'; }
+  header .regist {
+    border: .01rem solid #fff;
+    border-radius: .05rem;
+    font-size: .22rem;
+    height: .54rem;
+    padding: .16rem .3rem;
+    box-sizing: border-box;
+    color: #fff;
+    background: -webkit-linear-gradient(top, #fcb1c6, #e4366b); }
+
+section {
+  min-height: 7.32rem;
+  width: 100%; }
+  section .content {
+    height: 7.32rem;
+    width: 100%;
+    box-sizing: border-box; }
+    section .content .smallNum {
+      box-sizing: border-box;
+      padding: 0 .2rem;
+      height: .88rem;
+      width: 100%;
+      font-size: .3rem;
+      background: #333333;
+      display: flex; }
+      section .content .smallNum div {
+        box-sizing: border-box;
+        color: #fff;
+        font-family: 'Microsoft Yahei';
+        display: flex;
+        align-items: center; }
+        section .content .smallNum div span {
+          min-width: .48rem; }
+      section .content .smallNum .price span {
+        color: #e43669;
+        font-weight: 900; }
+    section .content .goodlist {
+      min-height: 3rem;
+      width: 100%;
+      font-size: .28rem; }
+      section .content .goodlist ul {
+        min-height: 3rem;
+        width: 100%;
+        padding: 0; }
+        section .content .goodlist ul li {
+          box-sizing: border-box;
+          padding: 0 .24rem 0 .33rem;
+          display: flex;
+          align-items: center;
+          height: 2.3rem;
+          border-bottom: .02rem solid #333;
+          font-weight: 600; }
+          section .content .goodlist ul li .goodpic {
+            height: 1.74rem;
+            width: 1.74rem;
+            background: #ccc;
+            margin-right: .26rem; }
+            section .content .goodlist ul li .goodpic img {
+              width: 100%;
+              height: 100%; }
+          section .content .goodlist ul li .goodchoose {
+            margin-right: .26rem;
+            width: 3.2rem;
+            height: 1.74rem; }
+            section .content .goodlist ul li .goodchoose p {
+              height: .76rem;
+              line-height: .38rem;
+              width: 100%;
+              margin: 0; }
+            section .content .goodlist ul li .goodchoose .everyprice {
+              width: 100%;
+              height: .38rem;
+              line-height: .38rem; }
+              section .content .goodlist ul li .goodchoose .everyprice span {
+                color: #e43669; }
+            section .content .goodlist ul li .goodchoose .goodcount {
+              width: 100%;
+              height: .6rem;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              line-height: .6rem; }
+              section .content .goodlist ul li .goodchoose .goodcount input {
+                width: .76rem;
+                height: .43rem;
+                text-align: center;
+                border-radius: .05rem; }
+              section .content .goodlist ul li .goodchoose .goodcount a {
+                display: block;
+                width: .57rem;
+                height: .48rem;
+                line-height: .42rem;
+                text-align: center;
+                font-size: .34rem;
+                background: -webkit-linear-gradient(top, #b0b0b0, #4d4d4d);
+                border-radius: .1rem;
+                color: #fff;
+                font-weight: 900; }
+          section .content .goodlist ul li .delgood {
+            width: .27rem;
+            height: 1.74rem; }
+            section .content .goodlist ul li .delgood a {
+              color: #a30b3c;
+              display: block;
+              width: .27rem;
+              height: .76rem;
+              line-height: .38rem; }
+            section .content .goodlist ul li .delgood p {
+              width: .27rem;
+              height: .38rem;
+              line-height: .38rem;
+              text-align: center;
+              margin: 0; }
+
+footer {
+  width: 100%;
+  height: .9rem;
+  position: absolute;
+  bottom: 0; }
+  footer .footerlist {
+    padding: 0;
+    margin: 0;
+    height: .9rem;
+    width: 100%;
+    display: flex;
+    font-size: .1rem; }
+    footer .footerlist li {
+      width: 20%;
+      background: #484850;
+      height: .9rem;
+      border-top: .05rem solid #484850;
+      color: #fff; }
+      footer .footerlist li p {
+        font-family: 'iconfont';
+        height: .63rem;
+        width: 100%;
+        margin: 0;
+        font-size: .48rem;
+        text-align: center; }
+      footer .footerlist li b {
+        display: block;
+        height: .22rem;
+        width: 100%;
+        font-size: .24rem;
+        text-align: center;
+        font-weight: 100; }
+    footer .footerlist li:hover {
+      color: #e4366b; }
+
+@font-face {
+  font-family: "iconfont";
+  src: url("iconfont.eot?t=1466772499");
+  /* IE9*/
+  src: url("iconfont.eot?t=1466772499#iefix") format("embedded-opentype"), url("iconfont.woff?t=1466772499") format("woff"), url("iconfont.ttf?t=1466772499") format("truetype"), url("iconfont.svg?t=1466772499#iconfont") format("svg");
+  /* iOS 4.1- */ }
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-iconfontcolor14:before {
+  content: "\e67b"; }
+
+.icon-30:before {
+  content: "\e66c"; }
+
+.icon-shopper:before {
+  content: "\e617"; }
+
+.icon-fenlei:before {
+  content: "\e631"; }
+
+.icon-shouye:before {
+  content: "\e608"; }
+
+.icon-gengduo:before {
+  content: "\e635"; }
