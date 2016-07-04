@@ -1,0 +1,314 @@
+@fe :"Microsoft yahei";
+* {
+  margin: 0;
+  padding: 0; }
+
+
+
+/*header矢量图标*/
+
+.iconfont2 {
+  font-size: 30px;
+  
+  font-family: "iconfont2" !important; }
+  
+  
+  
+  
+  
+  .back:before{
+  	content:"\f007a";
+		width: 0.97rem;	
+		height:0.86rem;
+		float: left;
+		color:#000000;
+		font-size:0.40rem;
+		text-align: center;
+		line-height: 0.86rem;
+  }
+
+  .fangdajing{
+  	background: #fff;
+  	width: 0.6rem;
+  	height:0.53rem;
+  	border-bottom-left-radius: 0.2rem;
+    border-top-left-radius:0.2rem;
+    text-align: center;
+		
+  }
+  
+  
+  .fangdajing:before{
+  	content:"\e624";
+		
+		/*float: left;*/
+		color:#000000;
+		font-size:0.40rem;
+		
+		line-height: 0.53rem;
+				
+  }
+
+
+
+
+
+#header{
+  position: relative;
+  width: 100%;
+  height: 0.86rem;
+  line-height: 0.4rem;
+  color: #fff;
+ 
+/*  text-align: center;*/
+  background: #e4366b; }
+  
+
+  #header h1 {
+  	
+    display: inline-block;
+   	padding-left: 1.8rem;
+    font-size: 0.4rem;
+    color: yellow;
+    height: 0.4rem; }
+
+#search {
+  width: 100%;
+  height: 0.85rem;
+  background: #52525a;
+  display: flex;
+  box-sizing: border-box;
+  padding-left: 0.3rem;
+  padding-top: 0.17rem; }
+  #search .ser {
+  	border: none;
+    outline: none;
+    width: 5rem;
+    height: 0.53rem;
+    display: block;
+    border-bottom-right-radius: 0.2rem;
+    border-top-right-radius:0.2rem;
+   /* border-radius: 0.2rem;*/
+   /* text-indent: 0.3rem;*/
+    font-size: 0.26rem; }
+
+
+.g{
+	display:block;
+	 width: 100%;
+	 height:3.3rem;
+/*	 background: red;*/
+
+}
+
+	.g .login-left{
+		width:36%;
+		height:3.05rem;
+		float: left;
+		/*background: pink;*/
+		
+	}
+	
+	.g .login-left img{
+		width:1.64rem;
+		height:1.64rem;
+		margin-left:0.3rem;
+		margin-top:0.61rem;
+		border: 1px solid red;
+		
+	}
+	
+	
+	.g .login-right{
+		
+		width: 64%;
+		height:3.05rem;
+		float: left;
+		/*background: #007AFF;*/
+	}
+	
+	
+	
+	.login-right p{
+		width: 50%;
+		height:0.35rem;
+		font-size: 0.35rem;
+		padding-top:0.92rem;
+	}
+	
+/*两个input框*/	
+.login-right input{
+	display: block;
+	float: left;
+	outline: none;
+	border: none;
+	background:#f25582;
+	width: 1.08rem;
+	height:0.4rem;
+	font-size: 0.25rem;
+	text-align: center;
+	line-height:0.4rem ;
+	color:#fff;
+	margin-top: 0.38rem;
+	border-radius: 0.1rem;
+}
+#in{
+	margin-left:0.44rem;
+}
+
+
+
+
+  /*-------------我的订单主页-------------------------*/          
+       
+            
+#sorts{
+	display: block;
+	width:5.58rem;
+	height:3.443rem;
+	border:1px solid #8D8D8D;
+	margin: 0 auto;
+	border-radius: 0.1rem;
+
+	}
+	#sorts li{
+		width: 5.58rem;
+		height: 0.86rem;
+		}
+		
+
+		#sorts li a{
+			display: block;
+			width:100% ;
+			height: 0.86rem;
+			font-size: 0.4rem;
+			line-height:0.86rem;
+			text-decoration:none;
+			border-bottom: 0.01rem solid #BCBCBC;
+			color:#484850;
+			font-weight: 600;
+			
+		/*	background: red;*/
+	
+		}
+			#sorts li a span{
+				/*display: block;
+				font-size: 0.4rem;
+				line-height: 0.86rem;*/
+				float: left;
+			}
+			
+			#sorts li a p{
+				display: block;
+				font-size: 0.4rem;
+				line-height: 0.86rem;
+				float: right;
+				padding-right: 0.2rem;
+			}
+		
+		#sorts li:nth-child(1) span{
+			padding-left: 0.2rem;
+		}
+		
+		#sorts li:nth-child(n+2) span{
+			
+			padding-left: 0.2rem;
+			
+		}
+		#sorts li:nth-child(4) a{
+			border-bottom: none;
+		}
+
+/*------------------我的订单------------------------*/
+
+
+footer {
+  width: 6.4rem;
+  height: 0.98rem;
+  position: absolute;
+  bottom: 0; }
+  footer dl {
+    width: 1.28rem;
+    height: 0.97rem;
+    float: left;
+    background: #484850; }
+    footer dl dt {
+      width: 1.28rem;
+      height: 0.49rem;
+      text-align: center; }
+    footer dl dd {
+      width: 1.28rem;
+      height: 0.41rem;
+      font-size: 0.24rem;
+      line-height: 0.41rem;
+      text-align: center;
+      color: #fff; }
+
+.iconfont {
+  font-size: 30px;
+  color: #fff;
+  font-family: "iconfont" !important; }
+
+.home_page:before {
+  content: "\e604";
+  font-size: 0.5rem;
+  line-height: 0.5rem; }
+
+.sort:before {
+  content: "\e7ad";
+  font-size: 0.5rem;
+  line-height: 0.5rem;
+  text-align: center; }
+
+.cart:before {
+  content: "\e654";
+  font-size: 0.5rem;
+  line-height: 0.5rem;
+  text-align: center; }
+
+.my_show:before {
+  content: "\e735";
+  font-size: 0.5rem;
+  line-height: 0.5rem;
+  text-align: center; }
+
+.more:before {
+  content: "\f0013";
+  font-size: 0.5rem;
+  line-height: 0.5rem;
+  text-align: center; }
+
+
+/*# sourceMappingURL=show.css.map */
+
+
+
+
+/*商品删除矢量图标*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

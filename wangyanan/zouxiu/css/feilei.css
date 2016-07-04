@@ -1,0 +1,143 @@
+html {
+  font-size: 62.5%;
+  font-family: "Microsoft Yahei"; }
+
+body, h1, h2, h3, h4, h5, h6, blockquote, ol, ul, dl, dd, p, textarea, input, select, option, form {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #f5f4f0;
+  -webkit-tap-highlight-color: transparent; }
+
+ol, ul, textarea, input, option, th, td {
+  padding: 0; }
+
+.page {
+  min-width: 320px;
+  max-width: 750px;
+  margin: 0 auto; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-size: 100%; }
+
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+  display: block; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+ul, ol {
+  list-style-type: none; }
+
+.clearfix:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden; }
+
+input[type=text], textarea {
+  -webkit-appearance: none; }
+
+input:focus {
+  -webkit-user-modify: read-write-plaintext-only; }
+
+fieldset, img {
+  border: 0; }
+
+a {
+  text-decoration: none; }
+
+a, textarea, input {
+  outline: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+textarea {
+  overflow: auto;
+  resize: none; }
+
+@media only screen and (min-width: 320px) {
+  html {
+    font-size: 75% !important; } }
+@media only screen and (min-width: 375px) {
+  html {
+    font-size: 87.89063% !important; } }
+@media only screen and (min-width: 414px) {
+  html {
+    font-size: 97.03% !important; } }
+@media only screen and (min-width: 480px) {
+  html {
+    font-size: 112.5% !important; } }
+@media only screen and (min-width: 560px) {
+  html {
+    font-size: 131.25% !important; } }
+@media only screen and (min-width: 640px) {
+  html {
+    font-size: 150% !important; } }
+@media only screen and (min-width: 720px) {
+  html {
+    font-size: 168.75% !important; } }
+@media only screen and (min-width: 750px) {
+  html {
+    font-size: 175.78125% !important; } }
+@media only screen and (min-width: 800px) {
+  html {
+    font-size: 187.5% !important; } }
+@media only screen and (min-width: 960px) {
+  html {
+    font-size: 225% !important; } }
+.header {
+  background: #e4366b;
+  width: 100%;
+  height: 3.58333rem;
+  color: #fff;
+  font-size: 1.66667rem;
+  line-height: 3.58333rem;
+  text-align: center; }
+
+.top {
+  background: #52525a;
+  width: 100%;
+  height: 3.58333rem;
+  border-top: 0.04167rem solid #000;
+  border-bottom: 0.04167rem solid #000;
+  box-sizing: border-box;
+  padding-top: 0.66667rem;
+  padding-left: 1.20833rem; }
+  .top div {
+    width: 24.58333rem;
+    height: 2.375rem;
+    background: #fff;
+    border-radius: 1.04167rem; }
+    .top div b {
+      float: left;
+      display: block;
+      width: 2.58333rem;
+      height: 2.375rem;
+      background: url(../images/search.png) right center no-repeat;
+      background-size: 1.5rem 1.58333rem; }
+    .top div input {
+      float: left;
+      display: block;
+      width: 20.95833rem;
+      height: 2.375rem;
+      border: none;
+      padding-left: 0.41667rem;
+      font-size: 0.95833rem;
+      box-sizing: border-box; }
+
+/*# sourceMappingURL=feilei.css.map */

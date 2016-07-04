@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name='viewport' content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        <title>登录</title>
+        <link rel="stylesheet" href="css/denglu.css">
+    </head>
+    <body>
+        <header>      	
+        		<img src="img/more.jpg" alt="">登录
+        		<button>注册</button>
+        </header>
+        <section>
+        	<input type="text" placeholder="账号" class='zhang'>
+        	<input type="password" placeholder="密码" class='mi'>
+        	<div>
+        		<input type="checkbox" checked="checked" class='check'> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;记住密码
+        		<span>忘记密码 ?</span>
+        	</div>
+        	<button>登录</button>
+        </section>
+        <div id='footer-denglu'></div>
+        <script src='common/jquery-1.10.1.min.js'></script>
+        <script>
+         	$('#footer-denglu').load('common/footer.html')
+        </script>
+    </body>
+</html>

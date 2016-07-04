@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>我的秀</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<script type="text/javascript" src="../js/jquery-2.2.3.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/myshow.css">
+	<link rel="stylesheet" type="text/css" href="../ux1/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="../css/head.css">
+	<link rel="stylesheet" type="text/css" href="../ux1/iconfont.css">
+</head>
+<body>
+	<header id="header">
+		<div class="head">
+			<header>
+				<a src="javascript:;" onClick="javascript:history.go(-1);" class="iconfont">&#xe63d;</a>
+				<span class="name">我的秀</span>
+			</header>
+			
+		</div>
+	</header>
+	
+	<section>
+		<div class="center">
+			<img src="../img/show.jpg">
+			<span class="name">昵称：未知</span>
+			<a href="javascript:;" class="login">登录</a>
+			<a href="javascript:;" class="regist">注册</a>
+		</div>
+		<ul>
+			<li >我的订单<span class="iconfont">&#xe6dc;</span></li>
+			<li >我的优惠券<span class="iconfont">&#xe6dc;</span></li>
+			<li >浏览记录<span class="iconfont">&#xe6dc;</span></li>
+			<li class="bt0">我的收藏<span class="iconfont">&#xe6dc;</span></li>
+		</ul>
+	</section>
+	
+	<footer id="footer"></footer>
+	<script type="text/javascript">
+		$("#footer").load("foot.html",function(){
+			var url = window.location.href;
+			var htmlName = url.split('/');
+			var thisHtml = null;
+			for(var i=0;i<htmlName.length;i++){
+				if(htmlName[i].indexOf('.html')!=-1){
+					thisHtml = htmlName[i].split('.')[0];
+				}
+			}
+			console.log(thisHtml);
+			var reg = /^htmlType_/;
+			var myHtml = 'htmlType_';
+			for(var i=0;i<localStorage.length;i++){
+				var key = localStorage.key(i);
+				if(reg.test(key)){
+					var oIndex = key.split('_')[1];
+					if(oIndex==3){
+						localStorage.setItem(myHtml+'3',thisHtml)
+					}
+				}
+			}
+		});
+	</script>
+	<script type="text/javascript" src="../js/myshow.js"></script>
+	<script type="text/javascript">
+		$('.login').on('click',function(){
+			window.location.href='login.html';
+		});
+		$('.regist').on('click',function(){
+			window.location.href='regist.html';
+		});
+		$('section ul li:eq(0)').on('click',function(){
+			window.location.href='mylist.html';
+		});
+		$('section ul li:eq(1)').on('click',function(){
+			window.location.href='mymoney.html';
+		});
+		$('section ul li:eq(2)').on('click',function(){
+			window.location.href='history.html';
+		});
+		$('section ul li:eq(3)').on('click',function(){
+			window.location.href='shoucang.html';
+		})
+	</script>
+</body>
+</html>

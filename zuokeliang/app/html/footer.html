@@ -1,0 +1,63 @@
+<link rel="stylesheet" type="text/css" href="../css/footer.css">
+<link rel="stylesheet" type="text/css" href="../ux/iconfont.css">
+<script type="text/javascript" src="../js/sy.js"></script>
+<footer id="footer">
+	<ul>
+		<li>
+			<p></p>
+			<b class="icon iconfont">&#xe628;</b>
+			<b class="txt">首页</b>
+		</li>
+		<li>
+			<p></p>
+			<b class="icon iconfont">&#xe61f;</b>
+			<b class="txt">分类</b>
+		</li>
+		<li>
+			<p></p>
+			<b class="icon iconfont">&#xe60f;</b>
+			<b class="txt">购物车</b>
+		</li>
+		<li>
+			<p></p>
+			<b class="icon iconfont">&#xe61a;</b>
+			<b class="txt">我的秀</b>
+		</li>
+		<li>
+			<p></p>
+			<b class="icon iconfont">&#xe61c;</b>
+			<b class="txt">更多</b>
+		</li>
+	</ul>
+</footer>
+<script type="text/javascript">
+	
+	//onbeforeunload 页面关闭(包括浏览器关闭)的时候触发
+	window.onbeforeunload = function()
+	{
+	    // return "真的离开?";
+	}
+
+	$('#footer ul li').on('tap',function(){
+		$(this).addClass('active').siblings().removeClass('active');
+		var index=$(this).index();//取出对应的点击的li标签的下标
+		console.log(index);
+		getTypeByLocal(index);
+	})
+	//每次一点击tap 到新页面的时候，就把 对应的url中 .html前面的值存到localStorage来，
+	function getTypeByLocal(index){
+		var reg = /^htmlType_/;
+		for(var i=0;i<localStorage.length;i++){
+			var key = localStorage.key(i);
+			if(reg.test(key)){
+				var oIndex = key.split('_')[1];
+				//取出对应key的htmlType_n里面n的值，
+				if(oIndex==index){   
+					//然后就跳转到点击的li下标的htmlType的值得页面
+					var myHtml = localStorage.getItem(key);
+					window.location.href=myHtml+'.html';
+				}
+			}
+		}
+	}
+</script>

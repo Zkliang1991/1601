@@ -1,0 +1,217 @@
+@charset "UTF-8";
+html {
+  font-size: 62.5%;
+  font-family: "微软雅黑", "Microsoft yahei"; }
+
+body, h1, h2, h3, h4, h5, h6, blockquote, ol, ul, dl, dd, p, textarea, input, select, option, form {
+  margin: 0;
+  padding: 0; }
+
+body {
+<<<<<<< HEAD
+  background: #f5f4f0;
+=======
+<<<<<<< HEAD
+=======
+  background: #f5f4f0;
+>>>>>>> 0c508d2b37dbbc9dbe8ca4cf282edeec00ea8915
+>>>>>>> 3157549bb0ee72b36633a0c580607321e4d63388
+  -webkit-tap-highlight-color: transparent; }
+
+ol, ul, textarea, input, option, th, td {
+  padding: 0; }
+
+.page {
+  min-width: 320px;
+  max-width: 750px;
+  margin: 0 auto; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-size: 100%; }
+
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+  display: block; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+ul, ol {
+  list-style-type: none; }
+
+.clearfix:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden; }
+
+/* ios默认文本框阴影 */
+input[type=text], textarea {
+  -webkit-appearance: none; }
+
+/* 低版本安卓文本框层级问题 */
+input:focus {
+  -webkit-user-modify: read-write-plaintext-only; }
+
+fieldset, img {
+  border: 0; }
+
+a {
+  text-decoration: none; }
+
+a, textarea, input {
+  outline: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+textarea {
+  overflow: auto;
+  resize: none; }
+
+@media only screen and (min-width: 320px) {
+  html {
+    font-size: 75% !important;
+    /* 12÷16=73.4% */ } }
+
+@media only screen and (min-width: 375px) {
+  html {
+    font-size: 87.89063% !important;
+    /*320/12=375/x;x=14.0625; 14.0625÷16=73.2% */ } }
+
+@media only screen and (min-width: 414px) {
+  html {
+    font-size: 97.03% !important;
+    /*414-15.525 15.525÷16=94% */ } }
+
+@media only screen and (min-width: 480px) {
+  html {
+    font-size: 112.5% !important;
+    /* 18÷16=94% */ } }
+
+@media only screen and (min-width: 560px) {
+  html {
+    font-size: 131.25% !important;
+    /* 21÷16=109% */ } }
+
+@media only screen and (min-width: 640px) {
+  html {
+    font-size: 150% !important;
+    /* 24÷16=125% */ } }
+
+@media only screen and (min-width: 720px) {
+  html {
+    font-size: 168.75% !important;
+    /* 27÷16=146.43% */ } }
+
+@media only screen and (min-width: 750px) {
+  html {
+    font-size: 175.78125% !important;
+    /* 28.125÷16=146.43% */ } }
+
+@media only screen and (min-width: 800px) {
+  html {
+    font-size: 187.5% !important;
+    /* 30÷16=146.43% */ } }
+
+@media only screen and (min-width: 960px) {
+  html {
+    font-size: 225% !important;
+    /* 36÷16=146.43% */ } }
+
+* {
+  margin: 0rem;
+  padding: 0rem; }
+
+body header {
+  width: 100%;
+  height: 3.58333rem;
+  background: #e4366b;
+  text-align: center;
+  line-height: 3.58333rem;
+  font-size: 1.66667rem;
+  color: #fff;
+  border-top: 0.04167rem solid #636363;
+  border-bottom: 0.04167rem solid #000; }
+  body header a {
+    display: block;
+    position: absolute;
+    left: 0.83333rem;
+    top: 1.25rem;
+    width: 2.125rem;
+    height: 1.41667rem;
+    background: url(../img/back.png) no-repeat; }
+
+body .list-good {
+  width: 100%;
+  position: absolute;
+  top: 3.66667rem;
+  bottom: 0rem; }
+  body .list-good ul {
+    width: 100%; }
+    body .list-good ul li {
+      width: 100%;
+      height: 8.41667rem;
+      border-bottom: 0.04167rem solid #aaa;
+      padding-top: 1.16667rem; }
+      body .list-good ul li dl {
+        width: 100%;
+        height: 100%;
+        display: flex; }
+        body .list-good ul li dl dt {
+          width: 9.66667rem;
+          height: 100%;
+          position: relative; }
+          body .list-good ul li dl dt img {
+            display: block;
+            margin-left: 1.41667rem;
+            border: 0.04167rem solid #bababa;
+            width: 7.16667rem;
+            height: 7.16667rem; }
+          body .list-good ul li dl dt a {
+            display: block;
+            position: absolute;
+            left: 1.41667rem;
+            top: 0rem;
+            width: 7.25rem;
+            height: 7.25rem; }
+        body .list-good ul li dl dd {
+          width: 17rem;
+          height: 100%;
+          position: relative; }
+          body .list-good ul li dl dd p {
+            font-size: 1.16667rem;
+            line-height: 1.79167rem; }
+          body .list-good ul li dl dd p:nth-of-type(1) {
+            width: 11.91667rem; }
+          body .list-good ul li dl dd p:nth-of-type(2) span {
+            display: inline-block;
+            color: #e43669; }
+          body .list-good ul li dl dd p:nth-of-type(3) a {
+            display: inline-block;
+            color: #aaa;
+            text-decoration: line-through; }
+          body .list-good ul li dl dd .gouwuche {
+            border-radius: 0.5rem;
+            color: #fff;
+            width: 5.75rem;
+            height: 2.25rem;
+            position: absolute;
+            bottom: 1.41667rem;
+            right: 0.83333rem;
+            background: url(../img/btn-car.png) no-repeat;
+            background-size: 4.91667rem 2.16667rem;
+            text-indent: 1.5rem;
+            line-height: 2.16667rem;
+            font-size: 2rem; }

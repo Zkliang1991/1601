@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+ul, ol {
+  list-style: none; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  height: 100%;
+  width: 100%;
+  background: #f7f7f7; }
+  body header {
+    font-size: 2rem;
+    display: block;
+    width: 100%;
+    height: 5rem;
+    background-color: #e4366b;
+    position: relative;
+    box-sizing: border-box;
+    color: white; }
+    body header span {
+      float: left;
+      height: 5rem;
+      margin: 0 auto;
+      line-height: 5rem;
+      width: 100%;
+      text-align: center; }
+      body header span .zc {
+        display: block;
+        height: 5rem;
+        position: relative;
+        right: 1rem;
+        float: right;
+        font-size: 1rem;
+        color: white;
+        text-decoration: none; }
+  body .login {
+    width: 100%;
+    height: 100%;
+    padding: 1rem 0.7rem 0 0.7rem;
+    box-sizing: border-box;
+    font-size: 2.5rem; }
+    body .login input {
+      outline: none;
+      width: 100%;
+      height: 0.7rem;
+      padding: 2.1rem 0 1.8rem 2.2rem;
+      box-sizing: border-box;
+      border: 0;
+      border-top: 1px solid #a4a4a4;
+      border-left: 1px solid #a4a4a4;
+      border-radius: 5px;
+      margin-bottom: 30px; }
+    body .login p {
+      width: 70%;
+      height: 3.5rem;
+      background: #00a0e9;
+      color: #fff;
+      font-size: 2rem;
+      line-height: 3.5rem;
+      text-align: center;
+      margin-top: 3rem;
+      margin-left: 4rem;
+      border-radius: 6px; }
+    body .login a {
+      font-size: 1.6rem;
+      margin-left: 4rem;
+      color: #00a0e9;
+      text-decoration: none;
+      background: red; }
+  body .sy {
+    font-size: 1rem;
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    font-size: 1rem;
+    color: black;
+    text-decoration: none; }
+
+/*# sourceMappingURL=deng.css.map */

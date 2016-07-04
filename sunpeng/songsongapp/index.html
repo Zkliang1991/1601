@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>首页</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		
+	</head>
+	<body>
+		<header>
+			<span>关于</span>
+			<h3>昆山市</h3>
+			<div>
+				<img src="img/wo.png"/>
+			</div>
+		</header>
+		<div class="swiper-container">
+			<div class="swiper-wrapper" >
+				<div class="swiper-slide on1" data-hash='slide1'><img src="img/swiper-bg1.png"/></div>
+				<div class="swiper-slide on2" data-hash='slide2'>slide2</div>
+				<div class="swiper-slide on3" data-hash='slide3'>slide3</div>
+				<div class="swiper-slide on4" data-hash='slide4'>slide4</div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+		<section>
+			<div class="link">
+				<li>
+					<img src="img/list1.png"/>
+					<span>外卖点餐</span>
+				</li>
+				<li>
+					<img src="img/list1.png"/>
+					<span>外卖点餐</span>
+				</li>
+				<li>
+					<img src="img/list1.png"/>
+					<span>外卖点餐</span>
+				</li>
+				<li>
+					<img src="img/list1.png"/>
+					<span>外卖点餐</span>
+				</li>
+				<li>
+					<img src="img/list1.png"/>
+					<span>外卖点餐</span>
+				</li>
+				<li>
+					<img src="img/list1.png"/>
+					<span>外卖点餐</span>
+				</li>
+				<li>
+					<img src="img/list1.png"/>
+					<span>外卖点餐</span>
+				</li>
+				<li>
+					<img src="img/list1.png"/>
+					<span>外卖点餐</span>
+				</li>
+			</div>
+			
+			<div class="hot">
+				<h3>热门活动</h3>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			<div class="tuijian">
+				<h3>推荐商家</h3>
+				<ul>
+					<li><img src="img/tuijan1.png"/></li>
+					<li><img src="img/tuijan1.png"/></li>
+					<li><img src="img/tuijan1.png"/></li>
+					<li><img src="img/tuijan1.png"/></li>
+					<li><img src="img/tuijan1.png"/></li>
+					<li><img src="img/tuijan1.png"/></li>
+					<li><img src="img/tuijan1.png"/></li>
+					<li><img src="img/tuijan1.png"/></li>
+					<li><img src="img/tuijan1.png"/></li>
+				</ul>
+			</div>
+		</section>
+		<footer>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</footer>
+		<script src="js/swiper-3.3.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var mySwiper = new Swiper('.swiper-container', {
+				autoplay:3000,
+				loop:true,
+				resistanceRatio:0,
+
+				pagination:'.swiper-pagination',
+				
+				paginationClickable:true,
+				
+				paginationType:'bullets',
+				
+				
+			});
+		</script>
+		<script type="text/javascript">
+			var width = document.body.clientWidth;
+			console.log(width);
+			var html = document.getElementById('html');
+			//求出设备宽度
+			html.style.fontSize = width/640*100 + 'px';
+			// rem 通过设备宽度来改变rem 
+			console.log(width);
+			//窗口改变的时候求出宽度
+			window.onresize =function(){
+				var width = document.body.clientWidth;
+				html.style.fontSize = width/640*100 + 'px';
+			}
+		</script>
+	</body>
+</html>

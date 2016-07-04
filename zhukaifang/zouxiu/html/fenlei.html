@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../css/public.css">
+	<link rel="stylesheet" type="text/css" href="../ux/iconfont.css">
+	<script type="text/javascript" src="../js/jquery-1.10.1.min.js"></script>
+	<title>分类</title>
+	<style type="text/css">
+	*{
+		margin:0;
+		padding: 0;
+	}
+	ul,ol{
+		list-style: none;
+	}
+	body,html{
+		width: 100%;
+		height: 100%;
+	}
+
+	.iconfont{
+		font-size: 0.5rem;
+	}
+	.fenlei{
+		width: 100%;
+		font-size: 0.4rem;
+		margin-top: 1.8rem;
+	}
+	.fenlei li{
+		width:100%;
+		height: 0.88rem;
+		border-bottom:0.02rem solid #eee; 
+		text-indent:0.22rem; 
+		line-height: 0.88rem;
+		font-family: "微软雅黑";
+		background: #f7f7f7;
+	}
+	.fenlei .icon-rjt{
+		font-size:0.3rem;
+		color:#0c0c0c;
+		float: right;
+		margin-right:0.3rem;
+	}
+	.fenlei .list{
+		text-indent:0.43rem;
+	}
+	.fenlei .icon-rjts{
+		margin-right:0rem;
+		-webkit-transform:rotate(180deg);
+	}
+	header{
+		position:fixed;
+		top:0;
+		left:0;
+		z-index: 999;
+	}
+	</style>
+</head>
+<body>
+	<header class="zx-top"></header>
+	<script type="text/javascript">
+	$('.zx-top').load('header.html',function(){
+		$('.goback').css('display','block');
+	});
+	</script>
+	
+	<div class="fenlei">
+		<ul>
+			<li>全部 <span class="iconfont icon-rjt">&#xe604;</span></li>
+			<!-- <li class="lsit"><span class="iconfont icon-rjt icon-rjts">&#xe614;</span></li> -->
+		</ul>
+	</div>
+
+<script type="text/javascript">
+	$.ajax({
+		url:"http://datainfo.duapp.com/shopdata/getclass.php",
+		type:"get",
+		dataType:"json",
+		success:function(data){
+			console.log(data);
+				var length=data.length;
+				for(i=0;i<length;i++){
+					var name = data[i].className;
+					$('.fenlei ul').append("<li class='list'>"+name+"<span class='iconfont icon-rjt icon-rjts'>&#xe614;</span></li>");
+				}
+		}
+	})
+</script>
+	
+
+	
+
+
+	<footer class="footer"></footer>
+	<script type="text/javascript">
+		$('.footer').load('footer.html',function(){
+			$('.icon-fen').css('color','deeppink');
+		});
+	</script>
+	<script type="text/javascript">
+		var width=document.body.clientWidth;
+		//求出当前设备的宽
+		var html=document.getElementById('html');
+		html.style.fontSize=width/640*100+'px';
+		//rem通过设备宽改变rem值
+		console.log(width);
+		//窗口改变的时候求出宽
+		window.onresize=function(){
+			var width=document.body.clientWidth;
+			html.style.fontSize=width/640*100+'px';
+		}
+	</script>
+</body>
+</html>

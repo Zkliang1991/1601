@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>轮播1234</title>
+	<link rel="stylesheet" type="text/css" href="css/lunbo.css">
+</head>
+<body>
+	<div class="first">
+		<div class="logo"></div>
+		<p>秀出你的每一天</p>
+		<div class="btm"></div>
+	</div>
+	<div class="swiper-container" id="myswiper2">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide slide1" data-hash="swiper1">
+				<img src="img/lun1.png">
+			</div>
+			<div class="swiper-slide slide2" data-hash="swiper2">
+				<p><span></span></p>
+				<p><span></span></p>
+				<p><span></span></p>
+				<p class="txt">放入购物车</p>
+				<p class="clock"><span></span></p>
+				<div class="btm-txt">
+					<div class="bg">
+					<p class="p1">满288元免运费</p>
+					<p class="p2">(有活动还有更多惊喜)</p>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-slide slide3" data-hash="swiper3">
+				<p>走秀网商品</p>
+				<div class="tu"><span></span></div>
+				<div class="btm-txt">
+					<div class="bg">
+						<p>每天10点<br/>&nbsp;&nbsp;&nbsp;新品抢购</p>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-slide slide4" data-hash="swiper4">
+				<p><span></span></p>
+				<p><span></span></p>
+				<p><span></span></p>
+				<p class="txt">NOW,开始走秀购物之行......</p>
+				<div class="btm-btn">开始体验</div>
+			</div>
+		</div>
+		<div class="swiper-pagination"></div>
+	</div>
+	<script type="text/javascript" src="js/lunbo.js"></script>
+<script type="text/javascript" src="js/jquery-2.2.3.js"></script>
+<script type="text/javascript">
+	$(".first").fadeOut(3000);
+	//$('.first').hide(2000);
+	//alert(localStorage.pCount);
+	var arrhtml=['main','zxfenlei','car','mine','more'];
+	if(localStorage.pCount){
+		localStorage.pCount++;
+	}else{
+<<<<<<< HEAD
+		//第一次时将页面地址一部分存进本地存储
+=======
+<<<<<<< HEAD
+		alert(2);
+=======
+		//第一次时将页面地址一部分存进本地存储
+>>>>>>> 0c508d2b37dbbc9dbe8ca4cf282edeec00ea8915
+>>>>>>> 3157549bb0ee72b36633a0c580607321e4d63388
+		localStorage.setItem('pCount',1);
+		for(var i =0;i<arrhtml.length;i++){
+			if(localStorage.pCount==1){     //用户第一次登陆
+				var htmlType = 'htmlType_'+i;
+				localStorage.setItem(htmlType,arrhtml[i]);
+				//把页面的url中的具体存到本地来
+			}
+		}
+	}
+
+
+</script>
+</body>
+</html>

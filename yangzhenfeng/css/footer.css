@@ -1,0 +1,33 @@
+footer{
+	display: block;
+	position: fixed;
+	left:0;
+	bottom:0;
+	width: 100%;
+	height:0.9rem;
+	z-index: 999;
+	padding-top:10px ;
+}
+footer ul{
+	width:100%;
+	height:100%;
+	background: rgba(0,0,0,1);
+	color:#fff;
+	
+}
+footer ul li{
+	float: left;
+	width:20%;
+	height:100%;
+	text-align: center;
+	margin-top:0.01rem;	
+	cursor: pointer;
+}
+footer ul .iconfont{
+	font-size: 0.5rem;
+}
+footer ul .iconfont span{
+	display: block;
+	font-size: 0.25rem;
+	margin-top:0.01rem;	
+}

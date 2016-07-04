@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>我的秀</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="../css/show.css">
+</head>
+<body>
+	<header>
+		<a href="javascript:history.go(-1);"></a>
+		<p>ZXIU 走秀网</p>
+	</header>
+	<div class="show-ser">
+		<div>
+			<input type="text" name="" placeholder="请输入搜索内容">
+		</div>
+	</div>
+	<ul class="clasify-ul" id="clasify">
+		<li>全部</li>
+	</ul>
+	<div id="footer"></div>
+	<script type="text/javascript" src="../js/lr.js"></script>
+	<script type="text/javascript">
+	      $('#footer').load('../html/footer.html',function(){
+	      	$('#foot-ul li').siblings().removeClass('active').eq(0).addClass('active');
+	      });
+	</script>
+</body>
+</html>
