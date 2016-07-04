@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+	<meta charset="UTF-8">
+	<title>购物车</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="../css/public.css">
+	<link rel="stylesheet" type="text/css" href="../ux/iconfont.css">
+	<script type="text/javascript" src="../js/jquery-1.10.1.min.js"></script>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		body,html{
+			width: 100%;			
+			height: 100%;
+			background: #f7f7f7;
+		}
+		ul,ol{
+			list-style: none;
+		}
+		.iconfont{
+			font-size: 0.5rem;
+		}
+		.zx-top p span{
+			left:2.6rem;
+		}
+		
+		.gowrap{
+			display: none;
+			width:100%;
+			text-align: center;
+			position: relative;
+			font-family: "微软雅黑";
+		}
+		.gowrap a{
+			font-size: 0.4rem;
+			color:red;
+			margin-top: 0.6rem;
+		}
+		.gowrap span{
+			display: block;
+			width:2.61rem;
+			height:2.63rem;
+			background-size:2.61rem 2.63rem; 
+			background-image:url(../images/gocar.jpg);
+			margin:0.25rem 0 0 1.9rem;
+		}
+		.gowrap p{
+			width: 4.22rem;
+			height: 0.94rem;
+			line-height: 0.94rem;
+			text-align: center;
+			color:#fff;
+			margin-top: 0.7rem;
+			font-size: 0.5rem;
+			background: #f35381;
+			margin-left: 1.08rem;
+			border-radius: 3px;
+		}
+
+
+		.carts{
+			width: 100%;
+		}
+		.info{
+			width:100%;
+			height: 0.87rem;
+			line-height: 0.87rem;
+			background: #333;
+			font-size: 0.3rem;
+			color:#fff;
+			font-family: "微软雅黑";
+			text-indent: 0.2rem;
+		}
+		.info span{
+			margin-right: 0.3rem;
+		}
+		.info a{
+			color:#fc0450;
+		}
+		.goods-info{
+			width:100%;
+			height:2.3rem;
+			box-sizing: border-box;
+			padding:0.27rem 0.24rem 0.3rem 0.32rem;
+			border-bottom: 2px solid #c0c0c0;
+			font-family: "微软雅黑";
+		}
+		.goods-info dt{
+			width:1.73rem;
+			height: 1.73rem;
+			border:1px solid #ccc;
+			margin-right: 0.25rem;
+			float:left;
+		}
+		.goods-info img{
+			width:1.73rem;
+			height: 1.73rem;
+		}
+		.goods-info dd{
+			width: 3.82rem;
+			height: 1.73rem;
+			float: left;
+			font-size: 0.3rem;
+		}
+		.goods-info dd:after{
+    		content:'.';
+			display:block;
+			height:0;
+			clear:both;
+			overflow:hidden;
+			visibility:hidden;
+		}
+		.goods-info p{
+			width:2.9rem;
+			float: left;
+		}
+		.goods-info a{
+			display: block;
+			float: right;
+
+		} 
+		.goods-info span{
+			display: block;
+			float: left;
+			width:100%;
+		}
+		.goods-info span i{
+			display:inline-block;
+			font-style: normal;
+			color:deeppink;
+		}
+		.goods-info span a{
+			display:inline-block;
+			float:right;
+		}
+		.goods-info .num{
+			width:100%;
+		}
+		.btn{
+			width:0.6rem;
+			height: 0.4rem;
+			background: #a7a7a7;
+			border:0;
+			color:#fff;
+			border-radius: 5px;
+			font-size: 0.3rem;
+			font-weight: bold;
+		}
+		.nums{
+			width:0.7rem;
+			height: 0.45rem;
+			outline: hidden;
+			text-align: center;
+			border-radius: 5px;
+		}
+	</style>
+</head>
+<body>
+
+	<header class="reg-top">
+		<span></span>
+		<b>购物车</b>
+		<a>去结算</a>
+	</header>
+
+	<div class="gowrap">
+		<a>你的购物车空空~</a>
+		<span></span>
+		<p class="gocar">去逛逛</p>
+
+
+		<script type="text/javascript">
+			$('.gocar').on('click',function(){
+				window.location.href="zx-index.html"
+			})
+		</script>
+	</div>
+
+	<div class="carts">
+		<p class="info">
+			<span>商品数量：1</span>
+			应付总额(不含运费)：<a>￥199</a>
+		</p>
+		<dl class="goods-info">
+			<dt><img src="../images/car-img.jpg"></dt>
+			<dd>
+				<p class="gn">ESPRIT 气质V领玫红 T恤</p>
+				<a href="">删除</a>				
+				<span>单价：<i>￥199</i><a>L</a></span>
+				<p class="num">数量:
+					<input class="btn btn-" type="button" value="-">
+					<input class="nums"type="text" value="1">
+					<input class="btn btn+" type="button" value="+">
+				</p>
+			</dd>
+		</dl>
+
+
+	</div>
+
+
+
+	<footer class="footer"></footer>
+	<script type="text/javascript">
+		$('.footer').load('footer.html',function(){
+			$('.icon-cart').css('color','deeppink');
+		});
+	</script>
+	<script type="text/javascript">
+		var width=document.body.clientWidth;
+		//求出当前设备的宽
+		var html=document.getElementById('html');
+		html.style.fontSize=width/640*100+'px';
+		//rem通过设备宽改变rem值
+		console.log(width);
+		//窗口改变的时候求出宽
+		window.onresize=function(){
+			var width=document.body.clientWidth;
+			html.style.fontSize=width/640*100+'px';
+		}
+	</script>
+</body>
+</html>

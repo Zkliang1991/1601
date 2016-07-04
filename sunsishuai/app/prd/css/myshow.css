@@ -1,0 +1,532 @@
+@charset "UTF-8";
+html {
+  font-size: 62.5%;
+  font-family: "微软雅黑", "Microsoft yahei"; }
+
+body, h1, h2, h3, h4, h5, h6, blockquote, ol, ul, dl, dd, p, textarea, input, select, option, form {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #f5f4f0;
+  -webkit-tap-highlight-color: transparent; }
+
+ol, ul, textarea, input, option, th, td {
+  padding: 0; }
+
+.page {
+  min-width: 320px;
+  max-width: 750px;
+  margin: 0 auto; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-size: 100%; }
+
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+  display: block; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+ul, ol {
+  list-style-type: none; }
+
+.clearfix:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden; }
+
+/* ios默认文本框阴影 */
+input[type=text], textarea {
+  -webkit-appearance: none; }
+
+/* 低版本安卓文本框层级问题 */
+input:focus {
+  -webkit-user-modify: read-write-plaintext-only; }
+
+fieldset, img {
+  border: 0; }
+
+a {
+  text-decoration: none; }
+
+a, textarea, input {
+  outline: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+textarea {
+  overflow: auto;
+  resize: none; }
+
+@media only screen and (min-width: 320px) {
+  html {
+    font-size: 75% !important;
+    /* 12÷16=73.4% */ } }
+
+@media only screen and (min-width: 375px) {
+  html {
+    font-size: 87.89063% !important;
+    /* 14.0625÷16=73.2% */ } }
+
+@media only screen and (min-width: 414px) {
+  html {
+    font-size: 97.03% !important;
+    /* 15.525÷16=94% */ } }
+
+@media only screen and (min-width: 480px) {
+  html {
+    font-size: 112.5% !important;
+    /* 18÷16=94% */ } }
+
+@media only screen and (min-width: 560px) {
+  html {
+    font-size: 131.25% !important;
+    /* 21÷16=109% */ } }
+
+@media only screen and (min-width: 640px) {
+  html {
+    font-size: 150% !important;
+    /* 24÷16=125% */ } }
+
+@media only screen and (min-width: 720px) {
+  html {
+    font-size: 168.75% !important;
+    /* 27÷16=146.43% */ } }
+
+@media only screen and (min-width: 750px) {
+  html {
+    font-size: 175.78125% !important;
+    /* 28.125÷16=146.43% */ } }
+
+@media only screen and (min-width: 800px) {
+  html {
+    font-size: 187.5% !important;
+    /* 30÷16=146.43% */ } }
+
+@media only screen and (min-width: 960px) {
+  html {
+    font-size: 225% !important;
+    /* 36÷16=146.43% */ } }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: "Microsoft yahei"; }
+
+header, aside, section {
+  display: block; }
+
+header {
+  width: 100%;
+  height: 3.66667rem;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  background: #e4366b;
+  text-align: center;
+  line-height: 3.66667rem;
+  font-size: 1.66667rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  border-top: 1px solid #636363;
+  border-bottom: 1px solid #282828;
+  position: relative; }
+  header span {
+    position: absolute;
+    display: block;
+    width: 4.5rem;
+    height: 2.20833rem;
+    line-height: 2.20833rem;
+    font-size: 1rem;
+    -webkit-border-radius: 0.41667rem;
+    -moz-border-radius: 0.41667rem;
+    -ms-border-radius: 0.41667rem;
+    -o-border-radius: 0.41667rem;
+    border-radius: 0.41667rem;
+    right: 0.83333rem;
+    top: 0.83333rem;
+    background: #f65e87;
+    display: none; }
+  header span:nth-child(2) {
+    display: block; }
+  header a {
+    position: absolute;
+    left: 0.83333rem;
+    top: 0;
+    color: #6a0d28;
+    font-size: 2.5rem; }
+
+section {
+  height: 39.5rem; }
+  section #main {
+    height: 100%;
+    overflow: hidden; }
+    section #main li {
+      height: 100%; }
+    section #main .li-load {
+      display: block; }
+      section #main .li-load #name0, section #main .li-load #pass0 {
+        display: block;
+        margin: 2.5rem auto 0;
+        width: 23.33333rem;
+        height: 3.25rem;
+        -webkit-border-radius: 0.625rem;
+        -moz-border-radius: 0.625rem;
+        -ms-border-radius: 0.625rem;
+        -o-border-radius: 0.625rem;
+        border-radius: 0.625rem;
+        text-indent: 1.08333rem;
+        font-size: 1.33333rem;
+        line-height: 3.25rem;
+        font-weight: 700; }
+      section #main .li-load div {
+        margin: 1.75rem auto 0;
+        width: 21.66667rem;
+        height: 1.33333rem;
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 1.33333rem; }
+        section #main .li-load div input {
+          display: block;
+          width: 1.25rem;
+          height: 1.25rem;
+          float: left;
+          border: 1px solid #bbbbbb; }
+        section #main .li-load div span {
+          float: left;
+          color: #707070;
+          margin: 0 2rem 0 0.625rem; }
+        section #main .li-load div a {
+          float: left;
+          color: #9e9e9e;
+          text-decoration: underline; }
+      section #main .li-load p {
+        margin: 1.91667rem auto 0;
+        width: 23.33333rem;
+        height: 3.75rem;
+        -webkit-border-radius: 0.625rem;
+        -moz-border-radius: 0.625rem;
+        -ms-border-radius: 0.625rem;
+        -o-border-radius: 0.625rem;
+        border-radius: 0.625rem;
+        text-align: center;
+        font-size: 1.41667rem;
+        line-height: 3.75rem;
+        font-weight: 700;
+        color: #FFFFFF;
+        background: #e93c71; }
+      section #main .li-load #warn0 {
+        background: none;
+        color: #e93c71; }
+    section #main .li-register #name1, section #main .li-register #pass1, section #main .li-register #pass1-again {
+      display: block;
+      margin: 2.5rem auto 0;
+      width: 23.33333rem;
+      height: 3.25rem;
+      -webkit-border-radius: 0.625rem;
+      -moz-border-radius: 0.625rem;
+      -ms-border-radius: 0.625rem;
+      -o-border-radius: 0.625rem;
+      border-radius: 0.625rem;
+      text-indent: 1.08333rem;
+      font-size: 1.33333rem;
+      line-height: 3.25rem;
+      font-weight: 700; }
+    section #main .li-register p {
+      display: block;
+      border: 0;
+      margin: 3.125rem auto 0;
+      width: 23.33333rem;
+      height: 3.75rem;
+      -webkit-border-radius: 0.625rem;
+      -moz-border-radius: 0.625rem;
+      -ms-border-radius: 0.625rem;
+      -o-border-radius: 0.625rem;
+      border-radius: 0.625rem;
+      text-align: center;
+      font-size: 1.41667rem;
+      line-height: 3.75rem;
+      font-weight: 700;
+      color: #FFFFFF;
+      background: #e93c71; }
+    section #main .li-register #warn {
+      background: none;
+      color: #e93c71; }
+    section #main .li-user .user {
+      height: 12.91667rem;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      -o-box-sizing: border-box;
+      padding-top: 2.58333rem; }
+      section #main .li-user .user dl {
+        margin-left: 1.45833rem;
+        height: 6.875rem; }
+        section #main .li-user .user dl dt {
+          width: 6.83333rem;
+          height: 6.875rem;
+          float: left;
+          margin-right: 1.375rem; }
+          section #main .li-user .user dl dt img {
+            display: block;
+            width: 100%;
+            height: 100%; }
+        section #main .li-user .user dl dd {
+          height: 6.875rem;
+          float: left; }
+          section #main .li-user .user dl dd p {
+            height: 4.33333rem;
+            line-height: 4.16667rem;
+            font-size: 1.41667rem;
+            color: #242424; }
+            section #main .li-user .user dl dd p b {
+              font-weight: 500; }
+          section #main .li-user .user dl dd span {
+            display: block;
+            width: 4.5rem;
+            height: 2.20833rem;
+            background: #ec4175;
+            -webkit-border-radius: 0.41667rem;
+            -moz-border-radius: 0.41667rem;
+            -ms-border-radius: 0.41667rem;
+            -o-border-radius: 0.41667rem;
+            border-radius: 0.41667rem;
+            margin-right: 1.83333rem;
+            text-align: center;
+            line-height: 2.20833rem;
+            color: #FFFFFF;
+            font-size: 0.91667rem;
+            float: left; }
+    section #main .li-user .user-info {
+      width: 23.29167rem;
+      height: 15.125rem;
+      border: 1px solid #dedede;
+      -webkit-border-radius: 0.625rem;
+      -moz-border-radius: 0.625rem;
+      -ms-border-radius: 0.625rem;
+      -o-border-radius: 0.625rem;
+      border-radius: 0.625rem;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+      -o-box-sizing: border-box;
+      margin-left: 1.33333rem; }
+      section #main .li-user .user-info li {
+        height: 3.75rem;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        border-bottom: 0.04167rem solid #dedede;
+        padding: 0 1.16667rem;
+        font-size: 1.5rem;
+        line-height: 3.70833rem; }
+        section #main .li-user .user-info li span:nth-child(1) {
+          float: left; }
+        section #main .li-user .user-info li span:nth-child(2) {
+          float: right; }
+      section #main .li-user .user-info li:last-child {
+        border: 0; }
+    section #main .coupon {
+      overflow: hidden; }
+      section #main .coupon .coupon-tit {
+        width: 22.08333rem;
+        height: 2.66667rem;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -webkit-border-radius: 0.41667rem;
+        -moz-border-radius: 0.41667rem;
+        -ms-border-radius: 0.41667rem;
+        -o-border-radius: 0.41667rem;
+        border-radius: 0.41667rem;
+        margin: 1.29167rem auto 1.08333rem; }
+        section #main .coupon .coupon-tit li {
+          display: block;
+          float: left;
+          width: 5.33333rem;
+          height: 2.58333rem;
+          text-align: center;
+          line-height: 2.58333rem;
+          font-size: 1.25rem;
+          color: #454545;
+          border: 1px solid #a8a8a8;
+          background-image: -webkit-linear-gradient(top, #f8f8f8, #c5c5c5); }
+        section #main .coupon .coupon-tit .active {
+          background-image: -webkit-linear-gradient(top, #f45985, #d81250);
+          color: #FFFFFF; }
+      section #main .coupon .coupon-txt {
+        width: 22.08333rem;
+        height: 6rem;
+        -webkit-border-radius: 0.41667rem;
+        -moz-border-radius: 0.41667rem;
+        -ms-border-radius: 0.41667rem;
+        -o-border-radius: 0.41667rem;
+        border-radius: 0.41667rem;
+        margin: 0 auto;
+        border: 1px solid #a8a8a8;
+        overflow: hidden; }
+        section #main .coupon .coupon-txt li {
+          box-sizing: border-box;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          -ms-box-sizing: border-box;
+          -o-box-sizing: border-box;
+          padding-top: 0.20833rem;
+          padding-left: 0.625rem;
+          line-height: 1.45833rem;
+          display: none; }
+          section #main .coupon .coupon-txt li p {
+            font-size: 0.91667rem;
+            color: #454545; }
+            section #main .coupon .coupon-txt li p span {
+              color: #8a8a8a; }
+        section #main .coupon .coupon-txt .active {
+          display: block; }
+    section #main .order-form ul {
+      height: 100%; }
+      section #main .order-form ul li {
+        display: block;
+        height: 9.20833rem;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        border-bottom: 1px solid #aaaaaa;
+        padding: 0.83333rem 1.25rem 1.08333rem 1.41667rem;
+        color: #FFFFFF; }
+        section #main .order-form ul li dl dt {
+          float: left;
+          width: 7.16667rem;
+          height: 7.16667rem;
+          border: 1px solid #c8c8c8; }
+          section #main .order-form ul li dl dt img {
+            width: 100%;
+            height: 100%; }
+        section #main .order-form ul li dl dd {
+          float: right;
+          width: 16rem;
+          height: 7.25rem;
+          box-sizing: border-box;
+          -webkit-box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          -ms-box-sizing: border-box;
+          -o-box-sizing: border-box;
+          padding-top: 0.29167rem; }
+          section #main .order-form ul li dl dd .intro-txt, section #main .order-form ul li dl dd .intro-class {
+            height: 1.75rem;
+            font-size: 1.08333rem;
+            color: #000000;
+            line-height: 1.66667rem; }
+            section #main .order-form ul li dl dd .intro-txt .intro-txt, section #main .order-form ul li dl dd .intro-class .intro-txt {
+              display: block;
+              float: left;
+              width: 14.58333rem; }
+            section #main .order-form ul li dl dd .intro-txt .size, section #main .order-form ul li dl dd .intro-class .size {
+              display: block; }
+          section #main .order-form ul li dl dd div {
+            height: 1.83333rem;
+            font-size: 1.08333rem;
+            color: #000000;
+            line-height: 1.83333rem; }
+            section #main .order-form ul li dl dd div span, section #main .order-form ul li dl dd div input {
+              float: left; }
+            section #main .order-form ul li dl dd div span:nth-child(1) {
+              margin-right: 0.41667rem; }
+            section #main .order-form ul li dl dd div .one-price {
+              color: #e43669; }
+            section #main .order-form ul li dl dd div .coun {
+              display: inline-block;
+              width: 3.125rem;
+              height: 1.83333rem;
+              -webkit-border-radius: 0.33333rem;
+              -moz-border-radius: 0.33333rem;
+              -ms-border-radius: 0.33333rem;
+              -o-border-radius: 0.33333rem;
+              border-radius: 0.33333rem;
+              margin: 0 0.625rem;
+              text-align: center;
+              font-size: 1rem;
+              font-weight: 800; }
+            section #main .order-form ul li dl dd div .cancle {
+              display: block;
+              float: right;
+              width: 5.75rem;
+              height: 2.25rem;
+              text-align: center;
+              line-height: 2.25rem;
+              color: #FFFFFF;
+              font-size: 1rem;
+              -webkit-border-radius: 0.41667rem;
+              -moz-border-radius: 0.41667rem;
+              -ms-border-radius: 0.41667rem;
+              -o-border-radius: 0.41667rem;
+              border-radius: 0.41667rem;
+              background-image: -webkit-linear-gradient(top, #f7608b, #c50f48);
+              margin: -0.625rem 0.41667rem 0 0; }
+    section #main .scanle .discount {
+      font-size: 0.83333rem; }
+    section #main .scanle .count {
+      font-size: 0.83333rem;
+      margin-left: 0.41667rem;
+      color: #bcbcbc;
+      text-decoration: line-through; }
+    section #main .collect .discount {
+      font-size: 0.83333rem; }
+    section #main .collect .count {
+      font-size: 0.83333rem;
+      margin-left: 0.41667rem;
+      color: #bcbcbc;
+      text-decoration: line-through; }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4.04167rem;
+  border-top: 1px solid #282828;
+  background: #484850; }
+  footer ul {
+    height: 3.75rem;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-around; }
+    footer ul li {
+      color: #FFFFFF;
+      height: 100%; }
+      footer ul li p {
+        height: 2.08333rem; }
+      footer ul li b {
+        display: block;
+        font-size: 1rem;
+        height: 1.66667rem;
+        line-height: 1.66667rem; }
+    footer ul .active {
+      color: #e6356b; }

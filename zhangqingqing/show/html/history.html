@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+	<title>浏览记录</title>
+	<link rel="stylesheet" type="text/css" href="../css/history.css">
+</head>
+<body>
+	<header>
+		<a href="javascript:history.go(-1);"></a>
+		<p>浏览记录</p>
+	</header><!-- /header -->
+	<ul>
+		<li>
+			<dl>
+				<dt><img src=""></dt>
+				<dd>
+					<span></span>
+					<span></span>
+					<span>单价：</span><a href="#"></a>
+					<span>折扣</span>
+					
+				</dd>
+			</dl>
+		</li>
+	</ul>
+	<footer id="footer"></footer>
+	<script type="text/javascript" src="../js/history.js"></script>
+	<script type="text/javascript">
+		$("#footer").load("footer.html",function(){
+			$('#footer ul li').eq(3).addClass('active');
+		});
+	</script>
+</body>
+</html>

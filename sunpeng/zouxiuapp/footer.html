@@ -1,0 +1,80 @@
+
+		<link rel="stylesheet" type="text/css" href="prd/css/footer.css"/>
+		<script src="prd/js/common.js" type="text/javascript" charset="utf-8"></script>
+
+		<footer class="iconfont">
+			<li id="home">
+				<span>&#xe627;</span>
+				<span>首页</span>
+			</li>
+			<li id="fenl">
+				<span>&#xe607;</span>
+				<span>分类</span>
+			</li>
+			<li id="cart">
+				<span>&#xe611;</span>
+				<span>购物车</span>
+			</li>
+			<li id="person">
+				<span>&#xe621;</span>
+				<span>我的秀</span>
+			</li>
+			<li id="more">
+				<span>&#xe669;</span>
+				<span>更多</span>
+			</li>
+		</footer>
+		
+		<script type="text/javascript">
+//			$('#home').on('tap',function(){
+//				window.location.href = 'zouxiu-index.html';
+//			})
+//			$('#fenl').on('tap',function(){
+//				window.location.href = 'fenl.html';
+//			
+//			})
+//			$('#cart').on('tap',function(){
+//				window.location.href = 'cart.html';
+//			
+//			})
+//			$('#person').on('tap',function(){
+//				window.location.href = 'person.html';
+//			
+//			})
+//			$('#more').on('tap',function(){
+//				window.location.href = 'more.html';
+//			
+//			})
+			
+//			$('footer li').on('tap',function(){
+//				$(this).removeClass().addClass('active');
+//			})
+//			console.log($('footer li'));
+			$('footer li').on('touchstart',function(){
+				$(this).addClass('active').siblings().removeClass('active');
+				var index=$(this).index();//取出对应的点击的li标签的下标
+//				console.log(index);
+				getTypeByLocal(index);
+			})
+			//每次一点击tap 到新页面的时候，就把 对应的url中 .html前面的值存到localStorage来，
+			function getTypeByLocal(index){
+				var reg = /^htmlType_/;
+				for(var i=0;i<localStorage.length;i++){
+					var key = localStorage.key(i);
+					if(reg.test(key)){
+						var oIndex = key.split('_')[1];
+						//取出对应key的htmlType_n里面n的值，
+						if(oIndex==index){   
+							//然后就跳转到点击的li下标的htmlType的值得页面
+							var myHtml = localStorage.getItem(key);
+							window.location.href=myHtml+'.html';
+						}
+					}
+				}
+			}
+			
+			
+			
+			
+		</script>
+
