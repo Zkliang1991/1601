@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>index</title>
+	<link rel="stylesheet" href="../css/myself.css">
+</head>
+<body>
+
+	<header class="iconfont">
+			<a href="#">۞</a>
+			<span>个人中心</span>
+	</header>
+	<div class="deng">
+		<img src="" alt="">
+		<span>点击登录</span>
+	</div>
+	<ul class="list">
+		<li>我的订单</li>
+		<li>送送币</li>
+		<li>送送劵</li>
+		<li class="last">送送分</li>
+	</ul>
+
+	<div class="ke">
+		<a href="#">☞</a>
+		<span>客服中心</span>
+	</div>
+	<footer class="footer">
+		<ul class="iconfont">
+			<li class="index">
+				<i>
+					&#xe601;
+				</i>
+				<span>首页</span>
+			</li>
+			<li class="type">
+				<i>
+					&#xe60d;
+				</i>
+				<span>活动</span>
+			</li>
+			<li class="buycar">
+				<i>
+					&#xe6ef;
+				</i>
+				<span>订单</span>
+			</li>
+			<li class="myshow">
+				<i>
+				   &#xe605;
+				</i>
+				<span>消息</span>
+			</li>
+		</ul>
+	</footer>
+</body>
+<script>
+	var width = document.documentElement.clientWidth;
+		var html = document.getElementById("html");
+		html.style.fontSize = width/640*100 + 'px';
+		console.log(width);
+		window.onresize = function() {
+			// 随着窗口的改变求设备的宽度
+			var width = document.body.clientWidth;
+			html.style.fontSize = width/640*100 + 'px';
+		}
+</script>
+</html>
