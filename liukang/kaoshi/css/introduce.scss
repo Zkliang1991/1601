@@ -1,0 +1,125 @@
+@import 'mobile';
+@charset "UTF-8";
+body{
+	background:#f7f7f7;
+	
+}
+header{
+	width:100%;
+	height:pxToRem(86);
+	background:#e4366b;
+	text-align:center;
+	box-sizing:border-box;
+	border-bottom:1px solid #636363;
+	border-top:1px solid #282828;
+	font-size:pxToRem(40);
+	color:#fff;
+	line-height:pxToRem(86);
+	position: relative;
+	.fenxiang{
+		width: pxToRem(112);
+		height: pxToRem(56);
+		background:#e93d6f;
+		position:absolute;
+		top:pxToRem(15);
+		right: pxToRem(18);
+		border-radius:pxToRem(15);
+		background:url(../images/car-bg.jpg) 0 0 repeat-x;
+		background-size:pxToRem(4) pxToRem(56);
+		font-size: pxToRem(25);
+		line-height: pxToRem(56);
+		text-align: center;
+
+	}
+	a{
+		display: block;
+		width: pxToRem(54);
+		height: pxToRem(36);
+		background:url(../images/jiantou.jpg) no-repeat 0 0;
+		background-size:pxToRem(54) pxToRem(36);
+		position:absolute;
+		left:pxToRem(18);
+		top:pxToRem(28);
+	}
+}
+
+
+
+
+	
+.slide1{
+	width: 100%;
+	.time{
+		width: 100%;
+		height: pxToRem(88);
+		background:#333;
+		line-height: pxToRem(88);
+		font-size: pxToRem(30);
+		text-indent: pxToRem(22);
+		color: #fff;
+		font-family: '微软雅黑';
+
+	}
+	.content1{
+		width: 100%;
+		.photo1{
+			width: pxToRem(440);
+			height: pxToRem(368);
+			margin:pxToRem(28) pxToRem(100) pxToRem(48);
+			border:1px solid #ccc;
+			img{
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.tit{
+			width: pxToRem(504);
+			height: pxToRem(83);
+			background:url(../images/tit-bg.jpg) 0 0 no-repeat;
+			background-size:100% 100%;
+			text-indent: pxToRem(80);
+			margin-bottom:pxToRem(30);
+			margin-left: pxToRem(42);
+			line-height: pxToRem(83);
+			color: #fff;
+			font-size: pxToRem(34);
+			span{
+				margin-right: pxToRem(30);
+			}
+		}
+		p{
+			width: 100%;
+			padding: 0 pxToRem(96) 0 pxToRem(62);
+			box-sizing:border-box;
+			font-size: pxToRem(23);
+			span:nth-child(2){
+				margin: 0 pxToRem(114) 0 pxToRem(32);
+			}
+		}
+	}
+
+
+	
+}
+
+footer{
+	width:100%;
+	height:pxToRem(98);
+	position:absolute;
+	bottom:0;
+	left:0;
+	background: #626167;
+	li{
+		float: left;
+		width: pxToRem(213);
+		height: 100%;
+		font-family: '微软雅黑';
+		font-size: pxToRem(40);
+		line-height: pxToRem(98);
+		text-align: center;
+		color:#fff;
+		
+	}
+	
+}

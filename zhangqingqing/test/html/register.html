@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+	<link rel="stylesheet" type="text/css" href="../css/register/register.css">
+	<title>注册</title>
+</head>
+<body>
+	<header>
+		<a href="javascript:history.go(-1);"></a>
+		<h1>注册</h1>
+	</header>
+	<section>
+		<div>
+			<p>
+				<input type="text" name="" class="tel" placeholder="手机号码">
+			</p>
+			<p>
+				<input type="text" name="" class="chk" placeholder="验证码">
+				<a href="#" class="send">发送验证码</a>
+			</p>
+			<p>
+				<input type="text" name="" class="pwd" placeholder="密码">
+			</p>
+			<p>
+				<input type="text" name="" class="chkpwd" placeholder="确认密码">
+			</p>
+		</div>
+	</section>
+	<a class="register" href="#">注册</a>
+	<p class="argee">
+		<input type="checkbox" checked="checked" name="">
+		<span>我已阅读并同意</span>
+		<a href="#">使用条款和隐私协议</a>
+	</p>
+	<script type="text/javascript">
+		var width=document.body.clientWidth;
+		var html=document.getElementById('html');
+		html.style.fontSize=width/640*100+'px';
+		
+		window.onresize=function(){
+			var width=document.body.clientWidth;
+			var html=document.getElementById('html');
+			html.style.fontSize=width/640*100+'px';
+		}
+</script>
+</body>
+</html>

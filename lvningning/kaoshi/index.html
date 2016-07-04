@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+	<meta charset="UTF-8">
+	<title>首页</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<script src="js/zepto.js"></script>
+
+</head>
+<body>
+	<header>
+		<i>关于</i>
+		<p>昆山市<b></b></p>
+		<span></span>
+	</header>
+	
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide slide1" >slide1</div>
+			<div class="swiper-slide slide2" >slide2</div>
+			<div class="swiper-slide slide3" >slide3</div>
+			<div class="swiper-slide slide4" >slide4</div>
+		</div>
+	</div>
+	<div class="list">
+		<dl>
+			<dt><img src="img/list1.png" alt=""></dt>
+			<dd>外卖点餐</dd>
+		</dl>
+		<dl>
+			<dt><img src="img/list1.png" alt=""></dt>
+			<dd>外卖点餐</dd>
+		</dl>
+		<dl>
+			<dt><img src="img/list1.png" alt=""></dt>
+			<dd>外卖点餐</dd>
+		</dl>
+		<dl>
+			<dt><img src="img/list1.png" alt=""></dt>
+			<dd>外卖点餐</dd>
+		</dl>
+		<dl>
+			<dt><img src="img/list1.png" alt=""></dt>
+			<dd>外卖点餐</dd>
+		</dl>
+		<dl>
+			<dt><img src="img/list1.png" alt=""></dt>
+			<dd>外卖点餐</dd>
+		</dl>
+		<dl>
+			<dt><img src="img/list1.png" alt=""></dt>
+			<dd>外卖点餐</dd>
+		</dl>
+		<dl>
+			<dt><img src="img/list1.png" alt=""></dt>
+			<dd>外卖点餐</dd>
+		</dl>
+	</div>
+	<h2>热门活动</h2>
+	<ul class="hot">
+		<li>送送分活动</li>
+		<li>送送分活动</li>
+		<li>送送分活动</li>
+		<li>送送分活动</li>
+		<li>送送分活动</li>
+		<li>送送分活动</li>
+	</ul>
+	<h2 class="tit2">推荐商家</h2>
+	<ul class="list2">
+		<li><img src="img/food.png" alt=""></li>
+		<li><img src="img/food.png" alt=""></li>
+		<li><img src="img/food.png" alt=""></li>
+		<li><img src="img/food.png" alt=""></li>
+		<li><img src="img/food.png" alt=""></li>
+		<li><img src="img/food.png" alt=""></li>
+		<li><img src="img/food.png" alt=""></li>
+		<li><img src="img/food.png" alt=""></li>
+		<li><img src="img/food.png" alt=""></li>
+	</ul>
+
+</body>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/index.js"></script>
+<script>
+	var html = document.getElementById('html');
+	var width = document.documentElement.clientWidth;
+	var height = document.documentElement.clientHeight;
+	html.style.fontSize = width/640*100+'px';
+	window.onresize=function(){
+		var html=document.getElementById('html');
+		var width = document.documentElement.clientWidth;
+		html.style.fontSize = width/640*100+'px';
+	}	
+
+
+</script>
+</html>

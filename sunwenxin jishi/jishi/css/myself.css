@@ -1,0 +1,111 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+body {
+  background: #f6f5f5; }
+
+header {
+  height: 0.9rem;
+  width: 100%;
+  background: #dc0a4b;
+  display: flex; }
+  header a {
+    line-height: 0.9rem;
+    display: block;
+    padding-left: 0.22rem;
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.4rem; }
+  header span {
+    display: block;
+    color: #fff;
+    font-size: 0.28rem;
+    line-height: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 0.06rem;
+    padding-left: 1.9rem; }
+
+.deng {
+  width: 100%;
+  height: 1.46rem;
+  display: flex; }
+  .deng img {
+    display: block;
+    width: 0.9rem;
+    height: 0.9rem;
+    border-radius: 1rem;
+    background: #fff;
+    margin: 0.22rem 0 0 0.62rem; }
+  .deng span {
+    font-size: 0.24rem;
+    letter-spacing: 0.1rem;
+    padding: 0.56rem 0 0 0.12rem; }
+
+.list {
+  width: 100%;
+  height: 0.86rem;
+  background: #fff;
+  display: flex;
+  list-style: none;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  margin-bottom: 0.26rem; }
+  .list li {
+    width: 1.6rem;
+    border-right: 1px solid #ccc;
+    font-size: 0.24rem;
+    line-height: 0.86rem;
+    text-align: center; }
+  .list .last {
+    border: 0; }
+
+.ke {
+  width: 100%;
+  height: 0.6rem;
+  background: #fff;
+  display: flex; }
+  .ke a {
+    display: block;
+    text-decoration: none;
+    font-size: 0.5rem;
+    margin: 0 0 0  0.38rem; }
+  .ke span {
+    font-size: 0.2rem;
+    line-height: 0.6rem;
+    margin-left: 0.16rem; }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.9rem;
+  background: #fff;
+  color: #ccc;
+  border-top: 1px solid #ccc; }
+  .footer .iconfont {
+    width: 100%;
+    height: 0.9rem; }
+    .footer .iconfont li {
+      width: 1.6rem;
+      height: 0.9rem;
+      float: left;
+      list-style: none;
+      color: #ccc; }
+      .footer .iconfont li i {
+        display: block;
+        height: 0.6rem;
+        text-align: center;
+        font-size: 0.4rem;
+        font-style: normal;
+        line-height: 0.6rem;
+        text-decoration: none; }
+      .footer .iconfont li span {
+        display: block;
+        text-align: center;
+        padding-bottom: 0;
+        font-size: 0.22rem;
+        font-weight: 900; }
+
+/*# sourceMappingURL=myself.css.map */

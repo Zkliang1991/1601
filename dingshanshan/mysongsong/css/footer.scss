@@ -1,0 +1,74 @@
+@charset "UTF-8";
+$font_family:'微软雅黑';
+@function pxToRem($px, $base: 24) {
+  @return ($px / $base) * 1rem;
+}
+
+
+*{
+	padding:0;
+	margin:0;
+}
+
+
+
+footer{
+	width:100%;
+	height:pxToRem(96);
+	background:#e4366b;
+	border-top:1px solid #636363;
+	background:#484850;
+	position:fixed;
+	bottom:0;
+	z-index:999;
+	ul{
+		list-style: none;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		li{
+			width:20%;
+			height:pxToRem(96);
+			position:relative;
+			color:#fff;
+			p{
+				width:100%;
+				height:pxToRem(5);
+				background:#e4366b;
+				display: none;
+				position: absolute;
+				left:0;
+				top:0;
+				z-index:999;
+			}
+			.icon{
+				display: block;
+				width:100%;
+				height:pxToRem(56);
+				text-align: center;
+				line-height:pxToRem(56); 
+				// color:#fff;
+				font-size: pxToRem(40);
+				font-family: $font_family;
+			}
+			.txt{
+				display: block;
+				width:100%;
+				height:pxToRem(37);
+				text-align: center;
+				line-height:pxToRem(37); 
+				// color:#fff;
+				font-size: pxToRem(24);
+				font-family: $font_family;
+			}
+		}
+		.active{
+			color: #e4366b;
+		}
+		// li:nth-of-type(1){
+		// 	p{
+		// 		display: block;
+		// 	}
+		// }
+	}	
+}

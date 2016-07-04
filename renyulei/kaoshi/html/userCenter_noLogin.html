@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+	<meta charset="UTF-8">
+	<title>注册</title>
+	<meta name="viewport" content="width=divce-width,initial-scale=1,user-scalable=no,minimum-scale=1,maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="../css/userCenter_noLogin.css">
+</head>
+<body>
+	<header>
+		<em></em>
+		个人中心
+	</header>
+	<div class="content">
+		<div class="dianji">
+			<div class="pic"></div>
+			<div class="txt">点击登录</div>
+		</div>
+		<ul class="list">
+			<li><a href="">我的订单</a></li>
+			<li><a href="">送送币</a></li>
+			<li><a href="">送送券</a></li>
+			<li><a href="">送送分</a></li>
+		</ul>
+		<div class="kefu">
+			<div class="phone"></div>
+			<div class="text">客服中心</div>
+		</div>
+	</div>
+</body>
+
+	<script type="text/javascript">
+		var html=document.getElementById('html');
+		var width=document.documentElement.clientWidth;
+		html.style.fontSize=width/640*100+'px';
+		window.onresize=function(){
+			var width=document.documentElement.clientWidth;
+			html.style.fontSize=width/640*100+'px';
+		}
+	</script>
+</html>

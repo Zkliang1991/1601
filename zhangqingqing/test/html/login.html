@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html id="html">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<title>登录</title>
+	<link rel="stylesheet" type="text/css" href="../css/login.css">
+</head>
+<body>
+	<header><img src="../img/login-1.png"><span>送送登录</span><a href="javascript:;" id="reg">注册</a></header>
+	<section>
+		<ul>
+			<li><img src="../img/login-2.png"><input type="text" name="" placeholder="手机号码"></li>
+			<li><img src="../img/login-3.png"><input type="text" name="" placeholder="输入密码"></li>
+			<li id="login-index">登录</li>
+			<li>忘记密码</li>
+		</ul>
+		<p>借用条款和隐私协议</p>
+	</section>
+	<script type="text/javascript">
+        var width=document.body.clientWidth;
+        var html=document.getElementById('html');
+        html.style.fontSize=width/520*100+'px';
+        
+        window.onresize=function(){
+            var width=document.body.clientWidth;
+            var html=document.getElementById('html');
+            html.style.fontSize=width/640*100+'px';
+        };
+        
+    </script>
+	<script type="text/javascript" src="../js/sea.js"></script>
+    <script type="text/javascript">
+         seajs.use('login',function(app){
+            app.init()
+          })
+    </script>
+</body>
+</html>

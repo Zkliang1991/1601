@@ -1,0 +1,225 @@
+@import 'mobile';
+@import '../images/ux/iconfont.css';
+@charset "UTF-8";
+body{
+	background:#f7f7f7;
+}
+header{
+	width:100%;
+	height:pxToRem(86);
+	background:#e4366b;
+	text-align:center;
+	box-sizing:border-box;
+	border-bottom:1px solid #636363;
+	border-top:1px solid #282828;
+	font-size:pxToRem(40);
+	color:#fff;
+	line-height:pxToRem(86);
+	position: relative;
+	position:fixed;
+	.jiesuang{
+		width: pxToRem(112);
+		height: pxToRem(56);
+		background:#e93d6f;
+		position:absolute;
+		top:pxToRem(15);
+		right: pxToRem(18);
+		border-radius:pxToRem(15);
+		background:url(../images/car-bg.jpg) 0 0 repeat-x;
+		background-size:pxToRem(4) pxToRem(56);
+		font-size: pxToRem(25);
+		line-height: pxToRem(56);
+		text-align: center;
+
+	}
+	a{
+		display: block;
+		width: pxToRem(54);
+		height: pxToRem(36);
+		background:url(../images/jiantou.jpg) no-repeat 0 0;
+		background-size:pxToRem(54) pxToRem(36);
+		position:absolute;
+		left:pxToRem(18);
+		top:pxToRem(28);
+	}
+}
+.gobuy{
+	width:pxToRem(421);
+	height:pxToRem(485);
+	margin:pxToRem(62) pxToRem(111) 0 pxToRem(108);
+	background:url(../images/buycar-bg.jpg) no-repeat 0 0;
+	background-size:100% 100%;
+	position:relative;
+	// display:none;
+	.go{
+		width: 100%;
+		height: pxToRem(93);
+		background:#f14f7e;
+		position:absolute;
+		bottom:0;
+		left:0;
+		font-size: pxToRem(48);
+		font-family: '微软雅黑';
+		line-height: pxToRem(93);
+		text-align: center;
+		color: #fff;
+
+	}
+}
+.info{
+	position:fixed;
+	top:pxToRem(86);
+	display:none;
+	width:100%;
+	height:pxToRem(90);
+	background:#333333;
+	padding:pxToRem(30) 0 0 pxToRem(26);
+	box-sizing:border-box;
+	.num{
+		width: pxToRem(220);
+		height: 100%;
+		color: #fff;
+		font-size: pxToRem(28);
+		font-family: '微软雅黑';
+		float: left;
+
+	}
+	.total{
+		float: left;
+		color: #fff;
+		font-size: pxToRem(28);
+		font-family: '微软雅黑';
+		span{
+			color: #e7366c;
+		}
+	}
+
+}
+
+.content{
+	width:100%;
+	position:absolute;
+	top:pxToRem(176);
+	z-index:-4;
+	li{
+		width: 100%;
+		height: pxToRem(228);
+		background:#fff;
+		border-bottom:1px solid #cbcbcb;
+		padding:pxToRem(26) pxToRem(22) 0 pxToRem(32);
+		box-sizing:border-box;
+		dt{
+			width: pxToRem(200);
+			height: 100%;
+			float: left;
+			img{
+				display: block;
+				width: pxToRem(175);
+				height: pxToRem(175);
+			}
+		}
+		dd{
+			float: left;
+			width: pxToRem(380);
+			height: 100%;
+			.title{
+				width:100%;
+				padding-right:pxToRem(60);
+				box-sizing:border-box;
+				height:pxToRem(87);
+				font-size: pxToRem(24);
+				font-family: '微软雅黑';
+				color: #333333;
+				line-height: pxToRem(30);
+				letter-spacing: pxToRem(2);
+				position:relative;
+				em{
+					display:block;
+					width: pxToRem(30);
+					height: pxToRem(40);
+					position:absolute;
+					right: 0;
+					top:pxToRem(5);
+					background:url(../images/shanchu.jpg) 0 0 no-repeat;
+					background-size:100% 100%;
+				}
+			}
+			.price{
+				padding-right:pxToRem(111);
+				box-sizing:border-box;
+				height:pxToRem(40);
+				font-size: pxToRem(30);
+				font-family: '微软雅黑';
+				color: #333333;
+				line-height: pxToRem(40);
+				position:relative;
+				span{
+					color: #e7366c;
+				}
+				em{
+					display: block;
+					width: pxToRem(14);
+					height: pxToRem(24);
+					position:absolute;
+					right: pxToRem(10);
+					top: 0;
+					background:url(../images/shoucang.jpg) 0 0 no-repeat;
+					background-size:100% 100%;
+				}
+
+			}
+			.count{
+				width: 100%;
+				height: pxToRem(44);
+				p:nth-child(1){
+					width: pxToRem(88);
+					height: 100%;
+					float: left;
+					line-height: pxToRem(44);
+					font-family: '微软雅黑';
+					color: #333333;
+					font-size: pxToRem(28);
+					line-height: pxToRem(40);
+				}
+				p:nth-child(2){
+					width: pxToRem(290);
+					height: pxToRem(44);
+					box-sizing:border-box;
+					padding-left:pxToRem(10);
+					float: left;
+					span{
+						width: pxToRem(57);
+						height: pxToRem(44);
+						background: #909090;	
+						float: left;
+						border-radius:pxToRem(10);
+						color:#fff;
+						font-size: pxToRem(38);
+						line-height: pxToRem(40);
+						text-align: center;
+					}
+					input{
+						width: pxToRem(77);
+						height: pxToRem(44);
+						border:0;
+						float: left;
+						box-shadow: pxToRem(1) pxToRem(1) pxToRem(5) inset;
+						margin:0 pxToRem(15);
+						border-radius:pxToRem(10);
+						font-size:pxToRem(26);
+						line-height: pxToRem(44);
+						text-align: center;
+						color: #333333;
+
+
+					}
+
+				}
+				
+			}
+
+		}
+
+	}
+
+}

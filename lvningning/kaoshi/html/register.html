@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+	<meta charset="UTF-8">
+	<title>松松登录</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<link rel="stylesheet" href="../css/register.css">
+	<script src="../js/zepto.js"></script>
+</head>
+<body>
+	<header id="header11"></header>
+	<script>
+		$("#header11").load("header.html");
+	</script>
+
+	<div class="main">
+		<p>
+			<span></span>
+			<input class="phone" type="text" placeholder="手机号码">
+		</p>
+		<p>
+			<span></span>
+			<input class="pass" type="text" placeholder="输入密码">
+		</p>
+		<a href="javascript:;">登录</a>
+		<b>忘记密码？</b>
+	</div>
+
+
+
+
+	
+</body>
+<script>
+		var html = document.getElementById('html');
+		var width = document.documentElement.clientWidth;
+		var height = document.documentElement.clientHeight;
+		html.style.fontSize = width/640*100+'px';
+		window.onresize=function(){
+			var html=document.getElementById('html');
+			var width = document.documentElement.clientWidth;
+			html.style.fontSize = width/640*100+'px';
+		}	
+
+
+	</script>
+
+
+
+</html>

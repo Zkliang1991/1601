@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+	<meta charset="UTF-8">
+	<title>注册</title>
+	<meta name="viewport" content="width=divce-width,initial-scale=1,user-scalable=no,minimum-scale=1,maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="../css/regsiter.css">
+</head>
+<body>
+	<header>
+		<em></em>
+		注册
+		<span>登录</span>
+	</header>
+	<div class="content">
+		<div class="sit">
+			<input type="text" name="" value="手机号码">
+			<input type="text" name="" value="验证码">
+			<input type="text" name="" value="密码">
+			<input type="text" name="" value="确认密码">
+		</div>
+		<div class="regsiter">注册</div>
+		<div class="txt">
+			<input type="checkbox" name="">
+			<p>使用条款和隐私协议<span>使用条款和隐私协议</span></p>
+		</div>
+	</div>
+</body>
+
+	<script type="text/javascript">
+		var html=document.getElementById('html');
+		var width=document.documentElement.clientWidth;
+		html.style.fontSize=width/640*100+'px';
+		window.onresize=function(){
+			var width=document.documentElement.clientWidth;
+			html.style.fontSize=width/640*100+'px';
+		}
+	</script>
+</html>
