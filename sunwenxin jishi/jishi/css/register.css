@@ -1,0 +1,73 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+body {
+  background: #f6f5f5; }
+
+header {
+  height: 0.9rem;
+  width: 100%;
+  background: #dc0a4b;
+  position: relative;
+  display: flex;
+  margin-bottom: 0.32rem; }
+  header a {
+    line-height: 0.9rem;
+    display: block;
+    padding-left: 0.22rem;
+    text-decoration: none;
+    color: #fff; }
+  header span {
+    display: block;
+    color: #fff;
+    font-size: 0.28rem;
+    line-height: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 0.06rem;
+    padding-left: 2.2rem; }
+
+.zu {
+  height: 2.3rem;
+  width: 6rem;
+  background: #fff;
+  margin-left: 0.18rem;
+  border-radius: 0.1rem; }
+  .zu input {
+    display: block;
+    width: 5.7rem;
+    height: 0.56rem;
+    border: 0;
+    padding-left: 0.3rem;
+    border-bottom: 1px solid #eee; }
+
+.zhuxce {
+  height: 0.6rem;
+  width: 6rem;
+  background: #00a0e9;
+  border: 0;
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+  color: #fff;
+  letter-spacing: 0.32rem;
+  border-radius: 0.1rem;
+  margin-left: 0.18rem; }
+
+p {
+  margin: 0.2rem 0 0  0.18rem;
+  display: flex; }
+  p input {
+    display: block; }
+  p a {
+    display: block;
+    font-size: 0.2rem;
+    text-decoration: none;
+    color: black;
+    margin-left: 0.1rem; }
+  p span {
+    color: #00a0e9;
+    font-size: 0.22rem;
+    margin-left: 0.1rem;
+    letter-spacing: 0.06rem; }
+
+/*# sourceMappingURL=register.css.map */

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html id="html">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<title>首页</title>
+	<link rel="stylesheet" type="text/css" href="../css/index.css">
+	<link rel="stylesheet" type="text/css" href="../css/swiper-3.3.1.min.css">
+</head>
+<body>
+	<header><span>关于</span><span>昆山市<img src="../img/index-1.png" alt=""></span><a href="javascript:;" id="reg"><img src="../img/index-2.png"></a></header>
+	<div class="swiper-container" id="index-con">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide" ><img src="../img/swiper1.png"></div>
+			<div class="swiper-slide"><img src="../img/swiper1.png"></div>
+			<div class="swiper-slide"><img src="../img/swiper1.png"></div>
+			<div class="swiper-slide"><img src="../img/swiper1.png"></div>
+		</div>
+	</div>
+	<section class="list">
+		<ul>
+			<li><dl><dt><img src="../img/index-3.png"></dt><dd>外卖点餐</dd></dl></li>
+			<li><dl><dt><img src="../img/index-4.png"></dt><dd>餐厅就座</dd></dl></li>
+			<li><dl><dt><img src="../img/index-5.png"></dt><dd>鲜花蛋糕</dd></dl></li>
+			<li><dl><dt><img src="../img/index-6.png"></dt><dd>教育培训</dd></dl></li>
+			<li><dl><dt><img src="../img/index-7.png"></dt><dd>粮油果蔬</dd></dl></li>
+			<li><dl><dt><img src="../img/index-8.png"></dt><dd>家政服务</dd></dl></li>
+			<li><dl><dt><img src="../img/index-9.png"></dt><dd>维修服务</dd></dl></li>
+			<li><dl><dt><img src="../img/index-10.png"></dt><dd>二手回收</dd></dl></li>
+		</ul>
+	</section>
+	<section class="hot">
+		<h2>热门活动</h2>
+		<ul>
+			<li>送送劵大放送</li>
+			<li>送送劵大放送</li>
+			<li>送送劵大放送</li>
+			<li>送送劵大放送</li>
+			<li>送送劵大放送</li>
+			<li>送送劵大放送</li>
+		</ul>
+	</section>
+	<section class="tuijian">
+		<h2>推荐商家</h2>
+		<ul>
+			<li><img src="../img/index-12.png"></li>
+			<li><img src="../img/index-12.png"></li>
+			<li><img src="../img/index-12.png"></li>
+			<li><img src="../img/index-12.png"></li>
+			<li><img src="../img/index-12.png"></li>
+			<li><img src="../img/index-12.png"></li>
+		</ul>
+	</section>
+	<footer>
+		<ul id="foot-ul">
+			<li>
+				<em><img src="../img/indexfoot-11.png"></em>
+				<span>首页</span>
+			</li>
+			<li>
+				<em><img src="../img/indexfoot-21.png"></em>
+				<span>活动</span>
+			</li>
+			<li>
+				<em><img src="../img/indexfoot-31.png"></em>
+				<span>订单</span>
+			</li>
+			<li>
+				<em><img src="../img/indexfoot-41.png"></em>
+				<span>消息</span>
+			</li>
+		</ul>
+	</footer>
+	<script type="text/javascript">
+        var width=document.body.clientWidth;
+        var html=document.getElementById('html');
+        html.style.fontSize=width/640*100+'px';
+        
+        window.onresize=function(){
+            var width=document.body.clientWidth;
+            var html=document.getElementById('html');
+            html.style.fontSize=width/640*100+'px';
+        };
+        
+    </script>
+	<script type="text/javascript" src="../js/sea.js"></script>
+    <script type="text/javascript">
+         seajs.use('index',function(app){
+            app.init()
+          })
+    </script>
+</body>
+</html>

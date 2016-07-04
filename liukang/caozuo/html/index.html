@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+	<meta charset="UTF-8">
+	<title>ZXIU 走秀网</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,minimum-scale=1,maximum-scale=1">
+	<link rel="stylesheet" href="../css/common.css">
+	<link rel="stylesheet" href="../css/index.css">
+	<link rel="stylesheet" type="text/css" href="../css/swiper-3.3.1.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/ux/iconfont.css">
+	<script type="text/javascript" src="../js/zepto.min.js"></script>
+
+	<script type="text/javascript" src="../js/swiper-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../js/iscroll.js"></script>
+	<script type="text/javascript" src="../js/myiscroll.js"></script>	
+	
+	
+	<style type="text/css">
+	
+		.swiper-container{
+			width:100%;
+			height:40vw;
+		}
+		.swiper-slide{
+			width:100%;
+			height: 40vw;
+			
+		}
+		.swiper-slide img{
+			width: 100vw;
+			height: 40vw;
+		}
+		.slide1{
+			background: deeppink;
+		}
+		.slide2{
+			background:pink;
+		}
+		.slide3{
+			background: red;
+		}
+		.slide4{
+			background: yellow;
+		}
+		.swiper-container-horizontal>.swiper-pagination-bullets{
+			/*top:10px;*/
+			height: 40px !important;
+			bottom:0;
+			margin: 0;
+		}
+		.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet{
+			margin: 0;
+			width:25%;
+			height: 40px;
+			color:#fff;
+			font-size: 25px;
+			line-height: 40px;
+			text-align: center;
+			background: #ccc;
+			border-radius:0;
+			opacity: 0.8;
+		}
+		.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet-active{
+			background: skyblue;
+			color:deeppink;
+		}
+
+		#wrapper {
+	position:absolute;
+	z-index:1;
+	/*  header 和footer 的高度 */
+	 top:260px;
+	bottom:60px;
+	left:-9999px;
+	width:100%;
+	background:#aaa;
+	background:rgab(0,0,0,.1);
+	overflow:auto;
+}
+
+#scroller {
+	position:absolute;
+	z-index:1;
+/*	-webkit-touch-callout:none;*/
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	width:100%;
+	padding:0;
+}
+
+
+#pullDown, #pullUp {
+	background:#e4e0e0;
+	height:40px;
+	line-height:40px;
+	padding:5px 10px;
+	border-bottom:1px solid #ccc;
+	font-weight:bold;
+	font-size:14px;
+	color:#888;
+	zoom:1 !important;
+}
+#pullDown .pullDownIcon, #pullUp .pullUpIcon  {
+	zoom:1 !important;
+	display:block; float:left;
+	width:40px; height:40px;
+	background:url(i/pull-icon@2x.png) 0 0 no-repeat;
+	-webkit-background-size:40px 80px;
+	 background-size:40px 80px;
+	-webkit-transition-property:-webkit-transform;
+	-webkit-transition-duration:250ms;	
+}
+#pullDown .pullDownIcon {
+	-webkit-transform:rotate(0deg) translateZ(0);
+}
+#pullUp .pullUpIcon  {
+	-webkit-transform:rotate(-180deg) translateZ(0);
+}
+
+#pullDown.flip .pullDownIcon {
+	-webkit-transform:rotate(-180deg) translateZ(0);
+}
+
+#pullUp.flip .pullUpIcon {
+	-webkit-transform:rotate(0deg) translateZ(0);
+}
+
+#pullDown.loading .pullDownIcon, #pullUp.loading .pullUpIcon {
+	background-position:0 100%;
+	-webkit-transform:rotate(0deg) translateZ(0);
+	-webkit-transition-duration:0ms;
+
+	-webkit-animation-name:loading;
+	-webkit-animation-duration:2s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-timing-function:linear;
+}
+
+@-webkit-keyframes loading {
+	from { -webkit-transform:rotate(0deg) translateZ(0); }
+	to { -webkit-transform:rotate(360deg) translateZ(0); }
+}
+	</style>
+
+	
+</head>
+<body>
+
+	<header>
+		<h3>zuiu 走秀网</h3>
+	</header>
+	<section>
+		<div class="search">
+			<em><img src="../img/search.jpg" alt=""></em>
+			<input type="text" name="" value="请输入搜素内容">
+			
+		</div>
+	</section>
+	<div class="swiper-container" id="myswiper1">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide slide1" data-hash='slide1'>
+				<img src="../img/pic1-index.jpg">
+			</div>
+			<div class="swiper-slide slide2" data-hash='slide2'><img src="../img/pic2.jpg"></div>
+			<div class="swiper-slide slide3" data-hash='slide3'><img src="../img/pic4.jpg"></div>
+			<div class="swiper-slide slide4" data-hash='slide4'><img src="../img/pic3.jpg"></div>
+		</div>
+		<!-- <div class="swiper-pagination"></div> -->
+
+	
+	</div>
+
+	<div id="wrapper">
+
+	<div id="scroller">
+		<div id="pullDown">
+			<span class="pullDownIcon"></span>
+			<span class="pullDownLabel">下拉刷新...</span>
+		</div>
+		<ul id="thelist">
+
+
+				<li>
+					<div class="pic">
+						<a href="#"><img src="../img/shanglie1.jpg" alt=""></a>
+					</div>
+					<div class="txt">
+						<p>
+							<span>0元大抽奖！走秀携古尔莎为你</span>
+							<span>开启，价值28800的土耳其的红酒</span>
+						</p>
+						<div class="det">
+							<div class="price">
+								<span>￥0</span>
+								<span>￥28880</span>
+								<span>0折</span>
+							</div>	
+							<div class="buycar iconfont">&#xe62d;</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="pic">
+						<a href="#"><img src="../img/pic3.jpg" alt=""></a>
+					</div>
+					<div class="txt">
+						<p>
+							<span>【物价直降】雅诗兰黛即时修护</span>
+							<span>特润精华露50ml，一滴抚摸你的皮肤</span>
+						</p>
+						<div class="det">
+							<div class="price">
+								<span>￥589</span>
+								<span>￥940</span>
+								<span>5.3折</span>
+							</div>	
+							<div class="buycar iconfont">&#xe62d;</div>
+						</div>
+					</div>
+				</li>
+		</ul>
+		<div id="pullUp">
+			<span class="pullUpIcon"></span>
+			<span class="pullUpLabel">加载更多...</span>
+		</div>
+	</div>
+
+</div>
+	<footer class="iconfont" id= 'footer'>
+		<ul>
+				<li>&#xe604;
+					<p>首页</p>
+				</li>
+				<li>&#xe67f;
+					<p>分类</p>
+				</li>
+				<li>&#xe62d;
+					<p>购物车</p>
+				</li>
+				<li>&#xe60d;
+					<p>我的秀</p>
+				</li>
+				<li>&#xe669;
+					<p>更多</p>
+				</li>
+		</ul>
+	</footer>
+
+	
+
+<script type="text/javascript">
+
+	var myswiper = new Swiper('#myswiper1',{
+		prevButton:'.swiper-button-prev',
+		nextButton:'.swiper-button-next',
+		//前进后退按钮
+		pagination:'.swiper-pagination',
+		//定义分页器
+		paginationClickable:true,
+		//分页器button可否点击 true 可以点击
+		paginationType:'bullets',
+		//分页器样式类型，可选  
+		//fraction 表示分数
+		//progress 进度条
+		// paginationHide :true,
+		//点击swiper会显示隐藏你的分页器
+		paginationElement:"li",
+		//设定分页器指示器（小点）的HTML标签。
+		// paginationBulletRender:function(index,className){
+		// 	// var array = ['首页','深圳','优雅','怀念'];
+		// 	var fonts = ['&#xe601;','&#xe67a;','&#xe614;','&#xe631;']
+		// 	return '<li class ="iconfont '+className+'">'+fonts[index]+'</li>';
+		// 	// return '<li class ="iconfont '+className+'">'+array[index]+'</li>';
+		// },
+		//渲染分页器小点。这个参数允许完全自定义分页器的指示点。接受指示点索引和指示点类名作为参数。
+		lazyLoading:true,
+		onInit:function(swiper){
+			// 初始化后执行
+			// alert(swiper.width);
+		},
+		onTouchStart:function(swiper){
+			// alert(swiper.activeIndex);
+		},
+		onSlideChangeStart:function(swiper){
+			//滑块释放时如果触发slider切换则执行
+			console.log(swiper.activeIndex);
+		},
+		onSlideChangeEnd:function(swiper){
+			//表示slide滑动结束后执行的回调
+			console.log(swiper.activeIndex);
+		},
+		onTransitionStart:function(swiper){
+			//过渡开始时触发
+			console.log(swiper.clickedIndex);
+		},
+		onClick:function(swiper){
+			//表示点击事件的回调
+			console.log(swiper.clickedIndex);
+		},
+		onTap:function(swiper){
+			//表示轻触
+			console.log(swiper.activeIndex);
+			myswiper.slideTo(3,1000);
+			//slideTo
+		}
+	})
+	</script>
+
+</body>
+	
+</html>
