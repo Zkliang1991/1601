@@ -1,0 +1,99 @@
+section {
+    width: 100vw;
+    margin-top: 13.75vw;
+    .swiper-container {
+        display: block;
+        width: 100vw;
+        height: 34.5vw;
+        .swiper-wrapper {
+            .swiper-slide {
+                width: 100vw;
+                height: 34.5vw;
+                font-size: 100px;
+                text-align: center;
+                background: #00A0E9;
+            }
+        }
+    }
+    .user {
+        display: flex;
+        height: 44vw;
+        width: 100vw;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        ul {
+            display: flex;
+            height: 44vw;
+            width: 100vw;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            overflow: hidden;
+            li {
+                display: flex;
+                width: 21vw;
+                height: 20vw;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                margin-top: 2vw;
+                overflow: hidden;
+                span {
+                    display: flex;
+                    height: 14vw;
+                    width: 14vw;
+                    font-size: 8vw;
+                    justify-content: center;
+                    align-items: center;
+                    color: #fff;
+                    border-radius: 50%;
+                    background: #9ECC6B;
+                }
+                p{
+                    width: 21vw;
+                    height: 6vw;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 4.2vw;
+                    color: #444;
+                }
+            }
+        }
+    }
+    .huodong{
+       width: 100vw;
+       padding: 0 2vw;
+       height: 85vw;
+       box-sizing: border-box;
+       h2{ 
+           margin-left: 2.8vw;
+           height: 6vw;
+           font-size: 5.2vw;
+           font-weight: 600;
+           width: 96vw;
+           font-family: "microsoft yahei";
+       } 
+       ul{
+           display: flex;
+           height: 79vw;
+           width: 90vw;
+           flex-wrap: wrap;
+           justify-content: space-around;
+           align-items: inherit;
+           li{
+               margin-top: 4vw;
+               list-style: none;
+               width: 42vw;
+               height: 20vw;
+               border: 1px solid #999999;
+           }
+       }
+    }
+    .shangjia{
+        ul{
+            li{
+                width: 26vw;
+            }
+        }
+    }
+}
