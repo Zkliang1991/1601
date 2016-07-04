@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录</title>
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+	<link rel="stylesheet" type="text/css" href="../css/login.css">
+</head>
+<body>
+		<header id="header">
+		<div class="houtui">
+			<a href="javascript:history.go(-1)" title=""></a>
+		</div>
+		<div class="tit">
+			送送登录
+		</div>
+		<div class="log">
+			<a href="javascript:;" title="" id="login">注册</a>
+		</div>
+		</header>
+		<section>
+			<div class="ipt1">
+				<span></span>
+				<input type="text" name="" placeholder="手机号码" id="user">
+			</div>
+			<div class="ipt2">
+				<span></span>
+				<input type="text" name="" placeholder="输入密码" id="user">
+			</div>
+			<div class="s-box">
+				<div class="dlu">
+					<a href="javascript:;" title="">登录</a>
+					<span>忘记密码？</span>
+				</div>
+			</div>
+		</section>
+</body>
+<script type="text/javascript">
+	function setRem(){
+		var html=document.documentElement;
+		var w=document.documentElement.clientWidth;
+		html.style.fontSize=w/640*100+'px';
+	}
+	setRem();
+	window.onresize=function(){
+		setRem();
+	}
+</script>
+</html>

@@ -1,0 +1,78 @@
+<ul id="nav">
+	<li>
+		<a href="#">
+			<i class="iconfont">&#xe601;</i>
+			<p>首页</p>
+		</a>
+	</li>
+	
+	<li>
+		<a href="#">
+			<i class="iconfont">&#xe687;</i>
+			<p>分类</p>
+		</a>
+	</li>
+	<li>
+		<a href="#">
+			<i class="iconfont">&#xe611;</i>
+			<p>购物车</p>
+		</a>
+	</li>
+	<li>
+		<a href="#">
+			<i class="iconfont">&#xe620;</i>
+			<p>我的秀</p>
+		</a>
+	</li>
+	<li>
+		<a href="#">
+			<i class="iconfont">&#xe612;</i>
+			<p>更多</p>
+		</a>
+	</li>
+</ul>
+
+
+<script type="text/javascript">
+	$(function(){
+		$('#index #nav li:eq(0)').addClass('active');
+		$('#fenlei #nav li:eq(1)').addClass('active');
+		$('#buycar #nav li:eq(2)').addClass('active');
+		$('#myshow #nav li:eq(3)').addClass('active');
+		$('#more #nav li:eq(4)').addClass('active');
+		$("#nav li").on('click',function(){
+			$(this).addClass('active').siblings().removeClass('active');
+		})
+	})
+
+	$(function(){
+		$(".fenye #nav li:eq(0)").on('click',function(){
+			window.location.href="../../index.html";
+		})
+		$(".fenye #nav li:eq(1)").on('click',function(){
+			window.location.href="fenlei.html";
+		})
+		$(".fenye #nav li:eq(2)").on('click',function(){
+			window.location.href="buycar.html";
+		})
+		$(".fenye #nav li:eq(3)").on('click',function(){
+			window.location.href="myshow.html";
+		})
+		$(".fenye #nav li:eq(4)").on('click',function(){
+			window.location.href="more.html";
+		})
+	})
+
+	$(function(){
+		$("#index #nav li:eq(1)").on('click',function(){
+			window.location.href="prd/html/fenlei.html";
+		})
+		$("#index #nav li:eq(3)").on('click',function(){
+			window.location.href="prd/html/myshow.html";
+		})
+		$("#index #nav li:eq(4)").on('click',function(){
+			window.location.href="prd/html/more.html";
+		})
+
+	})
+</script>

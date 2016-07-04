@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+	<meta charset="UTF-8">
+	<title>登录</title>
+	<meta name="viewport" content="width=divce-width,initial-scale=1,user-scalable=no,minimum-scale=1,maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="../css/login.css">
+</head>
+<body>
+	<header>
+		<em></em>
+		送送登录
+		<span>注册</span>
+	</header>
+	<div class="content">
+		<div class="username">
+			<input type="text" name="" value="手机号码">
+		</div>
+		<div class="pwd">
+			<input type="password" name="" placeholder="输入密码">
+		</div>
+		<div class="login">登录</div>
+		<div class="wj">忘记密码?</div>
+	</div>
+</body>
+	
+	<script type="text/javascript">
+		var html=document.getElementById('html');
+		var width=document.documentElement.clientWidth;
+		html.style.fontSize=width/640*100+'px';
+		window.onresize=function(){
+			var width=document.documentElement.clientWidth;
+			html.style.fontSize=width/640*100+'px';
+		}
+	</script>
+</html>

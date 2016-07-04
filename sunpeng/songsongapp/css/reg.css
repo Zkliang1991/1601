@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+ul, li {
+  list-style: none; }
+
+body, html {
+  width: 100%;
+  background: #f6f5f5; }
+
+header {
+  width: 100%;
+  height: 0.88rem;
+  background: #e4366b;
+  text-align: center;
+  line-height: 0.88rem;
+  color: #fff;
+  font-size: 0.34rem;
+  box-sizing: border-box;
+  font-family: "Microsoft yahei"; }
+  header img {
+    position: absolute;
+    width: 0.22rem;
+    height: 0.38rem;
+    left: 0.24rem;
+    top: 0.25rem; }
+
+section {
+  position: relative;
+  width: 100%;
+  height: 10.10rem;
+  padding: 0.36rem 0 0 0.14rem;
+  background: #f6f5f5;
+  box-sizing: border-box; }
+  section input {
+    display: block;
+    width: 6rem;
+    height: 0.64rem;
+    background: #fff;
+    color: #dcdddd;
+    text-indent: 0.24rem;
+    line-height: 0.64rem;
+    font-family: "Microsoft yahei";
+    font-size: 0.3rem;
+    border: 0;
+    outline: none;
+    border: 0.02rem solid #f6f5f5; }
+  section input:nth-child(1) {
+    border-radius: 0.1rem 0.1rem 0 0; }
+  section input:nth-child(5) {
+    border-radius: 0 0 0.1rem 0.1rem; }
+  section #yanzhengma {
+    display: block;
+    width: 1.37rem;
+    height: 0.42rem;
+    position: absolute;
+    right: 0.34rem;
+    top: 1.16rem;
+    background: #9ecc6b;
+    color: #fff;
+    border-radius: 0.1rem;
+    border: 0;
+    outline: none;
+    font-size: 0.2rem; }
+  section #reg {
+    display: block;
+    width: 6rem;
+    height: 0.62rem;
+    margin-top: 0.15rem;
+    color: #fff;
+    text-align: center;
+    line-height: 0.62rem;
+    font-size: 0.36rem;
+    font-family: "Microsoft yahei";
+    background: #00a0e9;
+    border: 0;
+    outline: none;
+    border-radius: 0.1rem;
+    box-shadow: 0.02rem 0.02rem 0.02rem #000; }
+  section div {
+    width: 4.2rem;
+    height: 0.28rem;
+    margin: 0.18rem 0 0 0.18rem; }
+    section div input {
+      display: block;
+      width: 0.2rem;
+      height: 0.3rem;
+      border: 0.01rem solid #9f9a99;
+      background: #f6f5f5;
+      float: left; }
+    section div span:nth-child(2) {
+      display: block;
+      width: 1.44rem;
+      height: 0.24rem;
+      color: #000;
+      line-height: 0.3rem;
+      font-family: "Microsoft yahei";
+      font-size: 0.2rem;
+      float: left; }
+    section div span:nth-child(3) {
+      display: block;
+      width: 2.42rem;
+      height: 0.24rem;
+      color: #00a0e9;
+      line-height: 0.24rem;
+      font-family: "Microsoft yahei";
+      font-size: 0.24rem;
+      float: left; }
