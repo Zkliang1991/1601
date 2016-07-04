@@ -1,0 +1,97 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: #ededed; }
+
+header {
+  width: 100%;
+  height: 3.625rem;
+  background: #dc0a4b;
+  position: relative; }
+  header a {
+    display: block;
+    height: 3.625rem;
+    text-decoration: none;
+    text-align: center;
+    line-height: 3.625rem;
+    color: #fff;
+    font-size: 1.16667rem;
+    font-family: "微软雅黑";
+    position: absolute;
+    left: 1rem;
+    top: 0; }
+  header p {
+    width: 100%;
+    height: 3.625rem;
+    text-align: center;
+    line-height: 3.625rem;
+    color: #fff;
+    font-size: 1.38875rem;
+    font-family: "微软雅黑";
+    position: absolute;
+    left: 0;
+    top: 0; }
+
+nav {
+  width: 100%;
+  height: 6.33333rem;
+  background: #ededed;
+  padding-left: 2.08333rem;
+  box-sizing: border-box; }
+  nav div {
+    float: left;
+    width: 4.08333rem;
+    height: 100%;
+    padding: 1.08333rem 0;
+    box-sizing: border-box; }
+    nav div img {
+      width: 100%;
+      height: 100%; }
+  nav span {
+    display: block;
+    float: left;
+    margin-right: 0.75rem;
+    height: 100%;
+    line-height: 6.33333rem;
+    font-size: 1.38875rem;
+    color: #000; }
+
+.tab {
+  list-style: none;
+  width: 100%;
+  height: 3.66667rem;
+  background: #fff;
+  border-top: 0.04167rem solid #d2d2d2;
+  border-bottom: 0.04167rem solid #d2d2d2;
+  margin-bottom: 0.5rem; }
+  .tab li {
+    width: 24.5%;
+    height: 3.66667rem;
+    float: left;
+    border-right: 1px solid #d7d7d7;
+    text-align: center;
+    line-height: 3.66667rem;
+    font-size: 1.21542rem;
+    color: #000; }
+  .tab li:nth-of-type(4) {
+    border-right: 0; }
+
+.info {
+  width: 100%;
+  height: 20.5rem;
+  background: #fff; }
+
+.ad {
+  width: 100%;
+  height: 3.91667rem;
+  text-align: center;
+  line-height: 3.91667rem;
+  font-size: 1.21542rem;
+  color: #000; }
+
+/*# sourceMappingURL=center.css.map */
