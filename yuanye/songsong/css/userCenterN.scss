@@ -1,0 +1,58 @@
+@import 'mobile';
+@import 'ux/iconfont.css';
+
+header{
+	background:#dc0a4b;
+	width:100%;
+	height:pxToRem(88);
+	line-height:pxToRem(100);
+	font-size:pxToRem(34);
+	position:relative;
+	box-sizing:border-box;
+	padding:0 pxToRem(30) 0 pxToRem(20);
+	color:#fff;
+	a{
+		img{
+			width:pxToRem(41);
+			height:pxToRem(39);
+		}
+	}
+	span{
+		position:absolute;
+		left:50%;
+		top:50%;
+		transform:translate(-50%,-50%);
+	};
+};
+
+
+
+footer{
+	width:100%;
+	height:pxToRem(92);
+	background:#fff;
+	position:fixed;
+	bottom:0;
+	left:0;
+	text-align:center;
+	color:#969797;
+	box-sizing:border-box;
+	border-top:1px solid #969797;
+	ul{
+		li{
+			width:25%;
+			height:pxToRem(92);
+			float:left;
+			p{
+				font-size:pxToRem(38);
+				line-height:pxToRem(60);
+			}
+			span{
+				font-size:pxToRem(22);
+			}
+		}
+		.changeRed{
+			color:#e2386d;
+		}
+	}
+}

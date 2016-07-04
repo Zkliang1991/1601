@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>送送注册</title>
+		<link rel="stylesheet" type="text/css" href="../css/reg.css"/>
+	</head>
+	<body>
+		<header>
+			<img src="../img/iconfont-right.png"/>
+			注册
+		</header>
+		<section>
+			<input type="text" placeholder="手机号码"/>
+			<input type="text" placeholder="验证码"/>
+			<button id="yanzhengma">发送验证码</button>
+			<input type="text" placeholder="密码"/>
+			<input type="text" placeholder="确认密码"/>
+			<button id="reg">注册</button>
+			<div>
+				<input type="checkbox" name="" id="" value="" />
+				<span>我已阅读并同意</span>
+				<span>使用条款和隐私协议</span>
+			</div>
+			
+		</section>
+		<footer></footer>
+		<script type="text/javascript">
+			var width = document.body.clientWidth;
+			console.log(width);
+			var html = document.getElementById('html');
+			//求出设备宽度
+			html.style.fontSize = width/640*100 + 'px';
+			// rem 通过设备宽度来改变rem 
+			console.log(width);
+			//窗口改变的时候求出宽度
+			window.onresize =function(){
+				var width = document.body.clientWidth;
+				html.style.fontSize = width/640*100 + 'px';
+			}
+		</script>
+		
+		<!--<script type="text/javascript">
+			$('#reg').on('touchstart',function(){
+				window.location.href = 'login.html';
+			})
+		</script>-->
+	</body>
+</html>
