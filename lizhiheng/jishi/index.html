@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>首页</title>
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css">
+</head>
+<body>
+		<header id="header">
+			<div class="houtui">
+				<a href="javascript:;" title="">关于</a>
+			</div>
+			<div class="tit">
+				<span>昆山市</span>
+				<a href="javascript:;" title=""></a>
+			</div>
+			<div class="log">
+				<a href="javascript:;" title="" id="login"></a>
+			</div>
+		</header>
+		<section>
+			<div class="swiper-container">
+             <div class="swiper-wrapper">
+                 <div class="swiper-slide">
+                 	<img src="img/3-6.jpg" alt="">
+                 </div>
+                 <div class="swiper-slide">
+                 	<img src="img/3-6.jpg" alt="">
+                 </div>
+                 <div class="swiper-slide">
+                 	<img src="img/3-6.jpg" alt="">
+                 </div>
+                 <div class="swiper-slide">
+                 	<img src="img/3-6.jpg" alt="">
+                 </div>
+             </div>
+         </div>
+         <div class="selec">
+         	<dl>
+         		<dt>
+         			<img src="img/diancan.png" alt="">
+         		</dt>
+         		<dd>外卖点餐</dd>
+         	</dl>
+         	<dl>
+         		<dt>
+         			<img src="img/zuowei.png" alt="">
+         		</dt>
+         		<dd>餐厅订单</dd>
+         	</dl>
+         	<dl>
+         		<dt>
+         			<img src="img/kafei.png" alt="">
+         		</dt>
+         		<dd>鲜花蛋糕</dd>
+         	</dl>
+         	<dl>
+         		<dt>
+         			<img src="img/jiaoyu.png" alt="">
+         		</dt>
+         		<dd>教育培训</dd>
+         	</dl>
+			
+         </div>
+         <div class="selec">
+         	<dl>
+         		<dt>
+         			<img src="img/shuiguo.png" alt="">
+         		</dt>
+         		<dd>粮油果树</dd>
+         	</dl>
+         	<dl>
+         		<dt>
+         			<img src="img/jiaz.png" alt="">
+         		</dt>
+         		<dd>家政服务</dd>
+         	</dl>
+         	<dl>
+         		<dt>
+         			<img src="img/shiy.png" alt="">
+         		</dt>
+         		<dd>维修服务</dd>
+         	</dl>
+         	<dl>
+         		<dt>
+         			<img src="img/shuiguo.png" alt="">
+         		</dt>
+         		<dd>二手回收</dd>
+         	</dl>
+         </div>
+         <div class="active">
+         	<h2>热门活动</h2>
+         </div>
+		</section>
+</body>
+<script type="text/javascript" data-main="js/index.js" src="js/require.js"></script>
+<script type="text/javascript">
+	function setRem(){
+		var html=document.documentElement;
+		var w=document.documentElement.clientWidth;
+		html.style.fontSize=w/640*100+'px';
+	}
+	setRem();
+	window.onresize=function(){
+		setRem();
+	}
+</script>
+</html>
