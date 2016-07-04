@@ -1,0 +1,82 @@
+section {
+  width: 100vw;
+  margin-top: 13.75vw; }
+  section .swiper-container {
+    display: block;
+    width: 100vw;
+    height: 34.5vw; }
+    section .swiper-container .swiper-wrapper .swiper-slide {
+      width: 100vw;
+      height: 34.5vw;
+      font-size: 100px;
+      text-align: center;
+      background: #00A0E9; }
+  section .user {
+    display: flex;
+    height: 44vw;
+    width: 100vw;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    section .user ul {
+      display: flex;
+      height: 44vw;
+      width: 100vw;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      overflow: hidden; }
+      section .user ul li {
+        display: flex;
+        width: 21vw;
+        height: 20vw;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2vw;
+        overflow: hidden; }
+        section .user ul li span {
+          display: flex;
+          height: 14vw;
+          width: 14vw;
+          font-size: 8vw;
+          justify-content: center;
+          align-items: center;
+          color: #fff;
+          border-radius: 50%;
+          background: #9ECC6B; }
+        section .user ul li p {
+          width: 21vw;
+          height: 6vw;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 4.2vw;
+          color: #444; }
+  section .huodong {
+    width: 100vw;
+    padding: 0 2vw;
+    height: 85vw;
+    box-sizing: border-box; }
+    section .huodong h2 {
+      margin-left: 2.8vw;
+      height: 6vw;
+      font-size: 5.2vw;
+      font-weight: 600;
+      width: 96vw;
+      font-family: "microsoft yahei"; }
+    section .huodong ul {
+      display: flex;
+      height: 79vw;
+      width: 90vw;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: inherit; }
+      section .huodong ul li {
+        margin-top: 4vw;
+        list-style: none;
+        width: 42vw;
+        height: 20vw;
+        border: 1px solid #999999; }
+  section .shangjia ul li {
+    width: 26vw; }
+
+/*# sourceMappingURL=main.css.map */
