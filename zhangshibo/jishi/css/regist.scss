@@ -1,0 +1,105 @@
+@import 'mobile.scss';
+@charset "utf-8";
+*{
+  margin:0;
+  padding:0;
+}
+a{
+  text-decoration:none;
+}
+ol,ul{
+  list-style:none;
+}
+header{
+  width:100%;
+  height:pxToRem(88);
+  box-sizing:border-box;
+  padding:0 .24rem;
+  background:#dc0a4b;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  a:nth-child(1){
+    font-size:pxToRem(58);
+    color:#fff;
+  }
+  a:nth-child(3){
+    font-size:pxToRem(22);
+    color:#fff;
+    visibility:hidden;
+  }
+  span{
+    font-size:pxToRem(30);
+    color:#fff;
+  }
+}
+content{
+  width:100%;
+  section{
+    width:100%;
+    height:pxToRem(900);
+    box-sizing:border-box;
+    //padding:.37rem  .22rem  0  .15rem;
+    padding-top:pxToRem(37);
+    padding-right:pxToRem(22);
+    padding-left:pxToRem(15);
+    ul{
+      width:100%;
+      height:pxToRem(236);
+      border-radius:pxToRem(3);
+      border:pxToRem(1) solid #ccc;
+      li{
+        width:100%;
+        height:pxToRem(58);
+        border-bottom:pxToRem(1) solid #ccc;
+        background:#fff;
+        input{
+          width:100%;
+          line-height:pxToRem(58);
+          border:0;
+          text-indent:pxToRem(25);
+        }
+      }
+      li:nth-child(2){
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        a{
+          display:block;
+          width:pxToRem(137);
+          height:pxToRem(42);
+          border-radius:pxToRem(2);
+          background:#9ecc6b;
+          font-size:pxToRem(18);
+          text-align:center;
+          line-height:pxToRem(42);
+          margin-right:pxToRem(22);
+        }
+      }
+    }
+    .regist{
+      margin-top:pxToRem(15);
+      a{
+        display:block;
+        height:pxToRem(62);
+        box-shadow:1px 1px 2px 0;
+        border-radius:pxToRem(7);
+        background:#00a0e9;
+        text-align:center;
+        line-height:pxToRem(62);
+        font-size:pxToRem(32);
+        color:#fff;
+        margin-bottom:pxToRem(10);
+      }
+      .yes{
+        width:100%;
+        height:pxToRem(24);
+        line-height:pxToRem(24);
+        b{
+          font-size:pxToRem(30);
+          color:#31b1eb;
+        }
+      }
+    }
+  }
+}

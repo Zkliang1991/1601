@@ -1,0 +1,220 @@
+@charset "UTF-8";
+html {
+  font-size: 62.5%;
+  font-family: "Microsoft yahei"; }
+
+body, h1, h2, h3, h4, h5, h6, blockquote, ol, ul, dl, dd, p, textarea, input, select, option, form {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #f5f4f0;
+  -webkit-tap-highlight-color: transparent; }
+
+ol, ul, textarea, input, option, th, td {
+  padding: 0; }
+
+.page {
+  min-width: 320px;
+  max-width: 750px;
+  margin: 0 auto; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-size: 100%; }
+
+article, aside, details, figcaption, figure, footer, header, menu, nav, section {
+  display: block; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+ul, ol {
+  list-style-type: none; }
+
+.clearfix:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden; }
+
+input[type=text], textarea {
+  -webkit-appearance: none; }
+
+input:focus {
+  -webkit-user-modify: read-write-plaintext-only; }
+
+fieldset, img {
+  border: 0; }
+
+a {
+  text-decoration: none; }
+
+a, textarea, input {
+  outline: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+textarea {
+  overflow: auto;
+  resize: none; }
+
+@media only screen and (min-width: 320px) {
+  html {
+    font-size: 75% !important;
+    /* 12梅16=73.4% */ } }
+@media only screen and (min-width: 375px) {
+  html {
+    font-size: 87.89063% !important;
+    /* 14.0625梅16=73.2% */ } }
+@media only screen and (min-width: 414px) {
+  html {
+    font-size: 97.03% !important;
+    /* 15.525梅16=94% */ } }
+@media only screen and (min-width: 480px) {
+  html {
+    font-size: 112.5% !important;
+    /* 18梅16=94% */ } }
+@media only screen and (min-width: 560px) {
+  html {
+    font-size: 131.25% !important;
+    /* 21梅16=109% */ } }
+@media only screen and (min-width: 640px) {
+  html {
+    font-size: 150% !important;
+    /* 24梅16=125% */ } }
+@media only screen and (min-width: 720px) {
+  html {
+    font-size: 168.75% !important;
+    /* 27梅16=146.43% */ } }
+@media only screen and (min-width: 750px) {
+  html {
+    font-size: 175.78125% !important;
+    /* 28.125梅16=146.43% */ } }
+@media only screen and (min-width: 800px) {
+  html {
+    font-size: 187.5% !important;
+    /* 30梅16=146.43% */ } }
+@media only screen and (min-width: 960px) {
+  html {
+    font-size: 225% !important;
+    /* 36梅16=146.43% */ } }
+* {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none; }
+
+ol, ul {
+  list-style: none; }
+
+header {
+  width: 100%;
+  height: 3.66667rem;
+  box-sizing: border-box;
+  padding: 0 .24rem;
+  background: #dc0a4b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  header a:nth-child(1) {
+    font-size: 2.08333rem;
+    color: #fff; }
+  header a:nth-child(3) {
+    font-size: 1.75rem;
+    color: #fff;
+    visibility: hidden; }
+  header span {
+    font-size: 1.25rem;
+    color: #fff; }
+
+content {
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 0.91667rem;
+  padding-right: 0.91667rem; }
+  content .personinfo {
+    width: 100%;
+    height: 6.41667rem;
+    background: #ccc;
+    display: flex;
+    align-items: center; }
+    content .personinfo img {
+      display: block;
+      width: 4.08333rem;
+      height: 4.08333rem;
+      border-radius: 50%;
+      margin-left: 1.66667rem; }
+    content .personinfo span {
+      margin-left: 0.83333rem;
+      color: #000; }
+  content .myorder {
+    margin-top: 0.125rem;
+    height: 3.75rem;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 0.04167rem solid #ccc;
+    border-top: 0.04167rem solid #ccc; }
+    content .myorder .orderlist {
+      display: flex;
+      height: 3.66667rem; }
+      content .myorder .orderlist li {
+        width: 25%;
+        height: 3.66667rem;
+        text-align: center;
+        line-height: 3.66667rem;
+        border-right: 0.04167rem solid #ccc; }
+      content .myorder .orderlist li:nth-child(4) {
+        border: 0; }
+    content .myorder .controlist {
+      width: 100%;
+      height: 20.41667rem;
+      background: blue; }
+
+footer {
+  width: 100%;
+  height: 3.83333rem;
+  border-top: 0.08333rem solid #333;
+  box-sizing: border-box;
+  padding-left: 0.91667rem;
+  padding-right: 0.91667rem; }
+  footer .footlist {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    footer .footlist li {
+      width: 3.58333rem;
+      height: 3.75rem;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap; }
+      footer .footlist li .pic {
+        margin-top: 0.75rem;
+        margin-bottom: 0.25rem;
+        width: 3.58333rem;
+        height: 2.75rem;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 2.75rem;
+        font-size: 2.33333rem;
+        color: #ccc; }
+      footer .footlist li span {
+        display: block;
+        font-size: 0.91667rem;
+        color: #ccc; }
+
+/*# sourceMappingURL=person.css.map */
