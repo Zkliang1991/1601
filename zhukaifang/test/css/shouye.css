@@ -1,0 +1,53 @@
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img {
+  margin: 0;
+  padding: 0; }
+
+fieldset, img {
+  border: none; }
+
+img {
+  display: block; }
+
+address, caption, cite, code, dfn, th, var {
+  font-style: normal;
+  font-weight: normal; }
+
+ul, ol {
+  list-style: none; }
+
+a {
+  color: #666;
+  text-decoration: none; }
+
+* {
+  padding: 0;
+  margin: 0; }
+
+body, html {
+  width: 100%;
+  height: 100%; }
+
+.icon-me {
+  width: 0.4rem;
+  font-size: 0.4rem; }
+
+.swiper-container {
+  width: 100%;
+  height: 2.13rem; }
+
+.swiper-slide {
+  width: 100%;
+  height: 100%; }
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  display: block; }
+
+.swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 0rem; }
+
+.swiper-pagination-bullet-active {
+  background: deeppink; }
+
+/*# sourceMappingURL=shouye.css.map */

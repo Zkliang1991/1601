@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+	<meta charset="UTF-8">
+	<title>我的优惠卷</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="stylesheet" type="text/css" href="../css/index.css">
+	<link rel="stylesheet" type="text/css" href="../ux/iconfont.css">
+	<script type="text/javascript" src="../js/index.js"></script>
+</head>
+<body id="myshow" class="fenye">
+	<header>
+		<div class="top">
+			<a href="javascript:history.back(-1)"></a>
+			<span>我的优惠卷</span>
+		</div>	
+	</header>
+	<section id="main">
+		<div class="coupon">
+			<ul>
+				<li class="conon">未使用</li>
+				<li>已使用</li>
+				<li>已过期</li>
+				<li>未激活</li>
+			</ul>
+			<div class="daijin-w boox">
+				<div class="daijin">
+					<p>40元代金券(满299元可以使用)</p>
+					<p>号码:<span>DSKFMDSFM83KNFKDS</span></p>
+					<p>过期时间:<span>2013年05月29日</span></p>
+					<p>状态:<span>未使用</span></p>
+				</div>
+			</div>
+			<div class="daijin-w"></div>
+			<div class="daijin-w"></div>
+			<div class="daijin-w"></div>
+			
+		</div>
+	</section>
+	<!--**********************通用尾部***********************-->
+		<footer id="footer"></footer>
+		<script type="text/javascript">	
+			$("#footer").load("footer.html");
+			$(".coupon ul li").on('click',function(){
+				$(this).addClass('conon').siblings().removeClass('conon');
+				var $e=$(this).index();
+				$(".daijin-w").eq($e).addClass('boox').siblings().removeClass('boox');
+			})
+
+		</script>
+	<!--**********************尾部结束***********************-->
+</body>
+</html>

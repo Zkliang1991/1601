@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>我的优惠券</title>
+		<link rel="stylesheet" href="prd/css/mycoupons.css" />
+	</head>
+	<body>
+		<header>
+			<img src="prd/img/return.png"/>
+			我的优惠券
+		</header>
+		<div id="cp">
+			<div class="swiper-container" id="swiper1">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide nav active-nav">未使用</div>
+					<div class="swiper-slide nav">已使用</div>
+					<div class="swiper-slide nav">已过期</div>
+					<div class="swiper-slide nav">未激活</div>
+				</div>
+			</div>
+			<div class="swiper-container" id="swiper2">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">40元现金卷（满299元可使用）--未使用</div>
+					<div class="swiper-slide">40元现金卷（满299元可使用）--已使用</div>
+					<div class="swiper-slide">40元现金卷（满299元可使用）--已过期</div>
+					<div class="swiper-slide">40元现金卷（满299元可使用）--未激活</div>
+				</div>
+			</div>
+		</div>
+		<script src="prd/js/common.js" type="text/javascript" charset="utf-8"></script>
+		<!--尾部-->
+		<footer id="footer">	
+		</footer>
+		<script type="text/javascript">
+			$('#footer').load('footer.html',function(){
+				$('#person').addClass('active');
+				
+			});
+		</script>
+		<script type="text/javascript">
+			var swiper1 = new Swiper('#swiper1',{
+				slidesPerView:"auto",
+				watchSlidesProgress : true,
+				watchSlidesVisibility : true,
+				//开启watchSlidesVisibility选项前需要先开启watchSlidesProgress，如果开启了watchSlidesVisibility，则会在每个可见slide增加一个classname，默认为'swiper-slide-visible'。
+				resistanceRatio:0,
+				// onTap:function(){
+				// 	swiper2.slideTo(swiper1.clickedIndex);
+				// }
+				onTap:function(){
+					// console.log(swiper1.activeIndex);
+					// console.log(swiper1.clickedIndex);
+					// swiper2.slideTo(swiper1.)
+					swiper2.slideTo(swiper1.clickedIndex);
+				}
+			})
+			var swiper2 = new Swiper('#swiper2',{
+				resistanceRatio:0,
+				onSlideChangeEnd:function(){
+					console.log(111);
+					change();
+				}
+			});
+			function updateNavposition(){
+				
+				var currentIndex = swiper2.activeIndex;
+				console.log(currentIndex);
+				$('#swiper1 .active-nav').removeClass('active-nav');
+				var activeNav = $('#swiper1 .nav').eq(currentIndex).addClass('active-nav');
+				// console.log(activeNav.index())
+				if(!activeNav.hasClass('swiper-slide-visible')){
+					if(currentIndex>swiper1.activeIndex){
+						var num = Math.floor(swiper1.width/activeNav.width()-1);
+						// swiper1.activeIndex;
+						swiper1.slideTo(currentIndex-num)
+					}else{
+						swiper1.slideTo(currentIndex)
+					}
+				}
+			}
+		
+			// swiper1.on('tap',function(){
+			// 	var index = swiper1.clickedIndex;
+			// 	console.log(swiper1.clickedIndex);
+			// 	$('#swiper1 .swiper-slide').eq(index).addClass('active-nav').siblings().removeClass('active-nav');
+			// })
+		
+		
+			function change(){
+				var currentIndex = swiper2.activeIndex;
+				// console.log(currentIndex);
+				var activeNav = $('#swiper1 .swiper-slide').removeClass('active-nav').eq(currentIndex).addClass('active-nav')
+				//表示执行高亮显示  activeNav 指向高亮对象 jq对象
+				if(!activeNav.hasClass('swiper-slide-visible')){
+					if(currentIndex>swiper1.activeIndex){
+						var oNum = Math.floor(swiper1.width/activeNav.width());
+						var swiper1ActiveIndex = currentIndex - oNum + 1;
+						swiper1.slideTo(swiper1ActiveIndex);
+					}else{
+						swiper1.slideTo(currentIndex);
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  width: 100%;
+  height: 100%;
+  background: #f6f5f5; }
+  body .main {
+    width: 100%; }
+    body .main p {
+      width: 6rem;
+      height: 0.66rem;
+      border-radius: 0.05rem;
+      background: #fff;
+      padding-left: 0.34rem;
+      box-sizing: border-box; }
+    body .main p:nth-of-type(1) {
+      margin: 0.36rem 0.26rem 0.32rem 0.15rem; }
+      body .main p:nth-of-type(1) span {
+        display: block;
+        width: 0.29rem;
+        height: 0.39rem;
+        margin-top: 0.12rem;
+        background: url(../img/phone.png) 0 0 no-repeat;
+        background-size: 0.29rem 0.39rem;
+        float: left; }
+      body .main p:nth-of-type(1) input {
+        float: left;
+        width: 5.22rem;
+        border: 0;
+        height: 0.66rem;
+        line-height: 0.66rem;
+        font-size: 0.25rem;
+        text-indent: 0.15rem; }
+    body .main p:nth-of-type(2) {
+      margin: 0 0.26rem 0 0.15rem; }
+      body .main p:nth-of-type(2) span {
+        display: block;
+        width: 0.26rem;
+        height: 0.31rem;
+        margin-top: 0.18rem;
+        background: url(../img/pass.png) 0 0 no-repeat;
+        background-size: 0.26rem 0.31rem;
+        float: left; }
+      body .main p:nth-of-type(2) input {
+        float: left;
+        width: 5.22rem;
+        border: 0;
+        height: 0.66rem;
+        line-height: 0.66rem;
+        font-size: 0.25rem;
+        text-indent: 0.15rem; }
+    body .main a {
+      display: block;
+      width: 3.44rem;
+      height: 0.69rem;
+      background: url(../img/register-bg.png) 0 0 no-repeat;
+      background-size: 100% 100%;
+      font-size: 0.3rem;
+      text-decoration: none;
+      color: #fff;
+      text-align: center;
+      line-height: 0.69rem;
+      border-radius: 0.1rem;
+      overflow: hidden;
+      margin: 0.26rem 0 0 1.42rem; }
+    body .main b {
+      width: 2rem;
+      height: 0.62rem;
+      display: block;
+      font-size: 0.3rem;
+      line-height: 0.62rem;
+      margin-left: 1.42rem;
+      color: #00a0e9;
+      font-weight: 100; }
+
+/*# sourceMappingURL=register.css.map */

@@ -41,7 +41,7 @@
 	$('#footer ul li').on('tap',function(){
 		$(this).addClass('active').siblings().removeClass('active');
 		var index=$(this).index();//取出对应的点击的li标签的下标
-
+		console.log(index);
 		getTypeByLocal(index);
 	})
 	//每次一点击tap 到新页面的时候，就把 对应的url中 .html前面的值存到localStorage来，

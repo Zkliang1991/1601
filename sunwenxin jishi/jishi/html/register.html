@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<title>zhuce</title>
+	<link rel="stylesheet" href="../css/register.css">
+</head>
+<body>
+	<header class="iconfont">
+			<a href="#">‹</a>
+			<span>注册</span>
+	</header>
+	<section class="zu">
+		<input type="text"  placeholder="手机号码">
+		<input type="text"  placeholder="验证码">
+		<input type="text"  placeholder="密码">
+		<input type="text"  placeholder="确认密码">
+	</section>
+	<input type="button" value="注册" class="zhuxce">
+	<p>
+		<input type="checkbox">
+		<a href="#">我已阅读并同意</a>
+		<span>使用条款和隐私协议</span>
+	</p>
+</body>
+<script>
+	var width = document.documentElement.clientWidth;
+		var html = document.getElementById("html");
+		html.style.fontSize = width/640*100 + 'px';
+		console.log(width);
+		window.onresize = function() {
+			// 随着窗口的改变求设备的宽度
+			var width = document.body.clientWidth;
+			html.style.fontSize = width/640*100 + 'px';
+			console.log(width);
+		}
+</script>
+</html>

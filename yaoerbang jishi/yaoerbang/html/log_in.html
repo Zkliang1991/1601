@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+	<meta charset="UTF-8">
+	<title>登录</title>
+	<meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1,minimum-scale=1,initial-scale=1">
+	<link rel="stylesheet" href="../css/log_in.css" type="text/css">
+	<!-- <script src="../js/rem.js"></script> -->
+</head>
+<body>
+	<header><span class="sp1"></span>送送登录<button type="button">注册</button></header>
+	<section>
+		<ul class="log-ul">
+			<li><span></span><input type="text" placeholder="手机号码"></li>
+			<li><span></span><input type="password" placeholder="输入密码"></li>
+		</ul>
+		<button type="button" class="btn">登录</button>
+		<p href="#">忘记密码？</p>
+	</section>
+	<script>
+		var width = document.documentElement.clientWidth;
+		var html = document.getElementById("html");
+		html.style.fontSize = width/640*100 + "px";
+		window.onresize = function(){
+			var width = document.documentElement.clientWidth;
+			html.style.fontSize = width/640*100 + "px";
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+@import 'mobile';
+@import 'iscroll';
+@import '../images/ux/iconfont.css';
+@charset "UTF-8";
+*{
+	padding:0;
+	margin:0;
+}
+ul,ol{
+	list-style:none;
+}
+header{
+	// width:100%;
+	// position:fixed;
+	// left:0;
+	// top:0;
+	position:relative;
+	h3{
+		width:100%;
+		height:pxToRem(80);
+		background:#e4366b;
+		text-align: center;
+		line-height:pxToRem(80);
+		font-size: pxToRem(40);
+		font-family: "微软雅黑";
+		color: #fff;
+		border-bottom: 1px solid #282828;
+
+	}
+	a{
+		display: block;
+		width: pxToRem(54);
+		height: pxToRem(36);
+		background:url(../images/jiantou.jpg) no-repeat 0 0;
+		background-size:pxToRem(54) pxToRem(36);
+		position:absolute;
+		left:pxToRem(18);
+		top:pxToRem(28);
+	}
+	.search{
+		width: 100%;
+		height: pxToRem(86);
+		background:#52525a;
+		border-top:1px solid #636363;
+		border-bottom:1px solid #282828;
+		display: flex;
+		justify-content: center;
+		align-items:center;
+		position: relative;
+
+		input{
+			width: pxToRem(590);
+			height: pxToRem(56);
+			border:0;
+			border-radius:pxToRem(22);
+			font-size:pxToRem(20);
+			text-indent: pxToRem(72);
+			line-height: pxToRem(56);
+			color: #949398;
+			background:#fff url(../images/search.jpg)no-repeat pxToRem(24) pxToRem(8);
+			background-size:pxToRem(34) pxToRem(41)
+			
+
+		}
+		
+	}
+}
+
+#wrapper {
+	position:absolute;
+	z-index:1;
+	top: pxToRem(170);
+	bottom:100px;
+	width:100%;
+	overflow:auto;
+	background:#fff;
+	#thelist{
+		width: 100%;
+		li{
+			width: 100%;
+			height: pxToRem(86);
+			border-top:1px solid #636363;
+			border-bottom:1px solid  #aaa;
+			padding:pxToRem(28) pxToRem(30) 0 pxToRem(40);
+			box-sizing:border-box;
+			background:url(../images/sit1.jpg) pxToRem(575) pxToRem(30) no-repeat;
+			background-size:pxToRem(27) pxToRem(33);
+			font-family: "微软雅黑";
+			font-size: pxToRem(38);
+			color: #000;
+		}
+		li:nth-child(1){
+			padding:pxToRem(28) pxToRem(30) 0 pxToRem(22);
+			background:url(../images/sit2.jpg) pxToRem(575) pxToRem(30) no-repeat;
+			background-size:pxToRem(30) pxToRem(30);
+		}
+	}
+}

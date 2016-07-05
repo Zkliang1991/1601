@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  width: 100%;
+  color: white;
+  font-family: "Microsoft yahei"; }
+
+ul {
+  list-style: none; }
+
+header {
+  width: 100%;
+  height: 1.28rem;
+  background: #dc0a4b;
+  font-size: 0.28rem;
+  text-align: center;
+  line-height: 1.68rem;
+  margin-bottom: 0.26rem; }
+  header span {
+    display: block;
+    width: 0.32rem;
+    height: 0.42rem;
+    background: url(../img/icon.jpg) center no-repeat;
+    background-size: cover;
+    float: left;
+    margin-top: 0.62rem;
+    margin-left: 0.24rem; }
+
+section {
+  width: 100%; }
+  section ul {
+    width: 6.02rem;
+    height: 2.4rem;
+    border-radius: 0.1rem;
+    margin: 0 auto;
+    border: solid 0.01rem grey;
+    margin-bottom: 0.18rem; }
+    section ul li:last-child {
+      border: 0; }
+    section ul li {
+      width: 100%;
+      height: 25%;
+      border-radius: 0.1rem;
+      border-bottom: solid 0.01rem grey;
+      font-size: 0.26rem;
+      text-indent: 0.24rem;
+      line-height: 0.56rem; }
+      section ul li input {
+        width: 4.24rem;
+        height: 0.46rem;
+        border: 0; }
+      section ul li button {
+        width: 1.36rem;
+        height: 0.42rem;
+        background: #9ecc6b;
+        border-radius: 0.1rem;
+        font-size: 0.2rem;
+        text-align: center;
+        line-height: 0.42rem;
+        border: 0;
+        margin-right: 0.1rem; }
+  section .btn {
+    display: block;
+    width: 6.02rem;
+    height: 0.64rem;
+    font-size: 0.34rem;
+    text-align: center;
+    line-height: 0.64rem;
+    border-radius: 0.1rem;
+    margin: 0 auto;
+    color: white;
+    background: #00a0e9;
+    margin-bottom: 0.4rem; }
+  section .check {
+    width: 6rem;
+    margin: 0 auto;
+    font-size: 0.18rem;
+    color: black; }
+    section .check input {
+      width: 0.2rem;
+      height: 0.2rem; }
+    section .check span {
+      font-size: 0.26rem;
+      color: #00a0e9; }
+
+/*# sourceMappingURL=log_up.css.map */
