@@ -1,0 +1,142 @@
+@import "mobile";
+@mixin radius($px1){
+  -webkit-border-radius:$px1;
+  -moz-border-radius:$px1;
+  -ms-border-radius:$px1;
+  -o-border-radius:$px1;
+  border-radius:$px1;
+}
+@mixin bor($b){
+  box-sizing:$b;
+  -webkit-box-sizing:$b;
+  -moz-box-sizing:$b;
+  -ms-box-sizing:$b;
+  -o-box-sizing:$b;
+}
+html,body{
+  width: 100%;
+  height: 100%;
+  background: #f6f5f5;
+  overflow-y: auto;
+}
+header{
+  width: 100%;
+  height: pxToRem(88);
+  background: #dc0a4b;
+  color: #FFFFFF;
+  line-height: pxToRem(88);
+  overflow: hidden;
+  img{
+    float: left;
+    display: block;
+    width: pxToRem(40);
+    height: pxToRem(40);
+    margin-left: pxToRem(23);
+    margin-top: pxToRem(25);
+  }
+  h3{
+    float: left;
+    font-size: pxToRem(28);
+    height: pxToRem(88);
+    text-align: center;
+    width: pxToRem(480);
+  }
+
+}
+section{
+  width: 100%;
+  height: pxToRem(919);
+  background: #f7f7f7;
+  aside{
+    height: pxToRem(147);
+    padding-left: pxToRem(62);
+    display: flex;
+    align-items: center;
+    img{
+      display: inline-block;
+      width: pxToRem(90);
+      height: pxToRem(90);
+      background: #FFFFFF;
+      @include radius(50%);
+      border: none;
+    }
+    span{
+      font-size: pxToRem(24);
+      margin-left: pxToRem(15);
+      font-weight: 600;
+    }
+  }
+  .nav{
+    width: 100%;
+    height: pxToRem(90);
+    background: #FFFFFF;
+    li{
+      width: pxToRem(158);
+      height: pxToRem(88);
+      float: left;
+      border: 1px solid #d2d2d2;
+      border-left: 0;
+      text-align: center;
+      line-height: pxToRem(88);
+      font-size: pxToRem(24);
+    }
+    li:nth-child(4){
+      border-right: 0;
+    }
+  }
+  div{
+    height: pxToRem(60);
+    margin-top: pxToRem(26);
+    background: #FFFFFF;
+    padding-left: pxToRem(39);
+    img{
+      float: left;
+      display: inline-block;
+      width: pxToRem(48);
+      height: pxToRem(48);
+      margin-right: pxToRem(15);
+    }
+    span{
+      float: left;
+      line-height: pxToRem(60);
+    }
+  }
+}
+footer{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: pxToRem(90);
+  border-top: 2px solid #b5b5b6;
+  ul{
+    width: pxToRem(600);
+    height: 100%;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-around;
+    li{
+      padding-top: pxToRem(12);
+      img{
+        display: block;
+        width: pxToRem(50);
+        height: pxToRem(37);
+        margin-bottom: pxToRem(6);
+      }
+      span{
+        font-size: pxToRem(18);
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

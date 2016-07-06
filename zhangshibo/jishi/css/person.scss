@@ -1,0 +1,125 @@
+@import 'mobile.scss';
+@charset "utf-8";
+*{
+  margin:0;
+  padding:0;
+}
+a{
+  text-decoration:none;
+}
+ol,ul{
+  list-style:none;
+}
+header{
+  width:100%;
+  height:pxToRem(88);
+  box-sizing:border-box;
+  padding:0 .24rem;
+  background:#dc0a4b;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  a:nth-child(1){
+    font-size:pxToRem(50);
+    color:#fff;
+  }
+  a:nth-child(3){
+    font-size:pxToRem(42);
+    color:#fff;
+    visibility:hidden;
+  }
+  span{
+    font-size:pxToRem(30);
+    color:#fff;
+  }
+}
+content{
+  width:100%;
+  box-sizing:border-box;
+  padding-left:pxToRem(22);
+  padding-right:pxToRem(22);
+  .personinfo{
+    width:100%;
+    height:pxToRem(154);
+    background:#ccc;
+    display:flex;
+    align-items: center;
+    img{
+      display:block;
+      width:pxToRem(98);
+      height:pxToRem(98);
+      border-radius:50%;
+      margin-left:pxToRem(40);
+    }
+    span{
+      margin-left:pxToRem(20);
+      color:#000;
+    }
+  }
+  .myorder{
+    margin-top:pxToRem(3);
+    height:pxToRem(90);
+    width:100%;
+    box-sizing:border-box;
+    border-bottom:pxToRem(1) solid #ccc;
+    border-top:pxToRem(1) solid #ccc;
+    .orderlist{
+      display:flex;
+      height:pxToRem(88);
+      li{
+        width:25%;
+        height:pxToRem(88);
+        text-align:center;
+        line-height:pxToRem(88);
+        border-right:pxToRem(1) solid #ccc;
+      }
+      li:nth-child(4){
+        border:0;
+      }
+    }
+    .controlist{
+      width:100%;
+      height:pxToRem(490);
+      background:blue;
+    }
+    
+  }
+}
+footer{
+  width:100%;
+  height:pxToRem(92);
+  border-top:pxToRem(2) solid #333;
+  box-sizing:border-box;
+  padding-left:pxToRem(22);
+  padding-right:pxToRem(22);
+  .footlist{
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    li{
+      width:pxToRem(86);
+      height:pxToRem(90);
+      display:flex;
+      justify-content: center;
+      flex-wrap:wrap;
+      .pic{
+        margin-top:pxToRem(18);
+        margin-bottom:pxToRem(6);
+        width:pxToRem(86);
+        height:pxToRem(66);
+        border-radius:50%;
+        //background:pink;
+        text-align:center;
+        line-height:pxToRem(66);
+        font-size:pxToRem(56);
+        color:#ccc;
+      }
+      span{
+        display:block;
+        font-size:pxToRem(22);
+        color:#ccc;
+      }
+    }
+  }
+}

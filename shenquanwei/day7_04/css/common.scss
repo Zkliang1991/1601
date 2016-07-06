@@ -24,6 +24,7 @@ header{
     position: fixed;
     left: 0;
     top: 0;
+    z-index: 999;
     display: flex;
     width: 100vw;
     height: 13.75vw;
@@ -45,6 +46,10 @@ header{
     p{
        width: 72.5vw; 
     }
+}
+.empty{
+    width: 100vw;
+    height: 14vw;
 }
 footer{
     display: flex;

@@ -1,0 +1,49 @@
+@import 'mobile';
+@charset "UTF-8";
+footer{
+	width:100%;
+	height:pxToRem(98);
+	background:#484850;
+	position: fixed;
+	bottom:0;
+	ul{
+		li{
+			float: left;
+			width: pxToRem(128);
+			height: 100%;
+
+			.sit{
+				font-size: pxToRem(50);
+				color: #fff;
+				text-align: center;
+				line-height: pxToRem(60);
+				height: pxToRem(58);
+			}
+			.text{
+				font-size: pxToRem(26);
+				font-family: '微软雅黑';
+				line-height: pxToRem(40);
+				height: pxToRem(50);
+				color: #fff;
+				text-align: center;
+			}
+
+		}
+		.car{
+			position:relative;
+			span{
+				display: block;
+				width: pxToRem(30);
+				height: pxToRem(30);
+				background:#df2660;
+				border-radius: 50%;
+				text-align: center;
+				line-height:pxToRem(30);
+				color: #fff;
+				position:absolute;
+				right:pxToRem(20);
+				top: 0;
+			}
+		}
+	}
+}

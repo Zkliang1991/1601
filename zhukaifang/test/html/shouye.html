@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+	<title>首页</title>
+	<link rel="stylesheet" type="text/css" href="../css/shouye.css">
+	<link rel="stylesheet" type="text/css" href="../css/public.css">
+	<link rel="stylesheet" type="text/css" href="../ux/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="../css/swiper-3.3.1.min.css">
+	<script type="text/javascript" src="../js/jquery-1.10.1.min.js"></script>
+	<script type="text/javascript" src="../js/swiper-3.3.1.min.js"></script>
+</head>
+<body>
+	<header class="header">
+		<a>关于</a>
+		<h4>昆山市</h4>
+		<span class="iconfont icon-me">&#xe62f;</span>
+	</header>
+
+	<div class="swiper-container" id="myswiper">
+		<div class="swiper-wrapper" >
+			<div class="swiper-slide slide1" data-hash="slide1">
+				<img src="../images/baner.jpg" class="img1" />
+			</div>
+			<div class="swiper-slide slide2" data-hash="slide2">
+				<img src="" class="img2">
+			</div>
+			<div class="swiper-slide slide3" data-hash="slide3">
+				<img src="" class="img3">
+			</div>
+			<div class="swiper-slide slide4" data-hash="slide4">
+				<img src="" class="img4">
+			</div>
+		</div>
+		<div class="swiper-pagination"></div>
+	</div>
+
+
+
+
+	
+	<footer class="footer"></footer>
+
+	<script type="text/javascript">
+		$('.footer').load('footer.html',function(){
+			$('.icon-home').css('color','deeppink');
+		})
+	</script>
+
+	<script type="text/javascript" src="../js/rem.js"></script>
+	<script type="text/javascript">
+		var myswiper = new Swiper('#myswiper',{
+			// autoplay:1000,
+			autoplayDisableOnInteraction : false,
+			speed:500,
+			effect : 'slide',
+			loop : true,
+			pagination : '.swiper-pagination',
+			speed:500,
+			paginationElement : 'li',
+			resistanceRatio : 0,
+		});
+
+	</script>
+</body>
+</html>

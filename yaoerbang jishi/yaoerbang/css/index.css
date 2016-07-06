@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+html, body {
+  width: 100%;
+  color: white;
+  font-family: "Microsoft yahei"; }
+
+ul {
+  list-style: none; }
+
+header {
+  width: 100%;
+  height: 1.28rem;
+  background: #dc0a4b;
+  text-align: center;
+  font-size: 0.3rem;
+  -webkit-box-sizing: border-box;
+  padding-top: 0.64rem; }
+  header .sp1 {
+    float: left;
+    margin-left: 0.24rem; }
+  header .city {
+    width: 1.7rem;
+    height: 0.44rem;
+    margin: 0 auto; }
+    header .city .sp2 {
+      display: block;
+      width: 0.42rem;
+      height: 0.44rem;
+      float: right;
+      background: url(../img/iconfont-locationfill.png) center no-repeat;
+      background-size: cover; }
+  header .sp3 {
+    display: block;
+    width: 0.42rem;
+    height: 0.44rem;
+    background: url(../img/iconfont-wo.png) center no-repeat;
+    background-size: cover;
+    float: right;
+    margin-right: 0.2rem;
+    margin-top: -0.5rem; }
+
+section {
+  width: 100%; }
+  section .swiper-container {
+    width: 100%; }
+    section .swiper-container .swiper-wrapper {
+      width: 100%; }
+      section .swiper-container .swiper-wrapper .swiper-slide {
+        width: 100%;
+        height: 2.12rem; }
+      section .swiper-container .swiper-wrapper .slide1 {
+        background: blue; }
+      section .swiper-container .swiper-wrapper .slide2 {
+        background: red; }
+      section .swiper-container .swiper-wrapper .slide3 {
+        background: green; }
+      section .swiper-container .swiper-wrapper .slide4 {
+        background: yellow; }
+  section .nav1 {
+    width: 5.94rem;
+    height: 2.94rem;
+    margin: 0 auto;
+    background: purple;
+    -webkit-box-sizing: border-box;
+    padding-top: 0.16rem;
+    display: -webkit-flex;
+    flex-flow: row wrap;
+    -webkit-justify-content: space-between; }
+    section .nav1 li {
+      width: 1rem;
+      height: 1.18rem;
+      margin: 0 0.2rem 0.2rem 0.2rem;
+      background: blue; }
+  section h2 {
+    width: 5.94rem;
+    height: 0.4rem;
+    margin: 0 auto;
+    font-size: 0.2rem;
+    line-height: 0.4rem;
+    color: black; }
+  section .nav2 {
+    width: 5.94rem;
+    height: 3.44rem;
+    margin: 0 auto;
+    background: orange;
+    -webkit-box-sizing: border-box;
+    display: -webkit-flex;
+    flex-flow: row wrap;
+    -webkit-justify-content: space-between; }
+    section .nav2 li {
+      width: 2.82rem;
+      height: 1rem;
+      background: red;
+      margin-bottom: 0.12rem; }
+  section .nav3 {
+    width: 5.94rem;
+    margin: 0 auto;
+    background: green;
+    -webkit-box-sizing: border-box;
+    display: -webkit-flex;
+    flex-flow: row wrap;
+    -webkit-justify-content: space-between; }
+    section .nav3 li {
+      width: 1.84rem;
+      height: 1.27rem;
+      background: orange;
+      margin-bottom: 0.24rem; }
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,75 @@
+@import 'mobile';
+@import '../images/ux/iconfont.css';
+@charset "UTF-8";
+body{
+	background:#f7f7f7;
+}
+header{
+	width:100%;
+	height:pxToRem(86);
+	background:#e4366b;
+	text-align:center;
+	box-sizing:border-box;
+	border-bottom:1px solid #636363;
+	border-top:1px solid #282828;
+	font-size:pxToRem(40);
+	color:#fff;
+	line-height:pxToRem(86);
+	position: relative;
+	a{
+		display: block;
+		width: pxToRem(54);
+		height: pxToRem(36);
+		background:url(../images/jiantou.jpg) no-repeat 0 0;
+		background-size:pxToRem(54) pxToRem(36);
+		position:absolute;
+		left:pxToRem(18);
+		top:pxToRem(28);
+	}
+}
+
+.content{
+	width:pxToRem(520);
+	margin: 0 auto;
+	margin-top:pxToRem(30);
+	ul{
+		width: 100%;
+		height: pxToRem(62);
+		display: flex;
+		border:1px solid #ccc;
+		background:#e4e4e4;
+		border-radius:pxToRem(20);
+		margin-bottom: pxToRem(23);
+		li{
+			border-right:1px solid #ccc;
+			flex:1;
+			font-size: pxToRem(30);
+			line-height: pxToRem(62);
+			font-family: "微软雅黑";
+			text-align: center;
+			color: #464646;
+		}
+		li:nth-child(4){
+			border-right:0;
+		}
+		.active{
+			background:#e22b63;
+			color:#fff;
+		}
+	}
+	.txt{
+		width: pxToRem(522);
+		height: pxToRem(140);
+		border:1px solid #ccc;
+		border-radius:pxToRem(20);
+		p{
+			font-size: pxToRem(24);
+			line-height: pxToRem(34);
+			color: #454545;
+			text-indent: pxToRem(16);
+			span{
+				color: #929292;
+			}
+		}
+	}
+}

@@ -1,0 +1,54 @@
+@charset "UTF-8";
+$font_family:"微软雅黑";
+
+*{
+	margin:0;
+	padding:0;
+}
+
+@mixin tran($bai){
+	transform:translateX($bai);
+	-webkit-transform:translateX($bai);
+	-moz-transform:translateX($bai);
+	-ms-transform:translateX($bai);
+	-o-transform:translateX($bai);
+}
+	
+
+
+header{
+	width:100%;
+	height:0.88rem;
+	background:#dc0a4b;
+	position:relative;
+
+	a{
+		display:block;
+		width:0.21rem;
+		height:0.38rem;
+		background:url(../img/jiantou1.png) 0 0 no-repeat;
+		background-size:100% 100%;
+		margin:0.25rem 0 0 0.24rem;
+		// box-sizing:border-box;
+		float:left;
+	}
+	p{
+		position:absolute;
+		left:50%;
+		@include tran(-50%);
+		font-family: $font_family;
+		color:#fff;
+		font-size:0.26rem;
+		line-height:0.88rem;
+	}
+	span{
+		display:block;
+		float:right;
+		margin-right:0.22rem;
+		font-size: 0.25rem;
+		font-family: $font_family;
+		color:#fff;
+		line-height:0.88rem;
+	}
+
+}
