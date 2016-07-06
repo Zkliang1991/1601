@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html id="html">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no'>
+		<link rel="stylesheet" type="text/css" href="css/register.css"/>
+	</head>
+	<body>
+		
+		<header>
+		
+			<div id="about"><a href="index.html"><</a></div>
+			<div id="city">注册</div>
+			
+		</header>			
+		<div id="inf">
+			<input type="number" placeholder="手机号码"class="btn t1"/>
+			<input type="text" placeholder="验证码"class="btn t2"/>
+			
+			<input type="password" placeholder="密码"class="btn t3"/>
+			<input type="password" placeholder="确认号码"class="btn t4"/>
+			<a href="javascript:;">发送验证码</a>
+		</div>
+			
+		<div id="reg">
+			<input type="button" name="" class="log" value="注册" />
+			<input type="checkbox" name="" class="diot" value=""/>
+			<p>我已经阅读并同意阅读</p> <span>使用条款和隐私协议</span>
+	
+		</div>	
+
+			
+			
+			
+			
+			
+		
+		
+	</body>
+	<script type="text/javascript">
+		var html = document.getElementById('html');
+		var width = document.documentElement.clientWidth;
+		html.style.fontSize = width/640*100 + "px";
+
+		onresize = onload =function(){
+			var html = document.getElementById('html');
+			var width = document.documentElement.clientWidth;
+			html.style.fontSize = width/640*100 + "px";	
+		}	
+ 
+	</script>
+</html>
