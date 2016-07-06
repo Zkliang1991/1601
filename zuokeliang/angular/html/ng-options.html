@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>下拉列表</title>
+	<!-- <script type="text/javascript" src="../js/jquery.js"></script> -->
+	<script type="text/javascript" src="../js/angular.js"></script>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		div{
+			padding-bottom: 50px;
+		}
+	</style>
+</head>
+<body ng-app='myApp'  ng-controller="myCtrl">
+	<div>
+		城市列表1:
+		<select ng-model="citySelect">
+			<option value="">请选择城市</option>
+			<option ng-repeat="city in cityList">{{city}}</option>
+		</select>
+
+		<h2>{{citySelect}}</h2>
+	</div>
+
+	<div>
+		城市列表2:
+		<!-- <select ng-model="LocationcitySelect" ng-options="city.value for city in locationCityList"> -->
+		<!-- <select ng-model="LocationcitySelect" ng-options="city.cityId as city.value for city in locationCityList"> -->
+		<!-- <select ng-model='LocationcitySelect' ng-options='citys.cityId as citys.value for citys in locationCityList'> -->
+		<select>
+			<option value="">请选择城市</option>
+
+			<!-- <option ng-repeat="city in locationCityList">{{city.value}}</option> -->
+		</select>
+
+		<h2>{{LocationcitySelect}}</h2>
+	</div>
+
+	<div>
+		汽车排名:
+		<!-- <select ng-model="loveCar" ng-options="c.model as c.brand for c in cars"> -->
+		<select ng-model="loveCar" ng-options="y.brand for (x,y) in cars">
+			<option value="">请选择汽车</option>
+			<!-- <option ng-repeat="car in cars">{{car.brand}}</option> -->
+		</select>
+		<h2>你最喜爱的汽车:{{loveCar.brand}}</h2>
+		<h2>你最喜爱的汽车模型:{{loveCar.model}}</h2>
+		<h2>你最喜爱的汽车颜色:{{loveCar.color}}</h2>
+	</div>
+	<script type="text/javascript">
+	var app = angular.module('myApp',[]);
+	app.controller('myCtrl',function($scope){
+		$scope.cityList = ['北京','深圳','上海','武汉','郑州'];
+		$scope.locationCityList = [
+			{value:"上海",cityId:'sh'},
+			{value:"北京",cityId:'bj'},
+			{value:"深圳",cityId:'sz'},
+			{value:"武汉",cityId:'wh'},
+			{value:"郑州",cityId:'zz'}  
+		];
+		$scope.cars = {
+			car01 : {brand : "Ford", model : "Mustang", color : "red"},
+			car02 : {brand : "Fiat", model : "500", color : "white"},
+			car03 : {brand : "Volvo", model : "XC90", color : "black"}
+		};
+	})
+	</script>
+</body>
+</html>
+

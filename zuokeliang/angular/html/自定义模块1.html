@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>自定义模块</title>
+	<!-- <script type="text/javascript" src="../js/jquery.js"></script> -->
+	<script type="text/javascript" src="../js/angular.js"></script>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		li{
+			margin-bottom: 20px;
+		}
+		b{
+			color:deeppink;
+		}
+	</style>
+</head>
+<body ng-app='myApp'  ng-controller="myCtrl">
+<!-- 	<b>
+		<b>郑州天气很好</b>
+		<span div>不要纠结了</span>
+	</b>
+	<ul>
+		<li div>郑州1601班</li>
+		<div>你不下雨你会死啊</div>
+	</ul> -->
+	<ul>
+		<li ng-repeat="user in userTitleList">
+			<b>{{user.Username}}</b>
+			<h3>{{user.Title}}</h3>
+			<span>{{user.Time}}</span><br>
+			<strong>{{user.likeAcount}}</strong>
+			<!-- <button ng-click="">点赞</button> -->
+			<like content="user"></like>
+			<ul>
+				<li ng-repeat="liker in user.likeList">{{liker.perTolike}}</li>
+			</ul>
+		</li>
+	</ul>
+	<script type="text/javascript">
+	var app = angular.module('myApp',[]);
+	app.controller('myCtrl',function($scope,$http){
+		$scope.userTitleList = [
+			{Username:"zkl",Title:'今天好像没有下雨',Time:"2016-07-05",likeAcount:0,likeList:[]},
+			{Username:"zkl",Title:'我今天差点就迟到了',Time:"2016-07-04",likeAcount:0,likeList:[]},
+			{Username:"zkl",Title:'你这样一直下雨好吗',Time:"2016-07-03",likeAcount:0,likeList:[]},
+			{Username:"zkl",Title:'下午我一直在打篮球',Time:"2016-07-02",likeAcount:0,likeList:[]},
+			{Username:"zkl",Title:'感觉生无可恋的啊',Time:"2016-07-01",likeAcount:0,likeList:[]},
+			]
+	})
+	//自定义模块
+	// E表示元素
+	// A表示指令
+	//templateUrl 表示加载页面模板
+	//作业 通过templateUrl 加载 loading模板
+	app.directive('div',function(){
+		var direction = [];
+		direction.restrict = "EA";
+		// direction.template = "<span>今天好像天晴了</span>";
+		direction.templateUrl = "mytemplate.html";
+		return direction;
+	})
+
+	app.directive('like',function(){
+		var direction = [];
+		direction.restrict ="EA";
+		direction.template = "<input type='button' ng-click='liker()' value='点赞'/>";
+		// 表示从外部传进来的变量content scope为属性
+		direction.scope = {
+ 			content:"="
+		}
+		// 链接到外部作用域  link为属性
+		direction.link = function($scope){
+			$scope.liker = function(){
+				$scope.content.likeAcount = $scope.content.likeAcount + 1;
+				$scope.content.likeList.push({perTolike:"王月娇"+new Date().getSeconds()})
+			}
+		}
+		return direction;
+	})
+	</script>
+</body>
+</html>
+

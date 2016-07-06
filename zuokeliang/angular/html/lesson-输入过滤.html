@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../css/base.css">
+	<script type="text/javascript" src="../js/angular.js"></script>
+	<title>输入过滤</title>
+	<style type="text/css">
+	li{
+		padding: 10px;
+	}		
+	td{
+		width: 80px;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+	}
+	</style>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl"  ng-init="week=['Mon','Tur','Wen','Thu','Fri','Sat','Sun']";>
+	<b>搜索:<input type="text" ng-model="test"></b>
+	<h1>NBA 名人堂2</h1>
+	<table>
+		<thead>
+			<tr>
+				<td>序号</td>
+				<td>名字</td>
+				<td>年龄</td>
+				<td>星座</td>
+				<td>薪资</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="data in playerInfo | orderBy:['age','-salary'] | filter:test" >
+				<!-- 输入过滤 -->
+				<!-- $index 表示下标 -->
+				<td>{{$index+1}}</td>
+				<td>{{data.name | lowercase}}</td>
+				<td>{{data.age}}</td>
+				<td>{{data.xingZuo}}</td>
+				<td>{{data.salary}}</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<div>姓名:<input type="text" ng-model="username"></div>
+	<p>{{username}}</p>
+	<script type="text/javascript">
+	var app = angular.module('myApp',[]);
+	app.controller('myCtrl',function($scope){
+		$scope.username = "郑州1601";
+		//数组
+		$scope.playerlist = [
+			["kobe",29,"摩羯座"],
+			["Jondon",44,"水瓶座"],
+			["James",32,"水瓶座"],
+		]
+
+		$scope.playerInfo = [
+			{name:"Kobe",age:39,xingZuo:"摩羯座",salary:"2400"},
+			{name:"Jondon",age:50,xingZuo:"水瓶座",salary:"3300"},
+			{name:"James",age:33,xingZuo:"水瓶座",salary:"3900"},
+			{name:"Afusan",age:39,xingZuo:"摩羯座",salary:"1800"}
+		]
+		var date = new Date();
+		$scope.now =date.getHours()+":"+date.getMinutes()+":"+date.getSeconds()
+	})
+	</script>
+</body>
+</html>

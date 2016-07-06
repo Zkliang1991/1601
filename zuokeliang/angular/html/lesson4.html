@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../css/base.css">
+	<script type="text/javascript" src="../js/angular.js"></script>
+	<title>表达式</title>
+	<style type="text/css">
+	li{
+		padding: 10px;
+	}
+	p{
+
+	}
+	</style>
+</head>
+<body>
+
+	<b>Angular 模式</b>
+	<ul ng-app ng-init="acount=0;price=0">
+		<li>数量:<input type="text" ng-model="acount"></li>
+		<li>单价:<input type="text" ng-model="price"></li>
+		<li>总价: {{acount*price||0 |currency}} </li>
+		<!--  {{price || 0}} 表示当price不存在或者为空的时候，取后者 -->
+		<li>{{5+5}}</li>
+		<!-- var a= 5,b=5 a+b = -->
+	</ul>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表单操作</title>
+	<script type="text/javascript" src='../js/angular.min.js'></script>
+	<link rel="stylesheet" type="text/css" href="../css/base.css">
+	<style type="text/css">
+	ul{
+		list-style: none;
+	}
+	li{
+		margin: 10px;
+	}
+	.notice{
+		color:red;
+	}
+	</style>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+	<form ng-submit="postForm()" name="myForm">
+		<ul>
+			<li>
+			 用户名: <input type="text" ng-model="Name" name="username" required
+			 ng-pattern="/^\w{8,18}$/">
+			 	<b class="notice" >
+					<span ng-show="myForm.username.$error.required">用户名不能为空！</span>
+					<span ng-show="!myForm.username.$error.required&&myForm.username.$dirty&&myForm.username.$invalid">请输入8-18位用户名</span>
+			 	</b>
+			</li>
+			<li>
+			 手机号: <input type="text" ng-model="phone" name="myphone" ng-pattern='/^1[3578]\d{9}$/' required>
+			 	<b class="notice" ng-show="myForm.myphone.$dirty&&myForm.myphone.$invalid">
+					请输入正确的手机号
+			 	</b>
+			</li>
+
+			<li>
+<!-- 			 邮 箱: <input type="text" ng-model="email" name="myemail" ng-pattern='/^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+$/' required>
+			 	<b class="notice" ng-show="myForm.myemail.$dirty&&myForm.myemail.$invalid">
+					请输入正确的邮箱地址
+			 	</b> -->
+			 	邮 箱: <input type="email" ng-model="email" name="myemail"  required>
+			 	<b class="notice" ng-show="myForm.myemail.$dirty&&myForm.myemail.$invalid">
+					请输入正确的邮箱地址
+			 	</b>
+			</li>
+			<li>
+				<input type="submit" value="提交" ng-disabled = "myForm.$invalid">
+			</li>
+		</ul>
+	</form>
+
+	<script type="text/javascript">
+	var app = angular.module("myApp",[]);
+	app.controller('myCtrl',function($scope){
+// $error           字段报错
+// $dirty			表单有填写记录
+// $valid			字段内容合法的
+// $invalid		    字段内容是非法的
+// $pristine		表单没有填写记录
+//ng-maxlength      表示最大长度
+//ng-minlength      表示最小长度
+		$scope.Name = "zuozuo"
+		$scope.Form = {};
+		$scope.locationCityList = [
+			{value:"上海",cityId:'sh'},
+			{value:"北京",cityId:'bj'},
+			{value:"深圳",cityId:'sz'},
+			{value:"武汉",cityId:'wh'},
+			{value:"郑州",cityId:'zz'}  
+		];
+		$scope.FormObjData = {
+			Username:" ",
+			Nikename:" ",
+		}
+		$scope.postForm = function(){
+			console.log($scope.Form);
+			//copy  angular 复制方法 
+			$scope.Form = angular.copy($scope.FormObjData);
+		}
+	})
+	</script>
+</body>
+</html>

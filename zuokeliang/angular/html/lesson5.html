@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../css/base.css">
+	<script type="text/javascript" src="../js/angular.js"></script>
+	<title>应用</title>
+	<style type="text/css">
+	li{
+		padding: 10px;
+	}
+	p{
+
+	}
+	</style>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+
+	<ul>
+		<!--  重复  -->
+		<li ng-repeat="x in citylist">{{x}}</li>
+	</ul>
+	<!-- 元素名 E  -->
+	<!-- <my-directive></my-directive> -->
+	<!-- 属性 A 指令 -->
+	<!-- <div my-directive></div> -->
+	<!-- 类名 C -->
+	<div class="my-directive"></div>
+
+	<div class="my-div">
+		<b>今天天气很好</b>
+	</div>
+	<div my-div>
+		<b>今天天气很好</b>
+	</div>
+	<my-div>
+		<b>今天天气很好</b>
+	<my-div>
+	</div>
+	<!-- directive:my-directive -->
+	<script type="text/javascript">
+	//定义一个myApp 模块 .
+	var app = angular.module('myApp',[]);
+	//给 myApp 模块添加一个控制器myCtrl ,这个控制器的作用域为$scope
+	app.controller('myCtrl',function($scope){
+		$scope.userName = "郑州1601";
+		$scope.citylist = [
+			"北京","上海","深圳","郑州"
+		]
+	})
+	//自定义指令
+	app.directive('myDirective',function(){
+		return {
+			restrict:"C",
+			template:"<h1>郑州1601</h1>"
+		}
+	})
+
+	app.directive('myDiv',function(){
+		var direction = {};
+		direction.restrict = "EA";
+		// direction.template = '第一个指令';
+		//表示允许从HTML页面中加载模板
+		direction.templateUrl = 'mytemplate.html'
+		return direction;
+	})
+	</script>
+</body>
+</html>
