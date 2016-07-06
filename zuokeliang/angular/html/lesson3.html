@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../css/base.css">
+	<script type="text/javascript" src="../js/angular.js"></script>
+	<title>angular</title>
+	<style type="text/css">
+	li{
+		padding: 10px;
+	}
+	p{
+
+	}
+	</style>
+</head>
+<body>
+	<!-- ng-init 表示 初始化 AngularJS 应用程序变量。
+ -->
+	<b>Angular 模式</b>
+	<ul data-ng-app data-ng-init="name='xuyongfeng';xing='zuo'">
+		<li>IT猿:<input type="text" data-ng-model="name"></li>
+		<li><span>hello: {{name}}</span></li>
+	</ul>
+
+</body>
+</html>

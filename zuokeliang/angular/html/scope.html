@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../css/base.css">
+	<script type="text/javascript" src="../js/angular.js"></script>
+	<title>angular</title>
+	<style type="text/css">
+	li{
+		padding: 10px;
+	}
+	p{
+
+	}
+	</style>
+</head>
+<body ng-app="myApp">
+	<div ng-controller="myCtrl">
+	<b>点击数量: <span >{{count}}</span></b>
+	<!-- <button ng-click="count = count + 1">点击</button> -->
+	<!-- ng-click 表示 点击事件   -->
+	<button ng-click="countAdd()">点击</button>
+	<ul>
+		<li ng-repeat="x in nameList">{{x}} 是 {{Class}} 班 的三好学生</li>
+	</ul>
+	</div>
+
+	<div ng-controller="myCtrl1">
+	 <b>点击数量: <span >{{count}}</span></b>
+	 <button ng-click="countAdd()">点击</button>
+	 <!-- ng-show 表示 显示隐藏 ，true表示显示 -->
+	 <p ng-show="hideFlag">郑州1601班平均薪资20k</p>
+	 <br><button ng-click="HideContex()">{{btnContext}}</button>
+	</div>
+	<script type="text/javascript">
+	var app = angular.module('myApp',[]);
+	app.controller('myCtrl',function($scope){
+		//属性
+		$scope.count = 0;
+		// $rootScope.Class = "郑州1601";
+		// $rootScope. = "郑州1601";
+		$scope.nameList = ['王恒','沈全伟','乔石'];
+		//定义方法
+		$scope.countAdd = function(){
+			// $scope.count +=1;
+		 	$scope.count = $scope.count  + 1;
+		 	
+		}
+	});
+	app.controller('myCtrl1',function($scope,$rootScope){
+		$scope.count = 100;
+		$rootScope.Class = "郑州1601";
+		$scope.countAdd = function(){
+		 	$scope.count = $scope.count  + 100;	
+		}
+
+		$scope.hideFlag = true;
+		$scope.btnContext = "隐藏"
+		$scope.HideContex = function(){
+			$scope.hideFlag =!$scope.hideFlag;
+			if($scope.hideFlag){
+				$scope.btnContext = "隐藏";
+			}else{
+				$scope.btnContext = "显示";
+			}
+			return false;
+		}
+	})
+	</script>
+</body>
+</html>

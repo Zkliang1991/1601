@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../css/base.css">
+	<script type="text/javascript" src="../js/angular.js"></script>
+	<title>应用</title>
+	<style type="text/css">
+	li{
+		padding: 10px;
+	}
+	b{
+		color:deeppink;
+		display: block;
+		margin: 5px;
+	}
+	h2{
+		color:#666;
+	}
+	</style>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+	<ul>
+		<li ng-repeat="info in userTitleList">
+			<b>{{info.Username}}</b>
+			<h2>{{info.Title}}</h2>
+			<span>{{info.Time}}</span><br>
+			<i>{{info.likeAcount}}</i>
+			<like content="info"></like>
+			<ul>
+				<li ng-repeat="liker in info.likeList">
+					<span>{{liker.text}}</span>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	<script type="text/javascript">
+	var app = angular.module('myApp',[]);
+	app.controller('myCtrl',function($scope){
+		$scope.userTitleList = [
+		{Username:"zkl",Title:'今天好像没有下雨',Time:"2016-07-05",likeAcount:0,likeList:[]},
+		{Username:"zkl",Title:'我今天差点就迟到了',Time:"2016-07-04",likeAcount:0,likeList:[]},
+		{Username:"zkl",Title:'你这样一直下雨好吗',Time:"2016-07-03",likeAcount:0,likeList:[]},
+		{Username:"zkl",Title:'下午我一直在打篮球',Time:"2016-07-02",likeAcount:0,likeList:[]},
+		{Username:"zkl",Title:'感觉生无可恋的啊',Time:"2016-07-01",likeAcount:0,likeList:[]},
+		]
+	})
+	//自定义指令
+	app.directive('myDirective',function(){
+		return {
+			restrict:"C",
+			template:"<h1>郑州1601</h1>"
+		}
+	})
+
+	app.directive('like',function(){
+		var direction = {};
+		direction.restrict = "EA";
+		direction.template = '<button ng-click="like()">点赞</button>';
+		//表示允许从HTML页面中加载模板
+		// direction.templateUrl = 'mytemplate.html'
+		//scope表示外部传进来的变量
+		direction.scope = {
+			content:"="
+		}
+		direction.link =function($scope,element){
+			$scope.like = function(){
+				$scope.content.likeAcount  =  $scope.content.likeAcount + 1;
+				$scope.content.likeList.push({text:"李易峰"})
+			};
+		}
+		return direction;
+	})
+	</script>
+</body>
+</html>

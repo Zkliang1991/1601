@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../css/base.css">
+	<script type="text/javascript" src="../js/angular.min.js"></script>
+	<title>angularcss类</title>
+	<style type="text/css">
+	li{
+		padding: 10px;
+	}
+	div{
+		margin-top:30px;
+	}
+	</style>
+</head>
+<body ng-app="myApp" >
+	<ul ng-controller="myCtrl">
+		<li>姓:<input type="text" ng-model="myxing"></li>
+		<li>名:<input type="text" ng-model="myming"></li>
+		<li>hello: {{myxing}} {{myming}}</li>
+		<li>谢谢你!{{fullName}}</li>
+	</ul>
+
+
+	<div ng-controller="MomCtrl">
+		<h1>{{Name}}</h1>
+		<h2>{{Location}}</h2>
+		<button ng-click="ChangHouse()">搬家</button>
+
+		<div ng-controller="MeCtrl">
+			<h1>{{Name}}</h1>
+			<h2>{{Location}}</h2>
+			<h4>{{mobile}}</h4>
+			<button >拨打电话</button>
+		</div>
+
+		<div ng-controller="GfCtrl">
+			<h1>{{Name}}</h1>
+			<h2>{{Location}}</h2>
+			<h4>{{mobile}}</h4>
+			<button ng-click="call()">拨打电话</button>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var app = angular.module("myApp",[]);
+		app.controller("myCtrl",function($scope){
+			$scope.myxing =  " ";
+			$scope.myming = " ";
+			//$watch 事件监听
+			$scope.$watch(['myxing','myming'],function(){
+				$scope.fullName = $scope.myxing + " " + $scope.myming;
+			});
+			$scope.$watch('myming',function(){
+				$scope.fullName = $scope.myxing + " " + $scope.myming;
+			})
+		});
+		app.controller("MeCtrl",function($scope){
+			$scope.Name = "佐佐木";
+			$scope.mobile = "待机";
+			$scope.$on('yourgfCall',function(){
+				$scope.mobile = "女朋友来电了..."
+				//Todo....
+			})
+		})
+		app.controller("MomCtrl",function($scope){
+			$scope.Name = "佐佐木的mather";
+			$scope.Location = "太阳系地球村中国街道";
+			$scope.ChangHouse =function(){
+				$scope.Location = "中国郑州市金水区幸福屯";
+			};
+			//$on() 表示监听或者接收
+			$scope.$on('callToZuo',function(){
+				//$broadcast 表示广播 ，向外传递消息 向下广播
+				$scope.$broadcast("yourgfCall");
+			})
+
+		})
+		app.controller('GfCtrl',function($scope){
+			$scope.Name = "佐佐木的女朋友";
+			$scope.Location = "中国郑州市金水区经纬中学1601班某某";
+			$scope.mobile = "待机";
+			// $scope.$emit()
+			$scope.call = function(){
+				$scope.mobile = "拨号中....";
+				// emit 向上传递消息  传递到父级 父级控制器
+				$scope.$emit("callToZuo");
+				// $scope.$broadcast("yourgfCall");
+			}
+		})
+	</script>
+</body>
+</html>

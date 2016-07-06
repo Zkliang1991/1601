@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表单操作</title>
+	<script type="text/javascript" src='../js/angular.min.js'></script>
+	<link rel="stylesheet" type="text/css" href="../css/base.css">
+	<style type="text/css">
+	ul{
+		list-style: none;
+	}
+	li{
+		margin: 10px;
+	}
+	</style>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+	<form ng-submit="postForm()">
+		<ul>
+			<li>
+				<label>用户名:<input type="text" ng-model="Form.Username"></label>
+			</li>
+			<li>
+				<label>呢称:<input type="text" ng-model="Form.Nikename"></label>
+			</li>
+			<li>
+				<label>年龄:<input type="text" ng-model="Form.Age"></label>
+			</li>
+			<li>
+				<label>是否已婚:<input type="checkbox" ng-model="Form.isMarried"></label>
+			</li>
+			<li>
+				<label>喜欢的动物:
+					<input type="radio" ng-model="Form.lovedAnimal" value="猫">猫
+					<input type="radio" ng-model="Form.lovedAnimal" value="狗">狗
+					<input type="radio" ng-model="Form.lovedAnimal" value="蚂蚁">蚂蚁
+				</label>
+			</li>
+			<li>
+				<label>居住的城市:
+					<select ng-model="Form.yourCity" ng-options="citys.cityId as citys.value for citys in locationCityList">
+						<option value="">请选择城市</option>
+					</select>
+				</label>
+			</li>
+			<li>
+				<input type="submit" value="提交">
+			</li>
+		</ul>
+	</form>
+
+	<ul>
+		<li>{{Form.Username}}</li>
+		<li>{{Form.Nikename}}</li>
+		<li>{{Form.Age}}</li>
+		<li>{{Form.isMarried}}</li>
+		<li>{{Form.lovedAnimal}}</li>
+		<li>{{Form.yourCity}}</li>
+	</ul>
+	<script type="text/javascript">
+	var app = angular.module("myApp",[]);
+	app.controller('myCtrl',function($scope){
+		$scope.Form = {};
+		$scope.locationCityList = [
+			{value:"上海",cityId:'sh'},
+			{value:"北京",cityId:'bj'},
+			{value:"深圳",cityId:'sz'},
+			{value:"武汉",cityId:'wh'},
+			{value:"郑州",cityId:'zz'}  
+		];
+		$scope.FormObjData = {
+			Username:" ",
+			Nikename:" ",
+		}
+		$scope.postForm = function(){
+			if($scope.Form.Username==""||$scope.Form.Username==undefined){
+				alert("用户名不能为空！")
+			}
+			console.log($scope.Form);
+			//copy  angular 复制方法 
+			$scope.Form = angular.copy($scope.FormObjData);
+		}
+	})
+	</script>
+</body>
+</html>

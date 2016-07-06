@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../css/base.css">
+	<script type="text/javascript" src="../js/angular.js"></script>
+	<title>ng-数组和对象</title>
+	<style type="text/css">
+	li{
+		padding: 10px;
+	}		
+	td{
+		width: 80px;
+		height: 40px;
+		line-height: 40px;
+		text-align: center;
+	}
+	</style>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl"  ng-init="week=['Mon','Tur','Wen','Thu','Fri','Sat','Sun']">
+
+	<h1>NBA 名人堂1</h1>
+	<table>
+		<thead>
+			<tr>
+				<td>名字</td>
+				<td>年龄</td>
+				<td>星座</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="data in playerlist">
+				<td>{{data[0]}}</td>
+				<td>{{data[1]}}</td>
+				<td>{{data[2]}}</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<h1>NBA 名人堂2</h1>
+	<table>
+		<thead>
+			<tr>
+				<td>名字</td>
+				<td>年龄</td>
+				<td>星座</td>
+				<td>薪资</td>
+				<td>操作</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="data in playerInfo  | limitTo:4" >
+			<!-- uppercase 过滤 所有字符串变成大写 -->
+			<!-- lowercase 过滤 所有字符串变成小写 -->
+			<!-- orderBy 排序 orderBy:'age':true  表示已age 降序排序 orderBy:['age','-salary']  -->
+			<!-- filter 过滤  -->
+			<!-- limitTo 表示 限制 多少条数据  -->
+			<!-- {$:33} 表示在全局环境下找 -->
+				<td>{{data.name | fanzhuan}}</td>
+				<td>{{data.age}}</td>
+				<td>{{data.xingZuo}}</td>
+				<td>{{data.salary}}</td>
+				<td><button ng-click="deleteUser(data.name)">删除</button></td>
+			</tr>
+		</tbody>
+	</table>
+	
+
+
+<!-- 	<ul>
+		<li ng-repeat="we in week"><b>{{we}}</b></li>
+	</ul> -->
+
+	<b>{{now}}</b>
+	<script type="text/javascript">
+	var app = angular.module('myApp',[]);
+	app.controller('myCtrl',function($scope){
+		$scope.userName = "郑州1601";
+		//数组
+		$scope.playerlist = [
+			["kobe",29,"摩羯座"],
+			["Jondon",44,"水瓶座"],
+			["James",32,"水瓶座"],
+		]
+
+		$scope.playerInfo = [
+			{name:"Kobe",age:39,xingZuo:"摩羯座",salary:"2400"},
+			{name:"Kobe",age:29,xingZuo:"摩羯座",salary:"4400"},
+			{name:"Kobe",age:29,xingZuo:"摩羯座",salary:"4400"},
+			{name:"Jondon",age:50,xingZuo:"水瓶座",salary:"3300"},
+			{name:"James",age:33,xingZuo:"水瓶座",salary:"3900"},
+			{name:"Afusan",age:39,xingZuo:"摩羯座",salary:"1800"},
+			{name:"weide",age:34,xingZuo:"摩羯座",salary:"1500"}
+		]
+		// 过滤 
+		// $scope.limitSalary = function(a){
+		// 	return a.salary >3000&&a.salary<4000;
+		// }
+		$scope.limitSalary = function(a){
+			return a.salary>3000&&a.salary<4000;
+		}
+		// $scope.xingZ = function(e){
+		// 	return e.age == 39;
+		// }
+		//定时器
+		// var date = new Date();
+		// $scope.now =date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
+		// // $scope.$apply()接收一个函数或Angular表达式字符串，并执行它
+		// $scope.timer = setInterval(function(){
+		// 	$scope.$apply(function(){
+		// 		var date = new Date();
+		// 		$scope.now =date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
+		// 	});
+		// },1000);
+		var date = new Date();
+		$scope.now =  date.getHours()+":"+date.getMinutes()+":"+date.getSeconds()
+		$scope.timer = setInterval(function(){
+			$scope.$apply(function(){
+				var date = new Date();
+				$scope.now =  date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
+			})
+		},1000)
+		//删除
+		// $scope.deleteUser = function(username){
+		// 	$scope.playerInfo.forEach(function(user,i,list){
+		// 		if(user.name==username){
+		// 			list.splice(i,1);
+		// 		}
+		// 	});
+		// }
+
+		$scope.deleteUser = function(username){
+			$scope.playerInfo.forEach(function(user,i,list){
+				if(user.name == username){
+					list.splice(i,1);
+					//splice(index,n,items)
+				}
+				console.log($scope.playerInfo)
+				return false;
+
+			})
+		}
+		// $scope.SetTimer = function(){
+		// 	$scope.$apply(function(){
+		// 		var date = new Date();
+		// 		$scope.now =date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
+		// 	})
+		// }
+		// $scope.timer = setInterval($scope.SetTimer,1000);
+
+		// $scope.$apply(function(){
+		// 	// $scope.playerInfo[0].salary = 5800;
+		// 	console.log(123);
+		// })
+	})
+
+	//	自定义过滤器	
+	app.filter("myFilter",function(){
+			return function(e,age){
+				var _out = [];
+				for(var i =0;i<e.length;i++){
+					if(e[i].salary>=3000&&e[i].salary<=4000&&e[i].age>age){
+						_out.push(e[i])
+					}
+				}
+				return _out;
+			}
+		})
+
+	app.filter("limitFilter",function(){
+		return function(e,age){
+			var _out = [];
+			for(var i = 0;i<e.length;i++){
+				if(e[i].salary>2000&&e[i].salary<4000&&e[i].age>age){
+					_out.push(e[i]);
+				}
+			}
+			return _out;
+		}
+	})
+	app.filter('fanzhuan',function(){
+		return function(e){
+			var earr=e.split("");
+			return earr.reverse().join('');
+		}
+	})
+	</script>
+</body>
+</html>

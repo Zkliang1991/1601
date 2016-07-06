@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件绑定</title>
+	<script type="text/javascript" src='../js/angular.min.js'></script>
+	<link rel="stylesheet" type="text/css" href="../css/base.css">
+	<style type="text/css">
+/*	input.ng-disabled{
+		background: pink;
+	}*/
+	</style>
+</head>
+<body ng-app="myApp" ng-controller="Ctrl">
+	<div>
+	<b>ng-click:</b><br>
+	<b>数量:</b><br>
+	<span>{{count|| 0}}</span><br>
+	<button ng-click="count = count +1">点击1</button><br>
+	<button ng-click="counter()">点击2</button><br>
+	<input type="text" ng-change="counter()" ng-model="change"><br>
+	<input type="text" ng-focus="counter()" ng-model="foucs"><br>
+	<input type="text" ng-keypress="counter()" ng-model="keypress">
+	<input type="text" ng-mousemove="counter()" ng-model="mousemove">
+	</div>
+
+	<div style="margin-top:30px">
+		<b>ng-submit:</b>
+		<form ng-submit="postData()">
+			<ul>
+				<li>姓名:<input type="text" ng-model="username"></li>
+				<li>邮箱:<input type="eamil" ng-model="email"></li>
+				<li>手机:<input type="tel" ng-model="tel"></li>
+				<li>
+					<input type="submit" value="提交" ng-disabled="true">
+				</li>
+			</ul>
+		</form>
+	</div>
+
+	<div ng-click="showBtn()">点击消失</div>
+	<div ng-show="showFlag">
+		<p>这是一首简单的小情歌ng-show</p>
+	</div>
+
+	<div ng-click="showBtn2()">点击消失</div>
+	<div ng-if="ifFlag">
+		<p>这是一首简单的小情歌ng-if</p>
+	</div>
+
+	<div>
+		<img ng-src="/lib/css/i/slogo.png">
+	</div>
+	<script type="text/javascript">
+	var app = angular.module('myApp',[])
+	app.controller('Ctrl',function($scope){
+		$scope.count = 0;
+		$scope.counter = function(){
+			$scope.count =  $scope.count + 1;
+		}
+
+		$scope.postData = function(){
+			var name = $scope.username;
+			var email = $scope.email;
+			var phone = $scope.tel;
+			console.log({name:name,email:email,phone:phone});
+			// $,ajax({
+			// 	url:"wwxxxxx",
+			// 	data:{name:name,email:email,phone:phone}
+			// })
+		}
+		$scope.showFlag = true;
+		$scope.showBtn =function(){
+			$scope.showFlag = !$scope.showFlag;
+		}
+		$scope.ifFlag = true;
+		$scope.showBtn2 =function(){
+			$scope.ifFlag = !$scope.ifFlag;
+		}
+	})
+	</script>
+</body>
+</html>
+
+<!-- 
+ng-model	绑定 HTML 控制器的值到应用数据
+指令：
+ng-if
+定义和用法
+ng-if 指令用于在表达式为 false 时移除 HTML 元素。
+如果 if 语句执行的结果为 true，会添加移除元素，并显示。
+而 ng-if 是从 DOM 中移除元素。
+
+
+ng-disabled：规定一个元素是否被禁用；
+ng-options:  下拉列表选项
+ng-src 指令覆盖了 <img> 元素的 src 属性。
+如果你使用了 AngularJS 代码设置图片地址，请使用 ng-src 指令替代 src 属性。
+
+事件指令:
+ng-focus
+ng-click
+ng-dblclick
+ng-mousedown
+ng-mouseenter
+ng-mouseleave
+ng-mousemove
+ng-keydown
+ng-keyup
+ng-keypress
+ng-change
+
+ -->

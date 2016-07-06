@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../css/base.css">
+	<script type="text/javascript" src="../js/angular.js"></script>
+	<title>angular</title>
+	<style type="text/css">
+	li{
+		padding: 10px;
+	}
+	p{
+
+	}
+	</style>
+</head>
+<body>
+	
+	<b>Angular 模式</b>
+	<ul ng-app>
+		<li>姓:<input type="text" ng-model="xing"></li>
+		<li>名:<input type="text" ng-model="ming"></li>
+		<li><button id="angularBtn">显示名字</button></li>
+		<!-- <li><p ng-bind="xing +' '+ming"></p></li> -->
+		<li><p>{{xing +' '+ming}}   </p></li>
+		<li><p>{{xing}} {{ming}} </p></li>
+		<li>IT猿:<input type="text" ng-model="name"></li>
+		<li><span>hello: {{name}}</span></li>
+	</ul>
+
+
+
+	<b>普通模式</b>
+	<ul>
+		<li>姓:<input type="text" id="myxing"></li>
+		<li>名:<input type="text" id="myming"></li>
+		<li><button id="showNameBtn">显示名字</button></li>
+		<li><p id="showName"></p></li>
+	</ul>
+
+	<script type="text/javascript">
+	var myxing = document.getElementById('myxing');
+	var myming = document.getElementById('myming')
+	var showNameBtn = document.getElementById('showNameBtn')
+	var showName = document.getElementById('showName')
+
+	showNameBtn.onclick = function(){
+		var xing = myxing.value;
+		var ming = myming.value;
+		showName.innerHTML =　xing + " " + ming;
+	}
+	</script>
+</body>
+</html>

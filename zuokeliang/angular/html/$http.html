@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ng-init</title>
+	<!-- <script type="text/javascript" src="../js/jquery.js"></script> -->
+	<script type="text/javascript" src="../js/angular.js"></script>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		ul{
+			list-style: none;
+		}
+		td{
+			width: 120px;
+			height: 50px;
+			line-height: 50px;
+			text-align: center;
+			color:deeppink;
+		}
+	</style>
+</head>
+<body ng-app='myApp'  ng-controller="myCtrl">
+
+	<table>
+		<thead>
+			<tr>
+				<td>编号</td>
+				<td>总数</td>
+				<td>昨日新增</td>
+				<td>日期</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="da in datalist">
+				<td>{{$index+1}}</td>
+				<td>{{da.generalCount}}</td>
+				<td>{{da.totalCount}}</td>
+				<td>{{da.dateTime}}</td>
+			</tr>
+		</tbody>
+	</table>
+	<div>
+		<b>模拟服务器请求</b>
+		<input type="text" ng-model="myname" name="username">
+		<button ng-click="song()">发送请求</button>
+		<p>服务器返回结果是:{{result}}</p>
+	</div>
+	<script type="text/javascript">
+	var app = angular.module('myApp',[]);
+	app.controller('myCtrl',function($scope,$http){
+		$scope.datalist = ['1','2','3']
+		// $.ajax({
+		// 	url:"http://data.daydays.com/general/statistic.do?startTime=2015-12-01%2000:00:00&endTime=2015-12-18%2000:00:00&uniqueCode=zl9001",
+		// 	type:'get',
+		// 	dataType:'jsonp',
+		// 	success:function(thisdata){
+		// 		// $scope.datalist= thisdata.result;
+		// 		$scope.datalist = thisdata.result.map(function(item){
+		// 			return item.dateTime
+		// 		})
+		// 		console.log($scope.datalist);
+		// 	}
+		// })
+		// $http.get('http://data.daydays.com/general/statistic.do?startTime=2015-12-01%2000:00:00&endTime=2015-12-18%2000:00:00&uniqueCode=zl9001').then(function(response){
+		// 	console.log(response.data.result);
+		// 	$scope.datalist = response.data.result;
+		// })
+
+		$http({
+			url:'http://data.daydays.com/general/statistic.do?startTime=2015-12-01%2000:00:00&endTime=2015-12-18%2000:00:00&uniqueCode=zl9001',
+			method:'get',
+			params:{
+
+			},
+		}).success(function(data){
+			console.log('success');
+			$scope.datalist = data.result;
+		})
+		$scope.song = function(){
+			var myname = $scope.myname;
+			console.log(myname);
+			postData = {
+				name:myname
+			}
+			$http.post('yz.php',postData).success(function(data){
+				$scope.result = data;
+			})
+		}
+	})
+
+	</script>
+</body>
+</html>
+

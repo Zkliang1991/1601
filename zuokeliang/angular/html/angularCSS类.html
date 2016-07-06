@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../css/base.css">
+	<script type="text/javascript" src="../js/angular.min.js"></script>
+	<title>angularcss类</title>
+	<style type="text/css">
+	li{
+		padding: 10px;
+	}
+	p{
+
+	}
+/*	input.ng-dirty{
+		background: pink;
+	}*/
+/*	input.ng-touched{
+		background: yellow;
+	}
+	input.ng-untouched{
+		background: blue;
+	}*/
+/*	input.ng-not-empty{
+		background: red;
+	}*/
+	input.ng-valid{
+		background: yellowgreen;
+	}
+	input.ng-invalid{
+		background: purple;
+	}
+	/* 控件的初始状态*/
+	input.ng-pristine{
+		background: #fff;
+	}
+	span{
+		display: none;
+	}
+	span.ng-valid{
+		display: block;
+	}
+	</style>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+	<ul>
+		<li>姓:<input type="text" ng-model="myxing" required></li>
+		 <!-- <span ng-model="sp">验证通过</span></li> -->
+		<li>名:<input type="text" ng-model="myming"></li>
+		<li>年龄:<input type="text"></li>
+		<li>手机:<input type="text" pattern="^1[3578]\d{9}$" ng-model="tel"></li>
+	</ul>
+	<script type="text/javascript">
+		var app = angular.module("myApp",[]);
+		app.controller("myCtrl",function(){
+
+		})
+	</script>
+</body>
+</html>

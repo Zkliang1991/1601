@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>服务</title>
+	
+	</head>
+	<body ng-app="myApp" ng-controller="myCtrl" >
+		<div >
+			<p> 当前页面的url:</p>
+			<h3>{{myUrl}}</h3>
+		
+		<p>该实例使用了内建的 $location 服务获取当前页面的 URL。</p>
+		</div>
+		
+		<div>
+			<p>我的心里话:</p>
+			<h3>{{sayFromHeart}}</h3>
+			<p>内建的 $timeout 服务</p>
+		</div>
+		<div>
+			<p>当前时间:</p>
+			<h3>{{nowTime}}</h3>
+			<p>内建的 $interval 服务</p>
+		</div>
+		<div>
+			<p>数值:</p>
+			<h3>{{number}}</h3>
+			<p>简单的自定义服务</p>
+		</div>
+	</body>
+	<script src="../js/angular.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var app = angular.module("myApp",[]);
+		app.controller("myCtrl",function($scope,$location,$timeout,$interval,$myServer){
+			$scope.myUrl = $location.absUrl();
+
+			$timeout(function(){
+				$scope.sayFromHeart = "my name is zuokeliang";
+				$timeout(function(){
+					$scope.sayFromHeart = "I am working in zhengzhou now";
+					$timeout(function(){
+						$scope.sayFromHeart = "I am very like my clever student";
+						$timeout(function(){
+							$scope.sayFromHeart = "I wish they could get a good job!";
+						},2000)
+					},2000)
+				},2000)
+			},2000);
+			var now = new Date();
+			$scope.nowTime = now.getHours()+":"+now.getMinutes()+":"+now.getSeconds();
+			$interval(function(){
+				var now = new Date();
+				$scope.nowTime = now.getHours()+":"+now.getMinutes()+":"+now.getSeconds();
+			},1000);
+
+			$scope.number = $myServer.func(3,3);
+			$myServer.Interval
+		});
+
+		app.service("$myServer",function(){
+			this.func = function(x,y){
+				return Math.pow(x,y);
+			},
+			this.Interval = setInterval(function(){
+				console.log('zkl');
+			},1000)
+		})
+	</script>
+</html>
