@@ -46,5 +46,28 @@ header {
     text-indent: 0.33rem; }
   #main .pas {
     margin-top: 0.32rem; }
+  #main .cli {
+    box-sizing: border-box;
+    display: block;
+    width: 3.38rem;
+    height: 0.62rem;
+    outline: none;
+    margin: 0 auto;
+    border-radius: 0.05rem;
+    margin-top: 0.42rem;
+    margin-bottom: 0.18rem;
+    background: #00a0e9;
+    font-size: 0.27rem;
+    letter-spacing: 0.32rem;
+    padding-left: 0.32rem;
+    color: #fff; }
+  #main .forget {
+    font-size: 0.26rem;
+    text-decoration: none;
+    display: block;
+    width: 1.30rem;
+    height: 0.26rem;
+    margin-left: 1.45rem;
+    color: #00a0e9; }
 
 /*# sourceMappingURL=login.css.map */

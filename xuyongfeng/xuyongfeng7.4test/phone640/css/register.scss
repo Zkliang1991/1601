@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: #f6f5f5;
+}
+
+header{
+     width:100%;
+     height:0.88rem;
+     background:#dc0a4b;  
+     font-size: 0.3rem; 
+     font-family: "microsoft yahei";
+     
+     #about{
+         
+         color: #fff;
+         float: left;
+         font-size:0.4rem ;
+        padding-left: 0.23rem;
+        line-height: 0.88rem;
+        a{
+            
+            
+            text-decoration: none;
+            color:#FFf;
+        }
+     }
+     
+     #city{
+          color: #fff;
+         line-height: 0.88rem;
+         float: left;
+         padding-left: 2.27rem;
+         width: 1.34rem;
+         height: 0.88rem;
+        
+         
+     }
+     #login{
+         line-height: 0.88rem;
+         padding-left: 1.25rem;
+         float: left;   
+         a{
+             text-decoration: none;
+             color: #FFFFFF;
+             
+         } 
+     }    
+}
+
+#inf{
+    width: 6rem;
+    height:2.37rem;    
+//  background: pink;
+    margin: 0 auto;
+    border:0.01rem solid #f6f5f5;
+    margin-top:0.28rem;
+    border-radius: 0.2rem;
+    background: #fff;
+    overflow: hidden;
+    position:relative;
+    
+    
+    
+    .btn{
+        display: block;
+        width: 100%;
+        height:25%;
+       
+        outline-style: none;
+        border: none;
+        font-size: 0.24rem;
+        text-indent:0.24rem;
+        font-family: "microsoft yahei";
+        border-bottom: 0.01rem solid rosybrown;  
+   
+    }
+    input:nth-child(4){
+      border-bottom:none;   
+    }
+    
+    a{
+        position:absolute;
+        display: block;
+        width:1.37rem ;
+        height: 0.42rem;
+        top:0.7rem;
+        left:4.5rem;
+        background: #9ecc6b;
+        font-size: 0.18rem;
+        text-align: center;
+        line-height: 0.42rem;
+        text-decoration: none;
+        border-radius:0.1rem;
+        outline:none;
+    }
+    
+    
+    
+}
+
+#reg{
+    .log{
+       display: block; 
+       height:0.62rem;
+       width: 6rem;
+       margin: 0 auto;
+       margin-top:0.14rem;
+       border:none;
+       background:#00a0e9;
+       border-radius: 0.1rem;
+      
+    }
+   .diot{
+       
+       display: block;
+       border:1px solid #ccc;
+       width:0.18rem ;
+       height:0.18rem;
+       float: left;
+      margin-left:0.2rem;
+      margin-top:0.2rem;
+      
+   }
+    p{
+        display: block;
+        font-size:0.2rem;
+        float:left;
+        margin-top: 0.20rem;
+    };   
+    span{
+        display:block;
+        font-size: 0.2rem;
+        color:#00a0e9;
+        float: left;
+        margin-top:0.18rem;
+    }
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
