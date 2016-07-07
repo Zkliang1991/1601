@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+	<meta charset="UTF-8">
+	<title>首页</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css">
+    </head>
+<body>
+	<header class="header">
+		<a href="javascript:;">关于</a>
+		<a href="html/mine.html"></a>
+		<p>昆山市</p>		
+	</header>
+	<section>	
+		<div class="wrapper">
+			<div class="swiper-container" id="myswiper">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide slide1" data-hash="swiper1">slide1</div>
+					<div class="swiper-slide slide2" data-hash="swiper2">slide2</div>
+					<div class="swiper-slide slide3" data-hash="swiper3">slide3</div>
+					<div class="swiper-slide slide4" data-hash="swiper4">slide4</div>
+				</div>
+			</div>
+			
+			<div class="list">
+				<ul>
+					<li>
+						<dl>
+							<dt></dt>
+							<dd>外卖点餐</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt></dt>
+							<dd>外卖点餐</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt></dt>
+							<dd>外卖点餐</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt></dt>
+							<dd>外卖点餐</dd>
+						</dl>
+					</li>
+
+					<li>
+						<dl>
+							<dt></dt>
+							<dd>外卖点餐</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt></dt>
+							<dd>外卖点餐</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt></dt>
+							<dd>外卖点餐</dd>
+						</dl>
+					</li>
+					<li>
+						<dl>
+							<dt></dt>
+							<dd>外卖点餐</dd>
+						</dl>
+					</li>
+				</ul>
+			</div>
+			<div class="hot-active">
+				<h3>热门活动</h3>
+				<div class="wrapper">
+					<ul>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+			</div>
+			<div class="shangjia">
+				<h3>推荐商家</h3>
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+		</div>
+	</section>	
+	<footer id="footer">
+	</footer>
+<script type="text/javascript" src="js/sea.js"></script> 
+<script type="text/javascript" src="js/jquery-2.2.3.js"></script> 
+
+<script type="text/javascript">
+	$("#footer").load("html/footer.html",function(){
+		$("#footer ul li").eq(0).addClass('active');
+	});
+
+    seajs.use('index',function(app){
+        app.init();
+    })
+    
+</script>
+</body>
+</html>

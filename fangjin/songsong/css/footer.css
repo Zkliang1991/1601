@@ -1,0 +1,30 @@
+footer{
+  width:100%;height: 90px;border-top: 1px solid #b5b5b6;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+}
+footer ul{
+	list-style-type: none;
+	width:100%;
+}
+footer li{
+	width:25%;
+	height: 90px;
+	float: left;
+	text-align: center;
+
+}
+footer li .iconfont{
+	margin: 10px auto 0;
+	display: block;
+	width:50px;height: 50px;
+	font-size: 44px;
+	color:#969797;
+}
+footer ul .active{
+	color:#e2386d;
+}
+footer ul .active .iconfont{
+	color:#e2386d;
+}
