@@ -48,6 +48,12 @@
 		<button ng-click="song()">发送请求</button>
 		<p>服务器返回结果是:{{result}}</p>
 	</div>
+	<div>
+		<b>验证奇数偶数:</b>
+		<input type="text" ng-model="num" placeholder="请输入数字">
+		<button ng-click="postData()">发送请求</button>
+		<p>你输入的数字是:{{check}}</p>
+	</div>
 	<script type="text/javascript">
 	var app = angular.module('myApp',[]);
 	app.controller('myCtrl',function($scope,$http){
@@ -76,17 +82,31 @@
 
 			},
 		}).success(function(data){
-			console.log('success');
 			$scope.datalist = data.result;
 		})
+		var myname = $scope.myname;
 		$scope.song = function(){
 			var myname = $scope.myname;
 			console.log(myname);
 			postData = {
-				name:myname
+				name:"左可亮"
 			}
 			$http.post('yz.php',postData).success(function(data){
 				$scope.result = data;
+			})
+		}
+		$scope.num = 0;
+		$scope.check = "偶数";
+		$scope.postData = function(){
+			console.log($scope.num)
+			$http({
+				method:"GET",
+				url:"yzodd.php",
+				params:{
+					n:$scope.num
+				}
+			}).success(function(data){
+				$scope.check = data;
 			})
 		}
 	})

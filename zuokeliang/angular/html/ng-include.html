@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ng-include</title>
+	<script type="text/javascript" src="../js/angular.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+	<!-- ng-include 引入模块，必须加单引号 -->
+	<!-- <div ng-include="'errorTemplate.html'"></div> -->
+	<select ng-model="yourSelect">
+		<option value="include1.html">Table</option>
+		<option value="include2.html">List</option>
+	</select>
+	<div ng-include='yourSelect'></div>
+	<script type="text/javascript">
+		var app = angular.module('myApp',[])
+		.controller('myCtrl',function($scope){
+			var employees = [{
+				firstName: "Fang",
+				lastName: "vane",
+				gender: "Male"
+			}, {
+				firstName: "Sara",
+				lastName: "rose",
+				gender: "Female"
+			}, {
+				firstName: "Mark",
+				lastName: "bear",
+				gender: "Male"
+			}, {
+				firstName: "Pam",
+				lastName: "hot",
+				gender: "Male"
+			}]
+			$scope.emp = employees;
+			$scope.yourSelect = "include1.html"
+		})
+	</script>
+</body>
+</html>

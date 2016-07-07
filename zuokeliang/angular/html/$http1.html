@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>$http</title>
+	<script type="text/javascript" src="../js/angular.js"></script>
+	<style type="text/css">
+		td{
+			width: 120px;
+			height: 46px;
+			line-height: 46px;
+			text-align: center;
+			color:#666;
+			font-size: 
+		}
+	</style>
+</head>
+<body ng-app='myApp' ng-controller='myCtrl'>
+	<table>
+		<thead>
+			<tr>
+				<td>编号</td>
+				<td>总数</td>
+				<td>昨日新增</td>
+				<td>日期</td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="x in dataList">
+				<td>{{$index+1}}</td>
+				<td>{{x.generalCount |number:2}}</td>
+				<td>{{x.totalCount|currency:"￥":2}}</td>
+				<td>{{x.dateTime | date:'yy-MM-dd'}}</td>
+				<td>{{"2015-12-1" | date:'yy/MM/dd'}}</td>
+			</tr>
+		</tbody>
+	</table>
+	<div>
+		<b>请求验证:</b>
+		<button ng-click="postData()">发送请求</button>
+		<h2>返回结果:{{result}}</h2>
+	</div>
+	<div>
+		<b>奇数偶数验证:</b>
+		<p><input type="text" ng-model="Num"></p>
+		<button ng-click="postNum(Num)">发送请求</button>
+		<h2>你输入的是:{{res}}</h2>
+	</div>
+	<script type="text/javascript">
+	 var app  = angular.module('myApp',[])
+	 .controller('myCtrl',function($scope,$http){
+	 	// getJSON()
+	 	// get
+	 	// post
+	 	// ajax
+	 	// when
+	 	//$http 表示请求服务
+	 	//千分位加 , 如 12345678 ==>  12,345,678
+	 	// yyyy-mm-dd   ==>  yy/mm/dd
+	 	// "2015-7-1" ==> "2015-07-01"
+	 	// $http.get('http://data.daydays.com/general/statistic.do?startTime=2015-12-01%2000:00:00&endTime=2015-12-18%2000:00:00&uniqueCode=zl9001').then(function(response){
+	 	// 	console.log(response.data);
+	 	// 	$scope.dataList = response.data.result;
+	 	// })
+	 	$http({
+	 		url:"http://data.daydays.com/general/statistic.do?startTime=2015-12-01%2000:00:00&endTime=2015-12-18%2000:00:00&uniqueCode=zl9001",
+	 		method:'GET',   //表示请求方式  类似ajax 的 type
+	 		params:{		//表示参数  类似ajax 的 data
+	 			// num:1;
+	 		}
+	 	}).success(function(data){
+	 		console.log('success');
+	 		$scope.dataList = data.result;
+	 	});
+
+	 	$scope.postData  =function(){
+	 		var da = {
+	 			name:encodeURI("左可亮")
+	 		}
+	 		console.log(da);
+	 		$http.post('myphp.php',da).success(function(data){
+	 			$scope.result = data;
+	 		})
+	 	}
+
+	 	$scope.postNum = function(num){
+	 		da = {
+	 			n:num
+	 		}
+	 		$http({
+	 			url:"yzodd.php",
+	 			method:"GET",
+	 			params:da
+	 		}).success(function(data){
+	 			$scope.res = data;
+	 		})
+	 	}
+	 })
+	</script>
+</body>
+</html>

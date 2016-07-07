@@ -8,8 +8,11 @@
 	<body ng-app="myApp" ng-controller="myCtrl" >
 		<div >
 			<p> 当前页面的url:</p>
-			<h3>{{myUrl}}</h3>
-		
+			<h3>absUrl: {{myUrl}}</h3>
+			<h3>协议:  {{protocol}}</h3>
+			<h3>主机: {{host}}</h3>
+			<h3>端口: {{port}}</h3>
+			<h3>hash: {{hash}}</h3>
 		<p>该实例使用了内建的 $location 服务获取当前页面的 URL。</p>
 		</div>
 		
@@ -34,7 +37,10 @@
 		var app = angular.module("myApp",[]);
 		app.controller("myCtrl",function($scope,$location,$timeout,$interval,$myServer){
 			$scope.myUrl = $location.absUrl();
-
+			$scope.protocol = $location.protocol();  //协议
+			$scope.host = $location.host();  //主机
+			$scope.port = $location.port();
+			$scope.hash = $location.hash();
 			$timeout(function(){
 				$scope.sayFromHeart = "my name is zuokeliang";
 				$timeout(function(){

@@ -1,0 +1,18 @@
+<style type="text/css">
+	ul{
+		list-style: none;
+	}
+	li{
+		margin:20px 0;
+		background: #666;
+	}
+
+</style>
+<ul>
+	<li ng-repeat="x in emp">
+		<b>编号:{{$index+1}}</b><br>
+		<span>姓:{{x.firstName}}</span><br>
+		<span>名:{{x.lastName}}</span><br>
+		<em>性别:{{x.gender}}</em><br>
+	</li>
+</ul>

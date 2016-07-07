@@ -1,0 +1,30 @@
+<style type="text/css">
+	td{
+		width: 80px;
+		height: 40px;
+		text-align: center;
+		line-height: 40px;
+		color:#666;
+	}
+	table{
+		border: 1px solid #999;
+	}
+</style>
+<table>
+	<thead>
+		<tr>
+			<td>编号</td>
+			<td>行</td>
+			<td>名</td>
+			<td>性别</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="x in emp">
+			<td>{{$index+1}}</td>
+			<td>{{x.firstName}}</td>
+			<td>{{x.lastName}}</td>
+			<td>{{x.gender}}</td>
+		</tr>
+	</tbody>
+</table>

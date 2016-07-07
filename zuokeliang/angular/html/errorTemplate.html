@@ -1,0 +1,36 @@
+<style type="text/css">
+div{
+	background: rgba(0,0,0,0.3);
+	position: absolute;
+	margin: auto;
+	left: 0;
+	top:0;
+	right:0;
+	bottom:0;
+	width: 200px;
+	height: 200px;
+	border-radius: 12px;
+}
+em{
+	display: block;
+	width: 40px;
+	height: 40px;
+	margin: 40px auto 20px;
+}
+.loading{
+	background:url(../css/xiao.png) no-repeat 0 0;
+	background-size:100% 100%;
+}
+p{
+	width: 100%;
+	line-height: 50px;
+	font-size: 18px;
+	color:#fff;
+	font-family: "微软雅黑";
+	text-align: center;
+}
+</style>
+<div>
+	<em class="loading"></em>
+	<p>{{errorText}}</p>
+</div>

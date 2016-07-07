@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>自定义模块</title>
+	<script type="text/javascript" src="../js/angular.js"></script>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		ul{
+			list-style: none;
+			width: 400px;
+			height: 400px;
+			text-align: center;
+			margin: 40px auto;
+			padding-top: 30px;
+			box-shadow: 0 0 10px #ccc;
+		}
+		li{
+			height: 50px;
+			margin: 20px 0;
+		}
+		b{
+			color:deeppink;
+		}
+	</style>
+</head>
+<body ng-app='myApp'  ng-controller="myCtrl">
+	<form name="myFrom" ng-submit="postdata()">
+		<li>用户名:<input type="text" name="myName" ng-model="username">
+		</li>
+		<li>手机号:<input type="text" name="myPhone" ng-model="phone">
+		</li>
+		<li><input type="submit" value="提交"></li>
+		<error ng-show="showIf"></error>
+	</form>
+	<script type="text/javascript">
+	var app = angular.module('myApp',[])
+	.controller("myCtrl",function($scope){
+		$scope.errorText = "请输入用户名";
+		$scope.showIf = false;
+		$scope.postdata = function(){
+			if($scope.username==''||$scope.username==undefined){
+					$scope.errorText = "请输入用户名";
+					$scope.showIf = true;
+					setTimeout(function(){
+						$scope.$apply(function(){
+							$scope.showIf = false;
+						})
+					},3000)
+					return false;
+			}
+			if($scope.phone==''||$scope.phone==undefined){
+				$scope.errorText = "请输入手机号";
+				$scope.showIf = true;
+				setTimeout(function(){
+					$scope.$apply(function(){
+						$scope.showIf = false;
+					})
+				},1500)
+				return false;
+			}
+		}
+	})
+	.directive('error',function(){
+		var direction = [];
+		direction.restrict="EA";
+		direction.templateUrl = "errorTemplate.html";
+		return direction;
+	})
+	// app.directive('error',function(){
+	// 	var direction = [];
+	// 	direction.restrict ="EA";
+	// 	direction.templateUrl = "errorTemplate.html";
+	// 	// 表示从外部传进来的变量content scope为属性
+	// 	// direction.scope = {
+ // 	// 		content:"="
+	// 	// }
+	// 	// // 链接到外部作用域  link为属性
+	// 	// direction.link = function($scope){
+	// 	// 	$scope.liker = function(){
+	// 	// 		$scope.content.likeAcount = $scope.content.likeAcount + 1;
+	// 	// 		$scope.content.likeList.push({perTolike:"王月娇"+new Date().getSeconds()})
+	// 	// 	}
+	// 	// }
+	// 	return direction;
+	// })
+	</script>
+</body>
+</html>
+

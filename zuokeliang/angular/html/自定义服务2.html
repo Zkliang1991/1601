@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>自定义服务</title>
+	<script type="text/javascript" src="../js/sea.js"></script>
+	<style type="text/css">
+	td{
+		border:1px solid #ddd;
+	}
+	</style>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+	<table>
+		<tr>
+			<td>你的字符串:</td>
+			<td><input type="text" ng-model="yourStr"></td>
+		</tr>
+		<tr>
+			<td>结果字符串:</td>
+			<td>{{resultStr}}</td>
+		</tr>
+		<tr>
+			<td>过滤字符串:</td>
+			<td>{{yourStr| upper}}</td>
+		</tr>
+		<tr>
+			<td>操作</td>
+			<td><button ng-click="myclick(yourStr)">执行</button></td>
+		</tr>
+	</table>
+	<script type="text/javascript">
+	seajs.use('../js/server1',function(app){
+		app.init();
+	})
+	</script>
+</body>
+</html>

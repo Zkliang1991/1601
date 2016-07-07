@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>服务</title>
+	<script type="text/javascript" src="../js/sea.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+	<div>
+	<b>内置$locaton</b>
+	<h2>absUrl:{{absUrl}}</h2>
+	<h2>host:{{host}}</h2>
+	<h2>port:{{post}}</h2>
+	<h2>portocol:{{portocol}}</h2>
+	</div>
+	<div>
+		<b>内置$timeout</b>
+		<p>我最想说的话:</p>
+		<h3>{{sayFormHeart}}</h3>
+		<h4>{{now}}</h4>
+		<h4>{{number}}</h4>
+		<p><input type="text" ng-model="mystr"></p>
+		<h4>{{mystr}}</h4>
+	</div>
+
+	<div>
+	<b>自定义过滤服务:</b>
+	<h3>{{255 | myFormat:10}}</h3>
+	</div>
+	<script type="text/javascript">
+	seajs.use('../js/myservice',function(app){
+		app.init()
+	})
+	</script>
+</body>
+</html>

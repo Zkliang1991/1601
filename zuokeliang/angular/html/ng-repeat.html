@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>ng-include</title>
+	<script type="text/javascript" src="../js/angular.js"></script>
+	<style type="text/css">
+	 ul{
+	 	list-style: none;
+	 }
+	 ol{
+		list-style-type: circle;
+	 }
+	</style>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+	<ul ng-repeat='p in pro' ng-init="parentsIndex=$index">
+		<li>{{p.name}}  index:{{$index}}</li>
+		<li>
+			<ol>
+				<li ng-repeat="c in p.cities">{{c.name}} parentIndex:{{parentsIndex}} index:{{$index}}</li>
+				<!-- parentsIndex 初始话index 存到指令里面 -->
+				<!-- $parent.$index -->
+			</ol>
+		</li>
+	</ul>
+	<script type="text/javascript">
+		var app = angular.module('myApp',[])
+		.controller('myCtrl',function($scope){	
+		    var provinces = [{
+		        name: "浙江",
+		        cities: [{
+		            name: '金华'
+		        }, {
+		            name: '杭州'
+		        }, {
+		            name: '温州'
+		        }, ]
+		    }, {
+		        name: "湖北",
+		        cities: [{
+		            name: '武汉'
+		        }, {
+		            name: '襄樊'
+		        }, {
+		            name: '黄冈'
+		        }, ]
+		    }, {
+		        name: "江苏",
+		        cities: [{
+		            name: '南京'
+		        }, {
+		            name: '徐州'
+		        }, {
+		            name: '连云港'
+		        }, ]
+		    },{
+		        name: "河南",
+		        cities: [{
+		            name: '郑州'
+		        }, {
+		            name: '开封'
+		        }, {
+		            name: '漯河'
+		        }, ]
+		    }];
+			$scope.pro = provinces;
+		})
+	</script>
+</body>
+</html>

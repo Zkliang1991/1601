@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>表格</title>
+	<script type="text/javascript" src='../js/angular.min.js'></script>
+	<link rel="stylesheet" type="text/css" href="../css/base.css">
+	<style type="text/css">
+		td{
+			width: 70px;
+			height: 35px;
+			line-height: 35px;
+			text-align: center;
+			cursor:pointer;
+		}
+	</style>
+</head>
+<body ng-app="myApp" ng-controller="Ctrl">
+	请输入:<input type="text" name="" ng-model="test">
+	请输入数量:<input type="text" name="" ng-model="num">
+	<table>
+		<thead>
+			<tr>
+				<td>序号</td>
+				<td>姓</td>
+				<td>名</td>
+				<td>性别</td>
+				<td ng-click="number='likes';desc = !desc">喜欢</td>
+				<td ng-click="number='disLikes';desc = !desc">不喜欢</td>
+				<td>操作</td>
+				<td>操作</td>
+			</tr>
+		</thead>
+		<!-- | orderBy: number :desc -->
+		<tbody>
+			<tr ng-repeat="emp in employees | orderBy:number:desc |filter:{firstName:test} | limitTo:num">
+				<td>{{$index+1}}</td>
+				<td>{{emp.firstName}}</td>
+				<td>{{emp.lastName}}</td>
+				<td>{{emp.gender}}</td>
+				<td>{{emp.likes}}</td>
+				<td>{{emp.disLikes}}</td>
+				<td><button ng-click="countTolike(emp)">喜欢</button></td>
+				<td><button ng-click="countTodislike(emp)">不喜欢</button></td>
+			</tr>
+		</tbody>
+	</table>
+	<script type="text/javascript">
+	var app = angular.module('myApp',[])
+	app.controller('Ctrl',function($scope){
+		var employees = [{
+			firstName: "Fang",
+			lastName: "vane",
+			gender: "Male",
+			likes:0,
+			disLikes:0
+		}, {
+			firstName: "Sara",
+			lastName: "rose",
+			gender: "Female",
+			likes:0,
+			disLikes:0
+		}, {
+			firstName: "Mark",
+			lastName: "bear",
+			gender: "Male",
+			likes:0,
+			disLikes:0
+		}, {
+			firstName: "Pam",
+			lastName: "hot",
+			gender: "Male",
+			likes:0,
+			disLikes:0
+		}]
+
+		$scope.employees = employees;
+		$scope.countTolike = function(n){
+			n.likes++;
+			// n++;
+			// $scope.$apply(function(){
+			// 	$scope.employees.likes = n;
+			// })
+			// console.log(n);
+		}
+		$scope.countTodislike = function(emp){
+			emp.disLikes++;
+		}
+	})
+	</script>
+</body>
+</html>

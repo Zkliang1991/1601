@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		ul{
+			list-style: none;
+		}
+		a{
+			text-decoration: none;
+		}
+		.active{
+			color:yellowgreen;
+			font-size:30px;
+			font-weight: bold;
+		}
+	</style>
+	<script type="text/javascript" src="../js/sea.js"></script>
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+	<h2>路由应用</h2>
+	<ul>
+		<li><a href="#/">首页</a></li>
+		<li><a href="#/html5">HTML5</a></li>
+		<li><a href="#/ios">IOS</a></li>
+		<li><a href="#/android">ANDROID</a></li>
+	</ul>
+	<div class="active" ng-view></div>
+	<script type="text/javascript">
+	seajs.use('../js/route',function(app){
+		app.init()
+	})
+	</script>
+<!--     <script src="../js/angular.min.js"></script>
+    <script src="../js/angular-route.min.js"></script>
+    <script type="text/javascript">
+    	var app = angular.module("myApp",['ngRoute'])
+			.config(['$routeProvider',function($routeProvider){
+				$routeProvider
+					.when('/',{template:'欢迎 welcome!!!'})
+					.when('/html5',{template:"这是HTML5的学习天堂"})
+					.when('/ios',{template:"ios你到底还行不行啊"})
+					.when('/android',{template:"android兄我看好你哦!!!"})
+					.otherwise({redirectTo:'/'});
+			}])
+			.controller('myCtrl',function($scope){
+
+			})
+    </script> -->
+</body>
+</html>
