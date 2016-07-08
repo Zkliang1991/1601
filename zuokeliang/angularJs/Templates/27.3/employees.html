@@ -1,0 +1,10 @@
+<h1>employees</h1> 
+
+Name : <input type="text" ng-model="employeesCtrl.firstname" />
+<button ng-click="employeesCtrl.employeesSearch()">Search</button>
+
+<div ng-repeat="employee in employeesCtrl.employees">
+	<a ui-sref="employeeDetail({id:employee.id})">{{employee.firstName}}</a> {{employee.gender}}
+</div>
+
+<button ng-click="employeesCtrl.reloadData()">Reload</button>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body ng-app="myModule">
+
+		<div ng-controller="myController">
+			<table border="1" cellspacing="1" cellpadding="1">
+				<tr>
+					<td>你的字符串</td>
+					<td><input type="text" ng-model="input" size="40"></td>
+				</tr>
+				<tr>
+					<td>结果字符串</td>
+					<td><input type="text" ng-model="output" size="40"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="button" ng-click="transformString(input)" value="执行"></td>
+				</tr>
+			</table>
+
+		</div>
+
+		<script type="text/javascript" src="js/angular.min.js"></script>
+		<script>
+		var myApp = angular.module('myModule', []);
+
+		myApp.controller('myController', function($scope) {
+
+			$scope.transformString = function(input) {
+				if (!input) {
+					return input;
+				}
+
+				var output = "";
+
+				for (var i = 0; i < input.length; i++) {
+					if (i > 0 && input[i] == input[i].toUpperCase()) {
+						output = output + " ";
+					}
+					output = output + input[i];
+				}
+
+				$scope.output = output;
+
+			}
+
+		})
+		</script>
+	</body>
+
+</html>

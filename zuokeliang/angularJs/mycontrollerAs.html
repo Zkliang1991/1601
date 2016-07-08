@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>18.1 routing</title>
+		<style>
+			table {
+				width: 800px;
+			}
+			
+			.leftMenu {
+				width: 200px;
+				height: 500px;
+			}
+			
+			.leftMenu a {
+				display: block;
+			}
+			
+			.mainContent {
+				background: #ccc;
+			}
+			ul{
+				list-style: none;
+			}
+		</style>
+	</head>
+
+	<body ng-app="myModule">
+
+		<table border="1" cellspacing="1" cellpadding="1">
+			<tr>
+				<td colspan="2">
+					<h1>Website Header</h1></td>
+			</tr>
+			<tr>
+				<td class="leftMenu">
+					<a href="#/home">Home</a>
+					<a href="#/courses">Courses</a>
+					<a href="#/employees">employees</a>
+				</td>
+				<td class="mainContent">
+					<ng-view></ng-view>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" class="footer">
+					<b>Website Footer</b>
+				</td>
+			</tr>
+		</table>
+
+
+
+		<script type="text/javascript" src="js/angular.js"></script>
+		<script type="text/javascript" src="js/angular-route.min.js">
+
+		</script>
+		<script>
+			var app = angular.module('myModule',['ngRoute'])
+			.config(['$routeProvider',function($routeProvider){
+				$routeProvider
+					.when('/home',{
+						templateUrl:'Tem/19/home.html',
+						controller:'homeController as homeCtrl'
+					})
+					.when('/courses',{
+						templateUrl:'Tem/19/courses.html',
+						controller:'coursesController as coursesCtrl'
+					})
+					.when('/employees',{
+						templateUrl:'Tem/19/employees.html',
+						controller:'employeesController as employeesCtrl'
+					})
+					.when('/employees/:id',{
+						templateUrl:'Tem/19/employeesDetail.html',
+						controller:'employeesDetailController as employeesDetailCtrl'
+					})
+					.otherwise({
+						redirectTo:'/home'   //表示重定向 默认页面
+					})
+			}])
+			.controller('homeController',function(){
+				this.message = '这是我们美丽的1601班'
+			})
+			.controller('coursesController',function(){
+				this.courseList = ['HTML5','IOS','ANDROID','JAVA','PHP','.NET','NODE'];
+			})
+			.controller('employeesController',function($http){
+				var _this =  this;
+				$http({
+					url:'data/person.cfm',
+					method:'GET',
+				}).success(function(data){
+					console.log(data);
+					_this.employeesList = data;
+				})
+			})
+			.controller("employeesDetailController",function($http,$routeParams){
+				var _this = this;
+				// $routeParams 在定义路由的时候匹配的参数 .id
+				$http({
+					url:'data/personDetail.cfm',
+					method:'GET',
+					params:{
+						id:$routeParams.id
+					}
+				}).success(function(data){
+					_this.userInfoData = data.id[$routeParams.id];
+				})
+
+			})
+			// .controller('employeesDetailCtrl',function($scope,$http,$routeParams){
+			// 	$scope.message = '这是我们美丽的1601班'
+			// 	$http({
+			// 		url:"data/personDetail.cfm",
+			// 		method:"GET",
+			// 		params:{
+			// 			id:$routeParams.id
+			// 		}
+			// 	}).success(function(data){
+			// 		console.log(data);
+			// 	})
+			// })
+		</script>
+	</body>
+
+</html>

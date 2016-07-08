@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>9.3 search</title>
+		<style>
+			.arrow-up {
+				width: 0;
+				height: 0;
+				border-left: 5px solid transparent;
+				border-right: 5px solid transparent;
+				border-bottom: 10px solid black;
+				display: inline-block;
+			}
+			
+			.arrow-down {
+				width: 0;
+				height: 0;
+				border-left: 5px solid transparent;
+				border-right: 5px solid transparent;
+				border-top: 10px solid black;
+				display: inline-block;
+			}
+		</style>
+	</head>
+
+	<body ng-app="myModule">
+		<div ng-controller="myController">
+			<input type="text" placeholder="search firstName & lastName" ng-model="searchText" size="40" />
+			<table border="1">
+				<tr>
+					<td ng-click="sortData('firstName')">FirstName
+						<div ng-class="getSortClass('firstName')"></div>
+					</td>
+					<td ng-click="sortData('lastname')">LastName
+						<div ng-class="getSortClass('lastname')">
+					</td>
+					<td ng-click="sortData('gender')">Gender
+						<div ng-class="getSortClass('gender')">
+					</td>
+					<td ng-click="sortData('salary')">Salary
+						<div ng-class="getSortClass('salary')">
+					</td>
+					<td>Salary</td>
+					<td ng-click="sortData('birthday')">Birthday
+						<div ng-class="getSortClass('birthday')">
+					</td>
+				</tr>
+				<tr ng-repeat="employee in employees | orderBy:sortColumn:reverseSort | filter:search">
+					<td>{{employee.firstName | uppercase}}</td>
+					<td>{{employee.lastName | lowercase}}</td>
+					<td>{{employee.gender}}</td>
+					<td>{{employee.salary |number:2}}</td>
+					<td>{{employee.salary |currency:'￥':1}}</td>
+					<td>{{employee.birthday | date:'yyyy-MM-dd' }}</td>
+				</tr>
+			</table>
+			</div>
+
+			<script type="text/javascript" src="js/angular.min.js"></script>
+			<script type="text/javascript" src="js/09.3_search.js"></script>
+	</body>
+
+</html>

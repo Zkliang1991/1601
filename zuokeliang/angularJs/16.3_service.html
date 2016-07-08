@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body ng-app="myModule">
+
+		<div ng-controller="myController">
+			{{input | stringFilter}}
+			<table border="1" cellspacing="1" cellpadding="1">
+				<tr>
+					<td>你的字符串</td>
+					<td><input type="text" ng-model="input"></td>
+				</tr>
+				<tr>
+					<td>结果字符串</td>
+					<td><input type="text" ng-model="output"></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="button" ng-click="transformString(input)" value="执行"></td>
+				</tr>
+			</table>
+
+		</div>
+
+		<script type="text/javascript" src="js/angular.js"></script>
+		<script>
+		var myApp = angular.module('myModule', [])
+		.service('stringService',function(){
+			return  {
+				processString:function(input){
+					if (!input) {
+						return input;
+					}
+
+					var output = "";
+
+					for (var i = 0; i < input.length; i++) {
+						if (i > 0 && input[i] == input[i].toUpperCase()) {
+							output = output + " ";
+						}
+
+						output = output + input[i];
+					}
+
+					return output;
+				}
+			}
+		})
+		.filter('stringFilter', ['stringService',function(stringService){
+			return function(a){
+				return stringService.processString(a);
+			}
+		}])
+		.controller('myController', function($scope,stringService) {
+
+			$scope.transformString = function(input) {
+				$scope.output = stringService.processString(input);
+			}
+
+		});
+
+		// app.filter("myFormat",["myService",function(myService){
+		// 	return function(a){
+		// 		return myService.myFunction(a);
+		// 	};
+		// }]);
+		</script>
+	</body>
+
+</html>

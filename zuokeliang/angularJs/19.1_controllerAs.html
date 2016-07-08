@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>19.1 controllerAs</title>
+	</head>
+
+	<body  ng-app="myModule">
+		<div ng-controller="myController as mainCtrl">
+			{{ mainCtrl.message}}
+		</div>
+		
+		<script type="text/javascript" src="js/angular.min.js"></script>
+		<script  >
+			var myApp = angular.module('myModule', []);
+
+			myApp.controller("myController",function(){
+				this.message = "AngularJs tutorial";
+			});
+
+		</script>
+	</body>
+
+</html>

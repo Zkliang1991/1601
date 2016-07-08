@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>5.1 ng-repeat</title>
+	</head>
+
+	<body ng-app="myModule">
+		<div ng-controller="myController">
+			Select View:
+			<select ng-model="viewTemplate">
+				<option value="14.2.1_template.html">Table</option>
+				<option value="14.2.2_template.html">List</option>
+			</select>
+			<div ng-include="viewTemplate"></div>
+		</div>
+
+		<script type="text/javascript" src="js/angular.min.js"></script>
+		<script >
+			var myApp = angular.module('myModule', []);
+
+myApp.controller("myController", function($scope) {
+	var employees = [{
+		firstName: "Fang",
+		lastName: "vane",
+		gender: "Male"
+	}, {
+		firstName: "Sara",
+		lastName: "rose",
+		gender: "Female"
+	}, {
+		firstName: "Mark",
+		lastName: "bear",
+		gender: "Male"
+	}, {
+		firstName: "Pam",
+		lastName: "hot",
+		gender: "Male"
+	}]
+	$scope.employees = employees;
+	$scope.viewTemplate = "14.2.1_template.html";
+});
+		</script>
+	</body>
+
+</html>

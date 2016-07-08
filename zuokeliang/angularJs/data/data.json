@@ -1,0 +1,57 @@
+{
+	"id":{
+		"1":{
+			"paperId":721,
+			"questId":3080,
+			"subject":"DL",
+			"title":"<span class='retract1'>哥伦比亚已经成为世界重要的鲜切花生产国。读图1，完成1～3题。</span><p class='retract'><img src='http://www.daydays.com/source/questionpic/docList/DL/2014_6_6/2014_6_6_15/1402041398670.png'/> </p>",
+			"options":"{\"a\":\"\",\"b\":\"\",\"c\":\"\",\"d\":\"\",\"e\":\"\",\"f\":\"\",\"g\":\"\",\"h\":\"\",\"i\":\"\",\"j\":\"\"}",
+			"baseTypeId":6,
+			"questTypeName":"材料分析题"
+		},
+		"analysis":{
+			"subject":"ZZ",
+			"quesName":"<p>李嘉图比较成本学说的局限性在于(　　)</p>\r\r<p>",
+			"options":"{\"a\":\"仅仅对指导英国参与国际分工、增进英国利益有益\",\"b\":\"反映了英国资产阶级渴望平等参与国际竞争、促进世界经济发展的愿望\",\"c\":\"没有看到一国参与国际分工在经济安全上可能遭受的潜在风险\",\"d\":\"没有看到并不是所有国家都有自己的成本比较优势\",\"e\":\"\",\"f\":\"\",\"g\":\"\",\"h\":\"\",\"i\":\"\",\"j\":\"\"}",
+			"answer":"CCABD",
+			"baseTypeId":1,
+			"sub":[
+				{
+					"answerTitle":"解析",
+					"content":"<p>【解析】</p>\r\r<p>试题分析：李嘉图的比较成本学说从理论上只看到比较成本的优势，忽视了其他因素，从实践上为英国资产阶级扩张和建立世界霸权提供了理论依据。一国参与国际分工，到底能否给自己带来好处，取决于许多方面的因素，处理不好会给本国发展带来严重危机。实际上，它同斯密的“绝对成本学说”一样，反映了当时英国资产阶级向外扩张、建立世界霸权的愿望。对现在的发展中国家来说，在参与国际分工的过程中，必须从本国实际出发，独立自主，注意维护本国的经济安全。正确答案为C。A、B为李嘉图比较成本学说的积极作用。D为绝对成本学说的局限性，不符合题意。</p>\r\r<p>考点：李嘉图比较成本学说</p>\r\r<p>\r\t\t                </p>"
+				},
+				{
+					"answerTitle":"解析",
+					"content":"<p>【解析】</p>\r\r<p>试题分析：李嘉图的比较成本学说从理论上只看到比较成本的优势，忽视了其他因素，从实践上为英国资产阶级扩张和建立世界霸权提供了理论依据。一国参与国际分工，到底能否给自己带来好处，取决于许多方面的因素，处理不好会给本国发展带来严重危机。实际上，它同斯密的“绝对成本学说”一样，反映了当时英国资产阶级向外扩张、建立世界霸权的愿望。对现在的发展中国家来说，在参与国际分工的过程中，必须从本国实际出发，独立自主，注意维护本国的经济安全。正确答案为C。A、B为李嘉图比较成本学说的积极作用。D为绝对成本学说的局限性，不符合题意。</p>\r\r<p>考点：李嘉图比较成本学说</p>\r\r<p>\r\t\t                </p>"
+				}
+			]
+		},
+		"sub":[
+			{	
+				"subId":10933,
+				"typeId":0,
+				"title":"<span class='retract1'>每年的情人节（2月14日），在美国销售的鲜切玫瑰花多来自哥伦比亚。与美国相比，在此期间，哥伦比亚生产鲜切玫瑰花的优势自然条件是（&nbsp; &nbsp;&nbsp;&nbsp; ）</span>",
+				"options":"{\"a\":\"地形较平&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \",\"b\":\"降水较丰沛\",\"c\":\"气温较高&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \",\"d\":\"土壤较肥沃\",\"e\":\"\",\"f\":\"\",\"g\":\"\",\"h\":\"\",\"i\":\"\",\"j\":\"\"}",
+				"pageNum":1,
+				"displayType":2
+			},
+			{
+				"subId":10934,
+				"typeId":0,
+				"title":"<span class='retract1'>哥伦比亚向美国运送鲜切玫瑰花宜采用（&nbsp;&nbsp;&nbsp;&nbsp; ）&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>",
+				"options":"{\"a\":\"公路运输&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \",\"b\":\"铁路运输\",\"c\":\"航空运输&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \",\"d\":\"海洋运输\",\"e\":\"\",\"f\":\"\",\"g\":\"\",\"h\":\"\",\"i\":\"\",\"j\":\"\"}",
+				"pageNum":2,
+				"displayType":2
+			},
+			{
+				"subId":10935,
+				"typeId":0,
+				"title":"<span class='retract1'>目前，墨西哥已成为哥伦比亚在美国鲜切花市场的竞争对手。与哥伦比亚相比，墨西哥开拓美国鲜切花市场的优势在于（&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ）&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>",
+				"options":"{\"a\":\"运费低&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; \",\"b\":\"热量足\",\"c\":\"技术高&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; \",\"d\":\"品种全\",\"e\":\"\",\"f\":\"\",\"g\":\"\",\"h\":\"\",\"i\":\"\",\"j\":\"\"}",
+				"pageNum":3,
+				"displayType":2
+			}
+		],
+		"videos":[{"ranks":"二级","videoImage":"/source/ExampaperVedio/pic/2015/10/29/01/1446053490263.jpg","schoolName":"重庆七中","videoId":845,"videoPath":"http://v1.jiyoutang.com/source/video/gaokaozhenti/2015/huaxue/chongqingjuan/cq7z002/4.mp4","teacherName":"王娇","teacherId":77983,"photoPath":null}]	
+	}
+}

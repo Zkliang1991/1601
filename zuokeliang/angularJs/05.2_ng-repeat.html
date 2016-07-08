@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>5.2 ng-repeat</title>
+	</head>
+
+	<body ng-app="myModule">
+		<div ng-controller="myController">
+
+			<ul ng-repeat="province in provinces">
+				<li>{{province.name}}</li>
+				<ul ng-repeat="city in province.cities">
+					<li>{{city.name}}</li>
+				</ul>
+			</ul>
+		</div>
+
+		<script type="text/javascript" src="js/angular.min.js"></script>
+		<script type="text/javascript" src="js/05.2_ng-repeat.js"></script>
+	</body>
+
+</html>

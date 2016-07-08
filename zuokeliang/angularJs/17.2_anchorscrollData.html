@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body ng-app="myModule">
+
+		<div ng-controller="myController">
+			<span ng-repeat="province in provinces">
+				<button id="top" ng-click="scrollTo(province.name)">{{province.name}}</button>
+			</span>
+				<fieldset ng-repeat="province in provinces" id="{{province.name}}">
+						<legend>{{province.name}}</legend>
+						<ul ng-repeat="city in province.cities">
+							<li>{{city.name}}</li>
+						</ul>
+				</fieldset>
+		</div>
+
+		<script type="text/javascript" src="js/angular.min.js"></script>
+		<script >
+		var myApp = angular.module('myModule', []);
+			myApp.controller('myController', function($scope, $anchorScroll, $location, $http) {
+				$http.get('data/province.json').then(function(response) {
+					$scope.provinces = 	response.data;
+				})
+				$scope.scrollTo = function(provinceName) {
+					$location.hash(provinceName);
+					$anchorScroll.yOffset = 20;
+					$anchorScroll();
+				}
+			})
+		</script>
+
+	</body>
+
+</html>

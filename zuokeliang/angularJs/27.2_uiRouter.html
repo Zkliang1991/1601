@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>27.2 UI Route</title>
+		<style>
+			table {
+				width: 800px;
+			}
+			
+			.leftMenu {
+				width: 200px;
+				height: 500px;
+			}
+			
+			.leftMenu a {
+				display: block;
+			}
+			
+			.mainContent {
+				background: #ccc;
+			}
+		</style>
+
+	</head>
+
+	<body ng-app="myModule">
+
+		<table border="1" cellspacing="1" cellpadding="1">
+			<tr>
+				<td colspan="2">
+					<h1>Website Header</h1></td>
+			</tr>
+			<tr>
+				<td class="leftMenu">
+					<a ui-sref="home">Home</a>
+					<a ui-sref="courses">Courses</a>
+					<a ui-sref="employees">Employees</a>
+				</td>
+				<td class="mainContent">
+					<ui-view></ui-view>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" class="footer">
+					<b>Website Footer</b>
+				</td>
+			</tr>
+		</table>
+
+		<script type="text/javascript" src="js/angular.js"></script>
+		<script type="text/javascript" src="js/angular-ui-router.js"></script>
+		<script type="text/javascript">
+		var myModule = angular.module('myModule', ['ui.router'])
+			.config(function($stateProvider) {
+
+				$stateProvider
+					.state("home", {
+						url: "/home",
+						templateUrl: "Templates/27.2/home.html",
+						controller: "homeController",
+						controllerAs: "homeCtrl"
+					})
+					.state("courses", {
+						url: "/courses",
+						templateUrl: "Templates/27.2/courses.html",
+						controller: "coursesController",
+						controllerAs: "coursesCtrl"
+					})
+					.state("employees", {
+						url: "/employees",
+						templateUrl: "Templates/27.2/employees.html",
+						controller: "employeesController",
+						controllerAs: "employeesCtrl",
+						resolve: {
+							employeeslist: function($http) {
+								return $http.get("http://localhost:8888/angular/employee.cfm")
+									.then(function(response) {
+										return response.data;
+									})
+							}
+						}
+					})
+					.state("employeeDetail", {
+						url: "/employees/:id",
+						templateUrl: "Templates/27.2/employeedetail.html",
+						controller: "employeeDetailController",
+						controllerAs: "employeeDetailCtrl"
+					})
+			})
+			.controller('homeController', function() {
+				this.message = "Home page";
+			})
+			.controller('coursesController', function() {
+				this.courses = ["Android", "Ios", "Html5", "Java"];
+			})
+			.controller('employeesController', function(employeeslist, $state, $location) {
+				var vm = this;
+
+				vm.reloadData = function() {
+					$state.reload();
+				}
+
+				vm.employees = employeeslist;
+			})
+			.controller('employeeDetailController', function($http, $stateParams) {
+				var vm = this;
+				$http({
+					url: "http://localhost:8888/angular/employeedetail.cfm",
+					params: {
+						id: $stateParams.id
+					},
+					method: "get"
+				}).then(function(response) {
+					vm.employee = response.data[0];
+				})
+			});
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>19.3 controller</title>
+	</head>
+
+	<body ng-app="myModule">
+		<!-- 
+		通过别名的方式进行识别，无论在哪个层级可以很好的识别与判断
+		不需要通过$parent的模式去区分了
+		-->
+		<div ng-controller="countryController as countryCtrl">
+			{{countryCtrl.name}}
+			<div ng-controller="stateController as stateCtrl">
+				{{countryCtrl.name}} - {{stateCtrl.name}}
+				<div ng-controller="cityController as cityCtrl">
+					{{countryCtrl.name}} - {{stateCtrl.name}} - {{cityCtrl.name}}
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="js/angular.min.js"></script>
+		<script type="text/javascript">
+			var myApp = angular.module('myModule', [])
+			.controller("countryController", function() {
+				this.name = "中国";
+			})
+			.controller("stateController", function() {
+				this.name = "浙江";
+			})
+			.controller("cityController", function() {
+				this.name = "金华";
+			});
+
+		</script>
+	</body>
+
+</html>

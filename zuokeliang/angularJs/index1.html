@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body ng-app="myModule">
+		<div ng-controller="myController">
+		{{10+20}}
+		
+		{{message}}
+		<input type="text" ng-model="searchText"/>
+		<br/>	<br/>	<br/>
+		显示的行数:<input type="number" min="0" max="5" ng-model="limitToRow"  />
+		
+		<input type="checkbox" ng-model="hideName" />
+		<table border="1">
+			<tr>
+				<td ng-hide="hideName">FirstName</td>
+				<td>LastName</td>
+				<td>Gender</td>
+				<td>喜欢</td>
+				<td>不喜欢</td>
+				<td>喜欢操作</td>
+				<td>不喜欢操作</td>
+			</tr>
+			<tr ng-repeat="employee in employees |filter:searchText">
+				<td ng-hide="hideName">{{employee.firstName}}</td>
+				<td>{{employee.lastName}}</td>
+				<td>{{employee.gender}}</td>
+				<td>{{employee.likes}}</td>
+				<td>{{employee.dislikes}}</td>
+				<td><button ng-click="incrementLikes(employee)">喜欢</button></td>
+				<td><button ng-click="incrementDislikes(employee)">不喜欢</button></td>
+			</tr>
+		</table>
+		
+		<ul>
+			<li ng-repeat="province in provinces">
+				{{province.name}} index = {{$index}}
+				<ul>
+					<li ng-repeat="city in province.cities">
+						{{city.name}} Parent index = {{$parent.$index}}, index = {{$index}}
+					</li>
+				</ul>
+			</li>
+			
+		</ul>
+		
+		</div>
+		<script type="text/javascript" src="js/angular.min.js" ></script>
+		<script type="text/javascript" src="js/tutorial.js" ></script>
+	</body>
+</html>

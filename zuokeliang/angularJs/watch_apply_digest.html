@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+
+	<script>
+		var module = angular.module("myapp", []);
+		var myController1 = module.controller("myController", function($scope) {
+			$scope.data = {
+				time: new Date()
+			};
+			$scope.updateTime = function() {
+				$scope.data.time = new Date();
+			}
+//			document.getElementById("updateTimeButton")
+//				.addEventListener('click', function() {
+//					console.log("update time clicked");
+//					$scope.data.time = new Date();
+//					//					  $scope.$digest();
+//				});
+			document.getElementById("updateTimeButton")
+				.addEventListener('click', function() {
+					$scope.$apply(function() {
+						console.log("update time clicked");
+						$scope.data.time = new Date();
+					});
+				});
+		});
+	</script>
+
+	<body ng-app="myapp">
+		<div ng-controller="myController">
+			{{data.time}}
+
+			<br/>
+			<button ng-click="updateTime()">update time - ng-click</button>
+			<button id="updateTimeButton">update time</button>
+		</div>
+
+	</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>5.1 ng-repeat</title>
+	</head>
+
+	<body ng-app="myModule">
+		<div ng-controller="myController">
+
+			<table border="1">
+				<tr>
+					<td>FirstName</td>
+					<td>LastName</td>
+					<td>Gender</td>
+				</tr>
+				<tr ng-repeat="employee in employees">
+					<td>{{employee.firstName}}</td>
+					<td>{{employee.lastName}}</td>
+					<td>{{employee.gender}}</td>
+				</tr>
+			</table>
+		</div>
+
+		<script type="text/javascript" src="js/angular.min.js"></script>
+		<script type="text/javascript" src="js/05.1_ng-repeat.js"></script>
+	</body>
+
+</html>

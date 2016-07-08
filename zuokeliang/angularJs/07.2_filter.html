@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>7.2 filters</title>
+	</head>
+
+	<body ng-app="myModule">
+		<div ng-controller="myController">
+			<input type="number" ng-model="rowLimit" />
+			<table border="1">
+				<tr>
+					<td>FirstName</td>
+					<td>LastName</td>
+					<td>Gender</td>
+					<td>Salary</td>
+					<td>Salary</td>
+					<td>Birthday</td>
+				</tr>
+				<tr ng-repeat="employee in employees | limitTo:rowLimit">
+					<td>{{employee.firstName | uppercase}}</td>
+					<td>{{employee.lastName | lowercase}}</td>
+					<td>{{employee.gender}}</td>
+					<td>{{employee.salary |number:2}}</td>
+					<td>{{employee.salary |currency:'￥':1}}</td>
+					<td>{{employee.birthday | date:'yyyy-MM-dd' }}</td>
+				</tr>
+			</table>
+		</div>
+
+		<script type="text/javascript" src="js/angular.min.js"></script>
+		<script type="text/javascript" src="js/07.2_filters.js"></script>
+	</body>
+
+</html>

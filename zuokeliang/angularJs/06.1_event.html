@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>6.1 event</title>
+	</head>
+
+	<body ng-app="myModule">
+		<div ng-controller="myController">
+			<table border="1">
+				<tr>
+					<td>FirstName</td>
+					<td>LastName</td>
+					<td>Gender</td>
+					<td>Likes</td>
+					<td>DisLikes</td>
+					<td>LikesButton</td>
+					<td>DisLikesButton</td>
+				</tr>
+				<tr ng-repeat="employee in employees">
+					<td>{{employee.firstName}}</td>
+					<td>{{employee.lastName}}</td>
+					<td>{{employee.gender}}</td>
+					<td>{{employee.likes}}</td>
+					<td>{{employee.disLikes}}</td>
+					<td><button ng-click="incrementLikes(employee)">Likes</button></td>
+					<td><button ng-click="incrementDisLikes(employee)">DisLikes</button></td>
+				</tr>
+			</table>
+		</div>
+
+		<script type="text/javascript" src="js/angular.min.js"></script>
+		<script type="text/javascript" src="js/06.1_event.js"></script>
+	</body>
+
+</html>

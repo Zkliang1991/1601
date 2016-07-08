@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>22.1 $scope and $rootScope</title>
+	</head>
+
+	<body ng-app="myModule">
+
+		<div ng-controller="redColourController">
+			Root Scope颜色 : {{rootScopeColour}} <br /> 红色Controller : {{redColour}} <br /> 绿色Controller :
+			<span style="color:red" ng-show="greenColour == undefined">
+		        绿色未定义
+		    </span>
+		</div>
+
+		<br />
+
+		<div ng-controller="greenColourController">
+			Root Scope颜色 : {{rootScopeColour}} <br /> 绿色Controller : {{greenColour}} <br /> 红色Controller :
+			<span style="color:red" ng-show="redColour == undefined">
+		        红色未定义
+		    </span>
+		</div>
+
+		<script type="text/javascript" src="js/angular.js"></script>
+		<script type="text/javascript" >
+			var myModule = angular.module('myModule', [])
+			.controller("redColourController", function($scope, $rootScope) {
+				$rootScope.rootScopeColour = "这里是RootScope的颜色";
+				$scope.redColour = "这里是红色";
+			})
+			.controller("greenColourController", function($scope) {
+				$scope.greenColour = "这里是绿色";
+			})
+		</script>
+	</body>
+
+</html>

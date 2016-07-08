@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>18.2 routing</title>
+		<style>
+			table {
+				width: 800px;
+			}
+			
+			.leftMenu {
+				width: 200px;
+				height: 500px;
+			}
+			
+			.leftMenu a {
+				display: block;
+			}
+			
+			.mainContent {
+				background: #ccc;
+			}
+		</style>
+	</head>
+
+	<body ng-app="myModule">
+
+		<table border="1" cellspacing="1" cellpadding="1">
+			<tr>
+				<td colspan="2">
+					<h1>Website Header</h1></td>
+			</tr>
+			<tr>
+				<td class="leftMenu">
+					<a href="#/home">Home</a>
+					<a href="#/courses">Courses</a>
+					<a href="#/employees">employees</a>
+				</td>
+				<td class="mainContent">
+					<ng-view></ng-view>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" class="footer">
+					<b>Website Footer</b>
+				</td>
+			</tr>
+		</table>
+
+		<script type="text/javascript" src="js/angular.js"></script>
+		<script type="text/javascript" src="js/angular-route.min.js"></script>
+		<script type="text/javascript" >
+			var myModule = angular.module('myModule', ['ngRoute'])
+			.config(function($routeProvider) {
+				$routeProvider
+					.when("/home", {
+						templateUrl: "Templates/18/home.html",
+						controller: "homeController"
+					})
+					.when("/courses", {
+						templateUrl: "Templates/18/courses.html",
+						controller: "coursesController"
+					})
+					.when("/employees", {
+						templateUrl: "Templates/18/employees.html",
+						controller: "employeesController"
+					})
+					.otherwise({
+						redirectTo:"/home"
+					})
+			})
+			.controller('homeController', function($scope) {
+				$scope.message = "Home page";
+			})
+			.controller('coursesController', function($scope) {
+				$scope.courses = ["Android", "Ios", "Html5", "Java"];
+			})
+			.controller('employeesController', function($scope, $http) {
+				$http.get('data/person.json').then(function(response) {
+					$scope.employees = response.data;
+				})
+			})
+		</script>
+	</body>
+
+</html>

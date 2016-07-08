@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>19.4 controllerAs</title>
+		<style>
+			table {
+				width: 800px;
+			}
+			
+			.leftMenu {
+				width: 200px;
+				height: 500px;
+			}
+			
+			.leftMenu a {
+				display: block;
+			}
+			
+			.mainContent {
+				background: #ccc;
+			}
+		</style>
+		
+	</head>
+
+	<body ng-app="myModule">
+
+		<table border="1" cellspacing="1" cellpadding="1">
+			<tr>
+				<td colspan="2">
+					<h1>Website Header</h1></td>
+			</tr>
+			<tr>
+				<td class="leftMenu">
+					<a href="#/home">Home</a>
+					<a href="#/courses">Courses</a>
+					<a href="#/employees">employees</a>
+				</td>
+				<td class="mainContent">
+					<ng-view></ng-view>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" class="footer">
+					<b>Website Footer</b>
+				</td>
+			</tr>
+		</table>
+
+		<script type="text/javascript" src="js/angular.js"></script>
+		<script type="text/javascript" src="js/angular-route.min.js"></script>
+		<script type="text/javascript">
+		var myModule = angular.module('myModule', ['ngRoute'])
+			.config(function($routeProvider) {
+				$routeProvider
+					.when("/home", {
+						templateUrl: "Templates/19.4/home.html",
+						controller: "homeController as homeCtrl"
+					})
+					.when("/courses", {
+						templateUrl: "Templates/19.4/courses.html",
+						controller: "coursesController as coursesCtrl"
+					})
+					.when("/employees", {
+						templateUrl: "Templates/19.4/employees.html",
+						controller: "employeesController as employeesCtrl"
+					})
+					.when("/employees/:id", {
+						templateUrl: "Templates/19.4/employeedetail.html",
+						controller: "employeeDetailController as employeeDetailCtrl"
+					})
+					.otherwise({
+						redirectTo: "/home"
+					})
+			})
+			.controller('homeController', function() {
+				this.message = "Home page";
+			})
+			.controller('coursesController', function() {
+				this.courses = ["Android", "Ios", "Html5", "Java"];
+			})
+			.controller('employeesController', function($http) {
+				var vm = this;
+				$http.get('http://localhost:8888/angular/employee.cfm').then(function(response) {
+					// 注意在http里，我们能够使用this吗？这个this它将指向谁呢？
+					// this.employees = response.data;
+					vm.employees = response.data;
+				})
+			})
+			.controller('employeeDetailController', function($http, $routeParams) {
+				var vm = this;
+				$http({
+					url: "http://localhost:8888/angular/employeedetail.cfm",
+					params: {
+						id: $routeParams.id
+					},
+					method: "get"
+				}).then(function(response) {
+					vm.employee = response.data[0];
+				})
+			});
+		</script>
+	</body>
+
+</html>

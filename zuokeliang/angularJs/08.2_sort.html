@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>8.2 sort</title>
+	</head>
+
+	<body ng-app="myModule">
+		<div ng-controller="myController">
+			<select ng-model="sortColumn">
+					<option value="firstName">firstName asc</option>
+					<option value="-firstName">firstName desc</option>
+
+					<option value="gender">gender asc</option>
+					<option value="-gender">gender desc</option>
+
+					<option value="salary">salary asc</option>
+					<option value="-salary">salary desc</option>
+					<option value="birthday">birthday asc</option>
+					<option value="-birthday">birthday desc</option>
+
+			</select>
+		
+			<table border="1">
+				<tr>
+					<td>FirstName</td>
+					<td>LastName</td>
+					<td>Gender</td>
+					<td>Salary</td>
+					<td>Salary</td>
+					<td>Birthday</td>
+				</tr>
+				<tr ng-repeat="employee in employees | orderBy:sortColumn">
+					<td>{{employee.firstName | uppercase}}</td>
+					<td>{{employee.lastName | lowercase}}</td>
+					<td>{{employee.gender}}</td>
+					<td>{{employee.salary |number:2}}</td>
+					<td>{{employee.salary |currency:'￥':1}}</td>
+					<td>{{employee.birthday | date:'yyyy-MM-dd' }}</td>
+				</tr>
+			</table>
+		</div>
+
+		<script type="text/javascript" src="js/angular.min.js"></script>
+		<script type="text/javascript" src="js/08.2_sort.js"></script>
+	</body>
+
+</html>
