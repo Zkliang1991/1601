@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>ui-routing</title>
+		<base href="/angularJs/" />
+		<style>
+			table {
+				width: 800px;
+			}
+			
+			.leftMenu {
+				width: 200px;
+				height: 500px;
+			}
+			
+			.leftMenu a {
+				display: block;
+			}
+			
+			.mainContent {
+				background: #ccc;
+			}
+			ul{
+				list-style: none;
+			}
+			.activeState{
+				background: deeppink;
+				font-size: 20px;
+				color:#fff;
+			}
+		</style>
+	</head>
+
+	<body ng-app="myModule">
+
+		<table border="1" cellspacing="1" cellpadding="1">
+			<tr>
+				<td colspan="2">
+					<h1>Website Header</h1></td>
+			</tr>
+			<tr>
+				<td class="leftMenu">
+				<!-- ui-sref-active  控制state的样式-->
+					<a ui-sref="home" ui-sref-active="activeState">Home</a>
+					<a ui-sref="courses" ui-sref-active="activeState">Courses</a>
+					<a ui-sref="employeesParent.employees" ui-sref-active="activeState">employees</a>  
+					<!-- 2 -->
+				</td>
+				<td class="mainContent">
+					<!-- <ng-view></ng-view> -->
+					<ui-view></ui-view>
+					<!-- 3 -->
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" class="footer">
+					<b>Website Footer</b>
+				</td>
+			</tr>
+		</table>
+		<script type="text/javascript" src="js/angular.js"></script>
+		<script type="text/javascript" src="js/angular-ui-router.js">
+		</script>
+		<script>
+			var app = angular.module('myModule',['ui.router'])  //1
+			//大小写不区分
+			.config(function($urlMatcherFactoryProvider) {
+				$urlMatcherFactoryProvider.caseInsensitive(true);
+			})
+			//默认页面
+			.config(function($urlRouterProvider) {
+				$urlRouterProvider.otherwise("/home");
+			})
+			//url的#符去除操作(注意base标签)
+			.config(function($locationProvider) {
+				$locationProvider.html5Mode(true);
+			})
+			.config(function($stateProvider){   
+				// 4
+				$stateProvider
+					.state('home',{     
+						url:'/home',
+						templateUrl:'Tem/27_2/home.html',
+						controller:'homeController',
+						controllerAs:'homeCtrl',
+						data:{
+							myhomeData1:'首页自定义数据11111',
+							myhomeData2:'首页自定义数据22222',
+						}
+					})
+					//  state 5
+					.state('courses',{
+						url:"/courses",
+						templateUrl:'Tem/27_2/courses.html',
+						controller:'coursesController',
+						controllerAs:'coursesCtrl',
+						data:{
+							mycoursesData1:'课程自定义数据333333',
+							mycoursesData2:'课程自定义数据444444',
+						}
+					})
+					.state('employeesParent',{
+						url:'/employees',
+						templateUrl:'Tem/27_2/employeesParent.html',
+						controller:'employeesParentController',
+						controllerAs:'employeesParentCtrl',
+						resolve:{
+							employeesTotal:function($http){
+								return $http({
+									url:'data/employeesParent.cfm',
+									method:'GET',
+								}).then(function(response){
+									console.log(response.data);
+									return response.data;
+								})
+							}
+						}
+					})
+					.state('employeesParent.employees',{
+						url:'/',
+						templateUrl:'Tem/27_2/employees.html',
+						controller:'employeesController',
+						controllerAs:'employeesCtrl',
+						resolve:{
+							myempList:function($http){
+							return	$http({
+									url:'data/person.cfm',
+									method:'GET'
+								}).then(function(response){
+									return response.data;
+								})
+							}
+						}
+					})
+					.state('employeesParent.employeesDetail',{
+						url:'/:id',
+						templateUrl:'Tem/27_2/employeesDetail.html',
+						controller:'employeesDetailController',
+						controllerAs:'employeesDetailCtrl'
+					})
+					.state('employeesParent.employeesSearch',{
+						url:'/employeesSearch/:firstname',
+						templateUrl:'Tem/27_2/employeeSearch.html',
+						controller:'employeesSearchController',
+						controllerAs:'employeesSearchCtrl'
+					})
+			})
+			.controller('employeesParentController',function(employeesTotal){
+				employeesTotal = employeesTotal[0];
+				this.males = employeesTotal.Males;
+				this.females = employeesTotal.Females;
+				this.total = employeesTotal.total;
+			})
+			.controller('homeController',function($state){
+				this.message = '这是我们美丽的1601班 ui-routing';
+				// $state.current 表示 当前url state 的对象
+				//  获取其他路由 的自定义数据 
+				this.myhomeData1 = $state.current.data.myhomeData1;
+				this.myhomeData2 = $state.current.data.myhomeData2;
+				this.mycourseData1 = $state.get('courses').data.mycoursesData1;
+				this.mycourseData2 = $state.get('courses').data.mycoursesData2;
+			})
+			.controller('coursesController',function(){
+				this.courseList = ['HTML5','IOS','ANDROID','JAVA','PHP','.NET','NODE'];
+			})
+			.controller('employeesController',function($http,$state,$location,myempList){
+				// 6 $state
+				var _this =  this;
+
+
+				_this.employeesList = myempList;
+
+				_this.reloadData = function(){
+					$state.reload();
+					//刷新一部分页面内容
+				}
+				_this.employeesSearch  = function(){
+					// $state.go 表示 ui-router 下 $state 路由跳转 表示url跳转
+					$state.go('employeesParent.employeesSearch',{
+						firstname:_this.ftname
+					})
+				}
+			})
+			.controller('employeesDetailController',function($http,$stateParams){
+				var _this = this;
+				$http({
+					url:'data/personDetail.cfm',
+					method:"GET",
+					params:{
+						id:$stateParams.id,
+					}
+				}).success(function(data){
+					_this.userInfoData = data.id[$stateParams.id];
+				})
+			})
+			.controller('employeesSearchController',function($http,$stateParams){
+				var _this  = this;
+				_this.ifFirstname = true;
+				if($stateParams.firstname){
+					console.log('ftname');
+					_this.ifFirstname = true;
+					$http({
+						url:'data/personsearch.cfm',
+						method:"get",
+						params:{
+							firstname:$stateParams.firstname,
+						}
+					}).success(function(data){
+						// _this.employeesSearchInfo
+						var mydata = data.firstName[$stateParams.firstname];
+
+						_this.employeesSearchInfo = mydata;
+						console.log(123);
+						console.log(_this.ifFirstname)
+						console.log(_this.employeesSearchInfo)
+					})
+				}else{
+					_this.ifFirstname = false;
+					$http({
+						url:'data/person.cfm',
+						method:'GET',
+					}).success(function(data){
+						_this.employeesSearchInfo  = data;
+					})
+				}
+			})
+		</script>
+	</body>
+
+</html>

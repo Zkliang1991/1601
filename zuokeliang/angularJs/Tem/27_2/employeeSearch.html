@@ -1,0 +1,26 @@
+<b>符合条件的员工详细信息:</b>
+	console.log({{employeesSearchCtrl}})
+<div ng-show="employeesSearchCtrl.ifFirstname">
+	<ul >
+		<li>姓:{{employeesSearchCtrl.employeesSearchInfo.firstName}}</li>
+		<li>名:{{employeesSearchCtrl.employeesSearchInfo.lastName}}</li>
+	</ul>
+</div>
+
+
+<div ng-show="!employeesSearchCtrl.ifFirstname">
+	<ul ng-repeat="emp in employeesSearchCtrl.employeesSearchInfo">
+		<li>姓:{{emp.firstName}}</li>
+		<li>名:{{emp.lastName}}</li>
+	</ul>
+</div>
+
+<h4><a ui-sref="employeesParent.employees">GoBack</a></h4>
+<!-- 
+<b>符合条件的员工详细信息:</b>
+<div>
+	<ul>
+		<li>姓:{{employeesSearchCtrl.employeesSearchInfo.firstName}}</li>
+		<li>名:{{employeesSearchCtrl.employeesSearchInfo.lastName}}</li>
+	</ul>
+</div> -->

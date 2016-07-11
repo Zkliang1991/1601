@@ -64,26 +64,44 @@
 				// 让所有的路由都能 URL地址忽略大小写
 				$routeProvider
 					.when('/home',{
-						templateUrl:'Tem/20/home.html',
+						templateUrl:'Tem/25/home.html',
 						controller:'homeController',
 						controllerAs:'homeCtrl'
 					})
 					.when('/coUrses',{
-						templateUrl:'Tem/20/courses.html',
+						templateUrl:'Tem/25/courses.html',
 						controller:'coursesController',
 						controllerAs:'coursesCtrl',
 						caseInsensitiveMatch:true
 						// URL地址忽略大小写
 					})
 					.when('/Employees',{
-						templateUrl:'Tem/20/employees.html',
+						templateUrl:'Tem/25/employees.html',
 						controller:'employeesController',
-						controllerAs:'employeesCtrl'
+						controllerAs:'employeesCtrl',
+						resolve:{
+							myemployeesList:function($http){
+								return  $http({
+								url:'data/person.cfm',
+										method:'GET',
+									}).then(function(response){
+										console.log(response.data);
+										return response.data;
+										// _this.employeesList = data;
+										// 此时函数里面的this指向http请求 用_this传进来
+								})
+							}
+						}
 					})
 					.when('/employees/:id',{
-						templateUrl:'Tem/20/employeesDetail.html',
+						templateUrl:'Tem/25/employeesDetail.html',
 						controller:'employeesDetailController',
 						controllerAs:'employeesDetailCtrl'
+					})
+					.when('/employeesearch/:firstname?',{
+						templateUrl:'Tem/25/employeeSearch.html',
+						controller:'employeesSearchController',
+						controllerAs:'employeesSearchCtrl'
 					})
 					.otherwise({
 						redirectTo:'/home'   //表示重定向 默认页面
@@ -96,37 +114,35 @@
 			.controller('coursesController',function(){
 				this.courseList = ['HTML5','IOS','ANDROID','JAVA','PHP','.NET','NODE'];
 			})
-			.controller('employeesController',function($http,$route,$scope){
+			.controller('employeesController',function($http,$route,$scope,$location,myemployeesList){
 				var _this =  this;
 				//
-				$http({
-					url:'data/person.cfm',
-					method:'GET',
-				}).success(function(data){
-					console.log(data);
-					_this.employeesList = data;
-					// 此时函数里面的this指向http请求 用_this传进来
-				})
+				// $http({
+				// 	url:'data/person.cfm',
+				// 	method:'GET',
+				// }).success(function(data){
+				// 	console.log(data);
+				// 	_this.employeesList = data;
+				// 	// 此时函数里面的this指向http请求 用_this传进来
+				// })
+				//resolve  3.实例化一个employees的控制器，并创建employees视图
+						// 4.视图加载完毕以后，我们就是异步加载数据的操作过 延迟加载渲染	
+						console.log(myemployeesList);
+				_this.employeesList = myemployeesList;
+
 
 				_this.reloadData = function(){
-					console.log(123);
 					$route.reload();
 					//刷新一部分页面内容
 				}
-				// .$$route.originalPath  表示 路由的 根路径
-				// $scope.$on("$routeChangeStart",function(event,next,current){
-				// 	if(!confirm('你确定离开这个页面吗?'+'\n'+next.$$route.originalPath+"\n"+current.$$route.originalPath)){
-				// 		event.preventDefault();
-				// 	}
-				// })
-				// event  表示事件对象
-				// next 表示要 跳转到的 路由或者页面 (location) 
-				// current 表示 当前 路由 或者 页面 (location)
-				$scope.$on("$locationChangeStart",function(event,next,current){
-					if(!confirm('你确定离开这个页面吗?'+'\n'+next+"\n"+current)){
-						event.preventDefault();
+					//点击查询事件
+				_this.employeesSearch = function(){
+					if(_this.ftname){
+						$location.url('/employeesearch/'+_this.ftname);
+					}else{
+						$location.url('/employeesearch')
 					}
-				})
+				}
 			})
 			.controller("employeesDetailController",function($http,$routeParams){
 				var _this = this;
@@ -142,19 +158,33 @@
 				})
 
 			})
-			// .controller('employeesDetailCtrl',function($scope,$http,$routeParams){
-			// 	$scope.message = '这是我们美丽的1601班'
-			// 	$http({
-			// 		url:"data/personDetail.cfm",
-			// 		method:"GET",
-			// 		params:{
-			// 			id:$routeParams.id
-			// 		}
-			// 	}).success(function(data){
+			.controller('employeesSearchController',function($http,$routeParams){
+				var _this = this;
+				_this.ifFirstname = true;
+				if($routeParams.firstname){
+					_this.ifFirstname = true;
+					$http({
+						url:'data/personsearch.cfm',
+						method:"get",
+						params:{
+							firstname:$routeParams.firstname,
+						}
+					}).success(function(data){
+						// _this.employeesSearchInfo
+						var mydata = data.firstName[$routeParams.firstname];
 
-			// 		console.log(data);
-			// 	})
-			// })
+						_this.employeesSearchInfo = mydata;
+					})
+				}else{
+					_this.ifFirstname = false;
+					$http({
+						url:'data/person.cfm',
+						method:'GET',
+					}).success(function(data){
+						_this.employeesSearchInfo  = data;
+					})
+				}
+			})
 		</script>
 	</body>
 

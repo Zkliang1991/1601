@@ -94,7 +94,7 @@
 				$scope.$on("$routeChangeStart", function(event, next, current) {
 					$log.debug("RouteChangeStart 事件");
 					$log.debug(event);
-					$log.debug(next);
+					$log.debug(next.$$route.originalPath);
 					$log.debug(current);
 				});
 

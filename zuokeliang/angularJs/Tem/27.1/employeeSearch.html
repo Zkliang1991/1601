@@ -1,0 +1,10 @@
+<b>符合条件的员工详细信息:</b>
+<script type="text/javascript">
+	console.log({{employeesSearchCtrl}})
+</script>
+<ul ng-repeat="emp in employeesSearchCtrl">
+	<li>姓:{{emp.firstName}}</li>
+	<li>名:{{emp.lastName}}</li>
+</ul>
+
+<h4><a ui-sref="employeesParent.employees">GoBack</a></h4>

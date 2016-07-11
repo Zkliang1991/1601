@@ -90,15 +90,16 @@
 			})
 			.controller('employeesController', function($http, $route, $rootScope, $log) {
 				var vm = this;
-
+				//$locationChangeStart 表示页面地址开始变化时
 				$rootScope.$on("$locationChangeStart", function() {
 					$log.debug("$locationChangeStart");
+					// $log.debug() ==console.log()
 				});
-
+				//$locationChangeStart 表示路由地址开始变化时
 				$rootScope.$on("$routeChangeStart", function() {
 					$log.debug("$routeChangeStart");
 				});
-
+				//成功时
 				$rootScope.$on("$locationChangeSuccess", function() {
 					$log.debug("$locationChangeSuccess");
 				});

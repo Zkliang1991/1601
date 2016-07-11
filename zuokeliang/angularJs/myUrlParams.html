@@ -64,41 +64,45 @@
 				// 让所有的路由都能 URL地址忽略大小写
 				$routeProvider
 					.when('/home',{
-						templateUrl:'Tem/20/home.html',
+						templateUrl:'Tem/25/home.html',
 						controller:'homeController',
 						controllerAs:'homeCtrl'
 					})
 					.when('/coUrses',{
-						templateUrl:'Tem/20/courses.html',
+						templateUrl:'Tem/25/courses.html',
 						controller:'coursesController',
 						controllerAs:'coursesCtrl',
 						caseInsensitiveMatch:true
 						// URL地址忽略大小写
 					})
 					.when('/Employees',{
-						templateUrl:'Tem/20/employees.html',
+						templateUrl:'Tem/25/employees.html',
 						controller:'employeesController',
 						controllerAs:'employeesCtrl'
 					})
 					.when('/employees/:id',{
-						templateUrl:'Tem/20/employeesDetail.html',
+						templateUrl:'Tem/25/employeesDetail.html',
 						controller:'employeesDetailController',
 						controllerAs:'employeesDetailCtrl'
+					})
+					.when('/employeesearch/:firstName?',{
+						templateUrl:'Tem/25/employeeSearch.html',
+						controller:'employeesSearchController',
+						controllerAs:'employeesSearchCtrl'
 					})
 					.otherwise({
 						redirectTo:'/home'   //表示重定向 默认页面
 					})
 			}])
 			.controller('homeController',function(){
-				this.message = '这是我们美丽的1601班';
-				this.homeC
+				this.message = '这是我们美丽的1601班'
 			})
 			.controller('coursesController',function(){
 				this.courseList = ['HTML5','IOS','ANDROID','JAVA','PHP','.NET','NODE'];
 			})
-			.controller('employeesController',function($http,$route,$scope){
+			.controller('employeesController',function($http,$route,$location){
 				var _this =  this;
-				//
+
 				$http({
 					url:'data/person.cfm',
 					method:'GET',
@@ -106,27 +110,53 @@
 					console.log(data);
 					_this.employeesList = data;
 					// 此时函数里面的this指向http请求 用_this传进来
-				})
-
+				});
+				// $http({
+				// 	url:'data/person.cfm',
+				// 	method:"GET",
+				// 	params:{
+				// 	}
+				// }).success(function(data){
+				// 	_this.employeesList =  data;		
+				// })
 				_this.reloadData = function(){
-					console.log(123);
 					$route.reload();
 					//刷新一部分页面内容
 				}
-				// .$$route.originalPath  表示 路由的 根路径
-				// $scope.$on("$routeChangeStart",function(event,next,current){
-				// 	if(!confirm('你确定离开这个页面吗?'+'\n'+next.$$route.originalPath+"\n"+current.$$route.originalPath)){
-				// 		event.preventDefault();
-				// 	}
-				// })
-				// event  表示事件对象
-				// next 表示要 跳转到的 路由或者页面 (location) 
-				// current 表示 当前 路由 或者 页面 (location)
-				$scope.$on("$locationChangeStart",function(event,next,current){
-					if(!confirm('你确定离开这个页面吗?'+'\n'+next+"\n"+current)){
-						event.preventDefault();
+				_this.empSearch  = function(){
+					if(_this.firstname){
+						console.log(_this.firstname)
+						$location.url('/employeesearch/'+_this.firstname)
+					}else{
+						$location.url('/employeesearch');
 					}
-				})
+				}
+			})
+			.controller('employeesSearchController',function($http,$routeParams){
+				var _this = this;
+				if($routeParams.firstName){
+					$http({
+						url:'data/personsearch.cfm',
+						method:"GET",
+						params:{
+							firstname:$routeParams.firstname
+						}
+					}).success(function(data){
+						console.log(123);
+						console.log(data);
+						_this.employeesearchInfo =  data.firstName[$routeParams.firstName];
+						console.log(_this.employeesearchInfo)
+					})
+				}else{
+					$http({
+						url:'data/person.cfm',
+						method:"GET",
+						params:{
+						}
+					}).success(function(data){
+						_this.employeesearchInfo =  data[0];		
+					})
+				}
 			})
 			.controller("employeesDetailController",function($http,$routeParams){
 				var _this = this;

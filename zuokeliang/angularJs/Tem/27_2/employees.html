@@ -1,0 +1,36 @@
+<style type="text/css">
+
+	ul{
+		list-style: none;
+	}
+	li{
+		margin-top: 20px;
+		border-bottom: 2px solid #fff;
+	}
+	P{
+		margin:4px 0;
+	}
+</style>
+<b>员工信息:</b>
+
+<ul>
+	<li ng-repeat="person in employeesCtrl.employeesList">
+		<p>姓:{{person.firstName}}</p>
+		<p>名:{{person.lastName}}</p>
+		<p>性别:{{person.gender}}</p>
+		<!-- <p><a href="#/employees/{{person.id}}">详细信息</a></p> -->
+		<p><a ui-sref="employeesParent.employeesDetail({id:person.id})">详细信息</a></p>
+	</li>
+</ul>
+
+<h3>
+	刷新页面:
+	<button ng-click="employeesCtrl.reloadData()">刷新</button>
+</h3>
+
+ <div>
+	搜索员工:
+	<input type="text" name="name" ng-model="employeesCtrl.ftname">
+	<button ng-click="employeesCtrl.employeesSearch()">search</button>
+ </div>
+

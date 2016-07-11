@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>ui.routing</title>
+		<!-- base标签   angularJs 为你的文件名称-->
+		<base href="/angularJs/" /> 
+		<style>
+			table {
+				width: 800px;
+			}
+			
+			.leftMenu {
+				width: 200px;
+				height: 500px;
+			}
+			
+			.leftMenu a {
+				display: block;
+			}
+			
+			.mainContent {
+				background: #ccc;
+			}
+			ul{
+				list-style: none;
+			}
+			.stateActive{
+				background: deeppink;
+				color:yellowgreen;
+				font-size: 30px;
+				font-weight: bold;
+				font-family: "微软雅黑";
+				text-decoration: none;
+			}
+		</style>
+	</head>
+
+	<body ng-app="myModule">
+
+		<table border="1" cellspacing="1" cellpadding="1">
+			<tr>
+				<td colspan="2">
+					<h1>Website Header</h1></td>
+			</tr>
+			<tr>
+				<td class="leftMenu">
+					<a ui-sref="home" ui-sref-active="stateActive">Home</a>
+					<a ui-sref="courses" ui-sref-active="stateActive">Courses</a>
+					<a ui-sref="employeesParent.employees" ui-sref-active="stateActive">employees</a>
+				</td>
+				<td class="mainContent">
+					<!-- <ng-view></ng-view> -->
+					<ui-view></ui-view>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" class="footer">
+					<b>Website Footer</b>
+				</td>
+			</tr>
+		</table>
+
+
+
+		<script type="text/javascript" src="js/angular.js"></script>
+		<script type="text/javascript" src="js/angular-ui-router.js">
+		</script>
+		<script>
+			var app = angular.module('myModule',['ui.router'])
+			//大小写不区分
+			.config(function($urlMatcherFactoryProvider) {
+				$urlMatcherFactoryProvider.caseInsensitive(true);
+			})
+			//默认页面
+			.config(function($urlRouterProvider) {
+				$urlRouterProvider.otherwise("/home");
+			})
+
+			.config(function($locationProvider) {
+				$locationProvider.html5Mode(true);
+			})
+			.config(function($stateProvider){
+				$stateProvider
+					.state('home',{
+						url:"/home",
+						templateUrl:'Tem/27.1/home.html',
+						controller:'homeController',
+						controllerAs:'homeCtrl',
+						data:{
+							customData1:"首页自定义数据11111111",
+							customData2:"首页自定义数据22222222"
+						}
+					})
+					.state('courses',{
+						url:'/courses',
+						templateUrl:'Tem/27.1/courses.html',
+						controller:'coursesController',
+						controllerAs:'coursesCtrl',
+						data:{
+							customData1:"课程自定义数据33333333",
+							customData2:"课程自定义数据44444444"
+						}
+					})
+					.state('employeesParent',{
+						url:'/employees',
+						templateUrl:'Tem/27.1/employeesParent.html',
+						controller:'employeesParentController',
+						controllerAs:'employeesParentCtrl',
+						resolve:{
+							employeesTotal:function($http){
+								return $http({
+									url:"data/employeesParent.cfm",
+									method:"GET"
+								}).then(function(response){
+									console.log(response.data);
+									return response.data;
+								})
+							}
+						}
+					})
+					.state('employeesParent.employees',{
+						url:'/',
+						templateUrl:'Tem/27.1/employees.html',
+						controller:'employeesController',
+						controllerAs:'employeesCtrl',
+						resolve:{
+							employeesList:function($http){
+								return $http({
+									url:"data/person.cfm",
+									method:"GET"
+								}).then(function(response){
+									return response.data;
+								})
+							}
+						}
+					})
+					.state('employeesParent.employeesDetail',{
+						url:'/:id',
+						templateUrl:'Tem/27.1/employeesDetail.html',
+						controller:'employeesDetailController',
+						controllerAs:'employeesDetailCtrl'
+					})
+					.state('employeesParent.employeesSearch',{
+						url:'/employeesSearch/:firstName',
+						templateUrl:'Tem/27.1/employeeSearch.html',
+						controller:'employeesSearchController',
+						controllerAs:'employeesSearchCtrl'
+					})
+			})
+			.controller('employeesParentController',function(employeesTotal){
+				console.log(employeesTotal[0])
+				this.Males = employeesTotal[0].Males;
+				this.Females = employeesTotal[0].Females;
+				this.total = employeesTotal[0].total;
+			})
+			.controller('homeController',function($state){
+				this.message = '这是我们美丽的1601班';
+				this.homeCustomData1 = $state.current.data.customData1;
+				this.homeCustomData2 = $state.current.data.customData2;
+				this.CoursesCustomData1 = $state.get('courses').data.customData1;
+				this.CoursesCustomData2= $state.get('courses').data.customData2;
+			})
+			.controller('coursesController',function(){
+				this.courseList = ['HTML5','IOS','ANDROID','JAVA','PHP','.NET','NODE'];
+			})
+			.controller('employeesController',function(employeesList,$state,employeesTotal){
+				var vm = this;
+				console.log(employeesList)
+
+				vm.employeesList = employeesList;
+
+				vm.reloadData = function(){
+					$state.reload();
+				}
+				vm.empSearch = function(){
+					$state.go('employeesParent.employeesSearch',{
+						firstname:vm.firstname
+					})
+				}
+				// vm.employeesTotal = employeesTotal;
+			})
+			.controller('employeesDetailController',function($http,$stateParams){
+				var vm = this;
+				$http({
+					url:'data/personDetail.cfm',
+					method:"GET",
+					params:{
+						id:$stateParams.id
+					}
+				}).success(function(data){
+					console.log(data);
+					vm.userInfoData = data.id[$stateParams.id];
+				})
+			})
+			.controller('employeesSearchController',function($http,$stateParams){
+				var _this = this;
+				if($stateParams.firstName){
+					$http({
+						url:'data/personsearch.cfm',
+						method:"GET",
+						params:{
+							firstname:$stateParams.firstname
+						}
+					}).success(function(data){
+						console.log(456);
+						console.log(data);
+						_this.employeesearchInfo =  data.firstName[$stateParams.firstName];
+						console.log(_this.employeesearchInfo)
+					})
+				}else{
+					$http({
+						url:'data/person.cfm',
+						method:"GET",
+						params:{
+						}
+					}).success(function(data){
+						_this.employeesearchInfo =  data[2];		
+					})
+				}
+			})
+			
+		</script>
+	</body>
+
+</html>
